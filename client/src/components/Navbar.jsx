@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <header className="header" data-header>
+      <header className="header bg-theme-white" data-header>
         <div className="container">
           <div className="overlay" data-overlay></div>
 
@@ -12,7 +12,7 @@ function Navbar() {
             <div className="h-12">
               <img
                 className="h-full"
-                src={"src/assets/logo/light-logo.jpeg"}
+                src={"src/assets/logo/light-logo.png"}
                 alt="URBAN GRADGE"
               />
             </div>
@@ -71,8 +71,8 @@ function Navbar() {
 
           <div className="header-actions">
             <div className="header-contact">
-              <Link to="tel:+918410084100" className="contact-link">
-                +91 8410084100
+              <Link to="tel:+917909200001" className="contact-link">
+                +91 7909200001
               </Link>
 
               <span className="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>

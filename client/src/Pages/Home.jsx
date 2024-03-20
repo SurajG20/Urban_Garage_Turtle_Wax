@@ -24,20 +24,20 @@ function Home() {
           <section className="section featured-car" id="featured-car">
             <div className="container">
               <div className="title-wrapper">
-                <h2 className="h2 section-title">
+                <h2 className="h2 text-theme-font-semibold section-title m-auto">
                   Take A Glimpse Of Our Collection
                 </h2>
-
+                {/* 
                 <Link to="#" className="featured-car-link">
                   <span>Veja mais</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link>
+                </Link> */}
               </div>
 
               <ul className="featured-car-list">
                 <li>
-                  <CarCard/>
+                  <CarCard />
                 </li>
 
                 <li>

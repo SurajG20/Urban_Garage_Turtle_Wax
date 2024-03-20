@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer bg-theme-white">
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <Link to="#" className="logo">
+            <Link to="/" className="logo">
               <div className="h-20 w-20">
                 <img
                   className="h-full w-full"
