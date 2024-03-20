@@ -24,7 +24,7 @@ function Home() {
           <section className="section featured-car" id="featured-car">
             <div className="container">
               <div className="title-wrapper">
-                <h2 className="h2 text-theme-font-semibold section-title m-auto">
+                <h2 className="h2 text-theme-semibold section-title m-auto">
                   Take A Glimpse Of Our Collection
                 </h2>
                 {/* 

@@ -16,51 +16,61 @@ function CarCard() {
 
       <div className="card-content">
         <div className="card-title-wrapper">
-          <h3 className="h3 card-title">
+          <h3 className="text-lg card-title text-theme-bold">
             <Link to="#">Toyota RAV4</Link>
           </h3>
 
-          <data className="year" value="2022">
+          {/* <data className="year" value="2022">
             2022
-          </data>
+          </data> */}
         </div>
 
         <ul className="card-list">
-          <li className="card-list-item">
-            <ion-icon name="people-outline"></ion-icon>
-
-            <span className="card-item-text">4 Pessoas</span>
+          <li className="card-list-item flex flex-col">
+            <span className="card-item-text text-theme-500 text-xs">
+              Reg. Year
+            </span>
+            <span className="text-black text-theme-500">2022</span>
           </li>
 
-          <li className="card-list-item">
-            <ion-icon name="flash-outline"></ion-icon>
-
-            <span className="card-item-text">Híbrido</span>
+          <li className="card-list-item flex flex-col">
+            <span className="card-item-text text-theme-500 text-xs">
+              Kms Driven
+            </span>
+            <span className="text-black text-theme-500">46,979</span>
           </li>
 
-          <li className="card-list-item">
-            <ion-icon name="speedometer-outline"></ion-icon>
-
-            <span className="card-item-text">6.1km / 1-litro</span>
-          </li>
-
-          <li className="card-list-item">
-            <ion-icon name="hardware-chip-outline"></ion-icon>
-
-            <span className="card-item-text">Automático</span>
+          <li className="card-list-item flex flex-col">
+            <span className="card-item-text text-theme-500 text-xs">Fuel</span>
+            <span className="text-black text-theme-500">2022</span>
           </li>
         </ul>
 
         <div className="card-price-wrapper">
-          <p className="card-price">
-            <strong>R$440</strong> / mês
-          </p>
+          <div>
+            <p className="text-sm ">INR</p>
+            <p className="card-price text-sm flex gap-x-1 font-bold text-theme-blue">
+              <span>11400000</span>
+              <span>/-</span>
+            </p>
+          </div>
 
-          <button className="btn fav-btn" aria-label="Add to favourite list">
+          <div>
+            <p className="text-sm flex gap-x-1">
+              <span className="text-sm">EMI starting from </span>
+              <span className="text-sm text-theme-blue">INR</span>
+            </p>
+            <p className="card-price text-sm flex gap-x-1  text-theme-blue">
+              <span>2,46,913</span>
+              <span>/-</span>
+            </p>
+          </div>
+
+          {/* <button className="btn fav-btn" aria-label="Add to favourite list">
             <ion-icon name="heart-outline"></ion-icon>
-          </button>
+          </button> */}
 
-          <button className="btn">Alugue agora</button>
+          {/* <button className="btn">Alugue agora</button> */}
         </div>
       </div>
     </div>

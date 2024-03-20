@@ -5,7 +5,7 @@ function HeroSection() {
     <section className="section hero" id="home">
       <div className="container">
         <div className="hero-content">
-          <h2 className="h1 hero-title text-theme-white text-theme-font-semibold">
+          <h2 className="h1 hero-title text-theme-white text-theme-semibold">
             Search Your Dream Car Now
           </h2>
         </div>

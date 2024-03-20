@@ -180,7 +180,7 @@ a {
 
 .btn {
   position: relative;
-  background: var(--background, var(--carolina-blue));
+  background: var(--background, #f50303);
   color: var(--color, var(--white));
   min-width: var(--width, 40px);
   min-height: var(--height, 40px);
@@ -490,7 +490,7 @@ a {
   background: #eeeeee;
   border: 1px solid var(--white);
   border-radius: var(--radius-18);
-  padding: 10px;
+  /* padding: 10px; */
   box-shadow: var(--shadow-1);
 }
 
@@ -531,7 +531,7 @@ a {
 }
 
 .featured-car-card .card-title > a:is(:hover, :focus) {
-  color: var(--carolina-blue);
+  color: #f50303;
 }
 
 .featured-car-card .year {
@@ -549,7 +549,7 @@ a {
   gap: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .featured-car-card .card-list-item {
@@ -577,11 +577,11 @@ a {
   gap: 15px;
 }
 
-.featured-car-card .card-price {
+/* .featured-car-card .card-price {
   font-family: var(--ff-nunito);
   font-size: var(--fs-6);
   color: var(--space-cadet);
-}
+} */
 
 .featured-car-card .card-price strong {
   font-size: var(--fs-3);
@@ -923,7 +923,7 @@ a {
    */
 
   .featured-car-card .card-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .featured-car-card .card-price {
@@ -1275,42 +1275,42 @@ a {
 
 /* FONT FAMILY CSS START */
 
-.text-theme-font-300 {
+.text-theme-300 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.text-theme-font-400 {
+.text-theme-400 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.text-theme-font-500 {
+.text-theme-500 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.text-theme-font-semibold {
+.text-theme-semibold {
   font-family: "Rajdhani", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-.text-theme-font-bold {
+.text-theme-bold {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.text-theme-font-300 {
+.text-roboto-300 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-.text-theme-font-400 {
+.text-roboto-400 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
