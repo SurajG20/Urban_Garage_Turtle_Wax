@@ -354,7 +354,7 @@ a {
 }
 
 .navbar-link:is(:hover, :focus) {
-  color: var(--carolina-blue);
+  color: #f50303;
 }
 
 .overlay {
@@ -406,7 +406,7 @@ a {
 }
 
 .input-wrapper {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .input-wrapper:not(:last-of-type) {
@@ -487,11 +487,19 @@ a {
 }
 
 .featured-car-card {
-  background: #eeeeee;
-  border: 1px solid var(--white);
+  background: white;
+  border: 2px solid var(--gray);
   border-radius: var(--radius-18);
   /* padding: 10px; */
   box-shadow: var(--shadow-1);
+}
+.featured-car-card:hover {
+  background: white;
+  border: 2px solid var(--gray);
+  border-radius: var(--radius-18);
+  /* padding: 10px; */
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
 }
 
 .featured-car-card .card-banner {
@@ -1011,7 +1019,7 @@ a {
   }
 
   .header-contact .contact-link:is(:hover, :focus) {
-    color: var(--carolina-blue);
+    color: #f50303;
   }
 
   .header-contact .contact-time {

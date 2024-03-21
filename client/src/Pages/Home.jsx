@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import { Link } from "react-router-dom";
 import CarCard from "../components/CarCard";
 
+import data from "../server.json";
+import { Link } from "react-router-dom";
+
+
+
 function Home() {
+  const[cars,setCars]=useState([])
+
+  useEffect(() => {
+
+  
+    setCars(data.cars);
+  }, []);
+
+  //  useEffect(() => {
+  //    const fetchData = async () => {
+  //     fetch("your-api-endpoint")
+  //       .then((response) => response.json())
+  //       .then((data) => setCars(data.cars));    
+  //      setCars(data.cars);
+  //    };
+  //    fetchData();
+  //  }, []);
+
   return (
     <>
       <Navbar />
@@ -36,359 +58,11 @@ function Home() {
               </div>
 
               <ul className="featured-car-list">
-                <li>
-                  <CarCard />
-                </li>
-
-                <li>
-                  <div className="featured-car-card">
-                    <figure className="card-banner">
-                      <img
-                        src="./assets/images/car-2.jpg"
-                        alt="BMW 3 Series 2019"
-                        loading="lazy"
-                        width="440"
-                        height="300"
-                        className="w-100"
-                      />
-                    </figure>
-
-                    <div className="card-content">
-                      <div className="card-title-wrapper">
-                        <h3 className="h3 card-title">
-                          <Link to="#">Toyota RAV4</Link>
-                        </h3>
-
-                        <data className="year" value="2022">
-                          2022
-                        </data>
-                      </div>
-
-                      <ul className="card-list">
-                        <li className="card-list-item">
-                          <ion-icon name="people-outline"></ion-icon>
-
-                          <span className="card-item-text">4 Pessoas</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="flash-outline"></ion-icon>
-
-                          <span className="card-item-text">Híbrido</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="speedometer-outline"></ion-icon>
-
-                          <span className="card-item-text">
-                            6.1km / 1-litro
-                          </span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                          <span className="card-item-text">Automático</span>
-                        </li>
-                      </ul>
-
-                      <div className="card-price-wrapper">
-                        <p className="card-price">
-                          <strong>R$440</strong> / mês
-                        </p>
-
-                        <button
-                          className="btn fav-btn"
-                          aria-label="Add to favourite list"
-                        >
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-
-                        <button className="btn">Alugue agora</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="featured-car-card">
-                    <figure className="card-banner">
-                      <img
-                        src="./assets/images/car-3.jpg"
-                        alt="Volkswagen T-Cross 2020"
-                        loading="lazy"
-                        width="440"
-                        height="300"
-                        className="w-100"
-                      />
-                    </figure>
-
-                    <div className="card-content">
-                      <div className="card-title-wrapper">
-                        <h3 className="h3 card-title">
-                          <Link to="#">Toyota RAV4</Link>
-                        </h3>
-
-                        <data className="year" value="2022">
-                          2022
-                        </data>
-                      </div>
-
-                      <ul className="card-list">
-                        <li className="card-list-item">
-                          <ion-icon name="people-outline"></ion-icon>
-
-                          <span className="card-item-text">4 Pessoas</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="flash-outline"></ion-icon>
-
-                          <span className="card-item-text">Híbrido</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="speedometer-outline"></ion-icon>
-
-                          <span className="card-item-text">
-                            6.1km / 1-litro
-                          </span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                          <span className="card-item-text">Automático</span>
-                        </li>
-                      </ul>
-
-                      <div className="card-price-wrapper">
-                        <p className="card-price">
-                          <strong>R$440</strong> / mês
-                        </p>
-
-                        <button
-                          className="btn fav-btn"
-                          aria-label="Add to favourite list"
-                        >
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-
-                        <button className="btn">Alugue agora</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="featured-car-card">
-                    <figure className="card-banner">
-                      <img
-                        src="./assets/images/car-4.jpg"
-                        alt="Cadillac Escalade 2020"
-                        loading="lazy"
-                        width="440"
-                        height="300"
-                        className="w-100"
-                      />
-                    </figure>
-
-                    <div className="card-content">
-                      <div className="card-title-wrapper">
-                        <h3 className="h3 card-title">
-                          <Link to="#">Toyota RAV4</Link>
-                        </h3>
-
-                        <data className="year" value="2022">
-                          2022
-                        </data>
-                      </div>
-
-                      <ul className="card-list">
-                        <li className="card-list-item">
-                          <ion-icon name="people-outline"></ion-icon>
-
-                          <span className="card-item-text">4 Pessoas</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="flash-outline"></ion-icon>
-
-                          <span className="card-item-text">Híbrido</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="speedometer-outline"></ion-icon>
-
-                          <span className="card-item-text">
-                            6.1km / 1-litro
-                          </span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                          <span className="card-item-text">Automático</span>
-                        </li>
-                      </ul>
-
-                      <div className="card-price-wrapper">
-                        <p className="card-price">
-                          <strong>R$440</strong> / mês
-                        </p>
-
-                        <button
-                          className="btn fav-btn"
-                          aria-label="Add to favourite list"
-                        >
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-
-                        <button className="btn">Alugue agora</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="featured-car-card">
-                    <figure className="card-banner">
-                      <img
-                        src="./assets/images/car-5.jpg"
-                        alt="BMW 4 Series GTI 2022"
-                        loading="lazy"
-                        width="440"
-                        height="300"
-                        className="w-100"
-                      />
-                    </figure>
-
-                    <div className="card-content">
-                      <div className="card-title-wrapper">
-                        <h3 className="h3 card-title">
-                          <Link to="#">Toyota RAV4</Link>
-                        </h3>
-
-                        <data className="year" value="2022">
-                          2022
-                        </data>
-                      </div>
-
-                      <ul className="card-list">
-                        <li className="card-list-item">
-                          <ion-icon name="people-outline"></ion-icon>
-
-                          <span className="card-item-text">4 Pessoas</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="flash-outline"></ion-icon>
-
-                          <span className="card-item-text">Híbrido</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="speedometer-outline"></ion-icon>
-
-                          <span className="card-item-text">
-                            6.1km / 1-litro
-                          </span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                          <span className="card-item-text">Automático</span>
-                        </li>
-                      </ul>
-
-                      <div className="card-price-wrapper">
-                        <p className="card-price">
-                          <strong>R$440</strong> / mês
-                        </p>
-
-                        <button
-                          className="btn fav-btn"
-                          aria-label="Add to favourite list"
-                        >
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-
-                        <button className="btn">Alugue agora</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="featured-car-card">
-                    <figure className="card-banner">
-                      <img
-                        src="./assets/images/car-6.jpg"
-                        alt="BMW 4 Series 2019"
-                        loading="lazy"
-                        width="440"
-                        height="300"
-                        className="w-100"
-                      />
-                    </figure>
-
-                    <div className="card-content">
-                      <div className="card-title-wrapper">
-                        <h3 className="h3 card-title">
-                          <Link to="#">Toyota RAV4</Link>
-                        </h3>
-
-                        <data className="year" value="2022">
-                          2022
-                        </data>
-                      </div>
-
-                      <ul className="card-list">
-                        <li className="card-list-item">
-                          <ion-icon name="people-outline"></ion-icon>
-
-                          <span className="card-item-text">4 Pessoas</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="flash-outline"></ion-icon>
-
-                          <span className="card-item-text">Híbrido</span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="speedometer-outline"></ion-icon>
-
-                          <span className="card-item-text">
-                            6.1km / 1-litro
-                          </span>
-                        </li>
-
-                        <li className="card-list-item">
-                          <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                          <span className="card-item-text">Automático</span>
-                        </li>
-                      </ul>
-
-                      <div className="card-price-wrapper">
-                        <p className="card-price">
-                          <strong>R$440</strong> / mês
-                        </p>
-
-                        <button
-                          className="btn fav-btn"
-                          aria-label="Add to favourite list"
-                        >
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-
-                        <button className="btn">Alugue agora</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                {cars&&cars.map((item) => (
+                  <li key={item._id}>
+                    <CarCard item={item} />
+                  </li>
+                ))}
               </ul>
             </div>
           </section>
@@ -508,7 +182,7 @@ function Home() {
                         <div className="publish-date">
                           <ion-icon name="time-outline"></ion-icon>
 
-                          <time datetime="2022-01-14">
+                          <time dateTime="2022-01-14">
                             14 de janeiro de 2022
                           </time>
                         </div>
@@ -549,7 +223,7 @@ function Home() {
                         <div className="publish-date">
                           <ion-icon name="time-outline"></ion-icon>
 
-                          <time datetime="2022-01-14">Janeiro 14, 2022</time>
+                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
                         </div>
 
                         <div className="comments">
@@ -590,7 +264,7 @@ function Home() {
                         <div className="publish-date">
                           <ion-icon name="time-outline"></ion-icon>
 
-                          <time datetime="2022-01-14">Janeiro 14, 2022</time>
+                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
                         </div>
 
                         <div className="comments">
@@ -631,7 +305,7 @@ function Home() {
                         <div className="publish-date">
                           <ion-icon name="time-outline"></ion-icon>
 
-                          <time datetime="2022-01-14">Janeiro 14, 2022</time>
+                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
                         </div>
 
                         <div className="comments">
@@ -672,7 +346,7 @@ function Home() {
                         <div className="publish-date">
                           <ion-icon name="time-outline"></ion-icon>
 
-                          <time datetime="2022-01-14">Janeiro 14, 2022</time>
+                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
                         </div>
 
                         <div className="comments">

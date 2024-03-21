@@ -1,4 +1,5 @@
 import React from "react";
+import Dropdown from "../utils/Dropdown";
 
 function HeroSection() {
   return (
@@ -15,33 +16,36 @@ function HeroSection() {
           <img
             loading="lazy"
             className="h-full w-full object-cover object-center"
-            src="src/assets/banners/hero-banner.jpg"
+            src="src/assets/banners/hero-banner1.jpeg"
             alt="Urban Gradge"
           />
         </div>
 
-        <form action="" className="hero-form bg-theme-white flex ">
+        <form action="" className="relative hero-form bg-theme-white flex ">
           <div className="input-wrapper">
-            <label for="input-1" className="input-label">
-              Car, model or brand
-            </label>
+            {/* <label for="input-1" className="input-label">
+            </label> */}
+            <Dropdown title={"Car, model or brand"} />
           </div>
 
           <div className="input-wrapper">
-            <label for="input-2" className="input-label">
+            {/* <label for="input-2" className="input-label">
               Max monthly payment
-            </label>
+            </label> */}
+            <Dropdown title={"Max monthly payment"} />
           </div>
 
           <div className="input-wrapper">
-            <label for="input-3" className="input-label">
+            {/* <label for="input-3" className="input-label">
               Make the Year
-            </label>
+            </label> */}
+            <Dropdown title={"Make the Year"} />
           </div>
           <div className="input-wrapper">
-            <label for="input-3" className="input-label">
+            {/* <label for="input-3" className="input-label">
               KMs Driven
-            </label>
+            </label> */}
+            <Dropdown title={"KMs Driven"} />
           </div>
 
           {/* <button type="submit" className="btn">

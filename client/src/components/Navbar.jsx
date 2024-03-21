@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// icons
+import { MdPerson } from "react-icons/md";
+
 function Navbar() {
   return (
     <>
@@ -21,49 +24,69 @@ function Navbar() {
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
               <li>
-                <Link to="/buy" className="navbar-link" data-nav-link>
+                <Link
+                  to="/buy"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
                   Buy
                 </Link>
               </li>
 
               <li>
-                <Link to="/sell" className="navbar-link" data-nav-link>
+                <Link
+                  to="/sell"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
                   Sell
                 </Link>
               </li>
 
               <li>
-                <Link to="/service" className="navbar-link" data-nav-link>
+                <Link
+                  to="/service"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
                   Service
                 </Link>
               </li>
 
               <li>
-                <Link to="/care-care" className="navbar-link" data-nav-link>
-                  Car Care
+                <Link
+                  to="/car-care"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
+                  Coatings and PPF
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/service-packages"
-                  className="navbar-link"
+                  to="/turtle-wax-products"
+                  className="navbar-link text-theme-500"
                   data-nav-link
                 >
-                  Service Packages
+                  Turtle Wax Products
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/extended-warranty"
-                  className="navbar-link"
+                  to="/recent-work"
+                  className="navbar-link text-theme-500"
                   data-nav-link
                 >
-                  Extended Warranty
+                  Recent Work
                 </Link>
               </li>
               <li>
-                <Link to="/insurance" className="navbar-link" data-nav-link>
-                  Insurance
+                <Link
+                  to="/about-us"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
+                  About Us
                 </Link>
               </li>
             </ul>
@@ -71,25 +94,20 @@ function Navbar() {
 
           <div className="header-actions">
             <div className="header-contact">
-              <Link to="tel:+917909200001" className="contact-link">
+              <Link
+                to="tel:+917909200001"
+                className="contact-link text-theme-500"
+              >
                 +91 7909200001
               </Link>
 
-              <span className="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+              <span className="contact-time text-theme-500">
+                Mon - Sat: 9:00 am - 6:00 pm
+              </span>
             </div>
 
-            <Link
-              to="#featured-car"
-              className="btn"
-              aria-labelledby="aria-label-txt"
-            >
-              <ion-icon name="car-outline"></ion-icon>
-
-              <span id="aria-label-txt">Explore Cars</span>
-            </Link>
-
-            <Link to="#" className="btn user-btn" aria-label="Profile">
-              <ion-icon name="person-outline"></ion-icon>
+            <Link to="/contant-us" className="btn user-btn" aria-label="Profile">
+              <MdPerson className="text-2xl" />
             </Link>
 
             <button
