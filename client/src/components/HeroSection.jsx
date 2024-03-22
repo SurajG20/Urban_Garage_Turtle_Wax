@@ -58,7 +58,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/BMW_logo.png"
+              src="assets/brands/brand1.png"
               alt="Urban Gradge BMW"
             />
           </div>
@@ -66,7 +66,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Mercedes_logo.png"
+              src="assets/brands/brand2.png"
               alt="Urban Gradge Mercedes"
             />
           </div>
@@ -74,7 +74,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Chevrolet_logo.png"
+              src="assets/brands/brand3.png"
               alt="Urban Gradge Chevrolet"
             />
           </div>
@@ -82,7 +82,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Ferrari_logo.png"
+              src="assets/brands/brand4.png"
               alt="Urban Gradge Ferrari"
             />
           </div>
@@ -90,7 +90,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Ford_logo.png"
+              src="assets/brands/brand5.png"
               alt="Urban Gradge Ford"
             />
           </div>
@@ -98,7 +98,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/porsche-logo.png"
+              src="assets/brands/brand6.png"
               alt="Urban Gradge Porsche"
             />
           </div>
@@ -106,7 +106,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Toyota_logo.png"
+              src="assets/brands/brand7.png"
               alt="Urban Gradge Toyota"
             />
           </div>
@@ -114,7 +114,7 @@ function HeroSection() {
             <img
               loading="lazy"
               className="h-full w-full object-contain object-center"
-              src="assets/brands/Volkswagen_logo.png"
+              src="assets/brands/brand8.png"
               alt="Urban Gradge Volkswagen"
             />
           </div>

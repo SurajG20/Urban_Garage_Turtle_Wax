@@ -713,6 +713,96 @@ a {
 }
 
 /*-----------------------------------*\
+  #Brand
+\*-----------------------------------*/
+
+.brand .section-title {
+  margin-bottom: 30px;
+}
+
+.brand-card {
+  background: var(--alice-blue-2);
+  border-radius: var(--radius-18);
+  border: 1px solid var(--white);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+
+.brand-card .card-banner {
+  /* aspect-ratio: 3 / 2; */
+  position: relative;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+}
+
+.brand-card .card-banner a:first-child {
+  height: 100%;
+}
+
+.brand-card .card-banner img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-card .card-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  --height: 30px;
+  --width: 92px;
+}
+
+.brand-card .card-content {
+  padding: 20px;
+}
+
+.brand-card .card-title {
+  margin-bottom: 20px;
+}
+
+.brand-card .card-title > a {
+  color: inherit;
+}
+
+.brand-card .card-title > a:is(:hover, :focus) {
+  color: var(--carolina-blue);
+}
+
+.brand-card .card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-card :is(.publish-date, .comments) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-6);
+  color: var(--independence);
+}
+
+.brand-card :is(.publish-date, .comments) ion-icon {
+  font-size: 15px;
+  --ionicon-stroke-width: 50px;
+}
+
+.brand .has-scrollbar {
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: inline mandatory;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.brand .has-scrollbar > li {
+  flex-shrink: 0;
+  max-width: 330px;
+  width: 100%;
+  scroll-snap-align: start;
+}
+/*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
 
@@ -802,14 +892,14 @@ a {
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
-  background: var(--alice-blue-1);
-  outline: 2px solid var(--carolina-blue);
+  background: #f50303;
+  outline: 2px solid white;
   border-radius: 10px;
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  border-color: var(--alice-blue-1);
-  background: var(--carolina-blue);
+  border-color: #f50303;
+  background: white;
   border-radius: 10px;
 }
 
