@@ -7,14 +7,10 @@ import CarCard from "../components/CarCard";
 import data from "../server.json";
 import { Link } from "react-router-dom";
 
-
-
 function Home() {
-  const[cars,setCars]=useState([])
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-
-  
     setCars(data.cars);
   }, []);
 
@@ -22,7 +18,7 @@ function Home() {
   //    const fetchData = async () => {
   //     fetch("your-api-endpoint")
   //       .then((response) => response.json())
-  //       .then((data) => setCars(data.cars));    
+  //       .then((data) => setCars(data.cars));
   //      setCars(data.cars);
   //    };
   //    fetchData();
@@ -58,11 +54,12 @@ function Home() {
               </div>
 
               <ul className="featured-car-list">
-                {cars&&cars.map((item) => (
-                  <li key={item._id}>
-                    <CarCard item={item} />
-                  </li>
-                ))}
+                {cars &&
+                  cars.map((item) => (
+                    <li key={item._id}>
+                      <CarCard item={item} />
+                    </li>
+                  ))}
               </ul>
             </div>
           </section>
@@ -70,6 +67,63 @@ function Home() {
           {/* <!-- 
         - #GET START
       --> */}
+
+          {/* hero Banner section Start  */}
+
+          <section className="section" id="hero-banber">
+            <div className="container">
+              <div className="relative grid grid-cols-1 md:grid-cols-2">
+                <div className="absolute h-full w-full">
+                  <img
+                    className="h-full w-full object-cover object-left"
+                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
+                    alt=""
+                  />
+                </div>
+                <div></div>
+                <div>
+                  <div className="mb-2">
+                    <h3 className="text-theme-semibold font-semibold text-xl">
+                      Why Choose
+                    </h3>
+                    <h2 className="text-theme-bold font-bold text-2xl">
+                      Luxury Ride!
+                    </h2>
+                  </div>
+                  <div className="mb-2">
+                    <p className="text-theme-500">
+                      Luxury Ride is a one stop destination for the Foremost,
+                      Exclusive and Extravagant Pre-Owned luxury cars. We are
+                      here to serve efficiently all across the country with our
+                      wide array of products and services equipped by our
+                      State-of-the-Art showrooms and Workshops to make your
+                      journey easy and lucrative.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-x-5">
+                    <div>
+                      <ul className="text-theme-500">
+                        <li>Unparalleled Variety Of Pre-Owned Luxury Cars</li>
+                        <li>PAN India Delivery</li>
+                        <li>In House Service Available</li>
+                        <li>350+ Check Evaluations</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul className="text-theme-500">
+                        <li>15 Day Money Back Guarantee</li>
+                        <li>30 Day or 1000 KMs Consumables Warranty</li>
+                        <li>1/2/3 Year Buy Back Facility</li>
+                        <li>100% Certified Cars</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* hero Banner section End  */}
 
           <section className="section get-start">
             <div className="container">
