@@ -159,7 +159,7 @@ function Home() {
                     <figure className="card-banner">
                       <Link to="#">
                         <img
-                          src="./assets/images/blog-1.jpg"
+                          src="assets/images/blog-1.jpg"
                           alt="Abertura de novos escritórios da empresa"
                           loading="lazy"
                           className="w-100"
