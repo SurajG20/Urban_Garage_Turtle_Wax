@@ -1,0 +1,76 @@
+{
+  "cars": [
+    {
+      "_id":"1",
+      "name": "BMW X7 xDrive40i M Sport",
+      "regyear":"2022",
+      "kms":"46,979",
+      "fuel":"Petrol",
+      "price":"1,11,00,000",
+      "emi":"2,46,913",
+      "img":["https://content.helloviewer.io/1920/65b259f16e6ef23cff781952/0aac1bb5-415c-44bc-a4f7-4cf4a5cb296e/slot/2.jpg","https://content.helloviewer.io/1920/65b259f16e6ef23cff781952/4874d4a0-8f79-45db-a4ee-c27759854a04/slot/5.jpg","https://content.helloviewer.io/1920/65b259f16e6ef23cff781952/0b2acf16-affe-4fb9-bb28-ea03aa461629/slot/7.jpg","https://content.helloviewer.io/1920/65b259f16e6ef23cff781952/2315d815-11da-447c-bb89-292a333c1a10/slot/1.jpg","https://content.helloviewer.io/1920/65b259f16e6ef23cff781952/1c8f0c19-bba4-485c-b082-2c493cc219e8/slot/1.jpg"],
+      "description": "Provides supportive care in the home.",
+      "available": true
+    },
+   
+    {
+      "_id": "2",
+      "name": "Mercedes Benz S Class S 350D",
+      "reg_year": "2020",
+      "kms": "18,635",
+      "fuel": "Diesel",
+      "price": "91,90,000",
+      "emi": "2,15,771",
+      "img": ["https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/2426da4f-e1e0-4f56-948a-8876b2a9a97a/slot/2.jpg","https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg","https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/fcf4861f-2fee-4a6e-82a8-58718d0642b8/slot/4.jpg","https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/2ca56a78-b855-4f08-b701-6d5c6128d19d/slot/5.jpg","https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/2964be85-4a6d-4419-b5a8-efff05e893ca/slot/7.jpg"],
+      "description": "Provides supportive care in the home.",
+      "available": true
+    },
+    {
+      "_id":"3",
+      "name": "Volvo XC60 Inscription D5",
+      "reg_year":"2022",
+      "kms":"20,967",
+      "fuel":"Diesel",
+      "price":"56,90,000",
+      "emi":"1,35,691",
+      "img":["https://content.helloviewer.io/1920/64aea73a8dfd3d4304da45ae/49901b1a-a60c-425e-809e-84cc55dfaf77/slot/Volvo-XC60-UP32MQ-2122.jpg","https://content.helloviewer.io/1920/64aea73a8dfd3d4304da45ae/3b606547-5724-4397-ba68-1cd2d660aef3/slot/2.jpg","https://content.helloviewer.io/1920/64aea73a8dfd3d4304da45ae/9858bda5-a93f-43bb-981f-0bae4b25858b/slot/7.jpg","https://content.helloviewer.io/1920/64aea73a8dfd3d4304da45ae/b1836396-5225-43cd-a8e9-7f3d73183c17/slot/6.jpg","https://content.helloviewer.io/1920/64aea73a8dfd3d4304da45ae/c89e6499-5ec8-4763-8995-29dc5b2ece67/slot/1.jpg"],
+      "description": "Provides supportive care in the home.",
+      "available": true
+    },
+    {
+      "_id":"4",
+      "name": "Mercedes Benz GLE 300d 4MATIC LWB",
+      "reg_year":"2022",
+      "kms":"44,658",
+      "fuel":"Diesel",
+      "price":"82,90,000",
+      "emi":"1,91,080",
+      "img":["https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/53f0dd26-3e8e-42d0-9593-c2f38e61a0ff/slot/2.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/d92791c0-fa05-4714-bfee-df36c71a3ab4/slot/3.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/19422181-2440-49fe-9fe5-02a8dea86785/slot/4.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/d8f0672c-ce7f-4557-af66-f3f62a4f736f/slot/5.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/5c27d1e6-112c-413e-8734-453aabbccccf/slot/6.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/d5a4e939-464e-410d-9f18-a8d722390f32/slot/8.jpg","https://content.helloviewer.io/1920/64eb0469caa1f9132d0a3ae1/76ea01c8-dd69-4973-80b3-5877f36d9c12/slot/1.jpg"],
+      "description": "Provides supportive care in the home.",
+      "available": true
+    },
+    {
+    "_id":"5",
+      "name": "Home Care",
+      "reg_year":"",
+      "kms":"",
+      "fuel":"",
+      "price":"",
+      "emi":"",
+      "description": "Provides supportive care in the home.",
+      "available": true
+    },
+    {
+      "_id":"6",
+      "name": "Home Care",
+      "reg_year":"",
+      "kms":"",
+      "fuel":"",
+      "price":"",
+      "emi":"",
+      "description": "Provides supportive care in the home.",
+      "available": true
+    }
+  ],
+  "products":[]
+}
