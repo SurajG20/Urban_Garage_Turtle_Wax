@@ -16,7 +16,7 @@ function HeroSection() {
           <img
             loading="lazy"
             className="h-full w-full object-cover object-center"
-            src="src/assets/banners/hero-banner1.jpeg"
+            src="src/assets/banners/HeroBanner1.jpeg"
             alt="Urban Gradge"
           />
         </div>

@@ -15,7 +15,7 @@ function Navbar() {
             <div className="h-12">
               <img
                 className="h-full"
-                src={"src/assets/logo/light-logo.png"}
+                src={"src/assets/logo/Lightlogo1.png"}
                 alt="URBAN GRADGE"
               />
             </div>
@@ -106,7 +106,11 @@ function Navbar() {
               </span>
             </div>
 
-            <Link to="/contant-us" className="btn user-btn" aria-label="Profile">
+            <Link
+              to="/contant-us"
+              className="btn user-btn"
+              aria-label="Profile"
+            >
               <MdPerson className="text-2xl" />
             </Link>
 
