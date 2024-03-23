@@ -465,9 +465,10 @@ function Home() {
             </div>
           </section>
 
+          {/* sell banner start */}
           <section className="section get-start">
             <div className="container">
-              <div className="max-w-6xl h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
                 <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
@@ -494,79 +495,142 @@ function Home() {
               </div>
             </div>
           </section>
+          {/* sell banner end  */}
+
           <section className="section get-start">
             <div className="container">
-              <h2 className="h2 section-title text-center text-theme-semibold">
-                Customers Reviews
-              </h2>
+              <div className="mb-5">
+                <h2 className="h2 section-title text-center text-theme-semibold ">
+                  Our Experience Centres
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                  Test drive, learn about services and more at your nearest
+                  showroom.
+                </p>
+              </div>
 
-              <ul className="get-start-list">
-                <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-1">
-                      <ion-icon name="person-add-outline"></ion-icon>
-                    </div>
+              <div className="grid grid-cols-2 gap-x-5 gap-y-5">
+                {/* card 1 */}
 
-                    <h3 className="card-title">Crie um perfil</h3>
+                <div className="h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                  <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    CHANDIGARH
+                  </h1>
+                  <p className="p font-extrabold text-theme-500">
+                    Standing at the heart of the Millennium city, our team of
+                    seasoned experts offers an array luxury car services and
+                    tailored solutions to cater to your every automotive
+                    requirement.
+                  </p>
 
-                    <p className="card-text">
-                      If you are going to use a passage of Lorem Ipsum, you need
-                      to be sure.
-                    </p>
-
-                    <Link to="#" className="card-link">
-                      Iniciar
-                    </Link>
+                  <div className="flex gap-x-3">
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book a vist
+                    </button>
+                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                      Get a Directions
+                    </button>
                   </div>
-                </li>
+                </div>
 
-                <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-2">
-                      <ion-icon name="car-outline"></ion-icon>
-                    </div>
+                {/* card 2 */}
 
-                    <h3 className="card-title">
-                      Diga-nos qual carro você quer
-                    </h3>
+                <div className="h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                  <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    Karnal
+                  </h1>
+                  <p className="p font-extrabold text-theme-500">
+                    Witness the grandeur of India's largest pre-owned car
+                    experience centre, where our highly skilled team of experts
+                    bring you a wide array of comprehensive car-related
+                    services.
+                  </p>
 
-                    <p className="card-text">
-                      Várias versões evoluíram ao longo dos anos, às vezes por
-                      acidente, às vezes propositalmente
+                  <div className="flex gap-x-3">
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book a visit
+                    </button>
+                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                      Get a Direction
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="section" id="hero-banner">
+            <div className="relative h-screen">
+              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
+                {/* Overlay div */}
+                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
+                <div className="absolute -z-20 h-full w-full">
+                  <img
+                    className="h-full w-full object-cover object-left"
+                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
+                    alt=""
+                  />
+                </div>
+                {/* left container  */}
+
+                {/* right container  */}
+                <div className=" p-5 opacity-80">
+                  <div className="mb-2">
+                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
+                      Why Choose
+                    </h3> */}
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
+                      Our Services
+                    </h2>
+                  </div>
+                  <div className="mb-2">
+                    <p className="text-theme-500 text-white">
+                      We provide complete professional services in our state of
+                      the art service centres designed to keep your ride running
+                      smoothly and impressively.
                     </p>
                   </div>
-                </li>
-
-                <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-3">
-                      <ion-icon name="person-outline"></ion-icon>
+                  <div className="grid grid-cols-2 gap-x-5 mb-10">
+                    <div>
+                      <ul className="text-theme-500 flex flex-col gap-y-5">
+                        <li className="flex text-white items-center text-theme-500">
+                          <TiTick className="text-white text-xl" />
+                          OEM/OES Parts
+                        </li>
+                        <li className="flex text-white items-center text-theme-500">
+                          {" "}
+                          <TiTick className="text-white text-xl" /> PAN India
+                          Delivery
+                        </li>
+                        <li className="flex text-white  items-center text-theme-500">
+                          {" "}
+                          <TiTick className="text-white text-xl" /> In House
+                          Service Available
+                        </li>
+                        <li className="flex text-white  items-center text-theme-500">
+                          {" "}
+                          <TiTick className="text-white text-xl" /> 350+ Check
+                          Evaluations
+                        </li>
+                      </ul>
                     </div>
-
-                    <h3 className="card-title">Combine com o vendedor</h3>
-
-                    <p className="card-text">
-                      Para fazer um tipo de livro de espécimes. Sobreviveu não
-                      apenas cinco séculos, mas também o salto para eletrônico
-                    </p>
                   </div>
-                </li>
-
-                <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-4">
-                      <ion-icon name="card-outline"></ion-icon>
-                    </div>
-
-                    <h3 className="card-title">Fazer um acordo</h3>
-
-                    <p className="card-text">
-                      Existem muitas variações de passagens de Lorem
-                      disponíveis, mas a maioria sofreu alterações
-                    </p>
+                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book Service package
+                    </button>
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book Service
+                    </button>
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book Car Care
+                    </button>
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Buy Extended Warranty
+                    </button>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -576,7 +640,7 @@ function Home() {
 
           <section className="section blog" id="blog">
             <div className="container">
-              <h2 className="h2 section-title">Nosso blog</h2>
+              <h2 className="h2 section-title text-theme-semibold">Customers Reviews</h2>
 
               <ul className="blog-list has-scrollbar">
                 <li>
