@@ -3,7 +3,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import CarCard from "../components/CarCard";
-
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
 
@@ -269,143 +271,229 @@ function Home() {
                   services.
                 </p>
               </div>
-              <ul className="get-start-list">
+              <ul className="get-start-list grid grid-cols-4">
+                {/* Buy  */}
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-1">
-                      <ion-icon name="person-add-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Buy
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Crie um perfil</h3>
-
-                    <p className="card-text">
-                      If you are going to use a passage of Lorem Ipsum, you need
-                      to be sure.
-                    </p>
-
-                    <Link to="#" className="card-link">
-                      Iniciar
-                    </Link>
                   </div>
                 </li>
-
+                {/* Sell  */}
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-2">
-                      <ion-icon name="car-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Sell
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">
-                      Diga-nos qual carro você quer
-                    </h3>
-
-                    <p className="card-text">
-                      Várias versões evoluíram ao longo dos anos, às vezes por
-                      acidente, às vezes propositalmente
-                    </p>
                   </div>
                 </li>
-
+                {/* Service */}
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-3">
-                      <ion-icon name="person-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Service
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Combine com o vendedor</h3>
-
-                    <p className="card-text">
-                      Para fazer um tipo de livro de espécimes. Sobreviveu não
-                      apenas cinco séculos, mas também o salto para eletrônico
-                    </p>
                   </div>
                 </li>
-
+                {/* Car care  */}
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-4">
-                      <ion-icon name="card-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Car care
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Fazer um acordo</h3>
-
-                    <p className="card-text">
-                      Existem muitas variações de passagens de Lorem
-                      disponíveis, mas a maioria sofreu alterações
-                    </p>
                   </div>
                 </li>
-              </ul>
-              <ul className="get-start-list">
+                {/* Products  */}
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-1">
-                      <ion-icon name="person-add-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Products
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Crie um perfil</h3>
-
-                    <p className="card-text">
-                      If you are going to use a passage of Lorem Ipsum, you need
-                      to be sure.
-                    </p>
-
-                    <Link to="#" className="card-link">
-                      Iniciar
-                    </Link>
                   </div>
                 </li>
-
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-2">
-                      <ion-icon name="car-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Turtle wax Products
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">
-                      Diga-nos qual carro você quer
-                    </h3>
-
-                    <p className="card-text">
-                      Várias versões evoluíram ao longo dos anos, às vezes por
-                      acidente, às vezes propositalmente
-                    </p>
                   </div>
                 </li>
-
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-3">
-                      <ion-icon name="person-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Buy
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Combine com o vendedor</h3>
-
-                    <p className="card-text">
-                      Para fazer um tipo de livro de espécimes. Sobreviveu não
-                      apenas cinco séculos, mas também o salto para eletrônico
-                    </p>
                   </div>
                 </li>
-
                 <li>
-                  <div className="get-start-card">
-                    <div className="card-icon icon-4">
-                      <ion-icon name="card-outline"></ion-icon>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Buy
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
                     </div>
-
-                    <h3 className="card-title">Fazer um acordo</h3>
-
-                    <p className="card-text">
-                      Existem muitas variações de passagens de Lorem
-                      disponíveis, mas a maioria sofreu alterações
-                    </p>
                   </div>
                 </li>
               </ul>
             </div>
           </section>
 
+          <section className="section get-start">
+            <div className="container">
+              <div className="max-w-6xl h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                  Sell Your Car At Highest Price In{" "}
+                </h1>
+                <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
+                <div className="flex gap-x-5">
+                  <p className="flex items-center gap-3 text-theme-500">
+                    <FaBlenderPhone className="text-lg" />
+                    Instant Call Back
+                  </p>
+                  <p className="flex items-center gap-3 text-theme-500">
+                    <FaCar className="text-lg" />
+                    Doorstep Evalution
+                  </p>
+                  <p className="flex items-center gap-3 text-theme-500">
+                    <FaMoneyCheckAlt className="text-lg" />
+                    Instants Payment
+                  </p>
+                </div>
+                <div>
+                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                    Sell Your Car
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
           <section className="section get-start">
             <div className="container">
               <h2 className="h2 section-title text-center text-theme-semibold">

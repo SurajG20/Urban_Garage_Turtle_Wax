@@ -224,7 +224,6 @@ a {
 .h1,
 .h2,
 .h3 {
-  color: var(--space-cadet);
   font-family: var(--ff-nunito);
   line-height: 1.4;
 }
@@ -1506,4 +1505,11 @@ a {
 }
 .bg-theme-white {
   background-color: #ffffff;
+}
+
+.card-banner {
+  background-image: url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
