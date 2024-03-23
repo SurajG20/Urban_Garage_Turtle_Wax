@@ -10,15 +10,15 @@ function Footer() {
             <Link to="/" className="logo">
               <div className="h-20 w-20">
                 <img
-                  className="h-full w-full"
-                  src="src/assets/logo/light-logo.jpeg"
+                  className="h-full w-full object-cover"
+                  src="assets/logo/light-logo-2.jpeg"
                   alt="Ridex logo"
                 />
               </div>
             </Link>
 
             <p className="footer-text">
-              Luxury Ride is the destination that you’ve been looking for all
+              Urban Garadge is the destination that you’ve been looking for all
               this time. Comprising of the most enthralling lineup of pre-owned
               luxury cars, We offer a car ecosystem to cater all your automotive
               needs, ensuring complete satisfaction and fulfillment.
@@ -61,13 +61,13 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="#" className="footer-link">
-                +91 8410084100
+              <Link to="tel:+917909200001" className="footer-link">
+                +91 7909200001
               </Link>
             </li>
             <li>
               <Link to="#" className="footer-link">
-                info@luxuryride.in
+                support@dcbi.in
               </Link>
             </li>
           </ul>
@@ -113,8 +113,14 @@ function Footer() {
           </ul>
 
           <p className="copyright">
-            &copy; 2023 <Link to="#">iChumbo</Link>. Todos os direitos
-            reservados
+            &copy; 2023{" "}
+            <Link
+              className="hover:text-red-600 text-theme-semibold navbar-link"
+              to="/"
+            >
+              Urban Garadge
+            </Link>
+            . All rights reserved
           </p>
         </div>
       </div>
