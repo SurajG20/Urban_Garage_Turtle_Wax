@@ -106,7 +106,7 @@ function Navbar() {
               </span>
             </div>
 
-            <Link to="/contant-us" className="btn user-btn" aria-label="Profile">
+            <Link to="/contant-us" className="btn user-btn hidden" aria-label="Profile">
               <MdPerson className="text-2xl" />
             </Link>
 

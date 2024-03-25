@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroSection from "../components/Herohome";
+import Herosection from "../components/Herosection";
 import CarCard from "../components/CarCard";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
@@ -12,7 +12,9 @@ import { Link } from "react-router-dom";
 // icons
 import { TiTick } from "react-icons/ti";
 
-function Home() {
+
+
+function BuyPage() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -38,7 +40,7 @@ function Home() {
         - #HERO
       --> */}
 
-          <HeroSection />
+          <Herosection />
 
           {/* <!-- 
         - #FEATURED CAR
@@ -73,7 +75,7 @@ function Home() {
         - #GET START
       --> */}
 
-          {/* why choose us Banner section Start  */}
+          {/* hero Banner section Start  */}
 
           <section className="section" id="hero-banner">
             <div className="relative md:h-96">
@@ -171,7 +173,7 @@ function Home() {
             </div>
           </section>
 
-          {/* why choose us Banner section End  */}
+          {/* hero Banner section End  */}
 
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section brand" id="brand">
@@ -994,4 +996,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default BuyPage;

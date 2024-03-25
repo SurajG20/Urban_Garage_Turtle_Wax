@@ -328,7 +328,7 @@ a {
   position: fixed;
   top: 70px;
   bottom: 0;
-  right: -260px;
+  
   max-width: 260px;
   width: 100%;
   padding: 20px 25px;
@@ -393,9 +393,6 @@ a {
   margin-bottom: 30px;
 }
 
-.hero-banner {
-  display: none;
-}
 
 .hero-form {
   border: 1px solid var(--white);
@@ -1147,7 +1144,7 @@ a {
 
   .hero-banner {
     display: block;
-    background: url("../images/hero-banner.jpg") no-repeat;
+    background: url("assets/banners/hero-banner1.jpeg") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;
