@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 function CarCard({ item }) {
-  console.log(item.img);
   return (
     <div className="featured-car-card">
       <figure className="card-banner">

@@ -3,19 +3,31 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Herosection from "../components/Herosection";
 import CarCard from "../components/CarCard";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
+
 import data from "../server.json";
 import { Link } from "react-router-dom";
 
 // icons
 import { TiTick } from "react-icons/ti";
-
-
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 
 function BuyPage() {
   const [cars, setCars] = useState([]);
+
+  const backgroundImg = {
+    backgroundImage: `
+    linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://luxuryride.in/img/buy-banner-img.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
 
   useEffect(() => {
     setCars(data.cars);
@@ -32,7 +44,7 @@ function BuyPage() {
   //  }, []);
 
   return (
-    <div className="relative">
+    <div>
       <Navbar />
       <main>
         <article>
@@ -40,7 +52,41 @@ function BuyPage() {
         - #HERO
       --> */}
 
-          <Herosection />
+          <section className="relative">
+            <div
+              className="container abosolute mt-32 -z-50 m-1 overflow-hidden top-0 h-56 flex items-center justify-center rounded-2xl  "
+              style={backgroundImg}
+            >
+              <div className="absolute m-1 -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              <div className="h-full w-full flex justify-end py-10 px-5">
+                <div className="min-w-3xl">
+                  <div>
+                    <h2 className="h2 text-theme-semibold text-white">
+                      High Quality, More Comfort
+                    </h2>
+                  </div>
+                  <div className="mt-5">
+                    <ul className="text-theme-semibold text-white flex flex-col gap-y-2">
+                      <li className="flex">
+                        <TiTick className="text-white text-xl" />
+                        <span>Largest Assortment of Pre-Owned Luxury Cars</span>
+                      </li>
+                      <li className="flex">
+                        {" "}
+                        <TiTick className="text-white text-xl" />
+                        <span>Easy Financing Options</span>
+                      </li>
+                      <li className="flex">
+                        {" "}
+                        <TiTick className="text-white text-xl" />
+                        <span>Sell Or Upgrade Effortlessly</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* <!-- 
         - #FEATURED CAR

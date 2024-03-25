@@ -8,12 +8,28 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
+import Dropdown from "../utils/Dropdown";
+import { IoCall } from "react-icons/io5";
+import { MdOutlinePayments } from "react-icons/md";
 
 // icons
 import { TiTick } from "react-icons/ti";
 
 function SellPage() {
   const [cars, setCars] = useState([]);
+
+  const backgroundImg = {
+    backgroundImage: `
+    linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://luxuryride.in/img/sell-banner-new.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
 
   useEffect(() => {
     setCars(data.cars);
@@ -38,465 +54,288 @@ function SellPage() {
         - #HERO
       --> */}
 
-          <HeroSection />
+          <section className="">
+            <div
+              className="abosolute -z-50 m-1 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+              style={backgroundImg}
+            >
+              <div className="absolute m-1 -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              <div className="max-w-6xl m-auto px-10 py-5">
+                {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
+                <div className="flex flex-col gap-y-5">
+                  <div>
+                    <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-semibold">
+                      Sell Your Car At Highest Price in 59 Minutes
+                    </h1>
+                  </div>
 
-          {/* <!-- 
-        - #FEATURED CAR
-      --> */}
+                  <div className="hidden md:block">
+                    <div className="bg-white rounded-2xl">
+                      <form
+                        action=""
+                        class="w-full relative grid grid-cols-4 gap-4"
+                      >
+                        <div class="flex justify-center">
+                          <Dropdown title={"Car, model or brand"} />
+                        </div>
 
-          <section className="section featured-car" id="featured-car">
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 text-theme-semibold section-title m-auto">
-                  Take A Glimpse Of Our Collection
-                </h2>
-                {/* 
-                <Link to="#" className="featured-car-link">
-                  <span>Veja mais</span>
+                        <div class="flex justify-center">
+                          <Dropdown title={"Max monthly payment"} />
+                        </div>
 
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link> */}
+                        <div class="flex justify-center">
+                          <Dropdown title={"Make the Year"} />
+                        </div>
+
+                        <div class="flex justify-center">
+                          <Dropdown title={"KMs Driven"} />
+                        </div>
+                      </form>
+                    </div>
+                    <div className="m-auto max-w-2xl grid grid-cols-5 gap-5 justify-center text-white mt-5">
+                      <div className="flex  gap-x-2 items-center">
+                        <span>
+                          <IoCall className="text-2xl" />
+                        </span>
+                        <span className="h3 whitespace-nowrap text-theme-500 ">
+                          Instant Call Back
+                        </span>
+                      </div>
+                      <div></div>
+
+                      <div className="flex  gap-x-2 items-center">
+                        <span>
+                          <FaCar className="text-2xl" />
+                        </span>
+                        <span className="h3 whitespace-nowrap text-theme-500">
+                          Doorstep Evaluation
+                        </span>
+                      </div>
+                      <div></div>
+
+                      <div className="flex gap-x-2 items-center">
+                        <span>
+                          <MdOutlinePayments className="text-2xl" />
+                        </span>
+                        <span className="h3 whitespace-nowrap text-theme-500">
+                          {" "}
+                          Instant Payment
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex justify-start items-center mt-5">
+                      <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand1.png"
+                            alt="Urban Gradge BMW"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand2.png"
+                            alt="Urban Gradge Mercedes"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand3.png"
+                            alt="Urban Gradge Chevrolet"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand4.png"
+                            alt="Urban Gradge Ferrari"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand5.png"
+                            alt="Urban Gradge Ford"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand6.png"
+                            alt="Urban Gradge Porsche"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand7.png"
+                            alt="Urban Gradge Toyota"
+                          />
+                        </div>
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand8.png"
+                            alt="Urban Gradge Volkswagen"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <ul className="featured-car-list">
-                {cars &&
-                  cars.map((item) => (
-                    <li key={item._id}>
-                      <CarCard item={item} />
-                    </li>
-                  ))}
-              </ul>
             </div>
           </section>
 
-          {/* <!-- 
-        - #GET START
-      --> */}
-
-          {/* hero Banner section Start  */}
+          {/* Selling Your Car Made Easy */}
+          <section className="section get-start">
+            <div className="container">
+              <div className=" grid md:grid-cols-2 gap-5">
+                {/* left container  */}
+                <div className="relative h-80 rounded-2xl ">
+                  <div className="absolute z-50 bottom-[-35px] right-10 bg-white rounded-2xl px-10 py-5">
+                    <ul className="text-theme-500">
+                      <li>Recommended by</li>
+                      <li className="text-theme-semibold text-green-600 text-xl">
+                        5000+ Customers
+                      </li>
+                      <li>Across India!</li>
+                    </ul>
+                  </div>
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="https://luxuryride.in/img/selling-car-made-simple.png"
+                    alt=""
+                  />
+                </div>
+                {/* right container  */}
+                <div className="flex flex-col justify-between p-6">
+                  <div>
+                    <h2 className="h2 text-theme-semibold">
+                      Selling Your Car Made Easy
+                    </h2>
+                  </div>
+                  <div>
+                    <p className="text-theme-500 text-md">
+                      Book your car inspection from our trained evaluators at
+                      your doorstep & convenience. Get the most lucrative price
+                      in market and experience a completely safe and quick
+                      payment process to make your selling journey easy with
+                      Luxury Ride.
+                    </p>
+                  </div>
+                  <div>
+                    <ul className="flex flex-col gap-y-2">
+                      <li className="flex items-center gap-x-2">
+                        <span>
+                          <TiTick />
+                        </span>
+                        <span>
+                          Fill In Your Car Details & Get An Instant Call Back
+                        </span>
+                      </li>
+                      <li className="flex items-center gap-x-2">
+                        <span>
+                          <TiTick />
+                        </span>
+                        <span>Free Doorstep Evaluation</span>
+                      </li>
+                      <li className="flex items-center gap-x-2">
+                        <span>
+                          <TiTick />
+                        </span>
+                        <span>Instant Payment</span>
+                      </li>
+                      <li className="flex items-center gap-x-2">
+                        <span>
+                          <TiTick />
+                        </span>
+                        <span>Complete Peace of Mind</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <section className="section" id="hero-banner">
-            <div className="relative md:h-96">
+            <div className="relative h-screen">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
-                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
+                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
                 <div className="absolute -z-20 h-full w-full">
                   <img
                     className="h-full w-full object-cover object-left"
-                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
+                    src="https://luxuryride.in/img/bookcar-mobile.png"
                     alt=""
                   />
                 </div>
                 {/* left container  */}
-                <div className="hidden md:flex items-end justify-center">
-                  <div className="h-[22rem]">
-                    <img
-                      className="h-full w-full object-cover object-left"
-                      src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
-                      alt=""
-                    />
-                  </div>
-                </div>
+
                 {/* right container  */}
-                <div className="bg-white p-5 opacity-80">
+                <div className="p-6 opacity-80">
                   <div className="mb-2">
-                    <h3 className="text-theme-semibold font-semibold text-xl">
+                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
-                    </h3>
-                    <h2 className="text-theme-bold font-bold text-2xl">
-                      URBAN GARADGE!
+                    </h3> */}
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
+                      Book Your Car Inspection At Your Doorstep
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500">
-                      Urban Garadge is a one stop destination for the Foremost,
-                      Exclusive and Extravagant Pre-Owned luxury cars. We are
-                      here to serve efficiently all across the country with our
-                      wide array of products and services equipped by our
-                      State-of-the-Art showrooms and Workshops to make your
-                      journey easy and lucrative.
+                    <p className="text-theme-500 text-white text-lg">
+                      Urban Garadge is not owned but experienced and we let you
+                      experience it from the comfort of your home. Or just
+                      simply visit our experience centre near you.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-x-5">
+                  <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
-                      <ul className="text-theme-500">
-                        <li className="flex items-center">
-                          <TiTick className="text-red-500 text-xl" />
-                          Urban Garadge
+                      <ul className="text-theme-500 text-xl  flex flex-col gap-y-5">
+                        <li className="flex text-white items-center text-theme-500">
+                          <TiTick className="text-white text-xl" />
+                          <span>Safety assurance</span>
                         </li>
-                        <li className="flex items-center">
+                        <li className="flex text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-500 text-xl" /> PAN India
-                          Delivery
+                          <TiTick className="text-white text-xl" />
+                          <span>Schedule FREE evaluation</span>
                         </li>
-                        <li className="flex items-center">
+                        <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-500 text-xl" /> In House
-                          Service Available
+                          <TiTick className="text-white text-xl" />
+                          <span>Get the highest quote upon inspection</span>
                         </li>
-                        <li className="flex items-center">
+                        <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-500 text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <ul className="text-theme-500">
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 15 Day
-                          Money Back Guarantee
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 30 Day or
-                          1000 KMs Consumables Warranty
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 1/2/3 Year
-                          Buy Back Facility
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 100%
-                          Certified Cars
+                          <TiTick className="text-white text-xl" />
+                          <span>Ensure complete peace of mind</span>
                         </li>
                       </ul>
                     </div>
                   </div>
+                  <div className="">
+                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      Book Appointment Now
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* hero Banner section End  */}
-
-          {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section brand" id="brand">
-            <div className="container">
-              <h2 className="h2 section-title text-center text-theme-semibold">
-                An Exciting Lineup Of Top Brands In Our Showrooms!
-              </h2>
-
-              <ul className="brand-list has-scrollbar">
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-cover object-center"
-                      src="assets/brands/brand1.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand2.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand3.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand4.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand5.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand6.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand7.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand8.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-          {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
-
-          {/* services  */}
-          <section className="section get-start">
-            <div className="container">
-              <div className="mb-5">
-                <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Team Urban Garadge Is Dedicated To Delivering Excellence
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
-                  Our team of highly skilled technicians is specially trained to
-                  provide your car with personalized care and luxurious
-                  services.
-                </p>
-              </div>
-              <ul className="get-start-list grid grid-cols-1 md:grid-cols-4">
-                {/* Buy  */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                {/* Sell  */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Sell
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                {/* Service */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Service
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                {/* Car care  */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Car care
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                {/* Products  */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Products
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Turtle wax Products
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* sell banner start */}
-          <section className="section get-start">
-            <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                  Sell Your Car At Highest Price In{" "}
-                </h1>
-                <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
-                <div className="flex gap-x-5">
-                  <p className="flex items-center gap-3 text-theme-500">
-                    <FaBlenderPhone className="text-lg" />
-                    Instant Call Back
-                  </p>
-                  <p className="flex items-center gap-3 text-theme-500">
-                    <FaCar className="text-lg" />
-                    Doorstep Evalution
-                  </p>
-                  <p className="flex items-center gap-3 text-theme-500">
-                    <FaMoneyCheckAlt className="text-lg" />
-                    Instants Payment
-                  </p>
-                </div>
-                <div>
-                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                    Sell Your Car
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
           {/* sell banner end  */}
-
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -552,81 +391,6 @@ function SellPage() {
                     </button>
                     <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
                       Get a Direction
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="section" id="hero-banner">
-            <div className="relative h-screen">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
-                <div className="absolute -z-20 h-full w-full">
-                  <img
-                    className="h-full w-full object-cover object-left"
-                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt=""
-                  />
-                </div>
-                {/* left container  */}
-
-                {/* right container  */}
-                <div className=" p-5 opacity-80">
-                  <div className="mb-2">
-                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3> */}
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
-                      Our Services
-                    </h2>
-                  </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-white">
-                      We provide complete professional services in our state of
-                      the art service centres designed to keep your ride running
-                      smoothly and impressively.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex text-white items-center text-theme-500">
-                          <TiTick className="text-white text-xl" />
-                          OEM/OES Parts
-                        </li>
-                        <li className="flex text-white items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-white text-xl" /> PAN India
-                          Delivery
-                        </li>
-                        <li className="flex text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-white text-xl" /> In House
-                          Service Available
-                        </li>
-                        <li className="flex text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-white text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Service package
-                    </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Service
-                    </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Car Care
-                    </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Buy Extended Warranty
                     </button>
                   </div>
                 </div>
