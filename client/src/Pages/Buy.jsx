@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Herosection from "../components/Herosection";
 import CarCard from "../components/CarCard";
-
 import data from "../server.json";
 import { Link } from "react-router-dom";
 
