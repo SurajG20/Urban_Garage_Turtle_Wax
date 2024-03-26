@@ -38,13 +38,10 @@ function Home() {
           {/* <!-- 
         - #HERO
       --> */}
-
           <HeroSection />
-
           {/* <!-- 
         - #FEATURED CAR
       --> */}
-
           <section className="section featured-car" id="featured-car">
             <div className="container">
               <div className="title-wrapper">
@@ -69,13 +66,10 @@ function Home() {
               </ul>
             </div>
           </section>
-
           {/* <!-- 
         - #GET START
       --> */}
-
           {/* why choose us Banner section Start  */}
-
           <section className="section" id="hero-banner">
             <div className="relative md:h-96">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
@@ -171,9 +165,7 @@ function Home() {
               </div>
             </div>
           </section>
-
           {/* why choose us Banner section End  */}
-
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section brand" id="brand">
             <div className="container">
@@ -258,7 +250,6 @@ function Home() {
             </div>
           </section>
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
-
           {/* services  */}
           <section className="section get-start">
             <div className="container">
@@ -473,7 +464,6 @@ function Home() {
               </ul>
             </div>
           </section>
-
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container">
@@ -506,6 +496,7 @@ function Home() {
           </section>
           {/* sell banner end  */}
 
+          {/* Our Experience Centres */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -574,22 +565,23 @@ function Home() {
             </div>
           </section>
 
+          {/* OUR SERVICES */}
           <section className="section" id="hero-banner">
             <div className="relative h-screen">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
-                <div className="absolute -z-20 h-full w-full">
+              {/* Overlay div with gradient from black to transparent */}
+              <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-2">
+                <div className=" absolute -z-20 h-full w-full">
                   <img
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
                     alt=""
                   />
                 </div>
-                {/* left container  */}
+                {/* Left container remains unchanged */}
 
-                {/* right container  */}
-                <div className=" p-5 opacity-80">
+                {/* Right container */}
+                <div className="  opacity-80 p-10">
                   <div className="mb-2">
                     {/* <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose

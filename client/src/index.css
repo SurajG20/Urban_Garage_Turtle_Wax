@@ -958,7 +958,7 @@ a {
 }
 
 .footer-link:is(:hover, :focus) {
-  color: var(--carolina-blue);
+  color: #f50303;
 }
 
 .footer-list:last-child > li:first-child {

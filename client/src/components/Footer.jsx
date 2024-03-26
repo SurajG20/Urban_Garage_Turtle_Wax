@@ -61,8 +61,8 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="tel:+917909200001" className="footer-link">
-                +91 7909200001
+              <Link to="tel:+917744900001" className="footer-link">
+                +91 7744900001
               </Link>
             </li>
             <li>
