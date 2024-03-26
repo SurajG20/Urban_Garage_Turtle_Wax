@@ -32,20 +32,23 @@ function Herohome() {
 
             <div className="hidden md:block">
               <div className="bg-white rounded-2xl">
-                <form action="" class="w-full relative grid grid-cols-4 gap-4">
-                  <div class="flex justify-center">
+                <form
+                  action=""
+                  className="w-full relative grid grid-cols-4 gap-4"
+                >
+                  <div className="flex justify-center">
                     <Dropdown title={"Car, model or brand"} />
                   </div>
 
-                  <div class="flex justify-center">
+                  <div className="flex justify-center">
                     <Dropdown title={"Max monthly payment"} />
                   </div>
 
-                  <div class="flex justify-center">
+                  <div className="flex justify-center">
                     <Dropdown title={"Make the Year"} />
                   </div>
 
-                  <div class="flex justify-center">
+                  <div className="flex justify-center">
                     <Dropdown title={"KMs Driven"} />
                   </div>
                 </form>
