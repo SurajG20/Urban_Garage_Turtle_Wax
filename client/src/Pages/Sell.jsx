@@ -335,7 +335,76 @@ function SellPage() {
             </div>
           </section>
 
-          {/* sell banner end  */}
+          {/* Why Sell To Luxury Ride?  */}
+          <section className="section get-start">
+            <div className="container">
+              <div className="mb-5">
+                <h2 className="h2 section-title text-center text-theme-semibold ">
+                  Why Sell To Luxury Ride?
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                  Sell your luxury car to luxury car experts for hassle free
+                  process and best market price.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-x-5 gap-y-5">
+                {/* card 1 */}
+
+                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                  <div className="bg-slate-200 p-5 rounded-full">
+                    <img
+                      src="	https://luxuryride.in/img/sell-direct-us.svg"
+                      alt="Urban Garadge"
+                    />
+                  </div>
+                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                    Sell Directly To Us
+                  </h1>
+                  <p className="p font-extrabold text-center text-theme-500">
+                    No listing required, we will buy your car
+                  </p>
+                </div>
+
+                {/* card 2 */}
+
+                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                  <div className="bg-slate-200 p-5 rounded-full">
+                    <img
+                      src="https://luxuryride.in/img/no-hidden-fee.svg"
+                      alt="Urban Garadge"
+                    />
+                  </div>
+                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                    No Hidden Fee
+                  </h1>
+                  <p className="p font-extrabold text-center text-theme-500">
+                    You get the full price we promise you without any deductions
+                    or fees
+                  </p>
+                </div>
+
+                {/* card 3 */}
+                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                  <div className="bg-slate-200 p-5 rounded-full">
+                    <img
+                      src="https://luxuryride.in/img/quick-and-transparent-process.svg"
+                      alt="Urban Garadge"
+                    />
+                  </div>
+                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                    Quick & Hassle-Free Process
+                  </h1>
+                  <p className="p font-extrabold text-center text-theme-500">
+                    Get a detailed evaluation report for your car based on our
+                    inspection
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* address  banner end  */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -398,359 +467,95 @@ function SellPage() {
             </div>
           </section>
 
+          {/* Faqs  banner end  */}
+          <section className="section get-start">
+            <div className="container">
+              <div className="mb-5">
+                <h2 className="h2 section-title text-center text-theme-semibold ">
+                  Frequently Asked Questions On Sell
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                  Have questions? We’re here to help.
+                </p>
+              </div>
+
+              <div className="">
+                <div class="relative mb-3">
+                  <h6 class="mb-0">
+                    <button
+                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+                      data-collapse-target="collapse-1"
+                    >
+                      <span>What is Material Tailwind?</span>
+                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
+                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
+                    </button>
+                  </h6>
+                  <div
+                    data-collapse="collapse-1"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                  >
+                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                      We're not always in the position that we want to be at.
+                      We're constantly growing. We're constantly making
+                      mistakes. We're constantly trying to express ourselves and
+                      actualize our dreams.
+                    </div>
+                  </div>
+                </div>
+                <div class="relative mb-3">
+                  <h6 class="mb-0">
+                    <button
+                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+                      data-collapse-target="collapse-2"
+                    >
+                      <span>How to use Material Tailwind?</span>
+                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
+                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
+                    </button>
+                  </h6>
+                  <div
+                    data-collapse="collapse-2"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                  >
+                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                      We're not always in the position that we want to be at.
+                      We're constantly growing. We're constantly making
+                      mistakes. We're constantly trying to express ourselves and
+                      actualize our dreams.
+                    </div>
+                  </div>
+                </div>
+                <div class="relative mb-3">
+                  <h6 class="mb-0">
+                    <button
+                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+                      data-collapse-target="collapse-3"
+                    >
+                      <span>What can I do with Material Tailwind?</span>
+                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
+                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
+                    </button>
+                  </h6>
+                  <div
+                    data-collapse="collapse-3"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                  >
+                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                      We're not always in the position that we want to be at.
+                      We're constantly growing. We're constantly making
+                      mistakes. We're constantly trying to express ourselves and
+                      actualize our dreams.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* <!-- 
         - #BLOG
       --> */}
-
-          <section className="section blog" id="blog">
-            <div className="container">
-              <h2 className="h2 section-title text-theme-semibold">
-                Customers Reviews
-              </h2>
-
-              <ul className="blog-list has-scrollbar">
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-78.png&w=1920&q=75"
-                          alt="Abertura de novos escritórios da empresa"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link
-                        to="#"
-                        className="btn card-badge text-theme-semobold"
-                      >
-                        Balwindar Singh
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">Audi Q3</h3>
-                      <p className="text-theme-400">
-                        i had the best Experience with Urban Garadge ,I test
-                        Drive their Audi Q3 at the chandighad showroom and on
-                        the day of the test drive , i had a cap on intead of my
-                        truban.
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">14 jan 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-75.png&w=1920&q=75"
-                          alt="Quais carros são mais vulneráveis"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link
-                        to="#"
-                        className="btn card-badge text-theme-semibold"
-                      >
-                        Naveen Mishra
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">
-                        <Link to="#">Hyundai Verna</Link>
-                      </h3>
-                      <p className="text-theme-400">
-                        It was amazing experience... The gesture..the quality of
-                        work ..the process ..it's all of the excellent
-                        quality...thanks @Urban Garadge for the amazing
-                        experience 👍👍
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Jan 22, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-48.png&w=1920&q=75"
-                          alt="As estatísticas mostraram qual idade média"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Naveen Mishra
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">
-                        <Link to="#">BMW GT</Link>
-                      </h3>
-                      <p className="text-theme-400">
-                        It was amazing experience... The gesture..the quality of
-                        work ..the process ..it's all of the excellent
-                        quality...thanks @Urban Garadge for the amazing
-                        experience 👍👍
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">feb 10, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-50.png&w=1920&q=75"
-                          alt="O que é necessário ao alugar um carro?"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Carros
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          O que é necessário ao alugar um carro?
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-26.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-45.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-36.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-29.png&w=1920&q=75"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
         </article>
       </main>
       <Footer />

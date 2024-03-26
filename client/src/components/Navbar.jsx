@@ -98,7 +98,7 @@ function Navbar() {
                 to="tel:+917909200001"
                 className="contact-link text-theme-500"
               >
-                +91 7909200001
+                +91 7744900001
               </Link>
 
               <span className="contact-time text-theme-500">
@@ -106,7 +106,11 @@ function Navbar() {
               </span>
             </div>
 
-            <Link to="/contant-us" className="btn user-btn hidden" aria-label="Profile">
+            <Link
+              to="/contant-us"
+              className="btn user-btn hidden"
+              aria-label="Profile"
+            >
               <MdPerson className="text-2xl" />
             </Link>
 
