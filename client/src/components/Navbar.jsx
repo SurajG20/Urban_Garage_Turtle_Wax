@@ -55,11 +55,20 @@ function Navbar() {
 
               <li>
                 <Link
-                  to="/car-care"
+                  to="/coating"
                   className="navbar-link text-theme-500"
                   data-nav-link
                 >
-                  Coatings and PPF
+                  Coating
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ppf"
+                  className="navbar-link text-theme-500"
+                  data-nav-link
+                >
+                  PPF
                 </Link>
               </li>
               <li>

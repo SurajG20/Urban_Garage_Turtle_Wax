@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 // icons
 import { TiTick } from "react-icons/ti";
 
-function CarcarePage() {
+function PPFPage() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -994,4 +994,4 @@ function CarcarePage() {
   );
 }
 
-export default CarcarePage;
+export default PPFPage;
