@@ -99,12 +99,12 @@ function Home() {
                       Why Choose
                     </h3>
                     <h2 className="text-theme-bold font-bold text-2xl">
-                      URBAN GARADGE!
+                      URBAN GARAGE!
                     </h2>
                   </div>
                   <div className="mb-2">
                     <p className="text-theme-500">
-                      Urban Garadge is a one stop destination for the Foremost,
+                      Urban Garage is a one stop destination for the Foremost,
                       Exclusive and Extravagant Pre-Owned luxury cars. We are
                       here to serve efficiently all across the country with our
                       wide array of products and services equipped by our
@@ -117,7 +117,7 @@ function Home() {
                       <ul className="text-theme-500">
                         <li className="flex items-center">
                           <TiTick className="text-red-500 text-xl" />
-                          Urban Garadge
+                          Urban Garage
                         </li>
                         <li className="flex items-center">
                           {" "}
@@ -173,80 +173,51 @@ function Home() {
                 An Exciting Lineup Of Top Brands In Our Showrooms!
               </h2>
 
-              <ul className="brand-list has-scrollbar">
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-cover object-center"
-                      src="assets/brands/brand1.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand2.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand3.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand4.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand5.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand6.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand7.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand8.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-              </ul>
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 has-scrollbar">
+                <div className="h-16 w-16 m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand1.png"
+                    alt=""
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand2.png"
+                    alt=""
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand3.png"
+                    alt=""
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand4.png"
+                    alt=""
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand5.png"
+                    alt=""
+                  />
+                </div>
+                <div className="h-16  w-auto m-auto">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src="assets/brands/brand6.png"
+                    alt=""
+                  />
+                </div>
+              
+              </div>
             </div>
           </section>
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
@@ -255,7 +226,7 @@ function Home() {
             <div className="container">
               <div className="mb-5">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Team Urban Garadge Is Dedicated To Delivering Excellence
+                  Team Urban Garage Is Dedicated To Delivering Excellence
                 </h2>
                 <p className="p max-w-3xl m-auto text-center text-theme-500">
                   Our team of highly skilled technicians is specially trained to

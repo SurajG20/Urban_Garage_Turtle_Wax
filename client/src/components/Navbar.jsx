@@ -16,7 +16,7 @@ function Navbar() {
               <img
                 className="h-full"
                 src={"assets/logo/light-logo.png"}
-                alt="URBAN GRADGE"
+                alt="URBAN "
               />
             </div>
           </Link>

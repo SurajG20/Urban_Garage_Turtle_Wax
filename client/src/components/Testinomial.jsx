@@ -76,7 +76,7 @@ function Testinomial() {
                 <p className="text-theme-400">
                   It was amazing experience... The gesture..the quality of work
                   ..the process ..it's all of the excellent quality...thanks
-                  @Urban Garadge for the amazing experience 👍👍
+                  @Urban Garage for the amazing experience 👍👍
                 </p>
 
                 <div className="card-meta">
@@ -120,7 +120,7 @@ function Testinomial() {
                 <p className="text-theme-400">
                   It was amazing experience... The gesture..the quality of work
                   ..the process ..it's all of the excellent quality...thanks
-                  @Urban Garadge for the amazing experience 👍👍
+                  @Urban Garage for the amazing experience 👍👍
                 </p>
 
                 <div className="card-meta">

@@ -17,10 +17,10 @@ function Herohome() {
   return (
     <section className="">
       <div
-        className="abosolute -z-50 m-1 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+        className="abosolute -z-50 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
         style={backgroundImg}
       >
-        <div className="absolute m-1 -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+        <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
         <div className="max-w-6xl m-auto px-10 py-5">
           {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
           <div className="flex flex-col gap-y-5">

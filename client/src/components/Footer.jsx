@@ -18,7 +18,7 @@ function Footer() {
             </Link>
 
             <p className="footer-text">
-              Urban Garadge is the destination that you’ve been looking for all
+              Urban Garage is the destination that you’ve been looking for all
               this time. Comprising of the most enthralling lineup of pre-owned
               luxury cars, We offer a car ecosystem to cater all your automotive
               needs, ensuring complete satisfaction and fulfillment.
@@ -118,7 +118,7 @@ function Footer() {
               className="hover:text-red-600 text-theme-semibold navbar-link"
               to="/"
             >
-              Urban Garadge
+              Urban Garage
             </Link>
             . All rights reserved
           </p>

@@ -104,12 +104,12 @@ function PPFPage() {
                       Why Choose
                     </h3>
                     <h2 className="text-theme-bold font-bold text-2xl">
-                      URBAN GARADGE!
+                      URBAN GARAGE!
                     </h2>
                   </div>
                   <div className="mb-2">
                     <p className="text-theme-500">
-                      Urban Garadge is a one stop destination for the Foremost,
+                      Urban Garage is a one stop destination for the Foremost,
                       Exclusive and Extravagant Pre-Owned luxury cars. We are
                       here to serve efficiently all across the country with our
                       wide array of products and services equipped by our
