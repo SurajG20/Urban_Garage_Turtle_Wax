@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedinIn,
+  FaYoutube,
+  FaSquareXTwitter,
+} from "react-icons/fa6";
 
 function Footer() {
   return (
     <footer className="footer bg-theme-white">
       <div className="container">
-        <div className="footer-top">
-          <div className="footer-brand">
+        <div className="grid grid-cols-5  gap-x-10 mb-10">
+          <div className="col-span-2">
             <Link to="/" className="logo">
               <div className="h-20 w-20">
                 <img
@@ -25,7 +32,7 @@ function Footer() {
             </p>
           </div>
 
-          <ul className="footer-list">
+          <div className="flex flex-col gap-2">
             <li>
               <p className="footer-list-title">Quick Links</p>
             </li>
@@ -53,9 +60,9 @@ function Footer() {
                 LR Buy Back
               </Link>
             </li>
-          </ul>
+          </div>
 
-          <ul className="footer-list flex flex-col">
+          <div className=" flex flex-col gap-2">
             <li>
               <p className="footer-list-title">For Assistance</p>
             </li>
@@ -70,38 +77,61 @@ function Footer() {
                 support@dcbi.in
               </Link>
             </li>
-          </ul>
+          </div>
+          <div className=" flex flex-col gap-2">
+            <li>
+              <p className="footer-list-title">For Assistance</p>
+            </li>
+
+            <li>
+              <Link to="tel:+917744900001" className="footer-link">
+                +91 7744900001
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="footer-link">
+                support@dcbi.in
+              </Link>
+            </li>
+          </div>
         </div>
 
         <div className="footer-bottom">
           <ul className="social-list">
             <li>
-              <Link to="#" className="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+              <Link
+                to="https://www.facebook.com/UrbanGarageIndia"
+                target="_blank"
+                className="social-link"
+              >
+                <FaFacebook />
               </Link>
             </li>
 
             <li>
-              <Link to="#" className="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
+              <Link
+                to="https://www.instagram.com/urbangarageindia"
+                target="_blank"
+                className="social-link"
+              >
+                <FaInstagram />
               </Link>
             </li>
 
             <li>
-              <Link to="#" className="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
+              <Link to="#" target="_blank" className="social-link">
+                <FaLinkedinIn />
+              </Link>
+            </li>
+            <li>
+              <Link to="#" target="_blank" className="social-link">
+                <FaYoutube />
               </Link>
             </li>
 
             <li>
-              <Link to="#" className="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </Link>
-            </li>
-
-            <li>
-              <Link to="#" className="social-link">
-                <ion-icon name="logo-skype"></ion-icon>
+              <Link to="#" target="_blank" className="social-link">
+                <FaSquareXTwitter />
               </Link>
             </li>
 

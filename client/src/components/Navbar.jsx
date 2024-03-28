@@ -16,7 +16,7 @@ function Navbar() {
               <img
                 className="h-full"
                 src={"assets/logo/light-logo.png"}
-                alt="URBAN "
+                alt="URBAN Garage"
               />
             </div>
           </Link>
@@ -89,15 +89,7 @@ function Navbar() {
                   Recent Work
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/about-us"
-                  className="navbar-link text-theme-500"
-                  data-nav-link
-                >
-                  About Us
-                </Link>
-              </li>
+              
             </ul>
           </nav>
 

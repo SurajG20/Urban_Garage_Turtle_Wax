@@ -265,7 +265,7 @@ a {
   left: 0;
   width: 100%;
   transition: var(--transition);
-  z-index: 4;
+  z-index: 999;
 }
 
 .header.active {
@@ -922,6 +922,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   row-gap: 50px;
+  
 }
 
 .footer-top .logo {
@@ -988,7 +989,7 @@ a {
 }
 
 .social-link:is(:hover, :focus) {
-  color: var(--carolina-blue);
+  color: #f50303;
 }
 
 .copyright {
@@ -1000,7 +1001,7 @@ a {
 }
 
 .copyright > a:is(:hover, :focus) {
-  color: var(--carolina-blue);
+  color: #f50303;
 }
 
 /*-----------------------------------*\
