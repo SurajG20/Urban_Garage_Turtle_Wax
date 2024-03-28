@@ -5,9 +5,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import BuyPage from "./Pages/Buy";
 import SellPage from "./Pages/Sell";
-// import CarcarePage from "./Pages/Carcare";
+import ServicePage from "./Pages/ServicePage";
 import CoatingPage from "./Pages/Coating";
 import PPFPage from "./Pages/PPF";
+
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/buy" element={<BuyPage />} />
       <Route path="/sell" element={<SellPage />} />
+      <Route path="/service" element={<ServicePage />} />
       <Route path="/coating" element={<CoatingPage />} />
       <Route path="/ppf" element={<PPFPage />} />
       <Route path="*" element={<PPFPage />} />
