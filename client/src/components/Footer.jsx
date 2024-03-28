@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// icons
 import {
   FaInstagram,
   FaFacebook,
@@ -7,6 +9,7 @@ import {
   FaYoutube,
   FaSquareXTwitter,
 } from "react-icons/fa6";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 function Footer() {
   return (
@@ -31,54 +34,80 @@ function Footer() {
               needs, ensuring complete satisfaction and fulfillment.
             </p>
           </div>
-
-          <div className="flex flex-col gap-2">
+          {/* quick link  */}
+          <div className="flex flex-col ">
             <li>
               <p className="footer-list-title">Quick Links</p>
             </li>
 
             <li>
-              <Link to="#" className="footer-link">
-                About Us
+              <Link to="/turtle-wax-products" className="footer-link flex items-center gap-x-1">
+                <span>Turtle Wax Products</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
 
             <li>
-              <Link to="#" className="footer-link">
-                Blog
+              <Link to="/recent-work" className="footer-link flex items-center gap-x-1">
+                <span>Recent Work</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
 
             <li>
-              <Link to="#" className="footer-link">
-                LR Assurance
+              <Link to={"/ppf"} className="footer-link flex items-center gap-x-1">
+                <span>PPF</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
-
             <li>
-              <Link to="#" className="footer-link">
-                LR Buy Back
+              <Link to={"/coating"} className="footer-link flex items-center gap-x-1">
+                <span>Coating</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
           </div>
-
-          <div className=" flex flex-col gap-2">
+          {/* Service  */}
+          <div className=" flex flex-col ">
             <li>
-              <p className="footer-list-title">For Assistance</p>
+              <p className="footer-list-title">Services</p>
             </li>
 
             <li>
-              <Link to="tel:+917744900001" className="footer-link">
-                +91 7744900001
+              <Link to="/buy" className="footer-link flex items-center gap-x-1">
+                <span>Buy</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
             <li>
-              <Link to="#" className="footer-link">
-                support@dcbi.in
+              <Link to="/sell" className="footer-link flex items-center gap-x-1">
+                <span>Sell</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/service" className="footer-link flex items-center gap-x-1">
+                <span>Our Services</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
               </Link>
             </li>
           </div>
-          <div className=" flex flex-col gap-2">
+          {/* For Assistance */}
+          <div className=" flex flex-col ">
             <li>
               <p className="footer-list-title">For Assistance</p>
             </li>
