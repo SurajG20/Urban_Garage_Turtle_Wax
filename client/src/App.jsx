@@ -8,6 +8,7 @@ import SellPage from "./Pages/Sell";
 // import CarcarePage from "./Pages/Carcare";
 import CoatingPage from "./Pages/Coating";
 import PPFPage from "./Pages/PPF";
+import RecentWork from "./Pages/RecentWork";
 
 
 
@@ -16,12 +17,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/buy" element={<BuyPage />} />
-      <Route path="/sell" element={<SellPage />} />
-      <Route path="/coating" element={<CoatingPage />} />
-      <Route path="/ppf" element={<PPFPage />} />
-      <Route path="*" element={<PPFPage />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/buy' element={<BuyPage />} />
+      <Route path='/sell' element={<SellPage />} />
+      <Route path='/coating' element={<CoatingPage />} />
+      <Route path='/ppf' element={<PPFPage />} />
+      <Route path='/recent-work' element={<RecentWork />} />
+
+      <Route path='*' element={<PPFPage />} />
     </Routes>
   );
 }
