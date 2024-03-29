@@ -1,23 +1,17 @@
-import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import HeroSection from '../components/Herohome';
-import CarCard from '../components/CarCard';
 import { FaBlenderPhone } from 'react-icons/fa';
 import { FaCar } from 'react-icons/fa';
 import { FaMoneyCheckAlt } from 'react-icons/fa';
-import data from '../server.json';
 import { Link } from 'react-router-dom';
 import { IoDiamondOutline } from 'react-icons/io5';
 // icons
 import { TiTick } from 'react-icons/ti';
-
+import { GrCertificate } from 'react-icons/gr';
+import { GiReceiveMoney } from 'react-icons/gi';
+import { IoCarSportOutline } from 'react-icons/io5';
 function RecentWork() {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    setCars(data.cars);
-  }, []);
+ 
 
   return (
     <div className='relative'>
@@ -113,7 +107,7 @@ function RecentWork() {
                 <div className='flex flex-col items-center justify-center '>
                   <div className='flex justify-center'>
                     <p className='inline-flex items-center gap-2 font-semibold text-2xl'>
-                      <IoDiamondOutline className='text-3xl' />
+                      <GrCertificate className='text-3xl' />
                       Service
                     </p>
                   </div>
@@ -122,7 +116,7 @@ function RecentWork() {
                 <div className='flex flex-col items-center justify-center '>
                   <div className='flex justify-center'>
                     <p className='inline-flex items-center gap-2 font-semibold text-2xl'>
-                      <IoDiamondOutline className='text-3xl' />
+                      < GiReceiveMoney className='text-3xl' />
                       Experience
                     </p>
                   </div>
@@ -131,7 +125,7 @@ function RecentWork() {
                 <div className='flex flex-col items-center justify-center '>
                   <div className='flex justify-center'>
                     <p className='inline-flex items-center gap-2 font-semibold text-2xl'>
-                      <IoDiamondOutline className='text-3xl' />
+                      <IoCarSportOutline className='text-3xl' />
                       Choice
                     </p>
                   </div>
