@@ -328,7 +328,7 @@ a {
   position: fixed;
   top: 70px;
   bottom: 0;
-  
+
   max-width: 260px;
   width: 100%;
   padding: 20px 25px;
@@ -392,7 +392,6 @@ a {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-
 
 .hero-form {
   border: 1px solid var(--white);
@@ -619,7 +618,7 @@ a {
 \*-----------------------------------*/
 
 .get-start .section-title {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .get-start-list {
@@ -629,7 +628,7 @@ a {
 
 .get-start-card {
   background: #eeeeee;
-  padding: 20px;
+  padding: 10px;
   border-radius: var(--radius-18);
   border: 1px solid var(--white);
   transition: var(--transition);
@@ -713,7 +712,7 @@ a {
 \*-----------------------------------*/
 
 .brand .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .brand-card {
@@ -803,7 +802,7 @@ a {
 \*-----------------------------------*/
 
 .blog .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .blog-card {
@@ -922,7 +921,6 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   row-gap: 50px;
-  
 }
 
 .footer-top .logo {
