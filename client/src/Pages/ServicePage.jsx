@@ -271,6 +271,99 @@ function ServicePage() {
             </div>
           </section>
 
+          <section className="section blog" id="blog">
+            <div className="container">
+              <h2 className="h2 text-center section-title text-theme-semibold">
+                Save BIG With Luxury Ride
+              </h2>
+
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+                {/* card 1 */}
+                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                  <div className="h-48">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/Free-Pick-drop.png"
+                      alt="Urban Garage Service Works"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="h3 text-theme-bold text-red-600">
+                      Free Pickup & Drop
+                    </h3>
+                    <p className="text-theme-500">
+                      We provide free of cost pickup and drop service of your
+                      car from your doorstep to serve you with a comfortable and
+                      reliable experience.
+                    </p>
+                  </div>
+                </div>
+                {/* card 2 */}
+                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                  <div className="h-48">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/oem-parts.png"
+                      alt="Urban Garage Service Works"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="h3 text-theme-bold text-red-600">
+                      Genuine OEM parts
+                    </h3>
+                    <p className="text-theme-500">
+                      We use genuine parts while serving your car to provide you
+                      with a best quality and reliable experience.
+                    </p>
+                  </div>
+                </div>
+                {/* card 3 */}
+                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                  <div className="h-48">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/30-days-warranty.png"
+                      alt="Urban Garage Service Works"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="h3 text-theme-bold text-red-600">
+                      30 Day Warranty
+                    </h3>
+                    <p className="text-theme-500">
+                      Our 30 days consumables warranty covers all your car parts
+                      against any defects or faults.
+                    </p>
+                  </div>
+                </div>
+                {/* card 4 */}
+                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                  <div className="h-48">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/transparent-billing.png"
+                      alt="Urban Garage Service Works"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="h3 text-theme-bold text-red-600">
+                      Transparent billing
+                    </h3>
+                    <p className="text-theme-500">
+                      We provide free of cost pickup and drop service of your
+                      car from your doorstep to serve you with a comfortable and
+                      reliable experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* How Luxury Ride Works?  */}
           <section className="section" id="">
             <div className="container ">
