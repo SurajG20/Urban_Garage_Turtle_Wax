@@ -3,16 +3,25 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/Herohome";
 import CarCard from "../components/CarCard";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
+// import Dropdown from "../utils/Dropdown";
 
 // icons
 import { TiTick } from "react-icons/ti";
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
+import { IoIosStar } from "react-icons/io";
 
 function CoatingPage() {
+  const backgroundImg = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/banners/hero-banner1.jpeg)`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -38,7 +47,167 @@ function CoatingPage() {
         - #HERO
       --> */}
 
-          <HeroSection />
+          <>
+            <section className="">
+              <div
+                className="abosolute -z-50 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+                style={backgroundImg}
+              >
+                <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+                <div className="container">
+                  <div className="grid grid-cols-2 gap-x-52">
+                    {/* right container  */}
+                    <div className="flex flex-col gap-y-5">
+                      <div>
+                        <h1 className="text-[2.8rem] md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
+                          Detailing Services That Fulfill All Your Needs
+                        </h1>
+                      </div>
+
+                      <div>
+                        <ul className="flex flex-col gap-y-5">
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              Recommended by 10,000+ customers across India
+                            </span>
+                          </li>
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              Your trusted partner in top-tier car care
+                            </span>
+                          </li>
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              Recommended by 10,000+ customers across India
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="grid grid-cols-3">
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="flex items-center gap-1">
+                            <IoIosStar className="text-2xl text-yellow-600" />
+                            <IoIosStar className="text-2xl text-yellow-600" />
+                            <IoIosStar className="text-2xl text-yellow-600" />
+                            <IoIosStar className="text-2xl text-yellow-600" />
+                            <IoIosStar className="text-2xl text-yellow-600" />
+                          </div>
+                          <div>
+                            <p className="whitespace-nowrap text-theme-500 text-white">
+                              Based on 100+ ratings
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="flex items-center gap-1">
+                            <h2 className="text-white text-2xl text-theme-semibold">
+                              5000+
+                            </h2>
+                          </div>
+                          <div>
+                            <p className="whitespace-nowrap text-theme-500 text-white">
+                              Detailing done
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="flex items-center gap-1">
+                            <h2 className="text-white text-2xl text-theme-semibold">
+                              8000+
+                            </h2>
+                          </div>
+                          <div>
+                            <p className="whitespace-nowrap text-theme-500 text-white">
+                              Registered users
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* left container  */}
+                    <div className="h-full">
+                      <div className="bg-white p-5 rounded-xl">
+                        <div>
+                          <h3 className="h2 text-theme-semibold flex gap-2 items-center ">
+                            <span>Please Enter Your </span>
+                            <span className="text-red-600">
+                              Car Details
+                            </span>{" "}
+                          </h3>
+                          <p className="text-theme-500">
+                            Fields marked with an * are required
+                          </p>
+                        </div>
+                        <div className="grid grid-cols-2">
+                          <div>
+                            <label htmlFor="">Name*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="">Mobile*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="">Car*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="">Service*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="">State*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="">City*</label>
+                            <input
+                              className="border-gray-300"
+                              type="text"
+                              placeholder="Enter Name"
+                            />
+                          </div>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
 
           {/* <!-- 
         - #FEATURED CAR
