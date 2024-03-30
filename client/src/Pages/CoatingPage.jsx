@@ -158,7 +158,7 @@ function CoatingPage() {
                               Name*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm text-theme-500  outline-none"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Enter Name"
                             />
@@ -168,7 +168,7 @@ function CoatingPage() {
                               Mobile*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm border-gray-300 text-theme-500"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Enter Mobile Number"
                             />
@@ -178,7 +178,7 @@ function CoatingPage() {
                               Car*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm border-gray-300 text-theme-500"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Enter Car Brand/Model"
                             />
@@ -188,7 +188,7 @@ function CoatingPage() {
                               Service*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm border-gray-300 text-theme-500"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Enter Select Service"
                             />
@@ -198,7 +198,7 @@ function CoatingPage() {
                               State*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm border-gray-300 text-theme-500"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Select State"
                             />
@@ -208,7 +208,7 @@ function CoatingPage() {
                               City*
                             </label>
                             <input
-                              className="p-1 bg-gray-200 text-sm border-gray-300 text-theme-500"
+                              className="p-1 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none"
                               type="text"
                               placeholder="Select City"
                             />

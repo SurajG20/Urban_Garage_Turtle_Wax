@@ -1488,6 +1488,15 @@ a {
 .bg-theme-red {
   background-color: "#f50303";
 }
+.border-theme-red {
+  border: 1px solid #f50303;
+}
+.border-theme-gray {
+  border: 1px solid lightgrey;
+}
+.outline-theme-red {
+  outline: 1px solid #f50303;
+}
 
 .text-theme-blue {
   color: #232376;
