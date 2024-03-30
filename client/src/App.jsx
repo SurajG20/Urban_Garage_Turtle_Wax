@@ -21,7 +21,7 @@ function App() {
       <Route path="/coating" element={<CoatingPage />} />
       <Route path="/ppf" element={<PPFPage />} />
       <Route path="/recent-work" element={<RecentWork />} />
-      <Route path="/contact-us" element={<Contactus />} />
+      <Route path="/contant-us" element={<Contactus />} />
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );

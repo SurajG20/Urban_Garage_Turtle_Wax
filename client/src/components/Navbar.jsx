@@ -97,6 +97,7 @@ function Navbar() {
             <div className="header-contact">
               <Link
                 to="tel:+917909200001"
+                target="_blank"
                 className="contact-link text-theme-500"
               >
                 +91 7744900001
