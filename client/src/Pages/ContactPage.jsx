@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroSection from "../components/Herohome";
-import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
@@ -14,12 +12,6 @@ import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 
 function Contactus() {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    setCars(data.cars);
-  }, []);
-
   //  useEffect(() => {
   //    const fetchData = async () => {
   //     fetch("your-api-endpoint")
@@ -38,35 +30,9 @@ function Contactus() {
           {/* <!-- 
         - #HERO
       --> */}
-          
-          {/* <!-- 
-        - #FEATURED CAR
-      --> */}
-          <section className="section featured-car" id="featured-car">
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 text-theme-semibold section-title m-auto">
-                  Take A Glimpse Of Our Collection
-                </h2>
-                {/* 
-                <Link to="#" className="featured-car-link">
-                  <span>Veja mais</span>
 
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link> */}
-              </div>
-
-              <ul className="featured-car-list">
-                {cars &&
-                  cars.map((item) => (
-                    <li key={item._id}>
-                      <CarCard item={item} />
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          </section>
           {/* <!-- 
+    
         - #GET START
       --> */}
           {/* why choose us Banner section Start  */}
