@@ -10,18 +10,20 @@ import CoatingPage from "./Pages/CoatingPage";
 import PPFPage from "./Pages/PPFPage";
 import RecentWork from "./Pages/RecentWorkPage";
 import Contactus from "./Pages/ContactPage";
+import DummyPage from "./Pages/DummyPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/contact-us" element={<Contactus />} />
       <Route path="/buy" element={<BuyPage />} />
       <Route path="/sell" element={<SellPage />} />
       <Route path="/service" element={<ServicePage />} />
       <Route path="/coating" element={<CoatingPage />} />
       <Route path="/ppf" element={<PPFPage />} />
       <Route path="/recent-work" element={<RecentWork />} />
-      <Route path="/contant-us" element={<Contactus />} />
+
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );

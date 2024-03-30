@@ -89,7 +89,6 @@ function Navbar() {
                   Recent Work
                 </Link>
               </li>
-              
             </ul>
           </nav>
 
@@ -109,7 +108,7 @@ function Navbar() {
             </div>
 
             <Link
-              to="/contant-us"
+              to="/contact-us"
               className="btn user-btn hidden"
               aria-label="Profile"
             >
