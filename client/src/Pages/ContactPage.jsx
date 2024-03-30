@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 // icons
 import { TiTick } from "react-icons/ti";
 
-function Home() {
+function Contactus() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -620,4 +620,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Contactus;

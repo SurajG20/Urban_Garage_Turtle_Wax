@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 // pages import
-import Home from "./Pages/Home";
-import BuyPage from "./Pages/Buy";
-import SellPage from "./Pages/Sell";
+import Home from "./Pages/HomePage";
+import BuyPage from "./Pages/BuyPage";
+import SellPage from "./Pages/SellPage";
 import ServicePage from "./Pages/ServicePage";
-import CoatingPage from "./Pages/Coating";
-import PPFPage from "./Pages/PPF";
-import RecentWork from "./Pages/RecentWork";
+import CoatingPage from "./Pages/CoatingPage";
+import PPFPage from "./Pages/PPFPage";
+import RecentWork from "./Pages/RecentWorkPage";
+import Contactus from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/coating" element={<CoatingPage />} />
       <Route path="/ppf" element={<PPFPage />} />
       <Route path="/recent-work" element={<RecentWork />} />
+      <Route path="/contact-us" element={<Contactus />} />
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );
