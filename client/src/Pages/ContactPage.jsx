@@ -94,70 +94,95 @@ function Contactus() {
                 {/* right container  */}
                 <div className="flex flex-col gap-8">
                   <div>
-                    <h2 className="h3 text-theme-semibold">
-                      Do you have a query? Ask us!
+                    <h2 className="h3 text-theme-semibold flex items-center">
+                      Do you have a query?{" "}
+                      <span className="text-theme-red">Ask us!</span>
                     </h2>
                   </div>
                   <div className="grid grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="" className="text-theme-500">
-                        Name*
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        First Name <span className="text-theme-red">*</span>
                       </label>
                       <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Enter Name"
+                        placeholder="Enter Your First Name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="" className="text-theme-500">
-                        Mobile*
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        Last Name<span className="text-theme-red">*</span>
                       </label>
                       <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Enter Mobile Number"
+                        placeholder="Enter Your Last Name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="" className="text-theme-500">
-                        Car*
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        Mobile Number<span className="text-theme-red">*</span>
                       </label>
                       <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Enter Car Brand/Model"
+                        placeholder="Enter Your Mobile Number"
                       />
                     </div>
                     <div>
-                      <label htmlFor="" className="text-theme-500">
-                        Service*
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        Email<span className="text-theme-red">*</span>
                       </label>
                       <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Enter Select Service"
+                        placeholder="Enter Your Email Id"
                       />
                     </div>
                     <div>
-                      <label htmlFor="" className="text-theme-500">
-                        State*
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        Select Query<span className="text-theme-red">*</span>
                       </label>
                       <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Select State"
+                        placeholder="Select Select Query"
                       />
                     </div>
-                    <div>
-                      <label htmlFor="" className="text-theme-500">
-                        City*
+                    <div className="col-span-2">
+                      <label
+                        htmlFor=""
+                        className="text-theme-500 flex items-center"
+                      >
+                        Describe Your Query
+                        <span className="text-theme-red">**</span>
                       </label>
-                      <input
-                        className="p-1 bg-gray-100 text-sm text-theme-500 border-theme-gray outline-none"
+                      <textarea
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
                         type="text"
-                        placeholder="Select City"
+                        placeholder="Write Your Query Here"
                       />
+                    </div>
+                    <div className="">
+                      <button className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold">
+                        Submit
+                      </button>
                     </div>
                   </div>
                   <div></div>
@@ -165,8 +190,6 @@ function Contactus() {
               </div>
             </div>
           </section>
-      
-          {/* sell banner end  */}
 
           {/* Our Experience Centres */}
           <section className="section get-start">
@@ -233,6 +256,171 @@ function Contactus() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Our Experience Centres */}
+          <section className="section get-start">
+            <div className="container">
+              <div className="mb-5">
+                <h2 className="h2 section-title text-center text-theme-semibold ">
+                  Explore Our Service Centres
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                  Schedule your maintenances, repairs and other services easily
+                  with a Urban Garage Service Centres near you.
+                </p>
+              </div>
+
+              <div className="md:flex justify-center gap-x-5 gap-y-5">
+                {/* card 1 */}
+
+                <div className="relative flex flex-col gap-y-8">
+                  {/* New wrapper for positioning */}
+                  <div className="relative z-0 w-96 rounded-2xl">
+                    {/* img-container */}
+                    <div className="h-64 overflow-hidden rounded-2xl">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-cover object-center"
+                        src="https://api.luxuryride.in/public/experience-center/service_center_banner-1689850171539-961537586-delhi-alipur.png"
+                        alt=""
+                      />
+                    </div>
+                    {/* Absolute container moved here, outside the overflow-hidden container */}
+                    <div className="absolute z-50 flex gap-5 bottom-0 -mb-5 left-5">
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 font-semibold text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-y-5">
+                    <div>
+                      <h3 className="h3 text-theme-semibold">
+                        Karnal Service Centre
+                      </h3>
+                      <p className="p text-theme-500">
+                        118, Milestone, Nh-1, Karnal, (Haryana) – 132001
+                      </p>
+                    </div>
+                    <div className="flex gap-5">
+                      <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
+                        Get Directions
+                      </button>
+                      <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
+                        Book Visit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                {/* card 2 */}
+
+                <div className="relative flex flex-col gap-y-8">
+                  {/* New wrapper for positioning */}
+                  <div className="relative z-0 w-96 rounded-2xl">
+                    {/* img-container */}
+                    <div className="h-64 overflow-hidden rounded-2xl">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-cover object-center"
+                        src="https://api.luxuryride.in/public/experience-center/service_center_banner-1689853292460-261947597-alipur-service-centre.png"
+                        alt=""
+                      />
+                    </div>
+                    {/* Absolute container moved here, outside the overflow-hidden container */}
+                    <div className="absolute z-50 flex gap-5 bottom-0 -mb-5 left-5">
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 font-semibold text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                        <div className="text-theme-500 text-theme-red">
+                          8,000
+                        </div>
+                        <div className="text-theme-500 text-sm">
+                          Sq. Ft. Area
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-y-5">
+                    <div>
+                      <h3 className="h3 text-theme-semibold">
+                        Delhi Service Centre
+                      </h3>
+                      <p className="p text-theme-500">
+                        Khasra No. 98, 2, GT Karnal Road,Dham, Alipur, Delhi,
+                        110036
+                      </p>
+                    </div>
+                    <div className="flex gap-5">
+                      <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
+                        Get Directions
+                      </button>
+                      <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
+                        Book Visit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* <div className="relative h-64 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
+                  <div className="relative z-10">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                      Karnal
+                    </h1>
+                    <p className="p font-extrabold text-theme-500">
+                      Witness the grandeur of India's largest pre-owned car
+                      experience centre, where our highly skilled team of
+                      experts bring you a wide array of comprehensive
+                      car-related services.
+                    </p>
+
+                    <div className="flex gap-x-3">
+                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        Book a visit
+                      </button>
+                      <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                        Get a Direction
+                      </button>
+                    </div>
+                  </div>
+                </div> */}
               </div>
             </div>
           </section>
