@@ -8,7 +8,7 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
-
+import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
 import HeroSection from "../components/HeroSection";
@@ -57,7 +57,7 @@ function ServicePage() {
 
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 has-scrollbar">
                 {/* card 1 */}
-                <div className="h-42 col-span-2 flex flex-col justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
+                <div className="h-42 col-span-2 flex flex-col  justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
                   <div className="">
                     <h2 className="h3 text-theme-bold text-white">
                       Periodic Maintenance
@@ -74,20 +74,26 @@ function ServicePage() {
                     </div>
                     <div>
                       <img
+                        loading="lazy"
                         src="https://luxuryride.in/img/periodic-maintenance.svg"
-                        alt=""
+                        alt="Urban Garage Periodic Maintenance"
                       />
                     </div>
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300 rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/ac-service-and-repair.svg"
-                        alt="Urban Garage AC Service & Repair"
-                      />
+                      <div className="h-[3rem]">
+                        <div className="h-[3rem]">
+                          <Image
+                            src="assets/icons/icon1.png"
+                            alt="Urban Garage AC Service & Repair"
+                            onError="assets/icons/loading.png"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -98,13 +104,16 @@ function ServicePage() {
                 </div>
 
                 {/* card 3*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/battery.svg"
-                        alt="Urban Garage AC Service & Repair"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon2.png"
+                          alt="Urban Garage Battery"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -112,29 +121,35 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 4*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/denting-and-painting.svg"
-                        alt="Urban Garage Denting Painting"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon3.png"
+                          alt="Urban Garage Denting & Painting"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
                     <h3 className="h3 text-theme-semibold">
-                      AC Service & Repair
+                      Denting & Painting
                     </h3>
                   </div>
                 </div>
                 {/* card 5*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/windshield-and-glasses.svg"
-                        alt="Urban Garage windshield-and-glasses"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon5.png"
+                          alt="Urban Garage Windshield & Glasses"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -144,13 +159,16 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 6*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-center items-start border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/suspension-fitments.svg"
-                        alt="Urban Garage suspension-fitments"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon4.png"
+                          alt="Urban Garage Suspension & Fitments"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -160,13 +178,16 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 7*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/tyres-and-wheel-care.svg"
-                        alt="Urban Garage Tyres & Wheel Care"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon7.png"
+                          alt="Urban Garage Tyres & Wheel Care"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -176,29 +197,35 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 8*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/inspection-checkups.svg"
-                        alt="Urban Garage AC Service & Repair"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon6.png"
+                          alt="Urban Garage Inspection & Checkups"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
                     <h3 className="h3 text-theme-semibold">
-                      AC Service & Repair
+                      Inspection & Checkups
                     </h3>
                   </div>
                 </div>
                 {/* card 9*/}
-                <div className="h-42  flex flex-col justify-between  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <img
-                        src="https://luxuryride.in/img/insurance-claims.svg"
-                        alt="Urban Garage Insurance Claims"
-                      />
+                      <div className="h-[3rem]">
+                        <Image
+                          src="assets/icons/icon9.png"
+                          alt="Urban Garage Insurance Claims"
+                          onError="assets/icons/loading.png"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between">
