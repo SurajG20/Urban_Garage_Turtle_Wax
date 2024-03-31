@@ -8,7 +8,7 @@ function Herohome() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('assets/banners/hero-banner1.jpeg')`,
+    url('assets/cars/car6.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

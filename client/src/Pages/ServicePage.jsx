@@ -236,7 +236,7 @@ function ServicePage() {
             </div>
           </section>
 
-          {/* Our Experience Centres */}
+          {/* Explore Our Service Centres */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -257,11 +257,10 @@ function ServicePage() {
                   <div className="relative z-0 w-96 rounded-2xl">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
-                      <img
-                        loading="lazy"
-                        className="h-full w-full object-cover object-center"
-                        src="https://api.luxuryride.in/public/experience-center/service_center_banner-1689850171539-961537586-delhi-alipur.png"
-                        alt=""
+                      <Image
+                        src="assets/garadge/garadge2.jpeg"
+                        alt="Urban Garage"
+                        onError="assets/garadge/garadge1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -318,11 +317,10 @@ function ServicePage() {
                   <div className="relative z-0 w-96 rounded-2xl">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
-                      <img
-                        loading="lazy"
-                        className="h-full w-full object-cover object-center"
-                        src="https://api.luxuryride.in/public/experience-center/service_center_banner-1689853292460-261947597-alipur-service-centre.png"
-                        alt=""
+                      <Image
+                        src="assets/garadge/garadge4.jpeg"
+                        alt="Urban Garage"
+                        onError="assets/garadge/garadge1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -373,35 +371,11 @@ function ServicePage() {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="relative h-64 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                      Karnal
-                    </h1>
-                    <p className="p font-extrabold text-theme-500">
-                      Witness the grandeur of India's largest pre-owned car
-                      experience centre, where our highly skilled team of
-                      experts bring you a wide array of comprehensive
-                      car-related services.
-                    </p>
-
-                    <div className="flex gap-x-3">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Book a visit
-                      </button>
-                      <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                        Get a Direction
-                      </button>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </section>
 
-          {/* Service Packages */}
+          {/* service location banners */}
           <section className="section get-start">
             <div className="container">
               {/* <div className="mb-5">
@@ -463,6 +437,7 @@ function ServicePage() {
             </div>
           </section>
 
+          {/* Save BIG With Luxury Ride */}
           <section className="section blog" id="blog">
             <div className="container">
               <h2 className="h2 text-center section-title text-theme-semibold">
@@ -473,11 +448,10 @@ function ServicePage() {
                 {/* card 1 */}
                 <div className="border border-gray-400 rounded-xl overflow-hidden">
                   <div className="h-48">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
+                    <Image
                       src="https://luxuryride.in/img/Free-Pick-drop.png"
-                      alt="Urban Garage Service Works"
+                      alt="Urban Garage"
+                      onError="assets/loading.jpeg"
                     />
                   </div>
                   <div className="p-5">
@@ -494,11 +468,10 @@ function ServicePage() {
                 {/* card 2 */}
                 <div className="border border-gray-400 rounded-xl overflow-hidden">
                   <div className="h-48">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
+                    <Image
                       src="https://luxuryride.in/img/oem-parts.png"
-                      alt="Urban Garage Service Works"
+                      alt="Urban Garage Genuine OEM parts"
+                      onError="assets/loading.jpeg"
                     />
                   </div>
                   <div className="p-5">
@@ -514,11 +487,10 @@ function ServicePage() {
                 {/* card 3 */}
                 <div className="border border-gray-400 rounded-xl overflow-hidden">
                   <div className="h-48">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
+                    <Image
                       src="https://luxuryride.in/img/30-days-warranty.png"
                       alt="Urban Garage Service Works"
+                      onError="assets/loading.jpeg"
                     />
                   </div>
                   <div className="p-5">
@@ -534,11 +506,10 @@ function ServicePage() {
                 {/* card 4 */}
                 <div className="border border-gray-400 rounded-xl overflow-hidden">
                   <div className="h-48">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
+                    <Image
                       src="https://luxuryride.in/img/transparent-billing.png"
                       alt="Urban Garage Service Works"
+                      onError="assets/loading.jpeg"
                     />
                   </div>
                   <div className="p-5">
@@ -555,18 +526,17 @@ function ServicePage() {
               </div>
             </div>
           </section>
-
-          {/* How Luxury Ride Works?  */}
+          {/* How Urban Garage Works?  */}
           <section className="section" id="">
             <div className="container ">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* left container  */}
                 <div className="md:flex items-end justify-center">
                   <div className="md:h-96 w-full">
-                    <img
-                      className="h-full w-full object-cover object-center"
+                    <Image
                       src="https://luxuryride.in/img/service-works.png"
-                      alt="Urban Garage Service Works"
+                      alt="Urban Garage"
+                      onError="assets/loading.jpeg"
                     />
                   </div>
                 </div>
@@ -574,7 +544,7 @@ function ServicePage() {
                 <div className="bg-gray-200 p-5 opacity-80 flex flex-col gap-5">
                   <div className="mb-2">
                     <h2 className="h1 text-theme-bold font-bold text-2xl">
-                      How Luxury Ride Works?
+                      How Urban Garage Works?
                     </h2>
                   </div>
                   {/* card 1 */}
@@ -688,7 +658,6 @@ function ServicePage() {
               </div>
             </div>
           </section>
-
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container">

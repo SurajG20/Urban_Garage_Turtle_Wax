@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroSection from "../components/Herohome";
+import Herohome from "../components/Herohome";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
 import { FaBlenderPhone } from "react-icons/fa";
@@ -38,7 +38,7 @@ function Home() {
           {/* <!-- 
         - #HERO
       --> */}
-          <HeroSection />
+          <Herohome />
           {/* <!-- 
         - #FEATURED CAR
       --> */}
@@ -216,7 +216,6 @@ function Home() {
                     alt=""
                   />
                 </div>
-              
               </div>
             </div>
           </section>

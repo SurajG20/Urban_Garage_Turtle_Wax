@@ -8,9 +8,9 @@ function CarCard({ item }) {
           src={`${
             item.img
               ? item.img[0]
-              : "https://cdn1.vectorstock.com/i/1000x1000/89/75/classic-car-banner-template-vector-8668975.jpg"
+              : "assets/loading.jpeg"
           }`}
-          alt="Toyota RAV4 2022"
+          alt="Urban Garage Car"
           loading="lazy"
           width="440"
           height="300"

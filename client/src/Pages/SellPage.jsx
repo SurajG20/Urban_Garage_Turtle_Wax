@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Dropdown from "../utils/Dropdown";
 import { IoCall } from "react-icons/io5";
 import { MdOutlinePayments } from "react-icons/md";
-
+import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
 
@@ -24,7 +24,7 @@ function SellPage() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('https://luxuryride.in/img/sell-banner-new.png')`,
+    url('assets/cars/car16.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -212,10 +212,10 @@ function SellPage() {
                       <li>Across India!</li>
                     </ul>
                   </div>
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="https://luxuryride.in/img/selling-car-made-simple.png"
-                    alt=""
+                    alt="Urban Garage"
+                    onError="assets/loading.jpeg"
                   />
                 </div>
                 {/* right container  */}
@@ -404,7 +404,7 @@ function SellPage() {
             </div>
           </section>
 
-          {/* address  banner end  */}
+          {/* service location banners */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -420,47 +420,46 @@ function SellPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                  <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                    CHANDIGARH
-                  </h1>
-                  <p className="p font-extrabold text-theme-500">
-                    Standing at the heart of the Millennium city, our team of
-                    seasoned experts offers an array luxury car services and
-                    tailored solutions to cater to your every automotive
-                    requirement.
-                  </p>
+                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge2.jpeg')]">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
+                  <div className="relative z-10">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                      Service Packages
+                    </h1>
+                    <p className="p font-extrabold text-theme-500">
+                      We strive to build long lasting relationships with our
+                      clients and that is why we provide you with every kinds
+                      after-sales service with our comprehensive service
+                      packages.
+                    </p>
 
-                  <div className="flex gap-x-3">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book a vist
-                    </button>
-                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                      Get a Directions
-                    </button>
+                    <div className="flex gap-x-3 mt-5">
+                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        Know more
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 {/* card 2 */}
 
-                <div className="h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                  <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                    Karnal
-                  </h1>
-                  <p className="p font-extrabold text-theme-500">
-                    Witness the grandeur of India's largest pre-owned car
-                    experience centre, where our highly skilled team of experts
-                    bring you a wide array of comprehensive car-related
-                    services.
-                  </p>
+                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
+                  <div className="relative z-10">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                      Extended Warranty
+                    </h1>
+                    <p className="p font-extrabold text-theme-500">
+                      Looking to extend your warranty coverage? Up to 8 years
+                      additional warranty coverage is available even after
+                      original coverage expiry.
+                    </p>
 
-                  <div className="flex gap-x-3">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book a visit
-                    </button>
-                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                      Get a Direction
-                    </button>
+                    <div className="flex gap-x-3 mt-5">
+                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        Know more
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
