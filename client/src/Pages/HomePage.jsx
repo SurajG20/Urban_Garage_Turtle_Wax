@@ -9,7 +9,7 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
-
+import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
 
@@ -165,7 +165,7 @@ function Home() {
               </div>
             </div>
           </section>
-          {/* why choose us Banner section End  */}
+
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section brand" id="brand">
             <div className="container">
@@ -173,54 +173,54 @@ function Home() {
                 An Exciting Lineup Of Top Brands In Our Showrooms!
               </h2>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 has-scrollbar">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 has-scrollbar">
                 <div className="h-16 w-16 m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand1.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand2.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand3.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand4.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand5.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16  w-auto m-auto">
-                  <img
-                    className="h-full w-full object-cover object-center"
+                  <Image
                     src="assets/brands/brand6.png"
-                    alt=""
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
                   />
                 </div>
               </div>
             </div>
           </section>
-          {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
-          {/* services  */}
+
+          {/* Team Urban Garage Is Dedicated To Delivering Excellence */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
@@ -244,7 +244,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -269,7 +269,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Red Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -294,7 +294,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -319,7 +319,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -344,7 +344,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-90"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -369,7 +369,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -393,7 +393,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -417,7 +417,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -434,7 +434,8 @@ function Home() {
               </ul>
             </div>
           </section>
-          {/* sell banner start */}
+
+          {/* banner  */}
           <section className="section get-start">
             <div className="container">
               <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
@@ -464,7 +465,6 @@ function Home() {
               </div>
             </div>
           </section>
-          {/* sell banner end  */}
 
           {/* Our Experience Centres */}
           <section className="section get-start">
@@ -535,7 +535,7 @@ function Home() {
             </div>
           </section>
 
-          {/* OUR SERVICES */}
+          {/* OUR SERVICES Banner*/}
           <section className="section" id="hero-banner">
             <div className="relative h-screen">
               {/* Overlay div with gradient from black to transparent */}

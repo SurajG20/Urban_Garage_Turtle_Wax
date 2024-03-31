@@ -55,7 +55,8 @@ function BuyPage() {
               className="container abosolute mt-32 -z-50 overflow-hidden top-0 h-56 flex items-center justify-center rounded-2xl  "
               style={backgroundImg}
             >
-              <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              {/* <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div> */}
+              <div className="absolute -z-10 bg-gradient-to-l from-black to-transparent  opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
               <div className="h-full w-full flex justify-end py-10 px-5">
                 <div className="min-w-3xl">
                   <div>
