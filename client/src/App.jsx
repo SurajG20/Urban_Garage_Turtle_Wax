@@ -10,7 +10,7 @@ import CoatingPage from "./Pages/CoatingPage";
 import PPFPage from "./Pages/PPFPage";
 import RecentWork from "./Pages/RecentWorkPage";
 import Contactus from "./Pages/ContactPage";
-import DummyPage from "./Pages/DummyPage";
+
 
 function App() {
   return (
