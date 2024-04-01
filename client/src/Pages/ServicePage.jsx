@@ -437,11 +437,11 @@ function ServicePage() {
             </div>
           </section>
 
-          {/* Save BIG With Luxury Ride */}
+          {/* Save BIG With Urban Garage */}
           <section className="section blog" id="blog">
             <div className="container">
               <h2 className="h2 text-center section-title text-theme-semibold">
-                Save BIG With Luxury Ride
+                Save BIG With Urban Garage
               </h2>
 
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">

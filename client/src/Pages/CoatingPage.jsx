@@ -240,8 +240,8 @@ function CoatingPage() {
                   Transform Your Car The Way You Want
                 </h2>
                 <p className="p max-w-3xl m-auto text-center text-theme-500">
-                  Maintain your car hygiene and cleanliness with Luxury Ride. We
-                  offer a variety of care care solutions to ensure a driving
+                  Maintain your car hygiene and cleanliness with Urban Garage.
+                  We offer a variety of care care solutions to ensure a driving
                   experience like never before!
                 </p>
               </div>

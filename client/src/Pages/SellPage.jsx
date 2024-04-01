@@ -14,9 +14,18 @@ import { MdOutlinePayments } from "react-icons/md";
 import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
+// icons
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+import { FaCirclePlus, FaCircleMinus } from "react-icons/fa6";
 
 function SellPage() {
   const [cars, setCars] = useState([]);
+  const [open, setOpen] = useState(1);
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   const backgroundImg = {
     backgroundImage: `
@@ -231,7 +240,7 @@ function SellPage() {
                       your doorstep & convenience. Get the most lucrative price
                       in market and experience a completely safe and quick
                       payment process to make your selling journey easy with
-                      Luxury Ride.
+                      Urban Garage.
                     </p>
                   </div>
                   <div>
@@ -335,12 +344,12 @@ function SellPage() {
             </div>
           </section>
 
-          {/* Why Sell To Luxury Ride?  */}
+          {/* Why Sell To Urban Garage?  */}
           <section className="section get-start">
             <div className="container">
               <div className="mb-5">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Why Sell To Luxury Ride?
+                  Why Sell To Urban Garage?
                 </h2>
                 <p className="p max-w-3xl m-auto text-center text-theme-500">
                   Sell your luxury car to luxury car experts for hassle free
@@ -388,6 +397,7 @@ function SellPage() {
                 <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      loading="lazy"
                       src="https://luxuryride.in/img/quick-and-transparent-process.svg"
                       alt="Urban Garadge"
                     />
@@ -478,77 +488,103 @@ function SellPage() {
                 </p>
               </div>
 
-              <div className="">
-                <div class="relative mb-3">
-                  <h6 class="mb-0">
-                    <button
-                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-                      data-collapse-target="collapse-1"
-                    >
-                      <span>What is Material Tailwind?</span>
-                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
-                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
-                    </button>
-                  </h6>
-                  <div
-                    data-collapse="collapse-1"
-                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              <>
+                <Accordion open={open === 1}>
+                  <AccordionHeader
+                    className="relative"
+                    onClick={() => handleOpen(1)}
                   >
-                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-                      We're not always in the position that we want to be at.
-                      We're constantly growing. We're constantly making
-                      mistakes. We're constantly trying to express ourselves and
-                      actualize our dreams.
-                    </div>
-                  </div>
-                </div>
-                <div class="relative mb-3">
-                  <h6 class="mb-0">
-                    <button
-                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-                      data-collapse-target="collapse-2"
-                    >
-                      <span>How to use Material Tailwind?</span>
-                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
-                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
-                    </button>
-                  </h6>
-                  <div
-                    data-collapse="collapse-2"
-                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    <p className="text-start">
+                      How Long Does It Take To Sell My Car?
+                    </p>
+                    <p className=" absolute right-0">
+                      {open === 1 ? <FaCircleMinus /> : <FaCirclePlus />}
+                    </p>
+                  </AccordionHeader>
+                  <AccordionBody>
+                    Typically, the process of selling a car with Urban Garage
+                    can be as quick as less than an hour. After the free
+                    inspection you will get your quote under 59 minutes and if
+                    you finalise it, we will close the deal and the car will be
+                    picked up immediately and the amount will be transferred to
+                    you. We strive to make the process as efficient and
+                    streamlined as possible to ensure a quick and hassle-free
+                    experience for our customers.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 2}>
+                  <AccordionHeader
+                    className="relative"
+                    onClick={() => handleOpen(2)}
                   >
-                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-                      We're not always in the position that we want to be at.
-                      We're constantly growing. We're constantly making
-                      mistakes. We're constantly trying to express ourselves and
-                      actualize our dreams.
-                    </div>
-                  </div>
-                </div>
-                <div class="relative mb-3">
-                  <h6 class="mb-0">
-                    <button
-                      class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-                      data-collapse-target="collapse-3"
-                    >
-                      <span>What can I do with Material Tailwind?</span>
-                      <i class="absolute right-0 pt-1 text-xs fa fa-plus group-open:opacity-0"></i>
-                      <i class="absolute right-0 pt-1 text-xs opacity-0 fa fa-minus group-open:opacity-100"></i>
-                    </button>
-                  </h6>
-                  <div
-                    data-collapse="collapse-3"
-                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    <p className="text-start">Does My Car Stay With Me?</p>
+
+                    <p className=" absolute right-0">
+                      {open === 2 ? <FaCircleMinus /> : <FaCirclePlus />}
+                    </p>
+                  </AccordionHeader>
+                  <AccordionBody>
+                    Yes, at Urban Garage, we understand that your car is an
+                    important asset and we respect your ownership. When you sell
+                    your car to Urban Garage, you have the option to keep
+                    driving it until the completion of the purchase process.
+                    Once an agreement is reached, we will handle the necessary
+                    paperwork and payment process while you continue to enjoy
+                    the use of your car. This allows you to have a seamless
+                    transition and ensures that you can still rely on your car
+                    until the purchase is finalised. We aim to provide a
+                    convenient and flexible experience, giving you the freedom
+                    to choose when you part ways with your vehicle.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 3}>
+                  <AccordionHeader
+                    className="relative"
+                    onClick={() => handleOpen(3)}
                   >
-                    <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-                      We're not always in the position that we want to be at.
-                      We're constantly growing. We're constantly making
-                      mistakes. We're constantly trying to express ourselves and
-                      actualize our dreams.
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <p className="text-start">
+                      Do I Have To Pay Anything Upfront?
+                    </p>
+                    <p className="absolute right-0">
+                      {open === 3 ? <FaCircleMinus /> : <FaCirclePlus />}
+                    </p>
+                  </AccordionHeader>
+                  <AccordionBody>
+                    No, you do not have to pay anything upfront when selling a
+                    car with Urban Garage. While selling your car, you do not
+                    pay anything but only receive with us. We believe in
+                    providing a transparent and fair process for our
+                    customers.There are no upfront fees or charges involved. You
+                    can confidently engage in the car selling process without
+                    any financial obligations until the final agreement is
+                    reached. At Urban Garage, we strive to make the transaction
+                    as convenient and transparent as possible, ensuring that you
+                    have a hassle-free experience from start to finish.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 4}>
+                  <AccordionHeader
+                    className="relative"
+                    onClick={() => handleOpen(4)}
+                  >
+                    <p className="text-start">
+                      Do You Provide Home Inspection?
+                    </p>
+                    <p className="absolute right-0">
+                      {open === 4 ? <FaCircleMinus /> : <FaCirclePlus />}
+                    </p>
+                  </AccordionHeader>
+                  <AccordionBody>
+                    Yes, Urban Garage provides free home inspection services for
+                    your convenience. Our expert evaluators can visit your home
+                    at a scheduled time to conduct a thorough inspection of your
+                    car. This allows you to have the inspection done in the
+                    comfort of your own surroundings, saving you time and
+                    effort. Our goal is to make the car inspection process as
+                    convenient and hassle-free as possible for our customers.
+                  </AccordionBody>
+                </Accordion>
+              </>
             </div>
           </section>
 
