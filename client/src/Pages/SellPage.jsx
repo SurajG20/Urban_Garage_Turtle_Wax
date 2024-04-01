@@ -222,6 +222,7 @@ function SellPage() {
                     </ul>
                   </div>
                   <Image
+                    loading="lazy"
                     src="https://luxuryride.in/img/selling-car-made-simple.png"
                     alt="Urban Garage"
                     onError="assets/loading.jpeg"
@@ -282,12 +283,13 @@ function SellPage() {
             <div className="relative h-screen">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
-                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-90"></div>
                 <div className="absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://luxuryride.in/img/bookcar-mobile.png"
-                    alt=""
+                    alt="Urban Garage"
                   />
                 </div>
                 {/* left container  */}
@@ -363,6 +365,7 @@ function SellPage() {
                 <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      loading="lazy"
                       src="	https://luxuryride.in/img/sell-direct-us.svg"
                       alt="Urban Garadge"
                     />
@@ -380,6 +383,7 @@ function SellPage() {
                 <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      loading="lazy"
                       src="https://luxuryride.in/img/no-hidden-fee.svg"
                       alt="Urban Garadge"
                     />
