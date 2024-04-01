@@ -10,7 +10,7 @@ import CoatingPage from "./Pages/CoatingPage";
 import PPFPage from "./Pages/PPFPage";
 import RecentWork from "./Pages/RecentWorkPage";
 import Contactus from "./Pages/ContactPage";
-
+import TurtleWaxPage from "./Pages/TurtlewaxPage";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       <Route path="/service" element={<ServicePage />} />
       <Route path="/coating" element={<CoatingPage />} />
       <Route path="/ppf" element={<PPFPage />} />
+      <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
       <Route path="/recent-work" element={<RecentWork />} />
       <Route path="/contact-us" element={<Contactus />} />
       <Route path="*" element={<PPFPage />} />

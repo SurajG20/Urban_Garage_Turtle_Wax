@@ -1397,6 +1397,11 @@ a {
   font-weight: 700;
   font-style: normal;
 }
+.text-theme-extrabold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 
 .text-roboto-300 {
   font-family: "Roboto", sans-serif;
