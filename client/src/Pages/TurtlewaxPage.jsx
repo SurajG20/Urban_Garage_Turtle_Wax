@@ -3,16 +3,17 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
+import HeroSection from "../components/HeroSection";
+import { Link } from "react-router-dom";
+import Image from "../utils/Image";
+import data from "../server.json";
+// icons
+import { TiTick } from "react-icons/ti";
+import { IoIosStar } from "react-icons/io";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
-import data from "../server.json";
-import { Link } from "react-router-dom";
-import Image from "../utils/Image";
-// icons
-import { TiTick } from "react-icons/ti";
-import HeroSection from "../components/HeroSection";
-import { IoIosStar } from "react-icons/io";
+import ProductCard from "../components/ProductCard";
 
 function TurtleWaxPage() {
   const [cars, setCars] = useState([]);
@@ -35,7 +36,7 @@ function TurtleWaxPage() {
   };
 
   useEffect(() => {
-    setCars(data.cars);
+    setCars(data.products);
   }, []);
 
   //  useEffect(() => {
@@ -56,27 +57,28 @@ function TurtleWaxPage() {
           {/* <!-- 
         - #HERO
       --> */}
-          <>
-            <section className="">
-              <div
-                className="abosolute  -z-50 overflow-hidden top-0 h-screen flex items-center justify-start rounded-2xl  md:rounded-none"
-                style={backgroundImg}
-              >
-                <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-                <div className="container ml-auto px-10 py-5">
-                  {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
-                  <div className="max-w-xl flex flex-col gap-y-5">
-                    <div>
-                      <h1 className="text-6xl text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
-                        BUY ONE GET ONE ON SELECTED PRODUCTS <br />
-                        <span className="text-green-900">SAVE NOW</span>
-                      </h1>
-                    </div>
+          {/* featured Products  */}
+
+          <section className="">
+            <div
+              className="abosolute  -z-50 overflow-hidden top-0 h-screen flex items-center justify-start rounded-2xl  md:rounded-none"
+              style={backgroundImg}
+            >
+              <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              <div className="container ml-auto px-10 py-5">
+                {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
+                <div className="max-w-xl flex flex-col gap-y-5">
+                  <div>
+                    <h1 className="text-6xl text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
+                      BUY ONE GET ONE ON SELECTED PRODUCTS <br />
+                      <span className="text-green-900">SAVE NOW</span>
+                    </h1>
                   </div>
                 </div>
               </div>
-            </section>
-          </>
+            </div>
+          </section>
+
           {/* WHAT ARE YOU WORKING ON TODAY? */}
           <section className="section " id="">
             <div className="container">
@@ -94,52 +96,85 @@ function TurtleWaxPage() {
                     src={carImg[carIndex]}
                     alt="Urban Garage Turtlewax"
                   />
-                  <div className="absolute top-0 h-full w-full grid grid-cols-3 p-20">
+                  <div className="absolute top-0 h-full w-full grid grid-cols-3 gap-5 p-20">
                     <div
                       onMouseEnter={() => setCarIndex(0)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                     <div
                       onMouseEnter={() => setCarIndex(1)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                     <div
                       onMouseEnter={() => setCarIndex(2)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                     <div
                       onMouseEnter={() => setCarIndex(3)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                     <div
                       onMouseEnter={() => setCarIndex(4)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                     <div
                       onMouseEnter={() => setCarIndex(5)}
                       onMouseLeave={() => setCarIndex(0)}
-                      className=""
+                      className="hover:cursor-pointer rounded-2xl"
                     >
                       {""}
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* <!-- 
+        - #FEATURED CAR
+      --> */}
+
+          <section className="section featured-car" id="featured-car">
+            <div className="container">
+              <div className="title-wrapper">
+                <h2 className="h2 text-theme-semibold section-title m-auto flex items-center">
+                  TRENDING &nbsp;
+                  <span className="font-bold text-green-900 hover:underline">
+                    TURTLEWAX{" "}
+                  </span>{" "}
+                  &nbsp; PRODUCTS
+                </h2>
+                {/* 
+                <Link to="#" className="featured-car-link">
+                  <span>Veja mais</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </Link> */}
+              </div>
+
+              <ul className="grid grid-cols-4 gap-5">
+                {cars &&
+                  cars.map((item) => (
+                    <li key={item._id}>
+                      <ProductCard item={item} />
+                    </li>
+                  ))}
+              </ul>
             </div>
           </section>
 

@@ -597,8 +597,8 @@ a {
 }
 
 .featured-car-card .fav-btn {
-  --background: var(--beau-blue);
-  --color: var(--blue-jeans);
+  --background: #00833e;
+  --color: white;
   --height: 36px;
   --width: 36px;
   --shadow-2: none;
@@ -729,6 +729,7 @@ a {
   overflow: hidden;
   width: 75px;
   height: 75px;
+  background: var(--white);
 }
 
 .brand-card .card-banner a:first-child {
@@ -738,6 +739,7 @@ a {
 .brand-card .card-banner img {
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .brand-card .card-badge {
@@ -1159,6 +1161,9 @@ a {
    */
 
   .featured-car-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .featured-product-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
