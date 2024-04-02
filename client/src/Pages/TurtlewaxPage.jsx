@@ -167,7 +167,7 @@ function TurtleWaxPage() {
                 </Link> */}
               </div>
 
-              <ul className="grid grid-cols-4 gap-5">
+              <ul className="grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {cars &&
                   cars.map((item) => (
                     <li key={item._id}>

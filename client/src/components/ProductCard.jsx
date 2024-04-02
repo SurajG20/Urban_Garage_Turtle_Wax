@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function ProductCard({ item }) {
   return (
-    <div className="featured-car-card">
+    <div className="featured-car-card featured-products-card">
       <figure className="card-banner">
         <div className="">
           <img
@@ -41,7 +41,7 @@ function ProductCard({ item }) {
         <div className="card-price-wrapper">
           <div>
             <p className="text-sm ">INR</p>
-            <p className="card-price text-sm flex gap-x-1 font-bold text-theme-blue">
+            <p className="card-price text-sm flex gap-x-1 font-bold text-theme-red">
               <span>{item.price ? item.price : "---"}</span>
               <span>/-</span>
             </p>

@@ -493,7 +493,15 @@ a {
   border: 2px solid var(--gray);
   border-radius: var(--radius-18);
   /* padding: 10px; */
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 4px 8px 0 rgba(0, 128, 0, 0.6);
+  cursor: pointer;
+}
+.featured-products-card:hover {
+  background: white;
+  border: 2px solid var(--gray);
+  border-radius: var(--radius-18);
+  /* padding: 10px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 128, 0, 0.6);
   cursor: pointer;
 }
 

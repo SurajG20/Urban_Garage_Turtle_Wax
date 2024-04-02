@@ -167,13 +167,13 @@ function Home() {
           </section>
 
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section brand" id="brand">
+          <section className="section " id="brand">
             <div className="container">
               <h2 className="h2 section-title text-center text-theme-semibold">
                 An Exciting Lineup Of Top Brands In Our Showrooms!
               </h2>
 
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 has-scrollbar">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
                 <div className="h-16 w-16 m-auto">
                   <Image
                     src="assets/brands/brand1.png"
@@ -482,13 +482,13 @@ function Home() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge1.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge1.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
                       CHANDIGARH
                     </h1>
-                    <p className="p font-extrabold text-theme-500">
+                    <p className="p font-extrabold text-theme-500 mb-2">
                       Standing at the heart of the Millennium city, our team of
                       seasoned experts offers an array luxury car services and
                       tailored solutions to cater to your every automotive
@@ -508,13 +508,13 @@ function Home() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
                       Karnal
                     </h1>
-                    <p className="p font-extrabold text-theme-500">
+                    <p className="p font-extrabold text-theme-500 mb-2">
                       Witness the grandeur of India's largest pre-owned car
                       experience centre, where our highly skilled team of
                       experts bring you a wide array of comprehensive
@@ -551,7 +551,7 @@ function Home() {
                 {/* Left container remains unchanged */}
 
                 {/* Right container */}
-                <div className="  opacity-80 p-10">
+                <div className="opacity-80 p-4 md:p-10">
                   <div className="mb-2">
                     {/* <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -592,7 +592,7 @@ function Home() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
