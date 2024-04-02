@@ -146,7 +146,7 @@ function TurtleWaxPage() {
           </section>
 
           {/* <!-- 
-        - #FEATURED CAR
+        - #FEATURED Products
       --> */}
 
           <section className="section featured-car" id="featured-car">
@@ -182,189 +182,71 @@ function TurtleWaxPage() {
           <section className="section " id="">
             <div className="container">
               <h2 className="h2 section-title text-center text-theme-semibold">
-                Life Is Too Short To Spend At A Repair Shop
+                NEW PRODUCTS
               </h2>
-              <p className="p max-w-3xl m-auto text-center text-theme-500">
-                Experience the epitome of automotive excellence as we offer
-                comprehensive professional car services, ensuring your wheels
-                are primed for all journeys.
-              </p>
 
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 has-scrollbar">
+              <div className="grid md:grid-cols-3 gap-5">
                 {/* card 1 */}
-                <div className="h-42 col-span-2 flex flex-col  justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
-                  <div className="">
-                    <h2 className="h3 text-theme-bold text-white">
-                      Periodic Maintenance
-                    </h2>
-                  </div>
-                  <div className="flex justify-between">
-                    <div className="flex flex-col justify-end">
-                      <h4 className="text-xl text-theme-semibold text-white">
-                        Recommended by 10,000+ Customers
-                      </h4>
-                      <p className="text-sm text-theme-500 text-white">
-                        4.9 Average Rating
-                      </p>
-                    </div>
-                    <div>
-                      <img
-                        loading="lazy"
-                        src="https://luxuryride.in/img/periodic-maintenance.svg"
-                        alt="Urban Garage Periodic Maintenance"
-                      />
+                <div className="relative md:h-96">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-110"
+                    src="https://turtlewax.in/cdn/shop/files/Exterior_Home_page_600x600.png?v=1701961116"
+                    alt="Urban Garadge Turtlewax"
+                  />
+                  <div className="absolute top-0 h-full w-full flex justify-center items-end">
+                    <div className="font-bold text-white text-4xl text-theme-bold">
+                      EXTERIOR
                     </div>
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="h-42  flex flex-col justify-between border border-gray-300 rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <div className="h-[3rem]">
-                          <Image
-                            src="assets/icons/icon1.png"
-                            alt="Urban Garage AC Service & Repair"
-                            onError="assets/icons/loading.png"
-                          />
-                        </div>
-                      </div>
+                <div className="relative  md:h-96">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center"
+                    src="https://turtlewax.in/cdn/shop/files/Interior_HOme_page_600x600.png?v=1701961075"
+                    alt="Urban Garadge Turtlewax"
+                  />
+                  <div className="absolute top-0 h-full w-full flex justify-center items-end">
+                    <div className="font-bold text-white text-4xl text-theme-bold">
+                      INTERIOR
                     </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      AC Service & Repair
-                    </h3>
                   </div>
                 </div>
-
-                {/* card 3*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon2.png"
-                          alt="Urban Garage Battery"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
+                {/* card 3 */}
+                <div className="relative  md:h-96">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center"
+                    src="https://turtlewax.in/cdn/shop/files/Hs_Group_shot_600x600.png?v=1701960680"
+                    alt="Urban Garadge Turtlewax"
+                  />
+                  <div className="absolute top-0 h-full w-full flex justify-center items-end">
+                    <div className="font-bold text-white text-4xl text-theme-bold">
+                      HYBRID SOLUTIONS
                     </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">Battery</h3>
                   </div>
                 </div>
-                {/* card 4*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon3.png"
-                          alt="Urban Garage Denting & Painting"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
+                {/* card 4 */}
+                <div className="col-span-3 relative  md:h-96">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center"
+                    src="https://turtlewax.in/cdn/shop/files/Hs_Group_shot_600x600.png?v=1701960680"
+                    alt="Urban Garadge Turtlewax"
+                  />
+                  <div className="absolute top-0 h-full w-full flex justify-start p-4 items-end">
+                    <div className="max-w-2xl font-bold text-white  text-theme-bold">
+                      <h1 className="h1 ">TURTLE WAX WORLDWIDE</h1>
+                      <h3 className="h2 underline">
+                        SEE THE LATEST FROM THE TURTLE WAX COMMUNITY
+                      </h3>
                     </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      Denting & Painting
-                    </h3>
-                  </div>
-                </div>
-                {/* card 5*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon5.png"
-                          alt="Urban Garage Windshield & Glasses"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      Windshield & Glasses
-                    </h3>
-                  </div>
-                </div>
-                {/* card 6*/}
-                <div className="h-42  flex flex-col justify-center items-start border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon4.png"
-                          alt="Urban Garage Suspension & Fitments"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      Suspension & Fitments
-                    </h3>
-                  </div>
-                </div>
-                {/* card 7*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon7.png"
-                          alt="Urban Garage Tyres & Wheel Care"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      Tyres & Wheel Care
-                    </h3>
-                  </div>
-                </div>
-                {/* card 8*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon6.png"
-                          alt="Urban Garage Inspection & Checkups"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">
-                      Inspection & Checkups
-                    </h3>
-                  </div>
-                </div>
-                {/* card 9*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
-                  <div className="flex">
-                    <div className="bg-gray-200 min-w-min p-2 rounded-md ">
-                      <div className="h-[3rem]">
-                        <Image
-                          src="assets/icons/icon9.png"
-                          alt="Urban Garage Insurance Claims"
-                          onError="assets/icons/loading.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <h3 className="h3 text-theme-semibold">Insurance Claims</h3>
                   </div>
                 </div>
               </div>
