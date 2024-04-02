@@ -187,8 +187,8 @@ function TurtleWaxPage() {
 
               <div className="grid md:grid-cols-3 gap-5">
                 {/* card 1 */}
-                <div className="relative md:h-96">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
+                <div className="relative md:h-96 rounded-2xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 "></div>
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-110"
@@ -202,7 +202,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="relative  md:h-96">
+                <div className="relative md:h-96 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
                   <img
                     loading="lazy"
@@ -217,7 +217,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 3 */}
-                <div className="relative  md:h-96">
+                <div className="relative md:h-96 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
                   <img
                     loading="lazy"
@@ -232,12 +232,12 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 4 */}
-                <div className="col-span-3 relative  md:h-96">
+                <div className="col-span-3 relative  md:h-96  rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-2xl"></div>
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-center"
-                    src="https://turtlewax.in/cdn/shop/files/Hs_Group_shot_600x600.png?v=1701960680"
+                    src="https://turtlewax.in/cdn/shop/files/turtle-wax-worldwide_1200x400.jpg?v=1693805101"
                     alt="Urban Garadge Turtlewax"
                   />
                   <div className="absolute top-0 h-full w-full flex justify-start p-4 items-end">
@@ -631,16 +631,24 @@ function TurtleWaxPage() {
                 is nothing but the best.
               </p>
 
-              <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 has-scrollbar">
-                <div className="h-28 w-auto m-auto">
+              <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 has-scrollbar">
+                <div className="h-28 w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
                   <img
                     loading="lazy"
-                    className="h-full w-full object-cover object-center"
+                    className=" h-full w-full object-cover object-center"
+                    src="https://turtlewax.in/cdn/shop/files/TW_Icon_Wordmark_RGB.png?v=1696332285"
+                    alt="Urban Garage Partner "
+                  />
+                </div>
+                <div className="h-28 w-36  m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                  <img
+                    loading="lazy"
+                    className=" h-full w-full object-cover object-center"
                     src="https://luxuryride.in/img/spare-parts1.png"
                     alt="Urban Garage Partner "
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                <div className="h-28 w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -648,7 +656,7 @@ function TurtleWaxPage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                <div className="h-28 w-36  m-auto bg-gray-100 border border-gray-300 rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -656,7 +664,7 @@ function TurtleWaxPage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                <div className="h-28 w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -664,7 +672,7 @@ function TurtleWaxPage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                <div className="h-28 w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
