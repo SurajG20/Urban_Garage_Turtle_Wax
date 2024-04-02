@@ -438,13 +438,13 @@ function Home() {
           {/* banner  */}
           <section className="section get-start">
             <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+              <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                <h1 className="text-2xl md:text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
                 <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
-                <div className="flex gap-x-5">
-                  <p className="flex items-center gap-3 text-theme-500">
+                <div className="flex flex-col md:flex-row gap-x-5">
+                  <p className="flex  items-center gap-3 text-theme-500">
                     <FaBlenderPhone className="text-lg" />
                     Instant Call Back
                   </p>
@@ -541,7 +541,7 @@ function Home() {
               {/* Overlay div with gradient from black to transparent */}
               <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div>
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className=" absolute -z-20 h-full w-full">
+                <div className="absolute -z-20 h-full w-full">
                   <img
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"

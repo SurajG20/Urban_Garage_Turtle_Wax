@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer className="footer bg-theme-white">
       <div className="container">
-        <div className="grid grid-cols-5  gap-x-10 mb-10">
+        <div className="grid md:grid-cols-5  gap-x-10 gap-y-5 mb-10">
           <div className="col-span-2">
             <Link to="/" className="logo">
               <div className="h-20 w-20">
