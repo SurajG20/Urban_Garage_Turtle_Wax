@@ -36,7 +36,7 @@ function Contactus() {
                   our team.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid md:grid-cols-2 gap-10">
                 {/* left container  */}
                 <div className="flex flex-col gap-5">
                   <div>
@@ -44,9 +44,10 @@ function Contactus() {
                   </div>
                   <div className="h-56">
                     <img
+                      loading="lazy"
                       className="h-full w-full object-cover object-center rounded-2xl"
-                      src="assets/garadge/garadge1.jpeg"
-                      alt=""
+                      src="assets/garage/garage1.jpeg"
+                      alt="Urban Garage Head Office"
                     />
                   </div>
                   <div>
@@ -95,11 +96,11 @@ function Contactus() {
                 <div className="flex flex-col gap-8">
                   <div>
                     <h2 className="h3 text-theme-semibold flex items-center">
-                      Do you have a query?{" "}
+                      Do you have a query ?{" "}
                       <span className="text-theme-red">Ask us!</span>
                     </h2>
                   </div>
-                  <div className="grid grid-cols-2 gap-5">
+                  <div className="flex flex-col md:grid grid-cols-2 gap-5">
                     <div>
                       <label
                         htmlFor=""
@@ -113,6 +114,7 @@ function Contactus() {
                         placeholder="Enter Your First Name"
                       />
                     </div>
+                    {/* Last Name */}
                     <div>
                       <label
                         htmlFor=""
@@ -207,13 +209,13 @@ function Contactus() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge1.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage1.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col gap-3">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                       CHANDIGARH
                     </h1>
-                    <p className="p font-extrabold text-theme-500">
+                    <p className="p tracking-wider text-justify font-bold text-theme-500">
                       Standing at the heart of the Millennium city, our team of
                       seasoned experts offers an array luxury car services and
                       tailored solutions to cater to your every automotive
@@ -233,13 +235,13 @@ function Contactus() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col gap-3">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                       Karnal
                     </h1>
-                    <p className="p font-extrabold text-theme-500">
+                    <p className="p tracking-wider text-justify font-bold text-theme-500">
                       Witness the grandeur of India's largest pre-owned car
                       experience centre, where our highly skilled team of
                       experts bring you a wide array of comprehensive
@@ -273,7 +275,7 @@ function Contactus() {
                 </p>
               </div>
 
-              <div className="md:flex justify-center gap-x-5 gap-y-5">
+              <div className="flex flex-col md:flex-row justify-center gap-x-5 gap-y-5">
                 {/* card 1 */}
 
                 <div className="relative flex flex-col gap-y-8">
@@ -433,9 +435,10 @@ function Contactus() {
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
                 <div className=" absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt=""
+                    alt="Uran Garage Service Centre"
                   />
                 </div>
                 {/* Left container remains unchanged */}
@@ -482,7 +485,7 @@ function Contactus() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
