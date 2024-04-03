@@ -33,7 +33,7 @@ function SellPage() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('assets/cars/car16.jpeg')`,
+    url('assets/banners/car16.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -73,13 +73,16 @@ function SellPage() {
                 {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
                 <div className="flex flex-col gap-y-5">
                   <div>
-                    <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-semibold">
-                      Sell Your Car At Highest Price in 59 Minutes
+                    <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-semibold">
+                      Sell Your Car At Highest Price in{" "}
+                      <span className="font-extrabold md:text-8xl">
+                        59 Minutes
+                      </span>
                     </h1>
                   </div>
 
                   <div className="hidden md:block">
-                    <div className="bg-white rounded-2xl">
+                    {/* <div className="bg-white rounded-2xl">
                       <form
                         action=""
                         class="w-full relative grid grid-cols-4 gap-4"
@@ -100,39 +103,76 @@ function SellPage() {
                           <Dropdown title={"KMs Driven"} />
                         </div>
                       </form>
-                    </div>
-                    <div className="m-auto max-w-2xl grid grid-cols-5 gap-5 justify-center text-white mt-5">
-                      <div className="flex  gap-x-2 items-center">
-                        <span>
-                          <IoCall className="text-2xl" />
-                        </span>
-                        <span className="h3 whitespace-nowrap text-theme-500 ">
-                          Instant Call Back
-                        </span>
-                      </div>
-                      <div></div>
-
-                      <div className="flex  gap-x-2 items-center">
-                        <span>
-                          <FaCar className="text-2xl" />
-                        </span>
-                        <span className="h3 whitespace-nowrap text-theme-500">
-                          Doorstep Evaluation
-                        </span>
-                      </div>
-                      <div></div>
-
-                      <div className="flex gap-x-2 items-center">
-                        <span>
-                          <MdOutlinePayments className="text-2xl" />
-                        </span>
-                        <span className="h3 whitespace-nowrap text-theme-500">
-                          {" "}
-                          Instant Payment
-                        </span>
-                      </div>
-                    </div>
+                    </div> */}
                     <div className="flex justify-start items-center mt-5">
+                      <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand1.png"
+                            alt="Urban Gradge BMW"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand2.png"
+                            alt="Urban Gradge Mercedes"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand3.png"
+                            alt="Urban Gradge Chevrolet"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand4.png"
+                            alt="Urban Gradge Ferrari"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand5.png"
+                            alt="Urban Gradge Ford"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand6.png"
+                            alt="Urban Gradge Porsche"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand7.png"
+                            alt="Urban Gradge Toyota"
+                          />
+                        </div>
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                          <img
+                            loading="lazy"
+                            className="h-full w-full object-contain object-center"
+                            src="assets/brands/brand8.png"
+                            alt="Urban Gradge Volkswagen"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="flex justify-start items-center mt-5">
                       <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
                         <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
                           <img
@@ -199,7 +239,7 @@ function SellPage() {
                           />
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

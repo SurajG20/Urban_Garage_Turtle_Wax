@@ -9,7 +9,7 @@ function Herohome() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('assets/cars/car6.jpeg')`,
+    url('assets/banners/car6.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -27,12 +27,13 @@ function Herohome() {
           <div className="h-full flex flex-col justify-around md:justify-center  gap-y-5">
             <div>
               <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-bold">
-                Search Your Dream Car Now
+                Search Your Dream Car Now <br />
+                <span className="font-extrabold md:text-8xl">URBAN GARAGE</span>
               </h1>
             </div>
 
             <div className="hidden md:block">
-              <div className="bg-white rounded-2xl">
+              {/* <div className="bg-white rounded-2xl">
                 <form
                   action=""
                   className="w-full relative grid grid-cols-4 gap-4"
@@ -53,7 +54,7 @@ function Herohome() {
                     <Dropdown title={"KMs Driven"} />
                   </div>
                 </form>
-              </div>
+              </div> */}
               <div className="flex justify-start items-center mt-5">
                 <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">

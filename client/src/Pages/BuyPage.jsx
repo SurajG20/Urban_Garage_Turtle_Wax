@@ -23,9 +23,9 @@ function BuyPage() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('assets/cars/car6.jpeg')`,
+    url('assets/banners/car11.jpeg')`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "left",
     backgroundRepeat: "no-repeat",
     backdropFilter: "blur(8px)",
   };
@@ -85,9 +85,15 @@ function BuyPage() {
                       </li>
                       <li className="flex justify-start items-center gap-x-5">
                         {" "}
-                        <MdVerifiedUser className="text-4xl" />
-                        <FaCar className="text-4xl" />
-                        <TbChecklist className="text-4xl" />
+                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                          <MdVerifiedUser className="text-4xl text-red-600" />
+                        </div>
+                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                          <FaCar className="text-4xl text-red-600" />
+                        </div>
+                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                          <TbChecklist className="text-4xl text-red-600" />
+                        </div>
                       </li>
                     </ul>
                   </div>

@@ -13,7 +13,7 @@
       "Fuel": " Diesel",
       "Colour": "ISLAND BLUE METTALIC",
       "Insurance": "Valid till Jan 2025",
-      "img": ["assrts/cars/min-countryman-cooper-s.jpeg"],
+      "img": ["assets/cars/min-countryman-cooper-s.jpeg"],
       "description": "Provides supportive care in the home.",
       "available": true
     },
@@ -31,7 +31,7 @@
       "Fuel": " Diesel",
       "Colour": "White Pearl",
       "Insurance ": "Valid till Oct 2024",
-      "img": ["assrts/cars/Volvo-XC90-D5-INSCRIPTION.jpeg"],
+      "img": ["assets/cars/Volvo-XC90-D5-INSCRIPTION.jpeg"],
       "description": "Provides supportive care in the home.",
       "available": true
     },
@@ -48,7 +48,7 @@
       "Fuel": "Diesel",
       "Colour": "RED",
       "Insurance": "Valid till May 2024",
-      "img": ["path/to/image.jpeg"],
+      "img": ["assets/cars/MERCEDES-BENZ-CLA-200D-SPORTS.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -66,7 +66,7 @@
       "Fuel": "Diesel",
       "Colour": "Green",
       "Insurance": "Valid",
-      "img": ["assets/cars/Mahindra-Thar-AT-Hard-Top-4WD.jpeg.jpeg"],
+      "img": ["assets/cars/Mahindra-Thar-AT-Hard-Top-4WD.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -121,7 +121,8 @@
       "img": ["assets/cars/MERCEDES-BENZ-GLA-200CGI-PETROL.jpeg"],
       "description": "Your description here.",
       "available": true
-    },{
+    },
+    {
       "_id": "8",
       "name": "AUDI Q3 35TDI QUATTRO 2017",
       "price": "1,675,000.00",
@@ -151,14 +152,10 @@
       "Fuel": "Diesel",
       "Colour": "CALCITE WHITE",
       "Insurance": "Valid till Jan 2024",
-      "img": ["path/to/MERCEDES-BENZ-INDIA-PVT-LTD.jpeg"],
+      "img": ["assets/cars/MERCEDES-BENZ-INDIA-PVT-LTD.jpeg"],
       "description": "Your description here.",
       "available": true
     }
-
-
-
-
   ],
   "products": [
     {
