@@ -4,14 +4,15 @@ import Footer from "../components/Footer";
 import Herohome from "../components/Herohome";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
+import Banner from "../components/Banner";
 import data from "../server.json";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 
 function Home() {
   const [cars, setCars] = useState([]);
@@ -613,6 +614,10 @@ function Home() {
 
           {/* testinomials  */}
           <Testinomial />
+
+          <section className="section">
+            <Banner />
+          </section>
         </article>
       </main>
       <Footer />

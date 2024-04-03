@@ -25,13 +25,14 @@ function Herohome() {
         <div className="h-full max-w-6xl m-auto px-10 py-5">
           {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
           <div className="h-full flex flex-col justify-around md:justify-center  gap-y-5">
+            {/* heading  */}
             <div>
               <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-bold">
                 Search Your Dream Car Now <br />
                 <span className="font-extrabold md:text-8xl">URBAN GARAGE</span>
               </h1>
             </div>
-
+            {/* beands  */}
             <div className="hidden md:block">
               {/* <div className="bg-white rounded-2xl">
                 <form
@@ -124,6 +125,7 @@ function Herohome() {
                 </div>
               </div>
             </div>
+            {/* button  */}
             <Link to={"/buy"} className="w-full block md:hidden">
               <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-red-900 text-white">
                 View Cars

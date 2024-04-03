@@ -40,7 +40,7 @@ function ServicePage() {
         - #HERO
       --> */}
           <HeroSection
-            imgURL={"assets/banners/hero-banner1.jpeg"}
+            imgURL={"assets/garage/garage4.jpeg"}
             title={"Find The Best Pocket Friendly Car Service For You!"}
           />
           {/* Life Is Too Short To Spend At A Repair Shop */}
@@ -258,9 +258,9 @@ function ServicePage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
                       <Image
-                        src="assets/garadge/garadge2.jpeg"
+                        src="assets/garage/garage2.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garadge/garadge1.jpeg"
+                        onError="assets/garage/garage1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -320,7 +320,7 @@ function ServicePage() {
                       <Image
                         src="assets/garadge/garadge4.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garadge/garadge1.jpeg"
+                        onError="assets/garage/garage1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}

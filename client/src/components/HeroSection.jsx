@@ -1,6 +1,6 @@
 import React from "react";
 import Dropdown from "../utils/Dropdown";
-
+import { Link } from "react-router-dom";
 function HeroSection({ imgURL, title }) {
   const backgroundImg = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${imgURL})`,
@@ -13,7 +13,7 @@ function HeroSection({ imgURL, title }) {
     <>
       <section className="">
         <div
-          className="abosolute -z-50 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+          className="abosolute mt-20 m-1 -z-50 overflow-hidden top-0 h-[65vh] md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
           style={backgroundImg}
         >
           <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
@@ -21,35 +21,88 @@ function HeroSection({ imgURL, title }) {
             {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
             <div className="flex flex-col gap-y-5">
               <div>
-                <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-semibold">
+                <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-bold">
                   {title}
                 </h1>
               </div>
 
+              {/* beands  */}
               <div className="hidden md:block">
-                <div className="bg-white rounded-2xl">
-                  <form
-                    action=""
-                    className="w-full relative grid grid-cols-4 gap-4"
-                  >
-                    <div className="flex justify-center">
-                      <Dropdown title={"Car, model or brand"} />
+                <div className="flex justify-start items-center mt-5">
+                  <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-10 mt-5">
+                    <div className="h-16 bg-white opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon1.png"
+                        alt="Urban Gradge Service"
+                      />
                     </div>
-
-                    <div className="flex justify-center">
-                      <Dropdown title={"Max monthly payment"} />
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon2.png"
+                        alt="Urban Gradge Service"
+                      />
                     </div>
-
-                    <div className="flex justify-center">
-                      <Dropdown title={"Make the Year"} />
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon3.png"
+                        alt="Urban Gradge Service"
+                      />
                     </div>
-
-                    <div className="flex justify-center">
-                      <Dropdown title={"KMs Driven"} />
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon4.png"
+                        alt="Urban Gradge Service"
+                      />
                     </div>
-                  </form>
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon5.png"
+                        alt="Urban Gradge Service"
+                      />
+                    </div>
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon6.png"
+                        alt="Urban Gradge Service"
+                      />
+                    </div>
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon7.png"
+                        alt="Urban Gradge Service"
+                      />
+                    </div>
+                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="assets/icons/icon9.png"
+                        alt="Urban Gradge Service"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
+              {/* button  */}
+              <Link to={"/buy"} className="w-full block md:hidden">
+                <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-red-900 text-white">
+                  View Cars
+                </button>
+              </Link>
             </div>
           </div>
         </div>
