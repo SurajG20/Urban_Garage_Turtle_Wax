@@ -30,7 +30,7 @@ function HeroSection({ imgURL, title }) {
               <div className="hidden md:block">
                 <div className="flex justify-start items-center mt-5">
                   <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-10 mt-5">
-                    <div className="h-16 bg-white opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16 w-24 border border-gray-600 bg-white opacity-40 p-2 rounded-xl  hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -38,7 +38,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -46,7 +46,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -54,7 +54,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -62,7 +62,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -70,7 +70,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -78,7 +78,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p- rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
@@ -86,7 +86,7 @@ function HeroSection({ imgURL, title }) {
                         alt="Urban Gradge Service"
                       />
                     </div>
-                    <div className="h-16 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
