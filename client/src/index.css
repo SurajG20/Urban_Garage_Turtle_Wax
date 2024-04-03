@@ -6,6 +6,23 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  min-width: 396px;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /**
    * colors
@@ -486,14 +503,13 @@ a {
   border: 2px solid var(--gray);
   border-radius: var(--radius-18);
   /* padding: 10px; */
-  box-shadow: var(--shadow-1);
+  /* box-shadow: var(--shadow-1); */
 }
 .featured-car-card:hover {
   background: white;
   border: 2px solid var(--gray);
   border-radius: var(--radius-18);
   /* padding: 10px; */
-  box-shadow: 0 4px 8px 0 rgba(0, 128, 0, 0.6);
   cursor: pointer;
 }
 .featured-products-card:hover {
@@ -501,7 +517,7 @@ a {
   border: 2px solid var(--gray);
   border-radius: var(--radius-18);
   /* padding: 10px; */
-  box-shadow: 0 4px 8px 0 rgba(0, 128, 0, 0.6);
+
   cursor: pointer;
 }
 

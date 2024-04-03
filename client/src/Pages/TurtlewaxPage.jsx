@@ -275,9 +275,9 @@ function TurtleWaxPage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
                       <Image
-                        src="assets/garadge/garadge2.jpeg"
+                        src="assets/garage/garage2.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garadge/garadge1.jpeg"
+                        onError="assets/garage/garage1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -329,15 +329,15 @@ function TurtleWaxPage() {
                 </div>
                 {/* card 2 */}
 
-                <div className="relative flex flex-col gap-y-8">
+                <div className="relative flex flex-col gap-y-8 bordder">
                   {/* New wrapper for positioning */}
                   <div className="relative z-0 w-96 rounded-2xl">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
                       <Image
-                        src="assets/garadge/garadge4.jpeg"
+                        src="assets/garage/garage4.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garadge/garadge1.jpeg"
+                        onError="assets/garage/garage1.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -368,8 +368,8 @@ function TurtleWaxPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-y-5">
-                    <div>
+                  <div className="flex flex-col gap-y-5 ">
+                    <div className="">
                       <h3 className="h3 text-theme-semibold">
                         Delhi Service Centre
                       </h3>

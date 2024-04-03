@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function ProductCard({ item }) {
   return (
-    <div className="featured-car-card featured-products-card">
+    <div className="featured-car-card  border-2 shadow-lg border-gray-900 hover:shadow-xl hover:border-gray-200 ">
       <figure className="card-banner">
         <div className="">
           <img

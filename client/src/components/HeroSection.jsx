@@ -17,9 +17,9 @@ function HeroSection({ imgURL, title }) {
           style={backgroundImg}
         >
           <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-          <div className="max-w-6xl m-auto px-10 py-5">
+          <div className="h-full max-w-6xl m-auto px-10 py-5">
             {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
-            <div className="flex flex-col gap-y-5">
+            <div className="h-full flex flex-col justify-around md:justify-center gap-y-5">
               <div>
                 <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-bold">
                   {title}

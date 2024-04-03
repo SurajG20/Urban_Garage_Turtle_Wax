@@ -20,8 +20,9 @@ function BuyPage() {
   const backgroundImg = {
     backgroundImage: `
     linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
+      to left, /* This changes the direction */
+      rgba(0, 0, 3, 5), 
+      rgba(0, 0, 0, 0.0) /* End of the gradient is now fully transparent */
     ),
     url('assets/banners/car11.jpeg')`,
     backgroundSize: "cover",
