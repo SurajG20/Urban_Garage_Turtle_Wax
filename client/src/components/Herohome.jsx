@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "../utils/Dropdown";
+import { Link } from "react-router-dom";
 
 function Herohome() {
   const backgroundImg = {
@@ -15,17 +16,17 @@ function Herohome() {
     backdropFilter: "blur(8px)",
   };
   return (
-    <section className="">
+    <section className="mt-20">
       <div
-        className="abosolute -z-50 overflow-hidden top-0 h-screen m-1 flex items-center justify-center rounded-2xl  md:rounded-none"
+        className="abosolute -z-50 overflow-hidden top-0 h-[65vh] md:h-screen m-1 flex items-center justify-center rounded-2xl  md:rounded-none"
         style={backgroundImg}
       >
         <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-        <div className="max-w-6xl m-auto px-10 py-5">
+        <div className="h-full max-w-6xl m-auto px-10 py-5">
           {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
-          <div className="flex flex-col gap-y-5">
+          <div className="h-full flex flex-col justify-around md:justify-center  gap-y-5">
             <div>
-              <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-semibold">
+              <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-bold">
                 Search Your Dream Car Now
               </h1>
             </div>
@@ -122,6 +123,11 @@ function Herohome() {
                 </div>
               </div>
             </div>
+            <Link to={"/buy"} className="w-full block md:hidden">
+              <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-red-900 text-white">
+                View Cars
+              </button>
+            </Link>
           </div>
         </div>
       </div>
