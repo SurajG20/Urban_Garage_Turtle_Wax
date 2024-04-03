@@ -4,12 +4,15 @@ import Footer from "../components/Footer";
 import CarCard from "../components/CarCard";
 import data from "../server.json";
 import { Link } from "react-router-dom";
+import Image from "../utils/Image";
 
 // icons
 import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
+import { MdVerifiedUser } from "react-icons/md";
+import { TbChecklist } from "react-icons/tb";
 
 function BuyPage() {
   const [cars, setCars] = useState([]);
@@ -20,7 +23,7 @@ function BuyPage() {
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ),
-    url('https://luxuryride.in/img/buy-banner-img.png')`,
+    url('assets/cars/car6.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -52,20 +55,20 @@ function BuyPage() {
 
           <section className="relative">
             <div
-              className="container abosolute mt-32 -z-50 overflow-hidden top-0 h-56 flex items-center justify-center rounded-2xl  "
+              className="container abosolute m-1 mt-20 -z-50 overflow-hidden top-0 h-[65vh] flex items-center justify-center rounded-2xl  "
               style={backgroundImg}
             >
               {/* <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div> */}
               <div className="absolute -z-10 bg-gradient-to-l from-black to-transparent  opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-              <div className="h-full w-full flex justify-end py-10 px-5">
+              <div className="h-full w-full flex items-center justify-end py-10 px-5">
                 <div className="min-w-3xl">
-                  <div>
+                  <div className="mb-10">
                     <h2 className="h2 text-theme-semibold text-white">
                       High Quality, More Comfort
                     </h2>
                   </div>
                   <div className="mt-5">
-                    <ul className="text-theme-semibold text-white flex flex-col gap-y-2">
+                    <ul className="text-theme-semibold text-white flex flex-col gap-y-5">
                       <li className="flex">
                         <TiTick className="text-white text-xl" />
                         <span>Largest Assortment of Pre-Owned Luxury Cars</span>
@@ -79,6 +82,12 @@ function BuyPage() {
                         {" "}
                         <TiTick className="text-white text-xl" />
                         <span>Sell Or Upgrade Effortlessly</span>
+                      </li>
+                      <li className="flex justify-start items-center gap-x-5">
+                        {" "}
+                        <MdVerifiedUser className="text-4xl" />
+                        <FaCar className="text-4xl" />
+                        <TbChecklist className="text-4xl" />
                       </li>
                     </ul>
                   </div>
@@ -221,86 +230,56 @@ function BuyPage() {
           {/* hero Banner section End  */}
 
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section brand" id="brand">
+          <section className="section " id="brand">
             <div className="container">
               <h2 className="h2 section-title text-center text-theme-semibold">
                 An Exciting Lineup Of Top Brands In Our Showrooms!
               </h2>
 
-              <ul className="brand-list has-scrollbar">
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-cover object-center"
-                      src="assets/brands/brand1.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand2.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand3.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand4.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand5.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand6.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand7.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="h-24 w-24">
-                    <img
-                      className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand8.png"
-                      alt=""
-                    />
-                  </div>
-                </li>
-              </ul>
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
+                <div className="h-24 w-24 m-auto py-5 bg-gray-200 rounded-lg border border-white">
+                  <Image
+                    src="assets/brands/brand1.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand2.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand3.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand7.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand5.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16  w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand6.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+              </div>
             </div>
           </section>
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
@@ -439,6 +418,31 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+                {/* PPF */}
+                <li>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage:
+                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        PPF
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                {/* Turtle wax Products */}
                 <li>
                   <div
                     className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
@@ -462,6 +466,8 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+
+                {/* Recent Wor */}
                 <li>
                   <div
                     className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
@@ -473,33 +479,10 @@ function BuyPage() {
                     {/* Overlay Element */}
                     <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
 
-                    {/* Content */}
+                    {/* content */}
                     <div className="z-10 relative p-4">
                       <h3 className="h3 text-white font-bold text-theme-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
-
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        Buy
+                        Recent Work
                       </h3>
                       <p className="hidden text-white mt-2">
                         If you are going to use a passage of Lorem Ipsum, you
