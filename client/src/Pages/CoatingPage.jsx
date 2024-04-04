@@ -16,7 +16,7 @@ import { IoIosStar } from "react-icons/io";
 
 function CoatingPage() {
   const backgroundImg = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/banners/hero-banner1.jpeg)`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/cars/car1.jpeg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -50,16 +50,16 @@ function CoatingPage() {
           <>
             <section className="">
               <div
-                className="abosolute -z-50 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+                className="abosolute mt-20 m-1 -z-50 overflow-hidden top-0 md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
                 style={backgroundImg}
               >
                 <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
                 <div className="container">
-                  <div className="grid grid-cols-2 gap-x-52">
+                  <div className="grid md:grid-cols-2 gap-y-5 gap-x-52">
                     {/* right container  */}
-                    <div className="flex flex-col  gap-y-5">
+                    <div className="flex flex-col gap-y-5 p-4">
                       <div>
-                        <h1 className="text-[2.8rem] md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
+                        <h1 className="h1 md:text-[2.8rem] md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
                           Detailing Services That Fulfill All Your Needs
                         </h1>
                       </div>
@@ -93,7 +93,7 @@ function CoatingPage() {
                         </ul>
                       </div>
 
-                      <div className="grid grid-cols-3">
+                      <div className="hidden md:grid grid-cols-3 gap-3">
                         <div className="flex flex-col items-center gap-2">
                           <div className="flex items-center gap-1">
                             <IoIosStar className="text-2xl text-yellow-600" />
@@ -137,7 +137,7 @@ function CoatingPage() {
                       </div>
                     </div>
                     {/* left container  */}
-                    <div className="h-full">
+                    <div className="hidden md:block h-full">
                       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
                         {/* first container  */}
                         <div>
@@ -567,7 +567,7 @@ function CoatingPage() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
