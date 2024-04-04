@@ -245,11 +245,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                      <h3 className="text-white text-3xl text-theme-bold font-bold">
                         Buy
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -270,11 +270,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Red Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                      <h3 className="text-white text-3xl text-theme-bold font-bold">
                         Sell
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -295,11 +295,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-2xl font-bold">
+                      <h3 className="text-white text-theme-bold text-3xl font-bold">
                         Service
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -320,11 +320,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                      <h3 className="text-white text-3xl text-theme-bold font-bold">
                         Car care
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -345,11 +345,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-90"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-2xl font-bold">
+                      <h3 className="text-white text-theme-bold text-3xl font-bold">
                         Products
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -370,11 +370,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-2xl font-bold">
+                      <h3 className="text-white text-theme-bold text-3xl font-bold">
                         Turtle Wax Products
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -394,11 +394,11 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-2xl font-bold">
+                      <h3 className="text-white text-theme-bold text-3xl font-bold">
                         Recent Work
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -418,7 +418,7 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">

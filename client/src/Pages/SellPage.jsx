@@ -14,7 +14,7 @@ import { MdOutlinePayments } from "react-icons/md";
 import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
-// icons
+import { FaHeadset } from "react-icons/fa6";
 import {
   Accordion,
   AccordionHeader,
@@ -474,7 +474,7 @@ function SellPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge2.jpeg')]">
+                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -497,7 +497,7 @@ function SellPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -532,20 +532,23 @@ function SellPage() {
                 </p>
               </div>
 
-              <>
-                <Accordion open={open === 1}>
+              <div className="flex flex-col gap-2">
+                <Accordion
+                  className="border border-gray-300 p-3 rounded-xl"
+                  open={open === 1}
+                >
                   <AccordionHeader
                     className="relative"
                     onClick={() => handleOpen(1)}
                   >
-                    <p className="text-start">
+                    <p className="text-start text-theme-semibold">
                       How Long Does It Take To Sell My Car?
                     </p>
                     <p className=" absolute right-0">
                       {open === 1 ? <FaCircleMinus /> : <FaCirclePlus />}
                     </p>
                   </AccordionHeader>
-                  <AccordionBody>
+                  <AccordionBody className="text-theme-500">
                     Typically, the process of selling a car with Urban Garage
                     can be as quick as less than an hour. After the free
                     inspection you will get your quote under 59 minutes and if
@@ -556,18 +559,24 @@ function SellPage() {
                     experience for our customers.
                   </AccordionBody>
                 </Accordion>
-                <Accordion open={open === 2}>
+
+                <Accordion
+                  className="border border-gray-300 p-3 rounded-xl"
+                  open={open === 2}
+                >
                   <AccordionHeader
                     className="relative"
                     onClick={() => handleOpen(2)}
                   >
-                    <p className="text-start">Does My Car Stay With Me?</p>
+                    <p className="text-start text-theme-semibold">
+                      Does My Car Stay With Me?
+                    </p>
 
                     <p className=" absolute right-0">
                       {open === 2 ? <FaCircleMinus /> : <FaCirclePlus />}
                     </p>
                   </AccordionHeader>
-                  <AccordionBody>
+                  <AccordionBody className="text-theme-500">
                     Yes, at Urban Garage, we understand that your car is an
                     important asset and we respect your ownership. When you sell
                     your car to Urban Garage, you have the option to keep
@@ -581,19 +590,23 @@ function SellPage() {
                     to choose when you part ways with your vehicle.
                   </AccordionBody>
                 </Accordion>
-                <Accordion open={open === 3}>
+
+                <Accordion
+                  className="border border-gray-300 p-3 rounded-xl"
+                  open={open === 3}
+                >
                   <AccordionHeader
                     className="relative"
                     onClick={() => handleOpen(3)}
                   >
-                    <p className="text-start">
+                    <p className="text-start text-theme-semibold">
                       Do I Have To Pay Anything Upfront?
                     </p>
                     <p className="absolute right-0">
                       {open === 3 ? <FaCircleMinus /> : <FaCirclePlus />}
                     </p>
                   </AccordionHeader>
-                  <AccordionBody>
+                  <AccordionBody className="text-theme-500">
                     No, you do not have to pay anything upfront when selling a
                     car with Urban Garage. While selling your car, you do not
                     pay anything but only receive with us. We believe in
@@ -606,19 +619,23 @@ function SellPage() {
                     have a hassle-free experience from start to finish.
                   </AccordionBody>
                 </Accordion>
-                <Accordion open={open === 4}>
+
+                <Accordion
+                  className="border border-gray-300 p-3 rounded-xl"
+                  open={open === 4}
+                >
                   <AccordionHeader
                     className="relative"
                     onClick={() => handleOpen(4)}
                   >
-                    <p className="text-start">
+                    <p className="text-start text-theme-semibold">
                       Do You Provide Home Inspection?
                     </p>
                     <p className="absolute right-0">
                       {open === 4 ? <FaCircleMinus /> : <FaCirclePlus />}
                     </p>
                   </AccordionHeader>
-                  <AccordionBody>
+                  <AccordionBody className="text-theme-500">
                     Yes, Urban Garage provides free home inspection services for
                     your convenience. Our expert evaluators can visit your home
                     at a scheduled time to conduct a thorough inspection of your
@@ -628,9 +645,37 @@ function SellPage() {
                     convenient and hassle-free as possible for our customers.
                   </AccordionBody>
                 </Accordion>
-              </>
+              </div>
             </div>
           </section>
+
+          <div className="section">
+            <div className="container border border-gray-300 p-3 rounded-xl">
+              <div className="flex items-center w-full gap-5">
+                <div className="flex items-center ">
+                  <div>
+                    <FaHeadset className="text-5xl text-red-600" />
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="h3 text-theme-semibold">
+                    Still have questions?
+                  </div>
+                  <div className="">
+                    <p className="text-theme-500">
+                      Can’t find the answer you’re looking for? Please chat to
+                      our friendly team.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <button className="py-2 px-8 text-theme-semibold text-white bg-theme-red rounded-lg">
+                    Get In Touch
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* <!-- 
         - #BLOG
