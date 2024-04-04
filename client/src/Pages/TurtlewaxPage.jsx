@@ -181,7 +181,7 @@ function TurtleWaxPage() {
           {/*  NEW PRODUCTS*/}
           <section className="section " id="">
             <div className="container">
-              <h2 className="h2 section-title text-center text-theme-semibold">
+              <h2 className="h2 mb-10 section-title text-center text-theme-semibold">
                 NEW PRODUCTS
               </h2>
 
@@ -248,6 +248,43 @@ function TurtleWaxPage() {
                       <h3 className="h2 underline">
                         SEE THE LATEST FROM THE TURTLE WAX COMMUNITY
                       </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Want to Know Morw Abt  Turtlewax*/}
+          <section className="section " id="">
+            <div className="">
+              {/* card 1 */}
+              <div className="col-span-3 relative  h-80  md:h-96">
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 "></div>
+                <img
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center"
+                  src="https://turtlewax.in/cdn/shop/files/footer-background_1200x400.png?v=1693806894"
+                  alt="Urban Garadge Turtlewax"
+                />
+                <div className="absolute top-0 h-full w-full flex items-center justify-center p-4 ">
+                  <div className="max-w-2xl  font-bold text-white  text-theme-bold">
+                    <h1 className="h1 text-white">WANT MORE TURTLE WAX?</h1>
+                    <p className="p mb-5 text-center text-theme-500 tracking-wide underline">
+                      Sign up for Turtle Wax India's newsletter and be the first
+                      to know about new product launches, car care tips, and
+                      exciting giveaways.
+                    </p>
+                    <div className="flex justify-center">
+                      <Link
+                        target="_blank"
+                        to="https://turtlewax.in/"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="bg-white text-gray-800 px-8 py-3 tracking-wider">
+                          Visit TurtleWax Products
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
