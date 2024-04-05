@@ -827,6 +827,20 @@ a {
   #BLOG
 \*-----------------------------------*/
 
+
+#blog{
+  width: 100%;
+  box-sizing: border-box; /* This ensures padding and borders are included in the element's total width */
+}
+
+@media (max-width: 768px) { /* Adjust 768px to your breakpoint for mobile devices */
+  #blog {
+    padding: 0; /* Example padding, adjust as needed */
+    margin: 0; /* Centers the blog in the viewport */
+    width: calc(100% - 30px); /* Adjusts width to account for padding */
+  }
+}
+
 .blog .section-title {
   margin-bottom: 10px;
 }
@@ -1552,4 +1566,12 @@ a {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }

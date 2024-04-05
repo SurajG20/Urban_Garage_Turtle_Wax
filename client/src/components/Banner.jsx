@@ -34,7 +34,7 @@ function Banner() {
 
       <div className="fixed md:hidden z-50 bottom-2 w-full px-2">
         <Link to="/contact-us">
-          <button className="px-8 py-3 w-full bg-red-800 text-white">
+          <button className="rounded-lg px-8 py-3 w-full text-theme-bold tracking-wider bg-theme-red text-white">
             Book Now
           </button>
         </Link>

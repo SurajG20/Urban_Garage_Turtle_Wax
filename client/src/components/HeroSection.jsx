@@ -3,7 +3,13 @@ import Dropdown from "../utils/Dropdown";
 import { Link } from "react-router-dom";
 function HeroSection({ imgURL, title }) {
   const backgroundImg = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${imgURL})`,
+    backgroundImage: `
+    linear-gradient(
+      to top, 
+      rgba(0, 0, 0, 5), 
+      rgba(0, 0, 0, 0)
+    ),
+    url(${imgURL})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

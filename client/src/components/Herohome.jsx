@@ -3,18 +3,20 @@ import Dropdown from "../utils/Dropdown";
 import { Link } from "react-router-dom";
 
 function Herohome() {
-  const backgroundImg = {
-    backgroundImage: `
+const backgroundImg = {
+  backgroundImage: `
     linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
+      to top, 
+      rgba(0, 0, 0, 1), 
+      rgba(0, 0, 0, 0)
     ),
     url('assets/banners/car6.jpeg')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backdropFilter: "blur(8px)",
-  };
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backdropFilter: "blur(8px)",
+};
+
   return (
     <section className="mt-20">
       <div
@@ -32,7 +34,7 @@ function Herohome() {
                 <span className="font-extrabold md:text-8xl">URBAN GARAGE</span>
               </h1>
             </div>
-            {/* beands  */}
+            {/* brands  */}
             <div className="hidden md:block">
               {/* <div className="bg-white rounded-2xl">
                 <form

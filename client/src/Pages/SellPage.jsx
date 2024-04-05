@@ -30,8 +30,9 @@ function SellPage() {
   const backgroundImg = {
     backgroundImage: `
     linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
+      to top, 
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0)
     ),
     url('assets/banners/car16.jpeg')`,
     backgroundSize: "cover",

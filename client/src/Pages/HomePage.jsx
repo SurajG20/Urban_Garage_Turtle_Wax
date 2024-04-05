@@ -94,7 +94,7 @@ function Home() {
                   </div>
                 </div>
                 {/* right container  */}
-                <div className="bg-white p-5 opacity-80">
+                <div className="bg-white p-4 md:p-5 opacity-80">
                   <div className="mb-2">
                     <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -113,9 +113,9 @@ function Home() {
                       journey easy and lucrative.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-x-5">
-                    <div>
-                      <ul className="text-theme-500">
+                  <div className="grid md:grid-cols-2 gap-y-2 gap-x-5">
+                    <div className="">
+                      <ul className="text-theme-500 flex flex-col gap-y-2">
                         <li className="flex items-center">
                           <TiTick className="text-red-500 text-xl" />
                           Urban Garage
@@ -138,7 +138,7 @@ function Home() {
                       </ul>
                     </div>
                     <div>
-                      <ul className="text-theme-500">
+                      <ul className="text-theme-500 flex flex-col gap-y-2">
                         <li className="flex items-center">
                           {" "}
                           <TiTick className="text-red-500 text-xl" /> 15 Day
@@ -390,7 +390,7 @@ function Home() {
                   <div
                     className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage: "url('assets/garadge/garadge4.jpeg')",
+                      backgroundImage: "url('assets/garage/garage4.jpeg')",
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -414,7 +414,7 @@ function Home() {
                   <div
                     className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage: "url('assets/garadge/garadge1.jpeg')",
+                      backgroundImage: "url('assets/garage/garage1.jpeg')",
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
