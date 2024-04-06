@@ -57,7 +57,7 @@ function ServicePage() {
 
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 has-scrollbar">
                 {/* card 1 */}
-                <div className="h-42 col-span-2 flex flex-col  justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
+                <div className="h-42 col-span-2 flex flex-col theme-border-white justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
                   <div className="">
                     <h2 className="h3 text-theme-bold text-white">
                       Periodic Maintenance
@@ -82,7 +82,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="h-42  flex flex-col justify-between border border-gray-300 rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -104,7 +104,7 @@ function ServicePage() {
                 </div>
 
                 {/* card 3*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -121,7 +121,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 4*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -140,7 +140,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 5*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -159,7 +159,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 6*/}
-                <div className="h-42  flex flex-col justify-center items-start border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-center items-start theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -178,7 +178,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 7*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -197,7 +197,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 8*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -216,7 +216,7 @@ function ServicePage() {
                   </div>
                 </div>
                 {/* card 9*/}
-                <div className="h-42  flex flex-col justify-between border border-gray-300  rounded-2xl px-4 py-4">
+                <div className="h-42  flex flex-col justify-between theme-border-white  rounded-2xl px-4 py-4">
                   <div className="flex">
                     <div className="bg-gray-200 min-w-min p-2 rounded-md ">
                       <div className="h-[3rem]">
@@ -265,7 +265,7 @@ function ServicePage() {
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
                     <div className="absolute z-50 flex justify-around md:gap-5 bottom-0 -mb-5 w-full">
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -273,7 +273,7 @@ function ServicePage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -281,7 +281,7 @@ function ServicePage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>

@@ -107,7 +107,7 @@ function SellPage() {
                     </div> */}
                     <div className="flex justify-start items-center mt-5">
                       <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -115,7 +115,7 @@ function SellPage() {
                             alt="Urban Gradge BMW"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -123,7 +123,7 @@ function SellPage() {
                             alt="Urban Gradge Mercedes"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -131,7 +131,7 @@ function SellPage() {
                             alt="Urban Gradge Chevrolet"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -139,7 +139,7 @@ function SellPage() {
                             alt="Urban Gradge Ferrari"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -147,7 +147,7 @@ function SellPage() {
                             alt="Urban Gradge Ford"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -155,7 +155,7 @@ function SellPage() {
                             alt="Urban Gradge Porsche"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -163,7 +163,7 @@ function SellPage() {
                             alt="Urban Gradge Toyota"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -175,7 +175,7 @@ function SellPage() {
                     </div>
                     {/* <div className="flex justify-start items-center mt-5">
                       <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -183,7 +183,7 @@ function SellPage() {
                             alt="Urban Gradge BMW"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -191,7 +191,7 @@ function SellPage() {
                             alt="Urban Gradge Mercedes"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -199,7 +199,7 @@ function SellPage() {
                             alt="Urban Gradge Chevrolet"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -207,7 +207,7 @@ function SellPage() {
                             alt="Urban Gradge Ferrari"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -215,7 +215,7 @@ function SellPage() {
                             alt="Urban Gradge Ford"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -223,7 +223,7 @@ function SellPage() {
                             alt="Urban Gradge Porsche"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -231,7 +231,7 @@ function SellPage() {
                             alt="Urban Gradge Toyota"
                           />
                         </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl border hover:cursor-pointer">
+                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -253,7 +253,7 @@ function SellPage() {
               <div className=" grid md:grid-cols-2 gap-5">
                 {/* left container  */}
                 <div className="relative h-80 rounded-2xl ">
-                  <div className="absolute z-50 bottom-[-35px] right-10 bg-white rounded-2xl px-10 py-5">
+                  <div className="absolute z-50 bottom-[-35px] theme-border-white right-10 bg-white rounded-2xl px-10 py-5">
                     <ul className="text-theme-500">
                       <li>Recommended by</li>
                       <li className="text-theme-semibold text-green-600 text-xl">
@@ -289,29 +289,33 @@ function SellPage() {
                     <ul className="flex flex-col gap-y-2">
                       <li className="flex items-center gap-x-2">
                         <span>
-                          <TiTick />
+                          <TiTick className="text-red-600" />
                         </span>
-                        <span>
+                        <span className="text-white">
                           Fill In Your Car Details & Get An Instant Call Back
                         </span>
                       </li>
                       <li className="flex items-center gap-x-2">
                         <span>
-                          <TiTick />
+                          <TiTick className="text-red-600" />
                         </span>
-                        <span>Free Doorstep Evaluation</span>
+                        <span className="text-white">
+                          Free Doorstep Evaluation
+                        </span>
                       </li>
                       <li className="flex items-center gap-x-2">
                         <span>
-                          <TiTick />
+                          <TiTick className="text-red-600" />
                         </span>
-                        <span>Instant Payment</span>
+                        <span className="text-white">Instant Payment</span>
                       </li>
                       <li className="flex items-center gap-x-2">
                         <span>
-                          <TiTick />
+                          <TiTick className="text-red-600" />
                         </span>
-                        <span>Complete Peace of Mind</span>
+                        <span className="text-white">
+                          Complete Peace of Mind
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -356,29 +360,29 @@ function SellPage() {
                     <div>
                       <ul className="text-theme-500 text-xl  flex flex-col gap-y-5">
                         <li className="flex text-white items-center text-theme-500">
-                          <TiTick className="text-white text-xl" />
+                          <TiTick className="text-red-600 text-xl" />
                           <span>Safety assurance</span>
                         </li>
                         <li className="flex text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" />
+                          <TiTick className="text-red-600 text-xl" />
                           <span>Schedule FREE evaluation</span>
                         </li>
                         <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" />
+                          <TiTick className="text-red-600 text-xl" />
                           <span>Get the highest quote upon inspection</span>
                         </li>
                         <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" />
+                          <TiTick className="text-red-600 text-xl" />
                           <span>Ensure complete peace of mind</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Appointment Now
                     </button>
                   </div>
@@ -403,7 +407,7 @@ function SellPage() {
               <div className="grid md:grid-cols-3 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       loading="lazy"
@@ -411,7 +415,7 @@ function SellPage() {
                       alt="Urban Garadge"
                     />
                   </div>
-                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                  <h1 className="h3 text-center font-semibold text-theme-bold tracking-wide text-nowrap">
                     Sell Directly To Us
                   </h1>
                   <p className="p font-extrabold text-center text-theme-500">
@@ -421,7 +425,7 @@ function SellPage() {
 
                 {/* card 2 */}
 
-                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       loading="lazy"
@@ -429,7 +433,7 @@ function SellPage() {
                       alt="Urban Garadge"
                     />
                   </div>
-                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                  <h1 className="h3 text-center font-semibold text-theme-bold tracking-wide text-nowrap">
                     No Hidden Fee
                   </h1>
                   <p className="p font-extrabold text-center text-theme-500">
@@ -439,7 +443,7 @@ function SellPage() {
                 </div>
 
                 {/* card 3 */}
-                <div className="h-72 p-10 flex flex-col border gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       loading="lazy"
@@ -447,7 +451,7 @@ function SellPage() {
                       alt="Urban Garadge"
                     />
                   </div>
-                  <h1 className="text-lg text-center font-semibold text-theme-bold tracking-wide text-nowrap">
+                  <h1 className="h3 text-center font-semibold text-theme-bold tracking-wide text-nowrap">
                     Quick & Hassle-Free Process
                   </h1>
                   <p className="p font-extrabold text-center text-theme-500">
@@ -475,7 +479,7 @@ function SellPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -489,7 +493,7 @@ function SellPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -511,7 +515,7 @@ function SellPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -535,7 +539,7 @@ function SellPage() {
 
               <div className="flex flex-col gap-2">
                 <Accordion
-                  className="border border-gray-300 p-3 rounded-xl"
+                  className="theme-border-white  p-3 rounded-xl"
                   open={open === 1}
                 >
                   <AccordionHeader
@@ -562,7 +566,7 @@ function SellPage() {
                 </Accordion>
 
                 <Accordion
-                  className="border border-gray-300 p-3 rounded-xl"
+                  className="theme-border-white  p-3 rounded-xl"
                   open={open === 2}
                 >
                   <AccordionHeader
@@ -593,7 +597,7 @@ function SellPage() {
                 </Accordion>
 
                 <Accordion
-                  className="border border-gray-300 p-3 rounded-xl"
+                  className="theme-border-white  p-3 rounded-xl"
                   open={open === 3}
                 >
                   <AccordionHeader
@@ -622,7 +626,7 @@ function SellPage() {
                 </Accordion>
 
                 <Accordion
-                  className="border border-gray-300 p-3 rounded-xl"
+                  className="theme-border-white  p-3 rounded-xl"
                   open={open === 4}
                 >
                   <AccordionHeader
@@ -651,7 +655,7 @@ function SellPage() {
           </section>
 
           <div className="section">
-            <div className="container border border-gray-300 p-3 rounded-xl">
+            <div className="container theme-border-white  p-3 rounded-xl">
               <div className="flex items-center w-full gap-5">
                 <div className="flex items-center ">
                   <div>
