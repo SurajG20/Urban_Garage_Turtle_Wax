@@ -184,7 +184,7 @@ function Home() {
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand2.png"
+                    src="assets/brands/brand12.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
@@ -198,7 +198,7 @@ function Home() {
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand4.png"
+                    src="assets/brands/brand9.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
@@ -422,7 +422,7 @@ function Home() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-2xl font-bold">
+                      <h3 className="text-white text-theme-bold text-3xl font-bold">
                         About Us
                       </h3>
                       <p className="hidden text-white mt-2">

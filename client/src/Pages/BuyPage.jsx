@@ -244,7 +244,7 @@ function BuyPage() {
               </h2>
 
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
-                <div className="h-24 w-24 m-auto py-5 bg-gray-200 rounded-lg border border-white">
+                <div className="h-16 w-auto m-auto">
                   <Image
                     src="assets/brands/brand1.png"
                     alt="Urban Garage Brand"
@@ -253,7 +253,7 @@ function BuyPage() {
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand2.png"
+                    src="assets/brands/brand12.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
@@ -315,11 +315,11 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="h3 text-white font-bold text-theme-boldtext-white text-3xl text-theme-bold">
                         Buy
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -329,6 +329,7 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+
                 {/* Sell  */}
                 <li>
                   <div
@@ -339,7 +340,7 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -353,6 +354,7 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+
                 {/* Service */}
                 <li>
                   <div
@@ -363,7 +365,7 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -377,6 +379,7 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+
                 {/* Car care  */}
                 <li>
                   <div
@@ -387,7 +390,7 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -401,6 +404,7 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
+
                 {/* Products  */}
                 <li>
                   <div
@@ -411,7 +415,7 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -425,30 +429,7 @@ function BuyPage() {
                     </div>
                   </div>
                 </li>
-                {/* PPF */}
-                <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
-                        PPF
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
-                    </div>
-                  </div>
-                </li>
                 {/* Turtle wax Products */}
                 <li>
                   <div
@@ -459,7 +440,7 @@ function BuyPage() {
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
@@ -474,22 +455,45 @@ function BuyPage() {
                   </div>
                 </li>
 
-                {/* Recent Wor */}
+                {/* Recent work */}
                 <li>
                   <div
                     className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                      backgroundImage: "url('assets/garage/garage4.jpeg')",
                     }}
                   >
                     {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-blue-500 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+
+                    {/* Content */}
+                    <div className="z-10 relative p-4">
+                      <h3 className="h3 text-white font-bold text-theme-bold">
+                        Recent work
+                      </h3>
+                      <p className="hidden text-white mt-2">
+                        If you are going to use a passage of Lorem Ipsum, you
+                        need to be sure.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                {/* About Us */}
+                <li>
+                  <div
+                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    style={{
+                      backgroundImage: "url('assets/garage/garage1.jpeg')",
+                    }}
+                  >
+                    {/* Overlay Element */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
 
                     {/* content */}
                     <div className="z-10 relative p-4">
                       <h3 className="h3 text-white font-bold text-theme-bold">
-                        Recent Work
+                        About Us
                       </h3>
                       <p className="hidden text-white mt-2">
                         If you are going to use a passage of Lorem Ipsum, you
@@ -550,7 +554,7 @@ function BuyPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge2.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -573,7 +577,7 @@ function BuyPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
