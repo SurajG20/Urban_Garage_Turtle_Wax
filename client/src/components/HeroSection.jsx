@@ -6,7 +6,7 @@ function HeroSection({ imgURL, title }) {
     backgroundImage: `
     linear-gradient(
       to top, 
-      rgba(0, 0, 0, 5), 
+      rgba(0, 0, 0, 2), 
       rgba(0, 0, 0, 0)
     ),
     url(${imgURL})`,
@@ -27,7 +27,7 @@ function HeroSection({ imgURL, title }) {
             {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
             <div className="h-full flex flex-col justify-around md:justify-center gap-y-5">
               <div>
-                <h1 className="md:h1 h2 text-center text-white font-bold tracking-wide text-theme-bold">
+                <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-bold">
                   {title}
                 </h1>
               </div>

@@ -5,9 +5,11 @@ function Testinomial() {
   return (
     <section className="section blog " id="blog">
       <div className="container">
-        <h2 className="h2 section-title text-theme-semibold">
-          Customers Reviews
-        </h2>
+        <div className="mb-5 md:mb-10">
+          <h2 className="h2 text-white section-title text-theme-semibold">
+            Customers Reviews
+          </h2>
+        </div>
 
         <ul className="blog-list has-scrollbar">
           <li>

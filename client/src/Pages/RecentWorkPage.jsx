@@ -1,15 +1,18 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
+import Testinomial from "../components/Testinomial";
 import { Link } from "react-router-dom";
-import { IoDiamondOutline } from "react-icons/io5";
+
 // icons
 import { TiTick } from "react-icons/ti";
 import { GrCertificate } from "react-icons/gr";
 import { GiReceiveMoney } from "react-icons/gi";
 import { IoCarSportOutline } from "react-icons/io5";
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
+import { IoDiamondOutline } from "react-icons/io5";
+
 function RecentWork() {
   return (
     <div className="relative">
@@ -38,7 +41,7 @@ function RecentWork() {
                       Why Choose Urban Garage?
                     </h1>
                     <h2 className="h2 text-theme-semibold text-white text-3xl font-bold">
-                      Serving Our Community Since 2014
+                      Serving Our Community Since 2024
                     </h2>
                   </div>
                 </div>
@@ -47,7 +50,7 @@ function RecentWork() {
           </section>
           {/* hero Banner section Start  */}
 
-          <section className="section" id="hero-banner">
+          <section className="section text-white" id="hero-banner">
             <div className="relative md:h-96">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 px-16">
                 {/* left container  */}
@@ -72,11 +75,10 @@ function RecentWork() {
                   </div>
                 </div>
                 {/* right container  */}
-                <div className="bg-white p-5 order-1">
+                <div className="bg-white order-1 rounded-md overflow-hidden theme-border-white">
                   <iframe
                     loading="lazy"
-                    width="516"
-                    height="380"
+                    className="h-full w-full object-cover object-center"
                     src="https://www.youtube.com/embed/tgbNymZ7vqY"
                   ></iframe>
                 </div>
@@ -84,18 +86,19 @@ function RecentWork() {
             </div>
           </section>
 
-          <section className="section" id="hero-banner">
-            <div className="relative mx-auto flex gap-20 flex-col items-center justify-center">
+          {/* Shop With Confidence */}
+          <section className="section text-white" id="hero-banner">
+            <div className="relative mx-auto flex gap-20 flex-col items-center justify-center ">
               <div className="h-full px-16">
-                <h1 className="h1 text-theme-bold relative inline-block text-black text-center">
+                <h1 className="h1 text-theme-bold relative inline-block  text-center">
                   Shop With Confidence
                   <span className="absolute bottom-[-12] left-1/2 transform -translate-x-1/2">
-                    <span className="block h-0.5 w-56 bg-black"></span>
+                    <span className="block h-0.5 w-56 bg-white"></span>
                   </span>
                 </h1>
               </div>
               <div className="flex gap-12 px-16">
-                <div className="flex flex-col items-center justify-center ">
+                <div className="flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl">
                       <IoDiamondOutline className="text-3xl text-theme-red" />
@@ -106,7 +109,7 @@ function RecentWork() {
                     Multi Point Quality Certification
                   </p>
                 </div>
-                <div className="flex flex-col items-center justify-center ">
+                <div className="flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold  items-center gap-2 font-semibold text-2xl">
                       <GrCertificate className="text-3xl text-theme-red" />
@@ -117,18 +120,19 @@ function RecentWork() {
                     7 Days Return Policy.
                   </p>
                 </div>
-                <div className="flex flex-col items-center justify-center ">
+                <div className="flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold  items-center gap-2 font-semibold text-2xl">
                       <GiReceiveMoney className="text-3xl text-theme-red" />
                       Experience
                     </p>
                   </div>
+
                   <p className="text-base text-theme-500">
                     #1 in Credit Assitance.
                   </p>
                 </div>
-                <div className="flex flex-col items-center justify-center ">
+                <div className="flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold   items-center gap-2 font-semibold text-2xl">
                       <IoCarSportOutline className="text-3xl text-theme-red" />
@@ -143,9 +147,9 @@ function RecentWork() {
             </div>
           </section>
           {/* sell banner start */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+              <div className="md:h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
                 <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
@@ -165,8 +169,8 @@ function RecentWork() {
                   </p>
                 </div>
                 <div>
-                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                    Sell Your Car
+                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg theme-border-white">
+                    <Link to={"/sell"}>Sell Your Car</Link>
                   </button>
                 </div>
               </div>
@@ -174,9 +178,9 @@ function RecentWork() {
           </section>
           {/* sell banner end  */}
 
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Our Experience Centres
                 </h2>
@@ -189,7 +193,7 @@ function RecentWork() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url('assets/garadge/garadge1.jpeg')] text-theme-500">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white bg-[url('assets/garage/garage1.jpeg')] text-theme-500">
                   {/* <!-- Black blur effect overlay --> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
 
@@ -205,7 +209,7 @@ function RecentWork() {
                   </p>
 
                   <div className="relative z-10 flex gap-x-3">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
                     <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -216,7 +220,7 @@ function RecentWork() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white bg-[url('assets/garadge/garadge2.jpeg')] text-theme-500">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl  overflow-hidden text-white bg-[url('assets/garage/garage2.jpeg')] text-theme-500">
                   {/* <!-- Black gradient drop effect overlay --> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
 
@@ -232,7 +236,7 @@ function RecentWork() {
                   </p>
 
                   <div className="relative z-10 flex gap-x-3">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
                     <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -280,39 +284,39 @@ function RecentWork() {
                   <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex text-white items-center text-theme-500">
-                          <TiTick className="text-white text-xl" />
+                        <li className="flex gap-2 text-white items-center text-theme-500">
+                          <TiTick className="text-red-600 text-xl" />
                           OEM/OES Parts
                         </li>
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> PAN India
+                          <TiTick className="text-red-600 text-xl" /> PAN India
                           Delivery
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> In House
+                          <TiTick className="text-red-600 text-xl" /> In House
                           Service Available
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> 350+ Check
+                          <TiTick className="text-red-600 text-xl" /> 350+ Check
                           Evaluations
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>
@@ -321,354 +325,8 @@ function RecentWork() {
             </div>
           </section>
 
-          <section className="section blog" id="blog">
-            <div className="container">
-              <h2 className="h2 section-title text-theme-semibold">
-                Customers Reviews
-              </h2>
-
-              <ul className="blog-list has-scrollbar">
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-78.png&w=1920&q=75"
-                          alt="Abertura de novos escritórios da empresa"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link
-                        to="#"
-                        className="btn card-badge text-theme-semobold"
-                      >
-                        Balwindar Singh
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">Audi Q3</h3>
-                      <p className="text-theme-400">
-                        i had the best Experience with Urban Garadge ,I test
-                        Drive their Audi Q3 at the chandighad showroom and on
-                        the day of the test drive , i had a cap on intead of my
-                        truban.
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">14 jan 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-75.png&w=1920&q=75"
-                          alt="Quais carros são mais vulneráveis"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link
-                        to="#"
-                        className="btn card-badge text-theme-semibold"
-                      >
-                        Naveen Mishra
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">
-                        <Link to="#">Hyundai Verna</Link>
-                      </h3>
-                      <p className="text-theme-400">
-                        It was amazing experience... The gesture..the quality of
-                        work ..the process ..it's all of the excellent
-                        quality...thanks @Urban Garadge for the amazing
-                        experience 👍👍
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Jan 22, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-48.png&w=1920&q=75"
-                          alt="As estatísticas mostraram qual idade média"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Naveen Mishra
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title text-theme-500">
-                        <Link to="#">BMW GT</Link>
-                      </h3>
-                      <p className="text-theme-400">
-                        It was amazing experience... The gesture..the quality of
-                        work ..the process ..it's all of the excellent
-                        quality...thanks @Urban Garadge for the amazing
-                        experience 👍👍
-                      </p>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">feb 10, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-50.png&w=1920&q=75"
-                          alt="O que é necessário ao alugar um carro?"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Carros
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          O que é necessário ao alugar um carro?
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-26.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-45.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-36.png&w=1920&q=75"
-                          alt="Novas regras para lidar com nossos carros"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="blog-card">
-                    <figure className="card-banner">
-                      <Link to="#">
-                        <img
-                          src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-29.png&w=1920&q=75"
-                          loading="lazy"
-                          className="w-100"
-                        />
-                      </Link>
-
-                      <Link to="#" className="btn card-badge">
-                        Empresa
-                      </Link>
-                    </figure>
-
-                    <div className="card-content">
-                      <h3 className="h3 card-title">
-                        <Link to="#">
-                          Novas regras para lidar com nossos carros
-                        </Link>
-                      </h3>
-
-                      <div className="card-meta">
-                        <div className="publish-date">
-                          <ion-icon name="time-outline"></ion-icon>
-
-                          <time dateTime="2022-01-14">Janeiro 14, 2022</time>
-                        </div>
-
-                        <div className="comments">
-                          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-
-                          <data value="114">114</data>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <section>
+            <Testinomial />
           </section>
         </article>
       </main>

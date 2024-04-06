@@ -88,12 +88,12 @@ function TurtleWaxPage() {
           </section>
 
           {/* WHAT ARE YOU WORKING ON TODAY? */}
-          <section className="section " id="">
+          <section className="section text-white" id="">
             <div className="container">
               <p className="h2 text-start text-theme-bold text-green-900">
                 PRODUCT FINDER
               </p>
-              <h2 className="h1 text-start section-title text-theme-semibold">
+              <h2 className="h1 mb-5 md:mb-10 text-start section-title text-theme-semibold">
                 WHAT ARE YOU WORKING ON TODAY?
               </h2>
 
@@ -157,10 +157,13 @@ function TurtleWaxPage() {
         - #FEATURED Products
       --> */}
 
-          <section className="section featured-car" id="featured-car">
+          <section
+            className="section featured-car text-white"
+            id="featured-car"
+          >
             <div className="container">
               <div className="title-wrapper">
-                <h2 className="h2 text-theme-semibold section-title m-auto flex items-center flex-wrap justify-center">
+                <h2 className="h2 mb-5 md:mb-10 text-theme-semibold section-title m-auto flex items-center flex-wrap justify-center">
                   TRENDING &nbsp;
                   <span className="font-bold text-green-900 hover:underline">
                     TURTLEWAX{" "}
@@ -187,9 +190,9 @@ function TurtleWaxPage() {
           </section>
 
           {/*  NEW PRODUCTS*/}
-          <section className="section " id="">
+          <section className="section text-white " id="">
             <div className="container">
-              <h2 className="h2 mb-10 section-title text-center text-theme-semibold">
+              <h2 className="h2 mb-5 md:mb-10 section-title text-center text-theme-semibold">
                 NEW PRODUCTS
               </h2>
 
@@ -264,7 +267,7 @@ function TurtleWaxPage() {
           </section>
 
           {/* Want to Know Morw Abt  Turtlewax*/}
-          <section className="section " id="">
+          <section className="section text-white" id="">
             <div className="">
               {/* card 1 */}
               <div className="col-span-3 relative  h-80  md:h-96">
@@ -303,7 +306,7 @@ function TurtleWaxPage() {
           </section>
 
           {/* Explore Our Service Centres */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
               <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
@@ -444,7 +447,7 @@ function TurtleWaxPage() {
           </section>
 
           {/* service location banners */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
               {/* <div className="mb-5">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
@@ -506,7 +509,7 @@ function TurtleWaxPage() {
           </section>
 
           {/* Save BIG With Urban Garage */}
-          <section className="section ">
+          <section className="section text-white ">
             <div className="container">
               <div className="mb-5 md:mb-10">
                 <h2 className="h2 text-center section-title text-theme-semibold">
@@ -597,7 +600,7 @@ function TurtleWaxPage() {
             </div>
           </section>
           {/* How Urban Garage Works?  */}
-          <section className="section" id="">
+          <section className="section " id="">
             <div className="container ">
               <div className="h-full grid grid-cols-1 items-center justify-center md:grid-cols-2 rounded-2xl overflow-hidden theme-border-white">
                 {/* left container  */}
@@ -675,9 +678,9 @@ function TurtleWaxPage() {
           </section>
           {/* why choose us Banner section End  */}
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container ">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold">
                   Original Parts Partner
                 </h2>

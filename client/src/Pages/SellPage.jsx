@@ -248,7 +248,7 @@ function SellPage() {
           </section>
 
           {/* Selling Your Car Made Easy */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
               <div className=" grid md:grid-cols-2 gap-5">
                 {/* left container  */}
@@ -270,13 +270,13 @@ function SellPage() {
                   />
                 </div>
                 {/* right container  */}
-                <div className="flex flex-col justify-between p-6">
+                <div className="flex flex-col justify-between gapy-3 p-6">
                   <div>
-                    <h2 className="h2 text-theme-semibold">
+                    <h2 className="h2 mb-5 text-theme-semibold">
                       Selling Your Car Made Easy
                     </h2>
                   </div>
-                  <div>
+                  <div className="mb-2">
                     <p className="text-theme-500 text-md">
                       Book your car inspection from our trained evaluators at
                       your doorstep & convenience. Get the most lucrative price
@@ -324,7 +324,7 @@ function SellPage() {
             </div>
           </section>
 
-          <section className="section" id="hero-banner">
+          <section className="section text-white" id="hero-banner">
             <div className="relative h-screen">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
@@ -392,9 +392,9 @@ function SellPage() {
           </section>
 
           {/* Why Sell To Urban Garage?  */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Why Sell To Urban Garage?
                 </h2>
@@ -464,9 +464,9 @@ function SellPage() {
           </section>
 
           {/* service location banners */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Our Experience Centres
                 </h2>
@@ -526,9 +526,9 @@ function SellPage() {
           </section>
 
           {/* Faqs  banner end  */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Frequently Asked Questions On Sell
                 </h2>
@@ -654,7 +654,7 @@ function SellPage() {
             </div>
           </section>
 
-          <div className="section">
+          <div className="section text-white">
             <div className="container theme-border-white  p-3 rounded-xl">
               <div className="flex items-center w-full gap-5">
                 <div className="flex items-center ">

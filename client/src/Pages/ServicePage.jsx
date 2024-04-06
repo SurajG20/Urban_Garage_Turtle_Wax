@@ -44,9 +44,9 @@ function ServicePage() {
             title={"Find The Best Pocket Friendly Car Service For You!"}
           />
           {/* Life Is Too Short To Spend At A Repair Shop */}
-          <section className="section " id="">
+          <section className="section text-white" id="">
             <div className="container">
-              <h2 className="h2 section-title text-center text-theme-semibold">
+              <h2 className="h2 mb-5 mb:mb-10 section-title text-center text-theme-semibold">
                 Life Is Too Short To Spend At A Repair Shop
               </h2>
               <p className="p max-w-3xl m-auto text-center text-theme-500">
@@ -59,7 +59,7 @@ function ServicePage() {
                 {/* card 1 */}
                 <div className="h-42 col-span-2 flex flex-col theme-border-white justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl px-4 py-4">
                   <div className="">
-                    <h2 className="h3 text-theme-bold text-white">
+                    <h2 className="h3  text-theme-bold text-white">
                       Periodic Maintenance
                     </h2>
                   </div>
@@ -237,13 +237,13 @@ function ServicePage() {
           </section>
 
           {/* Explore Our Service Centres */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Explore Our Service Centres
                 </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                <p className="p  max-w-3xl m-auto text-center text-theme-500">
                   Schedule your maintenances, repairs and other services easily
                   with a Urban Garage Service Centres near you.
                 </p>
@@ -438,9 +438,9 @@ function ServicePage() {
           </section>
 
           {/* Save BIG With Urban Garage */}
-          <section className="section blog">
+          <section className="section  text-white">
             <div className="container">
-              <h2 className="h2 mb-5 text-center section-title text-theme-semibold">
+              <h2 className="h2  mb-5 md:mb-10 text-center section-title text-theme-semibold">
                 Save BIG With Urban Garage
               </h2>
 
@@ -605,9 +605,9 @@ function ServicePage() {
           </section>
           {/* why choose us Banner section End  */}
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container ">
-              <h2 className="h2 section-title text-center text-theme-semibold">
+              <h2 className="h2 mb-5 md:mb-10 section-title text-center text-theme-semibold">
                 Original Parts Partner
               </h2>
               <p className=" max-w-3xl m-auto text-center text-theme-500">

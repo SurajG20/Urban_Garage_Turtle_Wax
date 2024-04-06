@@ -245,7 +245,7 @@ a {
 .h3 {
   font-family: var(--ff-nunito);
   line-height: 1.4;
-  color: white;
+  
 }
 
 p {
@@ -999,7 +999,8 @@ p {
 }
 
 .footer-list-title {
-  color: var(--space-cadet);
+  /* color: var(--space-cadet); */
+  color: gray;
   font-weight: var(--fw-600);
   margin-bottom: 8px;
 }
@@ -1151,7 +1152,8 @@ p {
   }
 
   .header-contact .contact-link {
-    color: var(--space-cadet);
+    /* color: var(--space-cadet); */
+    color: white;
     font-family: var(--ff-nunito);
     font-size: var(--fs-5);
     line-height: 1.3;

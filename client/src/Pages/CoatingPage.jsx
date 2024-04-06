@@ -263,10 +263,10 @@ function CoatingPage() {
 
           {/* Transform Your Car The Way You Want */}
 
-          <section className="section get-start">
+          <section className="section get-start text-white">
             {/* container 1 */}
             <div className="container mb-10 md:mb-20">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Transform Your Car The Way You Want
                 </h2>

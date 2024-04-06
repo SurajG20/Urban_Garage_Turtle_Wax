@@ -43,10 +43,14 @@ function Home() {
           {/* <!-- 
         - #FEATURED CAR
       --> */}
-          <section className="section featured-car" id="featured-car">
+          <section
+            className="section featured-car text-white"
+            id="featured-car"
+          >
             <div className="container">
               <div className="title-wrapper">
-                <h2 className="h2 text-theme-semibold section-title m-auto">
+             
+                <h2 className="h2 mb-5 text-theme-semibold section-title m-auto">
                   Take A Glimpse Of Our Collection
                 </h2>
                 {/* 
@@ -76,17 +80,19 @@ function Home() {
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
                 <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
-                <div className="absolute -z-20 h-full w-full">
+                <div className="absolute -z-10 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
-                    alt=""
+                    alt="Urban Garage"
                   />
                 </div>
                 {/* left container  */}
                 <div className="hidden md:flex items-end justify-center">
                   <div className="h-[22rem]">
                     <img
+                      loading="lazy"
                       className="h-full w-full object-cover object-left"
                       src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
                       alt="Uran Garage"
@@ -104,7 +110,7 @@ function Home() {
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500">
+                    <p className="text-theme-500 text-black">
                       Urban Garage is a one stop destination for the Foremost,
                       Exclusive and Extravagant Pre-Owned luxury cars. We are
                       here to serve efficiently all across the country with our
@@ -168,7 +174,7 @@ function Home() {
           </section>
 
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section " id="brand">
+          <section className="section text-white" id="brand">
             <div className="container">
               <h2 className="h2 section-title text-center text-theme-semibold">
                 An Exciting Lineup Of Top Brands In Our Showrooms!
@@ -222,9 +228,9 @@ function Home() {
           </section>
 
           {/* Team Urban Garage Is Dedicated To Delivering Excellence */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Team Urban Garage Is Dedicated To Delivering Excellence
                 </h2>
@@ -437,7 +443,7 @@ function Home() {
           </section>
 
           {/* banner  */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
               <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
                 <h1 className="text-2xl md:text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -468,9 +474,9 @@ function Home() {
           </section>
 
           {/* Our Experience Centres */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Our Experience Centres
                 </h2>
@@ -497,7 +503,7 @@ function Home() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Book a visit
                       </button>
                       <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -523,7 +529,7 @@ function Home() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Book a visit
                       </button>
                       <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -537,16 +543,17 @@ function Home() {
           </section>
 
           {/* OUR SERVICES Banner*/}
-          <section className="section" id="hero-banner">
+          <section className="section text-white" id="hero-banner">
             <div className="relative h-screen">
               {/* Overlay div with gradient from black to transparent */}
               <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div>
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
                 <div className="absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt=""
+                    alt="Urban Garage"
                   />
                 </div>
                 {/* Left container remains unchanged */}
@@ -571,39 +578,39 @@ function Home() {
                   <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex text-white items-center text-theme-500">
-                          <TiTick className="text-white text-xl" />
+                        <li className="flex gap-2 text-white items-center text-theme-500">
+                          <TiTick className="text-red-600 text-xl" />
                           OEM/OES Parts
                         </li>
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> PAN India
+                          <TiTick className="text-red-600 text-xl" /> PAN India
                           Delivery
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> In House
+                          <TiTick className="text-red-600 text-xl" /> In House
                           Service Available
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> 350+ Check
+                          <TiTick className="text-red-600 text-xl" /> 350+ Check
                           Evaluations
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>
@@ -613,7 +620,10 @@ function Home() {
           </section>
 
           {/* testinomials  */}
-          <Testinomial />
+
+          <section className="section">
+            <Testinomial />
+          </section>
 
           <section className="section">
             <Banner />
