@@ -16,6 +16,7 @@ html {
   min-width: 396px;
   min-height: 100vh;
   box-sizing: border-box !important;
+  background-color: #0c0c0c;
 }
 
 * {
@@ -244,6 +245,11 @@ a {
 .h3 {
   font-family: var(--ff-nunito);
   line-height: 1.4;
+  color: white;
+}
+
+p {
+  color: white;
 }
 
 .h1 {
@@ -363,7 +369,8 @@ a {
 }
 
 .navbar-link {
-  color: var(--independence);
+  /* color: var(--independence); */
+  color: white;
   font-family: var(--ff-nunito);
   font-size: var(--fs-6);
   padding-block: 5px;
@@ -501,14 +508,18 @@ a {
 
 .featured-car-card {
   background: white;
-  border: 2px solid var(--gray);
+  border: 1px solid var(--white);
   border-radius: var(--radius-18);
   /* padding: 10px; */
   /* box-shadow: var(--shadow-1); */
 }
+
+.theme-border-white {
+  border: 1px solid var(--white);
+}
 .featured-car-card:hover {
   background: white;
-  border: 2px solid var(--gray);
+  border: 1px solid var(--white);
   border-radius: var(--radius-18);
   /* padding: 10px; */
   cursor: pointer;
@@ -828,13 +839,13 @@ a {
   #BLOG
 \*-----------------------------------*/
 
-
-#blog{
+#blog {
   width: 100%;
   box-sizing: border-box; /* This ensures padding and borders are included in the element's total width */
 }
 
-@media (max-width: 768px) { /* Adjust 768px to your breakpoint for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust 768px to your breakpoint for mobile devices */
   #blog {
     padding: 0; /* Example padding, adjust as needed */
     margin: 0; /* Centers the blog in the viewport */
@@ -883,6 +894,7 @@ a {
 
 .blog-card .card-title {
   margin-bottom: 20px;
+  color: black;
 }
 
 .blog-card .card-title > a {
@@ -1006,7 +1018,7 @@ a {
 }
 
 .footer-bottom {
-  background: var(--gradient);
+  /* background: var(--gradient); */
   border: 1px solid var(--white);
   border-radius: var(--radius-18) var(--radius-18) 0 0;
   padding: 20px;
@@ -1562,6 +1574,20 @@ a {
   background-color: #ffffff;
 }
 
+.bg-theme-black {
+  background-color: #0c0c0c;
+}
+
+.bg-theme-black2 {
+  background-color: #191919;
+}
+.bg-theme-black3 {
+  background-color: #191919;
+}
+.bg-theme-black4 {
+  background-color: #272829;
+}
+
 .card-banner {
   background-image: url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);
   background-repeat: no-repeat;
@@ -1569,10 +1595,8 @@ a {
   background-size: cover;
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }

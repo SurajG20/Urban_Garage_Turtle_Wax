@@ -13,15 +13,16 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 function Footer() {
   return (
-    <footer className="footer bg-theme-white">
+    <footer className="footer bg-theme-black4 pt-5">
       <div className="container">
         <div className="grid md:grid-cols-5  gap-x-10 gap-y-5 mb-10">
-          <div className="col-span-2">
-            <Link to="/" className="logo">
-              <div className="h-20 w-20">
+          <div className="col-span-2 ">
+            <Link to="/" className="logo mb-2">
+              <div className="md:h-20 md:w-20">
                 <img
+                  loading="lazy"
                   className="h-full w-full object-cover"
-                  src="assets/logo/light-logo-2.jpeg"
+                  src="assets/logo/light-logo.png"
                   alt="Ridex logo"
                 />
               </div>
@@ -41,7 +42,10 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="/turtle-wax-products" className="footer-link flex items-center gap-x-1">
+              <Link
+                to="/turtle-wax-products"
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>Turtle Wax Products</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -50,7 +54,10 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="/recent-work" className="footer-link flex items-center gap-x-1">
+              <Link
+                to="/recent-work"
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>Recent Work</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -59,7 +66,10 @@ function Footer() {
             </li>
 
             <li>
-              <Link to={"/ppf"} className="footer-link flex items-center gap-x-1">
+              <Link
+                to={"/ppf"}
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>PPF</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -67,7 +77,10 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to={"/coating"} className="footer-link flex items-center gap-x-1">
+              <Link
+                to={"/coating"}
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>Coating</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -90,7 +103,10 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/sell" className="footer-link flex items-center gap-x-1">
+              <Link
+                to="/sell"
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>Sell</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -98,7 +114,10 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/service" className="footer-link flex items-center gap-x-1">
+              <Link
+                to="/service"
+                className="footer-link flex items-center gap-x-1"
+              >
                 <span>Our Services</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -125,7 +144,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <div className="footer-bottom  bg-theme-black3">
           <ul className="social-list">
             <li>
               <Link

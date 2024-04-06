@@ -3,19 +3,19 @@ import Dropdown from "../utils/Dropdown";
 import { Link } from "react-router-dom";
 
 function Herohome() {
-const backgroundImg = {
-  backgroundImage: `
+  const backgroundImg = {
+    backgroundImage: `
     linear-gradient(
       to top, 
       rgba(0, 0, 0, 1), 
       rgba(0, 0, 0, 0)
     ),
     url('assets/banners/car6.jpeg')`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backdropFilter: "blur(8px)",
-};
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
 
   return (
     <section className="mt-20">
@@ -60,7 +60,8 @@ const backgroundImg = {
               </div> */}
               <div className="flex justify-start items-center mt-5">
                 <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                  <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                  {/* brand 1  */}
+                  <div className="h-16  bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
@@ -68,7 +69,8 @@ const backgroundImg = {
                       alt="Urban Gradge BMW"
                     />
                   </div>
-                  <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                  {/* brand 2 */}
+                  <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl  theme-border-white hover:cursor-pointer">
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
@@ -76,6 +78,7 @@ const backgroundImg = {
                       alt="Urban Gradge Mercedes"
                     />
                   </div>
+                  {/* brand 3  */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"
@@ -84,6 +87,7 @@ const backgroundImg = {
                       alt="Urban Gradge Chevrolet"
                     />
                   </div>
+                  {/* brand 4 */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"
@@ -92,6 +96,7 @@ const backgroundImg = {
                       alt="Urban Gradge Ferrari"
                     />
                   </div>
+                  {/* brand 5  */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"
@@ -100,6 +105,7 @@ const backgroundImg = {
                       alt="Urban Gradge Ford"
                     />
                   </div>
+                  {/* brand 6  */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"
@@ -108,6 +114,7 @@ const backgroundImg = {
                       alt="Urban Gradge Porsche"
                     />
                   </div>
+                  {/* brand 7 */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"
@@ -116,6 +123,7 @@ const backgroundImg = {
                       alt="Urban Gradge Toyota"
                     />
                   </div>
+                  {/* brand 8  */}
                   <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl border hover:cursor-pointer">
                     <img
                       loading="lazy"

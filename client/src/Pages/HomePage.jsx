@@ -89,7 +89,7 @@ function Home() {
                     <img
                       className="h-full w-full object-cover object-left"
                       src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
-                      alt=""
+                      alt="Uran Garage"
                     />
                   </div>
                 </div>
@@ -238,7 +238,7 @@ function Home() {
                 {/* Buy  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden theme-border-white"
                     style={{
                       backgroundImage:
                         "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -263,7 +263,7 @@ function Home() {
                 {/* Sell  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
@@ -288,7 +288,7 @@ function Home() {
                 {/* Service */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
@@ -313,7 +313,7 @@ function Home() {
                 {/* Car care  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
@@ -338,7 +338,7 @@ function Home() {
                 {/* Products  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
@@ -363,7 +363,7 @@ function Home() {
                 {/* turtle wax produdcts  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
@@ -388,7 +388,7 @@ function Home() {
                 {/* Recent work */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage: "url('assets/garage/garage4.jpeg')",
                     }}
@@ -412,7 +412,7 @@ function Home() {
                 {/* About us  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage: "url('assets/garage/garage1.jpeg')",
                     }}

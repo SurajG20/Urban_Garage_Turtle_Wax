@@ -86,13 +86,13 @@ function BuyPage() {
                       </li>
                       <li className="flex justify-start items-center gap-x-5">
                         {" "}
-                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                        <div className="bg-gray-200 theme-border-white rounded-lg p-3 hover:cursor-pointer">
                           <MdVerifiedUser className="text-4xl text-red-600" />
                         </div>
-                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                        <div className="bg-gray-200 theme-border-white rounded-lg p-3 hover:cursor-pointer">
                           <FaCar className="text-4xl text-red-600" />
                         </div>
-                        <div className="bg-gray-200 border border-gray-600 rounded-lg p-3 hover:cursor-pointer">
+                        <div className="bg-gray-200 theme-border-white rounded-lg p-3 hover:cursor-pointer">
                           <TbChecklist className="text-4xl text-red-600" />
                         </div>
                       </li>
@@ -308,7 +308,7 @@ function BuyPage() {
                 {/* Buy  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -333,7 +333,7 @@ function BuyPage() {
                 {/* Sell  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
@@ -358,7 +358,7 @@ function BuyPage() {
                 {/* Service */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
@@ -383,7 +383,7 @@ function BuyPage() {
                 {/* Car care  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
@@ -408,7 +408,7 @@ function BuyPage() {
                 {/* Products  */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
@@ -433,7 +433,7 @@ function BuyPage() {
                 {/* Turtle wax Products */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
                         "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
@@ -458,7 +458,7 @@ function BuyPage() {
                 {/* Recent work */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage: "url('assets/garage/garage4.jpeg')",
                     }}
@@ -482,7 +482,7 @@ function BuyPage() {
                 {/* About Us */}
                 <li>
                   <div
-                    className="relative flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage: "url('assets/garage/garage1.jpeg')",
                     }}
@@ -508,8 +508,8 @@ function BuyPage() {
 
           {/* sell banner start */}
           <section className="section get-start">
-            <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+            <div className="container ">
+              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl theme-border-white text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
                 <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
@@ -554,7 +554,7 @@ function BuyPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage2.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -568,7 +568,7 @@ function BuyPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -577,7 +577,7 @@ function BuyPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -590,7 +590,7 @@ function BuyPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -607,9 +607,10 @@ function BuyPage() {
                 <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
                 <div className="absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt=""
+                    alt="Urban Garage Service Centers"
                   />
                 </div>
                 {/* left container  */}
@@ -657,16 +658,16 @@ function BuyPage() {
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>

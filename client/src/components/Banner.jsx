@@ -13,16 +13,20 @@ function Banner() {
     <>
       {tab && (
         <div className="hidden fixed bottom-10 right-10 md:flex flex-row items-center gap-2">
-          <a href="https://wa.me/917744900001">
-            <div className="bg-white p-3 rounded-lg hover:cursor-pointer">
-              <FaWhatsapp className="text-3xl text-gray-800" />
-            </div>
-          </a>
-          <a href="tel:917744900001">
-            <div className="bg-white p-3 rounded-lg hover:cursor-pointer">
-              <IoCall className="text-3xl text-gray-800" />
-            </div>
-          </a>
+          <Link
+            to="https://wa.me/917744900001"
+            target="_blank"
+            className=" theme-border-white rounded-lg bg-white p-3  hover:cursor-pointer"
+          >
+            <FaWhatsapp className="text-3xl text-gray-800" />
+          </Link>
+          <Link
+            target="_blank"
+            to="tel:917744900001"
+            className=" theme-border-white rounded-lg bg-white p-3  hover:cursor-pointer"
+          >
+            <IoCall className="text-3xl text-gray-800" />
+          </Link>
           <div
             className="absolute -top-5 bg-white -right-5 rounded-lg hover:cursor-pointer"
             onClick={() => setTab(false)}

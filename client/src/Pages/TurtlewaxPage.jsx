@@ -78,7 +78,9 @@ function TurtleWaxPage() {
                   <div>
                     <h1 className="md:text-6xl h1 text-center md:text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
                       BUY ONE GET ONE ON SELECTED PRODUCTS <br />
-                      <span className="text-green-900 font-extrabold text-6xl">SAVE NOW</span>
+                      <span className="text-green-900 font-extrabold text-6xl">
+                        SAVE NOW
+                      </span>
                     </h1>
                   </div>
                 </div>
@@ -276,7 +278,9 @@ function TurtleWaxPage() {
                 />
                 <div className="absolute top-0 h-full w-full flex items-center justify-center p-4 ">
                   <div className="max-w-2xl  font-bold text-white  text-theme-bold">
-                    <h1 className="h1 text-white">WANT MORE TURTLE WAX?</h1>
+                    <h1 className="mb-5 h1 text-white">
+                      WANT MORE TURTLE WAX ?
+                    </h1>
                     <p className="p mb-5 text-center text-theme-500 tracking-wide underline">
                       Sign up for Turtle Wax India's newsletter and be the first
                       to know about new product launches, car care tips, and
@@ -454,7 +458,7 @@ function TurtleWaxPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/get-your-car.png')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/get-your-car.png')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -477,7 +481,7 @@ function TurtleWaxPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/Extended-Warranty.png')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/Extended-Warranty.png')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -517,7 +521,7 @@ function TurtleWaxPage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="px-4 py-5">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Free Pickup & Drop
                     </h3>
@@ -537,7 +541,7 @@ function TurtleWaxPage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="px-4 py-5">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Genuine OEM parts
                     </h3>
@@ -556,7 +560,7 @@ function TurtleWaxPage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="px-4 py-5">
                     <h3 className="h3 text-theme-bold text-red-600">
                       30 Day Warranty
                     </h3>
@@ -575,7 +579,7 @@ function TurtleWaxPage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="px-4 py-5">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Transparent billing
                     </h3>
@@ -592,7 +596,7 @@ function TurtleWaxPage() {
           {/* How Urban Garage Works?  */}
           <section className="section" id="">
             <div className="container ">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
+              <div className="h-full grid grid-cols-1 items-center justify-center md:grid-cols-2 ">
                 {/* left container  */}
                 <div className="md:flex items-end justify-center">
                   <div className="md:h-96 w-full">

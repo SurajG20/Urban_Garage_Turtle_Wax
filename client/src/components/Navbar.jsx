@@ -7,7 +7,7 @@ import { MdPerson } from "react-icons/md";
 function Navbar() {
   return (
     <>
-      <header className="header bg-theme-white" data-header>
+      <header className="header bg-theme-black4" data-header>
         <div className="container">
           <div className="overlay" data-overlay></div>
 

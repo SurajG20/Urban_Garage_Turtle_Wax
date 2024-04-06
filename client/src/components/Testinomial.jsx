@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Testinomial() {
   return (
-    <section className="section blog" id="blog">
+    <section className="section blog " id="blog">
       <div className="container">
         <h2 className="h2 section-title text-theme-semibold">
           Customers Reviews
@@ -22,14 +22,16 @@ function Testinomial() {
                   />
                 </Link>
 
-                <Link to="#" className="btn card-badge text-theme-semobold">
+                <Link to="#" className="btn card-badge text-theme-semobold ">
                   Balwindar Singh
                 </Link>
               </figure>
 
               <div className="card-content">
-                <h3 className="h3 card-title text-theme-500">Audi Q3</h3>
-                <p className="text-theme-400">
+                <h3 className="h3 card-title text-theme-500 text-black">
+                  Audi Q3
+                </h3>
+                <p className="text-theme-400 text-black">
                   i had the best Experience with Urban Garadge ,I test Drive
                   their Audi Q3 at the chandighad showroom and on the day of the
                   test drive , i had a cap on intead of my truban.
@@ -73,7 +75,7 @@ function Testinomial() {
                 <h3 className="h3 card-title text-theme-500">
                   <Link to="#">Hyundai Verna</Link>
                 </h3>
-                <p className="text-theme-400">
+                <p className="text-theme-400 text-black">
                   It was amazing experience... The gesture..the quality of work
                   ..the process ..it's all of the excellent quality...thanks
                   @Urban Garage for the amazing experience 👍👍
@@ -117,7 +119,7 @@ function Testinomial() {
                 <h3 className="h3 card-title text-theme-500">
                   <Link to="#">BMW GT</Link>
                 </h3>
-                <p className="text-theme-400">
+                <p className="text-theme-400 text-black">
                   It was amazing experience... The gesture..the quality of work
                   ..the process ..it's all of the excellent quality...thanks
                   @Urban Garage for the amazing experience 👍👍
@@ -159,7 +161,7 @@ function Testinomial() {
 
               <div className="card-content">
                 <h3 className="h3 card-title text-theme-500">Audi Q3</h3>
-                <p className="text-theme-400">
+                <p className="text-theme-400 text-black">
                   i had the best Experience with Urban Garadge ,I test Drive
                   their Audi Q3 at the chandighad showroom and on the day of the
                   test drive , i had a cap on intead of my truban.
@@ -203,7 +205,7 @@ function Testinomial() {
                 <h3 className="h3 card-title text-theme-500">
                   <Link to="#">BMW GT</Link>
                 </h3>
-                <p className="text-theme-400">
+                <p className="text-theme-400 text-black">
                   It was amazing experience... The gesture..the quality of work
                   ..the process ..it's all of the excellent quality...thanks
                   @Urban Garage for the amazing experience 👍👍
@@ -231,4 +233,4 @@ function Testinomial() {
   );
 }
 
-export default Testinomial
+export default Testinomial;
