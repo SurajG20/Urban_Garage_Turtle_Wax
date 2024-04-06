@@ -137,7 +137,7 @@ function Herohome() {
             </div>
             {/* button  */}
             <Link to={"/buy"} className="w-full block md:hidden">
-              <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-red-900 text-white">
+              <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-theme-red text-white">
                 View Cars
               </button>
             </Link>

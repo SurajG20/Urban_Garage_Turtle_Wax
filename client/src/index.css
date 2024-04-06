@@ -352,7 +352,6 @@ p {
   position: fixed;
   top: 70px;
   bottom: 0;
-
   max-width: 260px;
   width: 100%;
   padding: 20px 25px;
@@ -1346,10 +1345,10 @@ p {
     font-weight: var(--fw-600);
   }
 
-  .navbar-list {
+  /* .navbar-list {
     display: flex;
     gap: 25px;
-  }
+  } */
 
   /**
    * HERO

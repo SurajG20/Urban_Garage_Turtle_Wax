@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // icons
 import { MdPerson } from "react-icons/md";
 
 function Navbar() {
+  
+  const [mobiNavbar, setmobiNavbar] = useState(false);
+
   return (
     <>
       <header className="header bg-theme-black4" data-header>
@@ -22,7 +25,7 @@ function Navbar() {
           </Link>
 
           <nav className="navbar" data-navbar>
-            <ul className="navbar-list">
+            <ul className="navbar-list flex gap-8">
               <li>
                 <Link
                   to="/buy"
@@ -116,6 +119,9 @@ function Navbar() {
             </Link>
 
             <button
+              onClick={() => {
+                "";
+              }}
               className="nav-toggle-btn"
               data-nav-toggle-btn
               aria-label="Toggle Menu"

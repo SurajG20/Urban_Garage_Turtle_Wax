@@ -24,9 +24,9 @@ function Contactus() {
 
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
           {/* services  */}
-          <section className="section mt-12 get-start">
+          <section className="section mt-12 get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-12">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Contact Information
                 </h2>
@@ -194,9 +194,9 @@ function Contactus() {
           </section>
 
           {/* Our Experience Centres */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Our Experience Centres
                 </h2>
@@ -263,9 +263,9 @@ function Contactus() {
           </section>
 
           {/* Our Experience Centres */}
-          <section className="section get-start">
+          <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Explore Our Service Centres
                 </h2>
