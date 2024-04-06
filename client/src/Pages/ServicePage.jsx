@@ -249,14 +249,14 @@ function ServicePage() {
                 </p>
               </div>
 
-              <div className="md:flex justify-center gap-x-5 gap-y-5">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative flex flex-col gap-y-8">
+                <div className="relative flex flex-col gap-y-8 ">
                   {/* New wrapper for positioning */}
                   <div className="relative z-0 w-full md:w-96 rounded-2xl">
                     {/* img-container */}
-                    <div className="h-64 overflow-hidden rounded-2xl">
+                    <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
                         src="assets/garage/garage2.jpeg"
                         alt="Urban Garage"
@@ -316,7 +316,7 @@ function ServicePage() {
                   {/* New wrapper for positioning */}
                   <div className="relative z-0 md:w-96 rounded-2xl">
                     {/* img-container */}
-                    <div className="h-64 overflow-hidden rounded-2xl">
+                    <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
                         src="assets/garadge/garadge4.jpeg"
                         alt="Urban Garage"
@@ -325,7 +325,7 @@ function ServicePage() {
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
                     <div className="absolute z-50 flex justify-around md:gap-5 bottom-0 -mb-5 w-full">
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -333,7 +333,7 @@ function ServicePage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -341,7 +341,7 @@ function ServicePage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -391,7 +391,7 @@ function ServicePage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-72 md:h-96 p-4 md:p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/get-your-car.png')]">
+                <div className="relative h-72 md:h-96 p-4  flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/get-your-car.png')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -405,7 +405,7 @@ function ServicePage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -414,7 +414,7 @@ function ServicePage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-4 md:p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/Extended-Warranty.png')]">
+                <div className="relative h-96 p-4  flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/Extended-Warranty.png')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -427,7 +427,7 @@ function ServicePage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -438,9 +438,9 @@ function ServicePage() {
           </section>
 
           {/* Save BIG With Urban Garage */}
-          <section className="section blog" id="blog">
+          <section className="section blog">
             <div className="container">
-              <h2 className="h2 text-center section-title text-theme-semibold">
+              <h2 className="h2 mb-5 text-center section-title text-theme-semibold">
                 Save BIG With Urban Garage
               </h2>
 
@@ -454,7 +454,7 @@ function ServicePage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Free Pickup & Drop
                     </h3>
@@ -474,7 +474,7 @@ function ServicePage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Genuine OEM parts
                     </h3>
@@ -493,7 +493,7 @@ function ServicePage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <h3 className="h3 text-theme-bold text-red-600">
                       30 Day Warranty
                     </h3>
@@ -512,7 +512,7 @@ function ServicePage() {
                       onError="assets/loading.jpeg"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <h3 className="h3 text-theme-bold text-red-600">
                       Transparent billing
                     </h3>
@@ -529,7 +529,7 @@ function ServicePage() {
           {/* How Urban Garage Works?  */}
           <section className="section" id="">
             <div className="container ">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
+              <div className="h-full grid grid-cols-1 md:grid-cols-2  rounded-2xl overflow-hidden theme-border-white">
                 {/* left container  */}
                 <div className="md:flex items-end justify-center">
                   <div className="md:h-96 w-full">
@@ -543,7 +543,7 @@ function ServicePage() {
                 {/* right container  */}
                 <div className="bg-gray-200 md:p-5 opacity-80 flex flex-col gap-5">
                   <div className="mb-2">
-                    <h2 className="h1 text-theme-bold font-bold text-2xl">
+                    <h2 className="text-theme-bold font-bold text-3xl text-black">
                       How Urban Garage Works?
                     </h2>
                   </div>
@@ -559,7 +559,7 @@ function ServicePage() {
                         </span>
                       </div>
 
-                      <p className="ml-7">
+                      <p className="ml-7 text-black">
                         Get quality service and repairs at affordable prices.
                       </p>
                     </div>
@@ -576,7 +576,7 @@ function ServicePage() {
                         </span>
                       </div>
 
-                      <p className="ml-7">
+                      <p className="ml-7 text-black">
                         We provide no cost pick and drop facility to our service
                         centres.
                       </p>
@@ -594,7 +594,9 @@ function ServicePage() {
                         </span>
                       </div>
 
-                      <p className="ml-7 ">Get real time updates on WhatsApp</p>
+                      <p className="ml-7 text-black">
+                        Get real time updates on WhatsApp
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -615,7 +617,7 @@ function ServicePage() {
               </p>
 
               <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 has-scrollbar">
-                <div className="h-28 w-auto m-auto">
+                <div className="h-28 w-auto m-auto ">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-center"
@@ -661,7 +663,7 @@ function ServicePage() {
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500">
+              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500">
                 <h1 className="text-5xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Stats Don’t Lie!
                 </h1>
@@ -706,15 +708,16 @@ function ServicePage() {
 
           {/* OUR SERVICES */}
           <section className="section" id="hero-banner">
-            <div className="relative h-screen">
+            <div className="relative md:h-screen">
               {/* Overlay div with gradient from black to transparent */}
               <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div>
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
                 <div className=" absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt=""
+                    alt="Urban Garage Service Centers"
                   />
                 </div>
                 {/* Left container remains unchanged */}
@@ -740,38 +743,38 @@ function ServicePage() {
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex text-white items-center text-theme-500">
-                          <TiTick className="text-white text-xl" />
+                          <TiTick className="text-red-600 text-xl" />
                           OEM/OES Parts
                         </li>
                         <li className="flex text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> PAN India
+                          <TiTick className="text-red-600 text-xl" /> PAN India
                           Delivery
                         </li>
                         <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> In House
+                          <TiTick className="text-red-600 text-xl" /> In House
                           Service Available
                         </li>
                         <li className="flex text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-white text-xl" /> 350+ Check
+                          <TiTick className="text-red-600 text-xl" /> 350+ Check
                           Evaluations
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>

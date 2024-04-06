@@ -27,20 +27,19 @@ function TurtleWaxPage() {
     "https://www.turtlewax.com/cdn/shop/files/car-hover-paint_178a04b5-c588-4e25-8877-4d039127185e_1920x720.png?v=1670861464",
   ];
 
-
-    const backgroundImg = {
-      backgroundImage: `
+  const backgroundImg = {
+    backgroundImage: `
     linear-gradient(
       to top, 
       rgba(0, 0, 0, 0.8), 
       rgba(0, 0, 0, 0)
     ),
     url('https://www.turtlewax.com/cdn/shop/files/d3c2c916-2fb9-4206-af93-b1f11d1b33c7_1500x.progressive.jpg?v=1707902215')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backdropFilter: "blur(8px)",
-    };
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
 
   useEffect(() => {
     setCars(data.products);
@@ -194,9 +193,9 @@ function TurtleWaxPage() {
                 NEW PRODUCTS
               </h2>
 
-              <div className="flex flex-col md:grid md:grid-cols-3 gap-5">
+              <div className="flex flex-col md:grid md:grid-cols-3 gap-x-5 gap-y-10">
                 {/* card 1 */}
-                <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden">
+                <div className="relative h-72 md:h-96 rounded-2xl theme-border-white overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 "></div>
                   <img
                     loading="lazy"
@@ -211,7 +210,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="relative  h-72 md:h-96 rounded-2xl overflow-hidden">
+                <div className="relative  h-72 md:h-96 rounded-2xl theme-border-white overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 rounded-2xl"></div>
                   <img
                     loading="lazy"
@@ -226,7 +225,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 3 */}
-                <div className="relative  h-72 md:h-96 rounded-2xl overflow-hidden">
+                <div className="relative  h-72 md:h-96 rounded-2xl theme-border-white overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 rounded-2xl"></div>
                   <img
                     loading="lazy"
@@ -241,7 +240,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 4 */}
-                <div className="col-span-3 relative  h-80  md:h-96  rounded-2xl overflow-hidden">
+                <div className="col-span-3 relative  h-80  md:h-96  rounded-2xl theme-border-white gap-y1- overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 rounded-2xl"></div>
                   <img
                     loading="lazy"
@@ -306,7 +305,7 @@ function TurtleWaxPage() {
           {/* Explore Our Service Centres */}
           <section className="section get-start">
             <div className="container">
-              <div className="mb-5">
+              <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Explore Our Service Centres
                 </h2>
@@ -319,9 +318,9 @@ function TurtleWaxPage() {
               <div className="md:flex justify-center gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative flex flex-col gap-y-8">
+                <div className=" flex flex-col gap-y-8">
                   {/* New wrapper for positioning */}
-                  <div className="relative z-0 w-96 rounded-2xl">
+                  <div className="relative z-0 w-full md:w-96 theme-border-white rounded-2xl">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
                       <Image
@@ -331,8 +330,8 @@ function TurtleWaxPage() {
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
-                    <div className="absolute z-50 flex gap-5 bottom-0 -mb-5 left-5">
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                    <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
+                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -340,7 +339,8 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+
+                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -348,7 +348,8 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+
+                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -379,9 +380,9 @@ function TurtleWaxPage() {
                 </div>
                 {/* card 2 */}
 
-                <div className="relative flex flex-col gap-y-8 bordder">
+                <div className="flex flex-col gap-y-8 bordder">
                   {/* New wrapper for positioning */}
-                  <div className="relative z-0 w-96 rounded-2xl">
+                  <div className="relative z-0 w-full md:w-96 rounded-2xl theme-border-white">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
                       <Image
@@ -391,8 +392,8 @@ function TurtleWaxPage() {
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
-                    <div className="absolute z-50 flex gap-5 bottom-0 -mb-5 left-5">
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                    <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -400,7 +401,7 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -408,7 +409,7 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md">
+                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -505,11 +506,13 @@ function TurtleWaxPage() {
           </section>
 
           {/* Save BIG With Urban Garage */}
-          <section className="section blog" id="blog">
+          <section className="section ">
             <div className="container">
-              <h2 className="h2 text-center section-title text-theme-semibold">
-                Save BIG With Urban Garage
-              </h2>
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 text-center section-title text-theme-semibold">
+                  Save BIG With Urban Garage
+                </h2>
+              </div>
 
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
                 {/* card 1 */}
@@ -596,7 +599,7 @@ function TurtleWaxPage() {
           {/* How Urban Garage Works?  */}
           <section className="section" id="">
             <div className="container ">
-              <div className="h-full grid grid-cols-1 items-center justify-center md:grid-cols-2 ">
+              <div className="h-full grid grid-cols-1 items-center justify-center md:grid-cols-2 rounded-2xl overflow-hidden theme-border-white">
                 {/* left container  */}
                 <div className="md:flex items-end justify-center">
                   <div className="md:h-96 w-full">
@@ -610,7 +613,7 @@ function TurtleWaxPage() {
                 {/* right container  */}
                 <div className="bg-gray-200 p-5 opacity-80 flex flex-col gap-5">
                   <div className="mb-2">
-                    <h2 className="h1 text-theme-bold font-bold text-2xl">
+                    <h2 className="h1 text-theme-bold font-bold text-2xl text-black">
                       How Urban Garage Works?
                     </h2>
                   </div>
@@ -626,7 +629,7 @@ function TurtleWaxPage() {
                         </span>
                       </div>
 
-                      <p className="ml-7">
+                      <p className="ml-7 text-black">
                         Get quality service and repairs at affordable prices.
                       </p>
                     </div>
@@ -643,7 +646,7 @@ function TurtleWaxPage() {
                         </span>
                       </div>
 
-                      <p className="ml-7">
+                      <p className="ml-7 text-black">
                         We provide no cost pick and drop facility to our service
                         centres.
                       </p>
@@ -661,7 +664,9 @@ function TurtleWaxPage() {
                         </span>
                       </div>
 
-                      <p className="ml-7 ">Get real time updates on WhatsApp</p>
+                      <p className="ml-7 text-black">
+                        Get real time updates on WhatsApp
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -672,18 +677,20 @@ function TurtleWaxPage() {
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section get-start">
             <div className="container ">
-              <h2 className="h2 section-title text-center text-theme-semibold">
-                Original Parts Partner
-              </h2>
-              <p className=" max-w-3xl m-auto text-center text-theme-500">
-                We source only 100% genuine and authentic spare parts from
-                reputed vendors and suppliers ensuring what goes into your car
-                is nothing but the best.
-              </p>
+              <div className="mb-5">
+                <h2 className="h2 section-title text-center text-theme-semibold">
+                  Original Parts Partner
+                </h2>
+                <p className=" max-w-3xl m-auto text-center text-theme-500">
+                  We source only 100% genuine and authentic spare parts from
+                  reputed vendors and suppliers ensuring what goes into your car
+                  is nothing but the best.
+                </p>
+              </div>
 
-              <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-6 ">
+              <div className=" grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-6 ">
                 {/* card 1 */}
-                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -692,7 +699,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 2 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -701,7 +708,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 3 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -710,7 +717,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 4 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -719,7 +726,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 5 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -728,7 +735,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 6*/}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 border border-gray-300 rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -742,16 +749,16 @@ function TurtleWaxPage() {
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container">
-              <div className=" md:h-80 p-4 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500">
+              <div className=" md:h-80 p-4 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500 theme-border-white">
                 <h1 className="text-5xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Stats Don’t Lie!
                 </h1>
                 <p className="p text-center md:text-start font-bold tracking-wider text-theme-bold">
                   Impressive Customer Statistics That Showcase Our Success
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-x-12 bg-white bg-opacity-50 border border-gray-200 shadow-lg p-6 rounded-lg">
-                  {/* ccard 1 */}
-                  <div className="flex flex-col items-center text-theme-500 gap-3 text-theme-500">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-x-12 bg-white bg-opacity-50 shadow-lg p-6 rounded-lg theme-border-white">
+                  {/* card 1 */}
+                  <div className="flex flex-col items-center text-theme-500 gap-3 text-theme-500 ">
                     <span className="h1 font-semibold text-theme-500">
                       50,000+
                     </span>
@@ -792,6 +799,7 @@ function TurtleWaxPage() {
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
                 <div className=" absolute -z-20 h-full w-full">
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
                     alt="Urban Garage Service Centers"
@@ -842,16 +850,16 @@ function TurtleWaxPage() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>
