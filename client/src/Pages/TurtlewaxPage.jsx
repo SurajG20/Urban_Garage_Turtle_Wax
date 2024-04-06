@@ -27,13 +27,20 @@ function TurtleWaxPage() {
     "https://www.turtlewax.com/cdn/shop/files/car-hover-paint_178a04b5-c588-4e25-8877-4d039127185e_1920x720.png?v=1670861464",
   ];
 
-  const backgroundImg = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.turtlewax.com/cdn/shop/files/d3c2c916-2fb9-4206-af93-b1f11d1b33c7_1500x.progressive.jpg?v=1707902215)`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backdropFilter: "blur(8px)",
-  };
+
+    const backgroundImg = {
+      backgroundImage: `
+    linear-gradient(
+      to top, 
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0)
+    ),
+    url('https://www.turtlewax.com/cdn/shop/files/d3c2c916-2fb9-4206-af93-b1f11d1b33c7_1500x.progressive.jpg?v=1707902215')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backdropFilter: "blur(8px)",
+    };
 
   useEffect(() => {
     setCars(data.products);
@@ -71,7 +78,7 @@ function TurtleWaxPage() {
                   <div>
                     <h1 className="md:text-6xl h1 text-center md:text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
                       BUY ONE GET ONE ON SELECTED PRODUCTS <br />
-                      <span className="text-green-900">SAVE NOW</span>
+                      <span className="text-green-900 font-extrabold text-6xl">SAVE NOW</span>
                     </h1>
                   </div>
                 </div>
@@ -90,7 +97,7 @@ function TurtleWaxPage() {
               </h2>
 
               <div className=" flex justify-end">
-                <div className="relative h-96 w-[50rem]">
+                <div className="relative md:h-96 w-full md:w-[50rem]">
                   <img
                     className="h-full w-full object-cover object-center"
                     src={carImg[carIndex]}
@@ -152,7 +159,7 @@ function TurtleWaxPage() {
           <section className="section featured-car" id="featured-car">
             <div className="container">
               <div className="title-wrapper">
-                <h2 className="h2 text-theme-semibold section-title m-auto flex items-center">
+                <h2 className="h2 text-theme-semibold section-title m-auto flex items-center flex-wrap justify-center">
                   TRENDING &nbsp;
                   <span className="font-bold text-green-900 hover:underline">
                     TURTLEWAX{" "}
