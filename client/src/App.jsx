@@ -11,13 +11,14 @@ import PPFPage from "./Pages/PPFPage";
 import RecentWork from "./Pages/RecentWorkPage";
 import Contactus from "./Pages/ContactPage";
 import TurtleWaxPage from "./Pages/TurtlewaxPage";
+import CarDetail from "./Pages/CarDetail";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-
       <Route path="/buy" element={<BuyPage />} />
+      <Route path="/buy/car-detail/:id" element={<CarDetail />} />
       <Route path="/sell" element={<SellPage />} />
       <Route path="/service" element={<ServicePage />} />
       <Route path="/coating" element={<CoatingPage />} />

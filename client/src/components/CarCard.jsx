@@ -66,7 +66,7 @@ function CarCard({ item }) {
           <div>
             <button className="bg-theme-red py-1 px-5 rounded-lg">
               <Link
-                to={`/car-detail/${item._id}`}
+                to={`/buy/car-detail/${item._id}`}
                 className="text- text-theme-semibold "
               >
                 View Details
