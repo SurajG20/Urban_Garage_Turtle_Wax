@@ -32,10 +32,10 @@ function CarDetail() {
   }, [id]);
 
   return (
-    <div className="relative">
+    <>
       {/* <Navbar /> */}
-      <nav className="container p-4 text-white">
-        <div className="grid grid-cols-3">
+      <nav className="container p-4 text-white  bg-theme-black4">
+        <div className="grid grid-cols-2 md:grid-cols-3">
           <div className="">
             <Link
               to={"/buy"}
@@ -49,9 +49,6 @@ function CarDetail() {
             </Link>
           </div>
           <div className="text-center">
-            <span>
-              <img src="assets/logo/light-logo.png" alt="" />
-            </span>
             <span className="text-theme-red h3 text-theme-bold">
               URBAN GARAGE
             </span>
@@ -64,10 +61,12 @@ function CarDetail() {
           <section className="section">
             <div className="container">
               <div className="mb-10 grid md:grid-cols-2 gap-x-10 text-white">
-                <div className="flex flex-col gap-y-3">
-                  <div className="text-theme-red h2">{carDetail.name}</div>
+                <div className="mb-5 flex flex-col gap-y-3">
+                  <div className="text-theme-red md:h2 h3 text-center md:text-start">
+                    {carDetail.name}
+                  </div>
 
-                  <div className="grid grid-cols-5 text-center gap-3">
+                  <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
                     <div>
                       <div className="text-theme-500 text-gray-400">
                         Regd.Year
@@ -92,7 +91,9 @@ function CarDetail() {
                       <div className="text-theme-500 text-gray-400">
                         Ownership
                       </div>
-                      <div className="text-theme-semibold">1</div>
+                      <div className="text-theme-semibold">
+                        {carDetail.owner}
+                      </div>
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
@@ -105,9 +106,9 @@ function CarDetail() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 items-start">
+                <div className="grid md:grid-cols-3 gap-5 items-start">
                   {/* card 1 */}
-                  <div className="flex flex-col justify-between">
+                  <div className="flex flex-col items-center md:items-start justify-between gap-2">
                     <div className="flex items-center gap-x-3">
                       <span className="text-theme-500 text-gray-400">IND</span>
                       <span className="h3 text-them-semibold text-theme-bold text-theme-red">
@@ -133,42 +134,49 @@ function CarDetail() {
                     </div>
                   </div>
                   {/* card 2 */}
-                  <div className="col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
-                    <button className="px-5 py-2 text-theme-semibold bg-theme-red rounded-md">
+                  <div className="md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
+                    <button className="px-5 w-full py-2 text-theme-semibold bg-theme-red rounded-md">
                       Book Test Drive
                     </button>
-                    <button className="py-2 px-5 bg-theme-white text-theme-semibold text-black rounded-md">
+                    <button className="py-2 w-full px-5 bg-theme-white text-theme-semibold text-black rounded-md">
                       E-Book Now
                     </button>
                   </div>
                 </div>
               </div>
-
-              {/* images grid  */}
-              <div className="h-[75vh] grid grid-cols-8 gap-5">
-                <div className="h-full col-span-2  flex flex-col gap-2 overflow-y-auto">
-                  <div className="h-62">
+              {/* main  Page content */}
+              <div className="md:h-[75vh] md:grid md:grid-cols-8 gap-5">
+                {/* images grid  */}
+                <div className="h-full w-full md:col-span-2 flex md:flex-col gap-2 overflow-x-auto md md:overflow-y-auto">
+                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
                     <img
                       className="object-cover object-center w-full h-full"
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
                     />
                   </div>
-                  <div className="h-62">
+                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
                     <img
                       className="object-cover object-center w-full h-full"
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
                     />
                   </div>
-                  <div className="h-62">
+                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
                     <img
                       className="object-cover object-center w-full h-full"
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
                     />
                   </div>
-                  <div className="h-62">
+                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
+                    <img
+                      className="object-cover object-center w-full h-full"
+                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
+                      alt="Urban Garage Car"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
                     <img
                       className="object-cover object-center w-full h-full"
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
@@ -176,7 +184,9 @@ function CarDetail() {
                     />
                   </div>
                 </div>
-                <div className="col-span-6 h-[75vh]">
+
+                {/* image container  */}
+                <div className="col-span-6 h-64 md:h-[75vh]">
                   <img
                     className="object-cover object-center w-full h-full"
                     src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/2426da4f-e1e0-4f56-948a-8876b2a9a97a/slot/2.jpg"
@@ -189,7 +199,7 @@ function CarDetail() {
         </article>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
