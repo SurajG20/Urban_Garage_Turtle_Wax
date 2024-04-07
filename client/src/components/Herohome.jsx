@@ -74,7 +74,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand2.png"
+                      src="assets/brands/brand12.png"
                       alt="Urban Gradge Mercedes"
                     />
                   </div>

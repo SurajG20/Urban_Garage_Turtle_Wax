@@ -258,9 +258,9 @@ function ServicePage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
-                        src="assets/garage/garage_two.jpeg"
+                        src="assets/garage/garage-two.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage_one.jpeg"
+                        onError="assets/garage/garage-one.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -318,9 +318,9 @@ function ServicePage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
-                        src="assets/garage/garage_four.jpeg"
+                        src="assets/garage/garage-four.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage_one.jpeg"
+                        onError="assets/garage/garage-one.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
