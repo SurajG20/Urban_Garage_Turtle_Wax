@@ -321,7 +321,8 @@ p {
 }
 
 .nav-toggle-btn span {
-  background: var(--independence);
+  background: white;
+  /* background: var(--independence); */
   width: 22px;
   height: 2px;
   border-radius: 2px;
@@ -339,7 +340,7 @@ p {
 }
 
 .nav-toggle-btn:is(:hover, :focus) span {
-  background: var(--carolina-blue);
+  background: red;
 }
 
 .nav-toggle-btn.active span {
@@ -396,6 +397,50 @@ p {
   opacity: 0.7;
   pointer-events: all;
 }
+
+
+/* mobile view navbar  */
+
+/* Initial state for mobile navbar is hidden */
+.mobile-nav {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100%;
+  background-color: #272829 !important;
+  z-index: 999; /* Ensure it's above other content */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+
+/* When mobiNavbar is true, show the navbar */
+.mobile-nav.show {
+  display: block;
+  transform: translateX(0%);
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none; /* Ensure it doesn't display on larger screens */
+  }
+}
+
+/* Responsive adjustments for the main navbar */
+@media (min-width: 768px) {
+  .navbar {
+    position: relative;
+    max-width: none;
+    padding: 0;
+    visibility: visible;
+    transform: none;
+    background: none;
+    box-shadow: none;
+  }
+}
+
 
 /*-----------------------------------*\
   #HERO

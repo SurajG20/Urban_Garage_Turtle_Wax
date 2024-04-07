@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 // icons
 import { MdPerson } from "react-icons/md";
-
+import { RxCross1 } from "react-icons/rx";
 function Navbar() {
-  
   const [mobiNavbar, setmobiNavbar] = useState(false);
 
   return (
@@ -24,7 +23,7 @@ function Navbar() {
             </div>
           </Link>
 
-          <nav className="navbar" data-navbar>
+          <nav className="navbar " data-navbar>
             <ul className="navbar-list flex gap-8">
               <li>
                 <Link
@@ -95,6 +94,94 @@ function Navbar() {
             </ul>
           </nav>
 
+          {/* mobile navbar */}
+          <div className={`mobile-nav p-4 ${mobiNavbar ? "show" : ""}`}>
+            <div className="flex justify-between items-center mb-10">
+              <Link to="/" className="logo">
+                <div className="h-12">
+                  <img
+                    className="h-full"
+                    src={"assets/logo/light-logo.png"}
+                    alt="URBAN Garage"
+                  />
+                </div>
+              </Link>
+              <RxCross1
+                onClick={() => setmobiNavbar(false)}
+                className="text-2xl text-white"
+              />
+            </div>
+
+            <ul className="mobile-nav-list flex flex-col gap-3 text-white">
+              <li>
+                <Link
+                  to="/buy"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Buy
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/sell"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Sell
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/service"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Service
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/coating"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Coating
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ppf"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  PPF
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/turtle-wax-products"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Turtle Wax Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/recent-work"
+                  className="mobile-nav-link text-theme-500"
+                  data-nav-link
+                >
+                  Recent Work
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           <div className="header-actions">
             <div className="header-contact">
               <Link
@@ -119,9 +206,7 @@ function Navbar() {
             </Link>
 
             <button
-              onClick={() => {
-                "";
-              }}
+              onClick={() => setmobiNavbar(!mobiNavbar)}
               className="nav-toggle-btn"
               data-nav-toggle-btn
               aria-label="Toggle Menu"
