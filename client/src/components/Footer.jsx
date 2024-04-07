@@ -18,7 +18,7 @@ function Footer() {
         <div className="grid md:grid-cols-5  gap-x-10 gap-y-5 mb-10">
           <div className="col-span-2 ">
             <Link to="/" className="logo mb-2">
-              <div className="md:h-20 md:w-20">
+              <div className="h-16 w-16 md:h-20 md:w-20">
                 <img
                   loading="lazy"
                   className="h-full w-full object-cover"
