@@ -258,9 +258,9 @@ function ServicePage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
-                        src="assets/garage/garage2.jpeg"
+                        src="assets/garage/garage_two.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage1.jpeg"
+                        onError="assets/garage/garage_one.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -269,7 +269,7 @@ function ServicePage() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -277,15 +277,15 @@ function ServicePage() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 font-semibold text-sm">
+                        <div className="text-theme-500 font-semibold text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>
                       <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
-                        <div className="text-theme-500 text-theme-red">
+                        <div className="text-theme-500 text-theme-red ">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -318,9 +318,9 @@ function ServicePage() {
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl theme-border-white">
                       <Image
-                        src="assets/garadge/garadge4.jpeg"
+                        src="assets/garage/garage_four.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage1.jpeg"
+                        onError="assets/garage/garage_one.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -329,7 +329,7 @@ function ServicePage() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -337,7 +337,7 @@ function ServicePage() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 font-semibold text-sm">
+                        <div className="text-theme-500 font-semibold text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -345,7 +345,7 @@ function ServicePage() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-sm text-gray-900">
                           Sq. Ft. Area
                         </div>
                       </div>

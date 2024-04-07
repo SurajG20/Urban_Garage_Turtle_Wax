@@ -13,7 +13,7 @@ html {
   line-height: 1.5;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  min-width: 396px;
+  min-width: 370px !important;
   min-height: 100vh;
   box-sizing: border-box !important;
   background-color: #0c0c0c;
