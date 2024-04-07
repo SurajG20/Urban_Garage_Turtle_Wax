@@ -1044,7 +1044,7 @@ p {
 
 .footer-list-title {
   /* color: var(--space-cadet); */
-  color: gray;
+  color: white;
   font-weight: var(--fw-600);
   margin-bottom: 8px;
 }

@@ -112,7 +112,7 @@ function Navbar() {
               />
             </div>
 
-            <ul className="mobile-nav-list flex flex-col gap-3 text-white">
+            <ul className="mobile-nav-list mb-2 flex flex-col gap-3 text-white">
               <li>
                 <Link
                   to="/buy"
@@ -180,6 +180,14 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
+            <div>
+              '
+              <Link to={"/contact-us"}>
+                <button className="py-2 px-5 w-full bg-white font-semibold">
+                  Contact us
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="header-actions">

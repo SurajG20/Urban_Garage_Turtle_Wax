@@ -37,7 +37,7 @@ function Footer() {
           </div>
           {/* quick link  */}
           <div className="flex flex-col ">
-            <li>
+            <li >
               <p className="footer-list-title">Quick Links</p>
             </li>
 

@@ -515,12 +515,12 @@ function BuyPage() {
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container ">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl theme-border-white text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+              <div className="h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl theme-border-white text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                <h1 className="md:text-4xl h3 font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
                 <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
-                <div className="flex gap-x-5">
+                <div className="flex flex-col md:flex-row gap-x-5">
                   <p className="flex items-center gap-3 text-theme-500">
                     <FaBlenderPhone className="text-lg" />
                     Instant Call Back
@@ -560,7 +560,7 @@ function BuyPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-two.jpeg')]">
+                <div className="relative h-80 md:h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-two.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -583,7 +583,7 @@ function BuyPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
+                <div className="relative h-80 md:h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -607,7 +607,7 @@ function BuyPage() {
           </section>
 
           <section className="section" id="hero-banner">
-            <div className="relative h-[85vh]">
+            <div className="relative md:h-[85vh]">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
                 <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
@@ -663,7 +663,7 @@ function BuyPage() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
