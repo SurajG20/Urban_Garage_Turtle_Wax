@@ -30,7 +30,7 @@ function RecentWork() {
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
+                    src="https://img.freepik.com/premium-photo/closeup-photo-car-mechanic-working-car-engine-mechanics-repair-service-garage-uniformed-mechanic-is-working-car-service-work-garage-repair-maintenance-services_826551-1057.jpg"
                     alt="Urban Garage Recent Work"
                   />
                 </div>
@@ -193,7 +193,12 @@ function RecentWork() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white bg-[url('assets/garage/garage1.jpeg')] text-theme-500">
+                <div
+                  style={{
+                    backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                  }}
+                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
+                >
                   {/* <!-- Black blur effect overlay --> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
 
@@ -220,7 +225,12 @@ function RecentWork() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl  overflow-hidden text-white bg-[url('assets/garage/garage2.jpeg')] text-theme-500">
+                <div
+                  style={{
+                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
+                  }}
+                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
+                >
                   {/* <!-- Black gradient drop effect overlay --> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
 
