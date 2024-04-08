@@ -13,7 +13,7 @@
       "fuel": " Diesel",
       "colour": "ISLAND BLUE METTALIC",
       "insurance": "Valid till Jan 2025",
-      "img": ["../../public/assets/cars/min-countryman-cooper-s.jpeg"],
+      "img": ["images/min-countryman-cooper-s.jpeg"],
       "description": "Provides supportive care in the home.",
       "available": true
     },
@@ -31,7 +31,7 @@
       "fuel": " Diesel",
       "colour": "White Pearl",
       "insurance ": "Valid till Oct 2024",
-      "img": ["../../public/assets/cars/Volvo-XC90-D5-INSCRIPTION.jpeg"],
+      "img": ["images/Volvo-XC90-D5-INSCRIPTION.jpeg"],
       "description": "Provides supportive care in the home.",
       "available": true
     },
@@ -48,7 +48,7 @@
       "fuel": "Diesel",
       "colour": "RED",
       "insurance": "Valid till May 2024",
-      "img": ["../../public/assets/cars/MERCEDES-BENZ-CLA-200D-SPORTS.jpeg"],
+      "img": ["images/MERCEDES-BENZ-CLA-200D-SPORTS.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -66,7 +66,7 @@
       "fuel": "Diesel",
       "colour": "Green",
       "insurance": "Valid",
-      "img": ["../../public/assets/cars/Mahindra-Thar-AT-Hard-Top-4WD.jpeg"],
+      "img": ["images/Mahindra-Thar-AT-Hard-Top-4WD.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -83,7 +83,7 @@
       "fuel": "Diesel",
       "colour": "Black Metallic",
       "insurance": "Valid from the day of delivery. COMPREHENSIVE",
-      "img": ["../../public/assets/cars/BMW-320D-LUXURY-LINE.jpeg"],
+      "img": ["images/BMW-320D-LUXURY-LINE.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -101,7 +101,7 @@
       "fuel": "Diesel",
       "colour": "White Pearl",
       "insurance": "Valid from day of delivery. COMPREHENSIVE",
-      "img": ["../../public/assets/cars/AUDI-A6-35TDI-S-LINE.jpeg"],
+      "img": ["images/AUDI-A6-35TDI-S-LINE.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -118,7 +118,7 @@
       "fuel": "Petrol",
       "colour": "Pearl Silver",
       "insurance": "Valid from day of delivery",
-      "img": ["../../public/assets/cars/MERCEDES-BENZ-GLA-200CGI-PETROL.jpeg"],
+      "img": ["images/MERCEDES-BENZ-GLA-200CGI-PETROL.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -135,7 +135,7 @@
       "fuel": "Diesel",
       "colour": "Silver",
       "insurance": "Valid from day of delivery (Comprehensive)",
-      "img": ["../../public/assets/cars/AUDI-Q3-35TDI-QUATTRO-2017.jpeg"],
+      "img": ["images/AUDI-Q3-35TDI-QUATTRO-2017.jpeg"],
       "description": "Your description here.",
       "available": true
     },
@@ -152,7 +152,7 @@
       "fuel": "Diesel",
       "colour": "CALCITE WHITE",
       "insurance": "Valid till Jan 2024",
-      "img": ["../../public/assets/cars/MERCEDES-BENZ-INDIA-PVT-LTD.jpeg"],
+      "img": ["images/MERCEDES-BENZ-INDIA-PVT-LTD.jpeg"],
       "description": "Your description here.",
       "available": true
     }
