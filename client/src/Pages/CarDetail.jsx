@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import Footer from "../components/Footer";
 import data from "../server.json";
 import { Link } from "react-router-dom";
-
+import Image from "../utils/Image";
+import errImg from "../../public/assets/loading.jpeg";
+console.log(errImg);
 // icons
 // import { TiTick } from "react-icons/ti";
 // import { FaBlenderPhone } from "react-icons/fa";
@@ -148,39 +149,25 @@ function CarDetail() {
               <div className="md:h-[75vh] md:grid md:grid-cols-8 gap-5">
                 {/* images grid  */}
                 <div className="h-full w-full md:col-span-2 flex md:flex-col gap-2 overflow-x-auto md md:overflow-y-auto">
-                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
-                    <img
-                      className="object-cover object-center w-full h-full"
+                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
+                    <Image
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
+                      onError={errImg}
                     />
                   </div>
-                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
-                    <img
-                      className="object-cover object-center w-full h-full"
+                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
+                    <Image
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
+                      onError={errImg}
                     />
                   </div>
-                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
-                    <img
-                      className="object-cover object-center w-full h-full"
+                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
+                    <Image
                       src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
                       alt="Urban Garage Car"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
-                    <img
-                      className="object-cover object-center w-full h-full"
-                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
-                      alt="Urban Garage Car"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 md:h-42 w-48 md:w-full">
-                    <img
-                      className="object-cover object-center w-full h-full"
-                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
-                      alt="Urban Garage Car"
+                      onError={errImg}
                     />
                   </div>
                 </div>
@@ -188,9 +175,14 @@ function CarDetail() {
                 {/* image container  */}
                 <div className="col-span-6 h-64 md:h-[75vh]">
                   <img
-                    className="object-cover object-center w-full h-full"
-                    src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/2426da4f-e1e0-4f56-948a-8876b2a9a97a/slot/2.jpg"
-                    alt="Urban Garage Car"
+                    className="h-full w-full object-cover object-center"
+                    src={
+                      carDetail.img && carDetail.img.length > 0
+                        ? carDetail.img[0]
+                        : errImg
+                    }
+                    alt={`Urban Garage ${carDetail.name}`}
+                    // Ensure image scales correctly
                   />
                 </div>
               </div>

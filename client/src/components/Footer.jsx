@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../../public/assets/logo/light-logo.png"
 // icons
+
 import {
   FaInstagram,
   FaFacebook,
@@ -22,7 +23,7 @@ function Footer() {
                 <img
                   loading="lazy"
                   className="h-full w-full object-cover"
-                  src="assets/logo/light-logo.png"
+                  src={logo}
                   alt="Ridex logo"
                 />
               </div>
@@ -37,7 +38,7 @@ function Footer() {
           </div>
           {/* quick link  */}
           <div className="flex flex-col ">
-            <li >
+            <li>
               <p className="footer-list-title">Quick Links</p>
             </li>
 
