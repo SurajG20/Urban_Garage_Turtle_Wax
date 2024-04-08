@@ -562,8 +562,7 @@ function BuyPage() {
 
                 <div
                   style={{
-                    backgroundImage:
-                      "url('../../public/assets/garage/garage-two.jpeg')",
+                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
                   }}
                   className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
@@ -591,8 +590,7 @@ function BuyPage() {
 
                 <div
                   style={{
-                    backgroundImage:
-                      "url('../../public/assets/garage/garage-four.jpeg')",
+                    backgroundImage: "url('assets/garage/garage-four.jpeg')",
                   }}
                   className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >

@@ -326,15 +326,16 @@ function TurtleWaxPage() {
                   <div className="relative z-0 w-full md:w-96 theme-border-white rounded-2xl">
                     {/* img-container */}
                     <div className="h-64 overflow-hidden rounded-2xl">
-                      <Image
-                        src="assets/garage/garage2.jpeg"
+                      <img
+                        className="h-full w-full object-cover object-center"
+                        src="assets/garage/garage-two.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage1.jpeg"
+                        loading="lazy"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
                     <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
-                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
+                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -343,7 +344,7 @@ function TurtleWaxPage() {
                         </div>
                       </div>
 
-                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
+                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -352,7 +353,7 @@ function TurtleWaxPage() {
                         </div>
                       </div>
 
-                      <div className="bg-gray-200  px-5 text-center theme-border-white rounded-md">
+                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -391,12 +392,12 @@ function TurtleWaxPage() {
                       <Image
                         src="assets/garage/garage4.jpeg"
                         alt="Urban Garage"
-                        onError="assets/garage/garage1.jpeg"
+                        onError="assets/garage/garage-two.jpeg"
                       />
                     </div>
                     {/* Absolute container moved here, outside the overflow-hidden container */}
                     <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
-                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
+                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -404,7 +405,7 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
+                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
@@ -412,7 +413,7 @@ function TurtleWaxPage() {
                           Sq. Ft. Area
                         </div>
                       </div>
-                      <div className="bg-gray-200  px-5 text-center rounded-md theme-border-white">
+                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
