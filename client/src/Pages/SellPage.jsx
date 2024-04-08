@@ -488,7 +488,7 @@ function SellPage() {
                 <div
                   style={{
                     backgroundImage:
-                      "url('public/assets/garage/garage-two.jpeg')",
+                      "url('assets/garage/garage-two.jpeg')",
                   }}
                   className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
@@ -517,7 +517,7 @@ function SellPage() {
                 <div
                   style={{
                     backgroundImage:
-                      "url('public/assets/garage/garage-four.jpeg')",
+                      "url('assets/garage/garage-four.jpeg')",
                   }}
                   className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
