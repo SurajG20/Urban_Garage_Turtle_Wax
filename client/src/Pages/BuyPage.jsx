@@ -325,7 +325,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-boldtext-white text-3xl text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-boldtext-white  text-theme-bold">
                         Buy
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -350,7 +350,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Sell
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -375,7 +375,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Service
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -400,7 +400,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Car care
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -425,7 +425,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Products
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -450,7 +450,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Turtle wax Products
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -466,8 +466,7 @@ function BuyPage() {
                   <div
                     className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage:
-                        "url('assets/garage/garage-four.jpeg')",
+                      backgroundImage: "url('assets/garage/garage-four.jpeg')",
                     }}
                   >
                     {/* Overlay Element */}
@@ -475,7 +474,7 @@ function BuyPage() {
 
                     {/* Content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         Recent work
                       </h3>
                       <p className="hidden text-white mt-2">
@@ -489,10 +488,9 @@ function BuyPage() {
                 {/* About Us */}
                 <li>
                   <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
+                    className="relative theme-border-white flex items-end rounded-3xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage:
-                        "url('assets/garage/garage-one.jpeg')",
+                      backgroundImage: "url('assets/garage/garage-one.jpeg')",
                     }}
                   >
                     {/* Overlay Element */}
@@ -500,7 +498,7 @@ function BuyPage() {
 
                     {/* content */}
                     <div className="z-10 relative p-4">
-                      <h3 className="h3 text-white font-bold text-theme-bold">
+                      <h3 className="text-3xl text-white font-bold text-theme-bold">
                         About Us
                       </h3>
                       <p className="hidden text-white mt-2">
