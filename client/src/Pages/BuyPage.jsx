@@ -467,7 +467,7 @@ function BuyPage() {
                     className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
-                        "url('public/assets/garage/garage-four.jpeg')",
+                        "url('assets/garage/garage-four.jpeg')",
                     }}
                   >
                     {/* Overlay Element */}
@@ -492,7 +492,7 @@ function BuyPage() {
                     className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
                     style={{
                       backgroundImage:
-                        "url('public/assets/garage/garage-one.jpeg')",
+                        "url('assets/garage/garage-one.jpeg')",
                     }}
                   >
                     {/* Overlay Element */}
@@ -562,7 +562,13 @@ function BuyPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-80 md:h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('public/assets/garage/garage-two.jpeg')]">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url('public/assets/garage/garage-two.jpeg')",
+                  }}
+                  className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -585,7 +591,13 @@ function BuyPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-80 md:h-96 p-4 flex flex-col theme-border-white gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('public/assets/garage/garage-four.jpeg')]">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url('public/assets/garage/garage-four.jpeg')",
+                  }}
+                  className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
