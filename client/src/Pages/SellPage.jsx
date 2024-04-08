@@ -66,7 +66,7 @@ function SellPage() {
 
           <section className="">
             <div
-              className="abosolute -z-50  overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+              className="abosolute mt-20 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
               style={backgroundImg}
             >
               <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
@@ -76,7 +76,7 @@ function SellPage() {
                   <div>
                     <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-semibold">
                       Sell Your Car At Highest Price in{" "}
-                      <span className="font-extrabold md:text-8xl">
+                      <span className="font-extrabold text-5xl md:text-8xl">
                         59 Minutes
                       </span>
                     </h1>
@@ -253,14 +253,14 @@ function SellPage() {
               <div className=" grid md:grid-cols-2 gap-5">
                 {/* left container  */}
                 <div className="relative h-80 rounded-2xl ">
-                  <div className="absolute z-50 bottom-[-35px] theme-border-white right-10 bg-white rounded-2xl px-10 py-5">
-                    <ul className="text-theme-500">
-                      <li>Recommended by</li>
-                      <li className="text-theme-semibold text-green-600 text-xl">
+                  <div className="absolute m-1/2 z-50 bottom-[-35px] theme-border-white bg-white rounded-2xl px-10 py-5">
+                    <div className="text-theme-500">
+                      <p className="text-black text-center">Recommended by</p>
+                      <p className="text-theme-semibold text-green-600 text-xl">
                         5000+ Customers
-                      </li>
-                      <li>Across India!</li>
-                    </ul>
+                      </p>
+                      <p className="text-black text-center">Across India!</p>
+                    </div>
                   </div>
                   <Image
                     loading="lazy"

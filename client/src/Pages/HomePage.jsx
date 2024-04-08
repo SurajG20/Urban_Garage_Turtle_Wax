@@ -201,7 +201,7 @@ function Home() {
                     onError="assets/icons/loading.png"
                   />
                 </div>
-                <div className="h-16 w-auto m-auto">
+                <div className="h-12 md:h-16 w-auto m-auto">
                   <Image
                     src="assets/brands/brand9.png"
                     alt="Urban Garage Brand"
@@ -395,7 +395,7 @@ function Home() {
                   <div
                     className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage: "url('assets/garage/garage4.jpeg')",
+                      backgroundImage: "url('assets/garage/garage-four.jpeg')",
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -419,7 +419,7 @@ function Home() {
                   <div
                     className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                     style={{
-                      backgroundImage: "url('assets/garage/garage1.jpeg')",
+                      backgroundImage: "url('assets/garage/garage-one.jpeg')",
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
