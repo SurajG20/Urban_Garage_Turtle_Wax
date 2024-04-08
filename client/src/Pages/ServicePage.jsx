@@ -13,9 +13,12 @@ import Image from "../utils/Image";
 import { TiTick } from "react-icons/ti";
 import HeroSection from "../components/HeroSection";
 import { IoIosStar } from "react-icons/io";
+import garage4 from "../../public/assets/garage/garage-four.jpeg";
+
 
 function ServicePage() {
   const [cars, setCars] = useState([]);
+
 
   useEffect(() => {
     setCars(data.cars);
@@ -40,7 +43,7 @@ function ServicePage() {
         - #HERO
       --> */}
           <HeroSection
-            imgURL={"assets/garage/garage4.jpeg"}
+            imgURL={"assets/garage/garage-four.jpeg"}
             title={"Find The Best Pocket Friendly Car Service For You!"}
           />
           {/* Life Is Too Short To Spend At A Repair Shop */}
@@ -663,14 +666,14 @@ function ServicePage() {
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container">
-              <div className=" h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500">
+              <div className=" md:h-80 flex flex-col p-4 gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://luxuryride.in/img/incredible-bg.png);] text-theme-500">
                 <h1 className="text-5xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Stats Don’t Lie!
                 </h1>
                 <p className="p font-bold tracking-wider text-theme-bold">
                   Impressive Customer Statistics That Showcase Our Success
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-x-12 bg-white bg-opacity-50 border border-gray-200 shadow-lg p-6 rounded-lg">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 md:gap-x-12 bg-white bg-opacity-50 border border-gray-200 shadow-lg p-6 rounded-lg">
                   {/* ccard 1 */}
                   <div className="flex flex-col items-center text-theme-500 gap-3 text-theme-500">
                     <span className="h1 font-semibold text-theme-500">
@@ -742,21 +745,21 @@ function ServicePage() {
                   <div className="grid md:grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           <TiTick className="text-red-600 text-xl" />
                           OEM/OES Parts
                         </li>
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" /> PAN India
                           Delivery
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" /> In House
                           Service Available
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" /> 350+ Check
                           Evaluations

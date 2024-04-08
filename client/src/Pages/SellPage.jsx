@@ -252,11 +252,13 @@ function SellPage() {
             <div className="container">
               <div className=" grid md:grid-cols-2 gap-5">
                 {/* left container  */}
-                <div className="relative h-80 rounded-2xl ">
-                  <div className="absolute m-1/2 z-50 bottom-[-35px] theme-border-white bg-white rounded-2xl px-10 py-5">
-                    <div className="text-theme-500">
-                      <p className="text-black text-center">Recommended by</p>
-                      <p className="text-theme-semibold text-green-600 text-xl">
+                <div className="relative h-80 rounded-2xl flex justify-center items-center">
+                  <div className="absolute z-50 bottom-[-35px] theme-border-white flex justify-center bg-white rounded-md px-10 py-2">
+                    <div className="text-theme-500 max-w-min">
+                      <p className="text-black text-center whitespace-nowrap">
+                        Recommended by
+                      </p>
+                      <p className="text-theme-semibold text-green-600 text-xl whitespace-nowrap">
                         5000+ Customers
                       </p>
                       <p className="text-black text-center">Across India!</p>
@@ -266,17 +268,18 @@ function SellPage() {
                     loading="lazy"
                     src="https://luxuryride.in/img/selling-car-made-simple.png"
                     alt="Urban Garage"
-                    onError="assets/loading.jpeg"
+                    onError={(e) => (e.target.src = "assets/loading.jpeg")} // Updated for React
                   />
                 </div>
+
                 {/* right container  */}
-                <div className="flex flex-col justify-between gapy-3 p-6">
+                <div className="flex flex-col justify-between gapy-3 ">
                   <div>
                     <h2 className="h2 mb-5 text-theme-semibold">
                       Selling Your Car Made Easy
                     </h2>
                   </div>
-                  <div className="mb-2">
+                  <div className="mb-3">
                     <p className="text-theme-500 text-md">
                       Book your car inspection from our trained evaluators at
                       your doorstep & convenience. Get the most lucrative price
@@ -340,7 +343,7 @@ function SellPage() {
                 {/* left container  */}
 
                 {/* right container  */}
-                <div className="p-6 opacity-80">
+                <div className="p-4 opacity-80">
                   <div className="mb-2">
                     {/* <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -356,24 +359,24 @@ function SellPage() {
                       simply visit our experience centre near you.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
+                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 text-xl  flex flex-col gap-y-5">
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           <TiTick className="text-red-600 text-xl" />
                           <span>Safety assurance</span>
                         </li>
-                        <li className="flex text-white items-center text-theme-500">
+                        <li className="flex gap-2 text-white items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" />
                           <span>Schedule FREE evaluation</span>
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" />
                           <span>Get the highest quote upon inspection</span>
                         </li>
-                        <li className="flex text-white  items-center text-theme-500">
+                        <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
                           <TiTick className="text-red-600 text-xl" />
                           <span>Ensure complete peace of mind</span>
@@ -407,9 +410,10 @@ function SellPage() {
               <div className="grid md:grid-cols-3 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      className="h-full w-full object-contain object-center"
                       loading="lazy"
                       src="	https://luxuryride.in/img/sell-direct-us.svg"
                       alt="Urban Garadge"
@@ -425,9 +429,10 @@ function SellPage() {
 
                 {/* card 2 */}
 
-                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      className="h-full w-full object-contain object-center"
                       loading="lazy"
                       src="https://luxuryride.in/img/no-hidden-fee.svg"
                       alt="Urban Garadge"
@@ -443,9 +448,10 @@ function SellPage() {
                 </div>
 
                 {/* card 3 */}
-                <div className="h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
+                      className="h-full w-full object-contain object-center"
                       loading="lazy"
                       src="https://luxuryride.in/img/quick-and-transparent-process.svg"
                       alt="Urban Garadge"
@@ -479,7 +485,7 @@ function SellPage() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-two.jpeg')]">
+                <div className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('public/assets/garage/garage-two.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -502,7 +508,7 @@ function SellPage() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
+                <div className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -546,7 +552,7 @@ function SellPage() {
                     className="relative"
                     onClick={() => handleOpen(1)}
                   >
-                    <p className="text-start text-theme-semibold">
+                    <p className="text-start  text-theme-semibold">
                       How Long Does It Take To Sell My Car?
                     </p>
                     <p className=" absolute right-0">
@@ -654,20 +660,20 @@ function SellPage() {
             </div>
           </section>
 
-          <div className="section text-white">
-            <div className="container theme-border-white  p-3 rounded-xl">
-              <div className="flex items-center w-full gap-5">
+          <section className="section text-white">
+            <div className="container theme-border-white  p-4 rounded-xl">
+              <div className="flex flex-col md:flex-row  items-center w-full gap-5">
                 <div className="flex items-center ">
                   <div>
                     <FaHeadset className="text-5xl text-red-600" />
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <div className="h3 text-theme-semibold">
+                  <div className="h3 text-theme-semibold text-center md:text-start">
                     Still have questions?
                   </div>
                   <div className="">
-                    <p className="text-theme-500">
+                    <p className="text-theme-500 text-center md:text-start">
                       Can’t find the answer you’re looking for? Please chat to
                       our friendly team.
                     </p>
@@ -680,7 +686,7 @@ function SellPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* <!-- 
         - #BLOG
