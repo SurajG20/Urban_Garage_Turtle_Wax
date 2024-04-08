@@ -16,7 +16,7 @@ function ProductCard({ item }) {
 
       <div className="card-content">
         <div className="card-title-wrapper">
-          <h3 className="text-lg card-title text-theme-bold">
+          <h3 className="text-lg text-black card-title text-theme-bold">
             <Link to={`/car-detail/${item._id}`}>
               {item.name ? item.name : "---"}
             </Link>
@@ -27,7 +27,7 @@ function ProductCard({ item }) {
           </data> */}
         </div>
 
-        <ul className="card-list">
+        {/* <ul className="card-list">
           <li className="card-list-item flex flex-col">
             <span className="card-item-text text-theme-500 text-xs">
               Reg. Year
@@ -36,7 +36,7 @@ function ProductCard({ item }) {
               {item.reg_year ? item.reg_year : "---"}
             </span>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="card-price-wrapper">
           <div>

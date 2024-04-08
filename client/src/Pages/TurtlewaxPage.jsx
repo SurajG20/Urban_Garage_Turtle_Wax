@@ -178,10 +178,10 @@ function TurtleWaxPage() {
                 </Link> */}
               </div>
 
-              <ul className="grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
+              <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {cars &&
                   cars.map((item) => (
-                    <li key={item._id}>
+                    <li className="w-100" key={item._id}>
                       <ProductCard item={item} />
                     </li>
                   ))}

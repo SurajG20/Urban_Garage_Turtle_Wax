@@ -15,13 +15,19 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 
 function PPFPage() {
-  const backgroundImg = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/banners/hero-banner1.jpeg)`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backdropFilter: "blur(8px)",
-  };
+    const backgroundImg = {
+      backgroundImage: `
+    linear-gradient(
+      to right, 
+      rgba(0, 0, 0, 2), 
+      rgba(0, 0, 0, 0)
+    ),
+    url(https://img.freepik.com/free-photo/person-working-car-wrapping_23-2149342627.jpg?w=900)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backdropFilter: "blur(8px)",
+    };
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -50,16 +56,16 @@ function PPFPage() {
           <>
             <section className="">
               <div
-                className="abosolute -z-50 overflow-hidden top-0 h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+                className="abosolute mt-16 -z-50 overflow-hidden top-0 md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
                 style={backgroundImg}
               >
                 <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
                 <div className="container">
-                  <div className="grid grid-cols-2 gap-x-52">
+                  <div className="grid md:grid-cols-2 md:gap-x-52">
                     {/* left container  */}
                     <div className="flex flex-col  gap-y-5">
                       <div>
-                        <h1 className="text-[2.8rem] md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
+                        <h1 className="text-4xl md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
                           Detailing Services That Fulfill All Your Needs
                         </h1>
                       </div>
@@ -94,16 +100,17 @@ function PPFPage() {
                       </div>
 
                       <div className="grid grid-cols-3">
+                        {/* rating  */}
                         <div className="flex flex-col items-center gap-2">
                           <div className="flex items-center gap-1">
-                            <IoIosStar className="text-2xl text-yellow-600" />
-                            <IoIosStar className="text-2xl text-yellow-600" />
-                            <IoIosStar className="text-2xl text-yellow-600" />
-                            <IoIosStar className="text-2xl text-yellow-600" />
-                            <IoIosStar className="text-2xl text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
                           </div>
                           <div>
-                            <p className="whitespace-nowrap text-theme-500 text-white">
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
                               Based on 100+ ratings
                             </p>
                           </div>
@@ -111,12 +118,12 @@ function PPFPage() {
 
                         <div className="flex flex-col items-center gap-2">
                           <div className="flex items-center gap-1">
-                            <h2 className="text-white text-2xl text-theme-semibold">
+                            <h2 className="text-white text-xl md:text-2xl text-theme-semibold">
                               5000+
                             </h2>
                           </div>
                           <div>
-                            <p className="whitespace-nowrap text-theme-500 text-white">
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
                               Detailing done
                             </p>
                           </div>
@@ -124,12 +131,12 @@ function PPFPage() {
 
                         <div className="flex flex-col items-center gap-2">
                           <div className="flex items-center gap-1">
-                            <h2 className="text-white text-2xl text-theme-semibold">
+                            <h2 className="text-white text-xl md:text-2xl  text-theme-semibold">
                               8000+
                             </h2>
                           </div>
                           <div>
-                            <p className="whitespace-nowrap text-theme-500 text-white">
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
                               Registered users
                             </p>
                           </div>
@@ -558,7 +565,7 @@ function PPFPage() {
                 {/* left container  */}
 
                 {/* right container  */}
-                <div className=" p-5 opacity-80">
+                <div className="p-4 opacity-80">
                   <div className="mb-2">
                     {/* <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -574,7 +581,7 @@ function PPFPage() {
                       smoothly and impressively.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
+                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex gap-2 text-white items-center text-theme-500">
@@ -599,7 +606,7 @@ function PPFPage() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
@@ -623,7 +630,7 @@ function PPFPage() {
       --> */}
 
           <section>
-            <Testinomial/>
+            <Testinomial />
           </section>
         </article>
       </main>
