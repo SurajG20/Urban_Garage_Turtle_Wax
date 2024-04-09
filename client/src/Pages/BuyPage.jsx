@@ -57,7 +57,7 @@ function BuyPage() {
 
           <section className="relative text-white">
             <div
-              className="container abosolute m-1 mt-20 -z-50 overflow-hidden top-0 h-[65vh] flex items-center justify-center rounded-2xl  "
+              className="container abosolute m-1 mt-20 md:mt-16 -z-50 overflow-hidden top-0 h-[65vh] flex items-center justify-center rounded-2xl  "
               style={backgroundImg}
             >
               {/* <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div> */}

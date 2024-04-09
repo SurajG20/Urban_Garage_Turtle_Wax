@@ -3,18 +3,19 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/Herohome";
 import CarCard from "../components/CarCard";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import data from "../server.json";
 import { Link } from "react-router-dom";
 import Dropdown from "../utils/Dropdown";
-import { IoCall } from "react-icons/io5";
-import { MdOutlinePayments } from "react-icons/md";
+
 import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
 import { FaHeadset } from "react-icons/fa6";
+import { IoCall } from "react-icons/io5";
+import { MdOutlinePayments } from "react-icons/md";
+import { FaBlenderPhone } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 import {
   Accordion,
   AccordionHeader,
@@ -66,7 +67,7 @@ function SellPage() {
 
           <section className="">
             <div
-              className="abosolute mt-20 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
+              className="abosolute mt-20 md:mt-16 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
               style={backgroundImg}
             >
               <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
@@ -487,8 +488,7 @@ function SellPage() {
 
                 <div
                   style={{
-                    backgroundImage:
-                      "url('assets/garage/garage-two.jpeg')",
+                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
                   }}
                   className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
@@ -516,12 +516,10 @@ function SellPage() {
 
                 <div
                   style={{
-                    backgroundImage:
-                      "url('assets/garage/garage-four.jpeg')",
+                    backgroundImage: "url('assets/garage/garage-four.jpeg')",
                   }}
                   className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
-                  
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
