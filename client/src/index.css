@@ -1647,3 +1647,8 @@ p {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* service banners  */
+.group:hover .group-hover\:block {
+  display: block;
+}

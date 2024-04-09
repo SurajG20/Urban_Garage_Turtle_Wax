@@ -40,12 +40,12 @@ function Home() {
           {/* <!-- 
         - #HERO
       --> */}
-          <Herohome />
+          {/* <Herohome /> */}
           {/* <!-- 
         - #FEATURED CAR
       --> */}
           {/* Team Urban Garage Is Dedicated To Delivering Excellence */}
-          <section className="section get-start text-white">
+          <section className="section  mt-20 md:mt-16  get-start text-white">
             <div className="container">
               <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
@@ -68,16 +68,16 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-3xl text-theme-bold font-bold">
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
                         Buy
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Choose from an hand selected premium collection of
+                        Pre-Owned Luxuary Cars
                       </p>
                     </div>
                   </div>
@@ -96,13 +96,12 @@ function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-3xl text-theme-bold font-bold">
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
                         Sell
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Now, Sell Your Car on Your Fingertips in 59 minutes.
                       </p>
                     </div>
                   </div>
@@ -121,13 +120,12 @@ function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-3xl font-bold">
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
                         Service
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Now, Sell Your Car on Your Fingertips in 59 minutes.
                       </p>
                     </div>
                   </div>
@@ -146,13 +144,13 @@ function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-3xl text-theme-bold font-bold">
-                        Car care
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                        Car Care
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Experience the ultimate in car protection or just give
+                        your car a spa day.
                       </p>
                     </div>
                   </div>
@@ -171,13 +169,13 @@ function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-90"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-3xl font-bold">
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
                         Products
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Explore our range and discover products that redefine
+                        excellence.
                       </p>
                     </div>
                   </div>
@@ -196,13 +194,14 @@ function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-3xl font-bold">
-                        Turtle Wax Products
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                        Turtle wax products
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        At Turtle Wax, we’re a dedicated team of auto
+                        enthusiasts that live and breathe Turtle Wax® & auto
+                        culture.
                       </p>
                     </div>
                   </div>
@@ -217,16 +216,16 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-3xl font-bold">
-                        Recent Work
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
+                        Turtle wax products
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        At Turtle Wax, we’re a dedicated team of auto
+                        enthusiasts that live and breathe Turtle Wax® & auto
+                        culture.
                       </p>
                     </div>
                   </div>
@@ -241,16 +240,17 @@ function Home() {
                     }}
                   >
                     {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
                     {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-white text-theme-bold text-3xl font-bold">
+                    <div className="group z-10 relative p-4">
+                      <h3 className="text-white text-2xl text-theme-bold font-bold">
                         About Us
                       </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
+                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                        Urban Garage Ride is the ultimate destination you have been
+                        seeking, offering a mesmerizing range of pre-owned
+                        luxury cars coupled with exceptional car service.
                       </p>
                     </div>
                   </div>
