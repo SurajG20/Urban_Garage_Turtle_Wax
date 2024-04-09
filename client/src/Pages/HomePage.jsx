@@ -44,189 +44,6 @@ function Home() {
           {/* <!-- 
         - #FEATURED CAR
       --> */}
-          <section
-            className="section featured-car text-white"
-            id="featured-car"
-          >
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 mb-5 text-theme-semibold section-title m-auto">
-                  Take A Glimpse Of Our Collection
-                </h2>
-                {/* 
-                <Link to="#" className="featured-car-link">
-                  <span>Veja mais</span>
-
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link> */}
-              </div>
-
-              <ul className="featured-car-list">
-                {cars &&
-                  cars.map((item) => (
-                    <li key={item._id}>
-                      <CarCard item={item} />
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          </section>
-          {/* <!-- 
-        - #GET START
-      --> */}
-          {/* why choose us Banner section Start  */}
-          <section className="section" id="hero-banner">
-            <div className="relative md:h-96">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
-                <div className="absolute -z-10 h-full w-full">
-                  <img
-                    loading="lazy"
-                    className="h-full w-full object-cover object-left"
-                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
-                    alt="Urban Garage"
-                  />
-                </div>
-                {/* left container  */}
-                <div className="hidden md:flex items-end justify-center">
-                  <div className="h-[22rem]">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-left"
-                      src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
-                      alt="Uran Garage"
-                    />
-                  </div>
-                </div>
-                {/* right container  */}
-                <div className="bg-white p-4 md:p-5 opacity-80">
-                  <div className="mb-2">
-                    <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3>
-                    <h2 className="text-theme-bold font-bold text-2xl">
-                      URBAN GARAGE!
-                    </h2>
-                  </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-black">
-                      Urban Garage is a one stop destination for the Foremost,
-                      Exclusive and Extravagant Pre-Owned luxury cars. We are
-                      here to serve efficiently all across the country with our
-                      wide array of products and services equipped by our
-                      State-of-the-Art showrooms and Workshops to make your
-                      journey easy and lucrative.
-                    </p>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-y-2 gap-x-5">
-                    <div className="">
-                      <ul className="text-theme-500 flex flex-col gap-y-2">
-                        <li className="flex items-center">
-                          <TiTick className="text-red-500 text-xl" />
-                          Urban Garage
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> PAN India
-                          Delivery
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> In House
-                          Service Available
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-2">
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 15 Day
-                          Money Back Guarantee
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 30 Day or
-                          1000 KMs Consumables Warranty
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 1/2/3 Year
-                          Buy Back Facility
-                        </li>
-                        <li className="flex items-center">
-                          {" "}
-                          <TiTick className="text-red-500 text-xl" /> 100%
-                          Certified Cars
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
-          <section className="section text-white" id="brand">
-            <div className="container">
-              <h2 className="h2 section-title text-center text-theme-semibold">
-                An Exciting Lineup Of Top Brands In Our Showrooms!
-              </h2>
-
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
-                <div className="h-16 w-16 m-auto">
-                  <Image
-                    src="assets/brands/brand1.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-                <div className="h-16 w-auto m-auto">
-                  <Image
-                    src="assets/brands/brand12.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-                <div className="h-16 w-auto m-auto">
-                  <Image
-                    src="assets/brands/brand3.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-                <div className="h-12 md:h-16 w-auto m-auto">
-                  <Image
-                    src="assets/brands/brand9.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-                <div className="h-16 w-auto m-auto">
-                  <Image
-                    src="assets/brands/brand5.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-                <div className="h-16  w-auto m-auto">
-                  <Image
-                    src="assets/brands/brand6.png"
-                    alt="Urban Garage Brand"
-                    onError="assets/icons/loading.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Team Urban Garage Is Dedicated To Delivering Excellence */}
           <section className="section get-start text-white">
             <div className="container">
@@ -439,6 +256,188 @@ function Home() {
                   </div>
                 </li>
               </ul>
+            </div>
+          </section>
+          <section
+            className="section featured-car text-white"
+            id="featured-car"
+          >
+            <div className="container">
+              <div className="title-wrapper">
+                <h2 className="h2 mb-5 text-theme-semibold section-title m-auto">
+                  Take A Glimpse Of Our Collection
+                </h2>
+                {/* 
+                <Link to="#" className="featured-car-link">
+                  <span>Veja mais</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </Link> */}
+              </div>
+
+              <ul className="featured-car-list">
+                {cars &&
+                  cars.map((item) => (
+                    <li key={item._id}>
+                      <CarCard item={item} />
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </section>
+          {/* <!-- 
+        - #GET START
+      --> */}
+          {/* why choose us Banner section Start  */}
+          <section className="section" id="hero-banner">
+            <div className="relative md:h-96">
+              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
+                {/* Overlay div */}
+                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
+                <div className="absolute -z-10 h-full w-full">
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-left"
+                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
+                    alt="Urban Garage"
+                  />
+                </div>
+                {/* left container  */}
+                <div className="hidden md:flex items-end justify-center">
+                  <div className="h-[22rem]">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-left"
+                      src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
+                      alt="Uran Garage"
+                    />
+                  </div>
+                </div>
+                {/* right container  */}
+                <div className="bg-white p-4 md:p-5 opacity-80">
+                  <div className="mb-2">
+                    <h3 className="text-theme-semibold font-semibold text-xl">
+                      Why Choose
+                    </h3>
+                    <h2 className="text-theme-bold font-bold text-2xl">
+                      URBAN GARAGE!
+                    </h2>
+                  </div>
+                  <div className="mb-2">
+                    <p className="text-theme-500 text-black">
+                      Urban Garage is a one stop destination for the Foremost,
+                      Exclusive and Extravagant Pre-Owned luxury cars. We are
+                      here to serve efficiently all across the country with our
+                      wide array of products and services equipped by our
+                      State-of-the-Art showrooms and Workshops to make your
+                      journey easy and lucrative.
+                    </p>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-y-2 gap-x-5">
+                    <div className="">
+                      <ul className="text-theme-500 flex flex-col gap-y-2">
+                        <li className="flex items-center">
+                          <TiTick className="text-red-500 text-xl" />
+                          Urban Garage
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> PAN India
+                          Delivery
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> In House
+                          Service Available
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> 350+ Check
+                          Evaluations
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul className="text-theme-500 flex flex-col gap-y-2">
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> 15 Day
+                          Money Back Guarantee
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> 30 Day or
+                          1000 KMs Consumables Warranty
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> 1/2/3 Year
+                          Buy Back Facility
+                        </li>
+                        <li className="flex items-center">
+                          {" "}
+                          <TiTick className="text-red-500 text-xl" /> 100%
+                          Certified Cars
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
+          <section className="section text-white" id="brand">
+            <div className="container">
+              <h2 className="h2 section-title text-center text-theme-semibold">
+                An Exciting Lineup Of Top Brands In Our Showrooms!
+              </h2>
+
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
+                <div className="h-16 w-16 m-auto">
+                  <Image
+                    src="assets/brands/brand1.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand12.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand3.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-12 md:h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand9.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16 w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand5.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+                <div className="h-16  w-auto m-auto">
+                  <Image
+                    src="assets/brands/brand6.png"
+                    alt="Urban Garage Brand"
+                    onError="assets/icons/loading.png"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
