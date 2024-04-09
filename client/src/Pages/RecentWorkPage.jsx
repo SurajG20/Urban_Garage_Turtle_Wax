@@ -14,19 +14,53 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import { IoDiamondOutline } from "react-icons/io5";
 
 function RecentWork() {
+  const backgroundImg = {
+    backgroundImage: `
+    linear-gradient(
+      to top, 
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0)
+    ),
+    url('https://c1.wallpaperflare.com/preview/649/915/591/car-mechanic-automobile-service-thumbnail.jpg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backdropFilter: "blur(8px)",
+  };
   return (
     <div className="relative">
       <Navbar />
       <main>
         <article>
           {/* <HeroSection /> */}
+          <section className="">
+            <div
+              className="abosolute mt-20 md:mt-16 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
+              style={backgroundImg}
+            >
+              <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              <div className="max-w-6xl  m-auto px-10 py-5">
+                {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
+                <div className="flex flex-col gap-y-5">
+                  <div>
+                    <h1 className="h1 md:text-start text-start text-white font-bold tracking-wide text-theme-semibold">
+                      Why Choose Urban Garage?
+                      <span className="font-extrabold text-h1 md:text-8xl">
+                        Serving Our Community Since 2024
+                      </span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-          <section className="section" id="hero-banner">
-            <div className="relative md:h-96">
+          {/* <section className="section" id="hero-banner">
+            <div className="relative h-[65vh] md:h-screen">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
-                <div className="absolute -z-20 h-full w-full">
+              
+                <div className="absolute h-full w-full bg-black opacity-50 z-10"></div>
+                <div className="absolute  h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
@@ -34,7 +68,7 @@ function RecentWork() {
                     alt="Urban Garage Recent Work"
                   />
                 </div>
-                {/* left container  */}
+          
                 <div className="hidden md:flex items-center justify-center mx-auto px-16">
                   <div className="">
                     <h1 className="h1 text-white text-theme-bold  font-bold text-nowrap">
@@ -47,7 +81,7 @@ function RecentWork() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* hero Banner section Start  */}
 
           <section className="section text-white" id="hero-banner">
