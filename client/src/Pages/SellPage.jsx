@@ -22,6 +22,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { FaCirclePlus, FaCircleMinus } from "react-icons/fa6";
+import BuyForm from "../components/BuyForm";
 
 function SellPage() {
   const [cars, setCars] = useState([]);
@@ -330,64 +331,60 @@ function SellPage() {
 
           <section className="section text-white" id="hero-banner">
             <div className="relative h-screen">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-90"></div>
-                <div className="absolute -z-20 h-full w-full">
+              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
+              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-50"></div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-2">
+                <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"
-                    className="h-full w-full object-cover object-left"
+                    className="h-full w-full object-contain object-right"
                     src="https://luxuryride.in/img/bookcar-mobile.png"
                     alt="Urban Garage"
                   />
                 </div>
-                {/* left container  */}
-
-                {/* right container  */}
-                <div className="p-4 opacity-80">
+                {/* <!-- Right container --> */}
+                <div className="opacity-90 bg-black p-4 md:p-10 z-20 relative">
                   <div className="mb-2">
-                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3> */}
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
-                      Book Your Car Inspection At Your Doorstep
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
+                      BOOK YOUR CAR INSPECTION AT YOUR DOORSTEP
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500 text-white text-lg">
+                    <p className="text-theme-500 text-white shadow-md">
                       Urban Garadge is not owned but experienced and we let you
                       experience it from the comfort of your home. Or just
                       simply visit our experience centre near you.
                     </p>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
+                  {/* <!-- Adjustments to text shadow for better visibility --> */}
+                  <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
-                      <ul className="text-theme-500 text-xl  flex flex-col gap-y-5">
+                      <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex gap-2 text-white items-center text-theme-500">
                           <TiTick className="text-red-600 text-xl" />
-                          <span>Safety assurance</span>
+                          Safety assurance
                         </li>
                         <li className="flex gap-2 text-white items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" />
-                          <span>Schedule FREE evaluation</span>
+                          <TiTick className="text-red-600 text-xl" /> PAN India
+                          Schedule FREE evaluation
                         </li>
                         <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" />
-                          <span>Get the highest quote upon inspection</span>
+                          <TiTick className="text-red-600 text-xl" /> In House
+                          Get the highest quote upon inspection
                         </li>
                         <li className="flex gap-2 text-white  items-center text-theme-500">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" />
-                          <span>Ensure complete peace of mind</span>
+                          <TiTick className="text-red-600 text-xl" /> 350+ Check
+                          Ensure complete peace of mind
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div className="">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Appointment Now
+                      Book a Appointment Now
                     </button>
                   </div>
                 </div>
@@ -467,6 +464,12 @@ function SellPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section>
+            <div className="container">
+              <BuyForm />
             </div>
           </section>
 

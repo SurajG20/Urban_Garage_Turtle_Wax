@@ -549,39 +549,36 @@ function CoatingPage() {
             </div>
           </section>
 
-          <section className="section" id="hero-banner">
+          {/* OUR SERVICES */}
+          <section className="section text-white" id="hero-banner">
             <div className="relative h-screen">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
-                <div className="absolute -z-20 h-full w-full">
+              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
+              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-2">
+                <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt="urban garage service center"
+                    alt="Urban Garage"
                   />
                 </div>
-                {/* left container  */}
-
-                {/* right container  */}
-                <div className="p-4 opacity-80">
+                {/* <!-- Right container --> */}
+                <div className="opacity-90 p-4 md:p-10 z-20 relative">
                   <div className="mb-2">
-                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3> */}
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
                       Our Services
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500 text-white">
+                    <p className="text-theme-500 text-white shadow-md">
                       We provide complete professional services in our state of
                       the art service centres designed to keep your ride running
                       smoothly and impressively.
                     </p>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
+                  {/* <!-- Adjustments to text shadow for better visibility --> */}
+                  <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex gap-2 text-white items-center text-theme-500">

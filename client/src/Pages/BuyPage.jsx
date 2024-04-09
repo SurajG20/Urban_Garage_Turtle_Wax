@@ -14,6 +14,7 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { MdVerifiedUser } from "react-icons/md";
 import { TbChecklist } from "react-icons/tb";
+import BuyForm from "../components/BuyForm";
 
 function BuyPage() {
   const [cars, setCars] = useState([]);
@@ -54,7 +55,6 @@ function BuyPage() {
           {/* <!-- 
         - #HERO
       --> */}
-
           <section className="relative text-white">
             <div
               className="container abosolute m-1 mt-20 md:mt-18 -z-50 overflow-hidden top-0 h-[65vh] flex items-center justify-center rounded-2xl  "
@@ -103,11 +103,9 @@ function BuyPage() {
               </div>
             </div>
           </section>
-
           {/* <!-- 
         - #FEATURED CAR
       --> */}
-
           <section
             className="section featured-car text-white"
             id="featured-car"
@@ -135,39 +133,36 @@ function BuyPage() {
               </ul>
             </div>
           </section>
-
           {/* <!-- 
         - #GET START
       --> */}
-
           {/* hero Banner section Start  */}
-
           <section className="section" id="hero-banner">
             <div className="relative md:h-96">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
-                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
-                <div className="absolute -z-20 h-full w-full">
+                <div className="absolute h-full w-full bg-black opacity-20 z-10"></div>
+                <div className="absolute z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
-                    alt="Urban Garage Service Centers"
+                    src="assets/banners/carbanner1.jpeg"
+                    alt="Urban Garage"
                   />
                 </div>
                 {/* left container  */}
-                <div className="hidden md:flex items-end justify-center">
+                <div className="hidden  md:flex items-end justify-center">
                   <div className="h-[22rem]">
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-left"
                       src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
-                      alt="Urban Garage Service Centers"
+                      alt="Uran Garage"
                     />
                   </div>
                 </div>
                 {/* right container  */}
-                <div className="bg-white p-5 opacity-80">
+                <div className="bg-white p-4 md:p-5 opacity-90">
                   <div className="mb-2">
                     <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -186,50 +181,50 @@ function BuyPage() {
                       journey easy and lucrative.
                     </p>
                   </div>
-                  <div className="grid md:grid-cols-2  gap-5">
-                    <div>
+                  <div className="grid md:grid-cols-2 gap-y-2 gap-x-5">
+                    <div className="">
                       <ul className="text-theme-500 flex flex-col gap-y-2">
-                        <li className="flex gap-2 items-state">
-                          <TiTick className="text-red-600 text-xl" />
+                        <li className="flex items-center">
+                          <TiTick className="text-red-500 text-xl" />
                           Urban Garage
                         </li>
-                        <li className="flex gap-2  items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> PAN India
+                          <TiTick className="text-red-500 text-xl" /> PAN India
                           Delivery
                         </li>
-                        <li className="flex gap-2  items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> In House
+                          <TiTick className="text-red-500 text-xl" /> In House
                           Service Available
                         </li>
-                        <li className="flex gap-2 items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> 350+ Check
+                          <TiTick className="text-red-500 text-xl" /> 350+ Check
                           Evaluations
                         </li>
                       </ul>
                     </div>
                     <div>
-                      <ul className="flex flex-col gap-y-2 text-theme-500">
-                        <li className="flex gap-2  items-center">
+                      <ul className="text-theme-500 flex flex-col gap-y-2">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> 15 Day
+                          <TiTick className="text-red-500 text-xl" /> 15 Day
                           Money Back Guarantee
                         </li>
-                        <li className="flex gap-2 items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> 30 Day or
+                          <TiTick className="text-red-500 text-xl" /> 30 Day or
                           1000 KMs Consumables Warranty
                         </li>
-                        <li className="flex gap-2  items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> 1/2/3 Year
+                          <TiTick className="text-red-500 text-xl" /> 1/2/3 Year
                           Buy Back Facility
                         </li>
-                        <li className="flex gap-2  items-state">
+                        <li className="flex items-center">
                           {" "}
-                          <TiTick className="text-red-600 text-xl" /> 100%
+                          <TiTick className="text-red-500 text-xl" /> 100%
                           Certified Cars
                         </li>
                       </ul>
@@ -239,9 +234,7 @@ function BuyPage() {
               </div>
             </div>
           </section>
-
           {/* hero Banner section End  */}
-
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section text-white" id="brand">
             <div className="container">
@@ -296,7 +289,6 @@ function BuyPage() {
             </div>
           </section>
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
-
           {/* services  */}
           <section className="section get-start text-white">
             <div className="container">
@@ -511,7 +503,6 @@ function BuyPage() {
               </ul>
             </div>
           </section>
-
           {/* sell banner start */}
           <section className="section get-start">
             <div className="container ">
@@ -543,7 +534,6 @@ function BuyPage() {
             </div>
           </section>
           {/* sell banner end  */}
-
           {/* service location banners */}
           <section className="section get-start text-white">
             <div className="container">
@@ -615,39 +605,35 @@ function BuyPage() {
               </div>
             </div>
           </section>
-
-          <section className="section" id="hero-banner">
-            <div className="relative md:h-[85vh]">
-              <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
-                {/* Overlay div */}
-                <div className="absolute -z-10 h-full w-full bg-black opacity-60 "></div>
-                <div className="absolute -z-20 h-full w-full">
+          {/* OUR SERVICES */}
+          <section className="section text-white" id="hero-banner">
+            <div className="relative h-screen">
+              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
+              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-2">
+                <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
                     src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt="Urban Garage Service Centers"
+                    alt="Urban Garage"
                   />
                 </div>
-                {/* left container  */}
-
-                {/* right container  */}
-                <div className=" p-5 opacity-80">
-                  <div className="mb-5 md:mb-10">
-                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3> */}
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
+                {/* <!-- Right container --> */}
+                <div className="opacity-90 p-4 md:p-10 z-20 relative">
+                  <div className="mb-2">
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
                       Our Services
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500 text-white">
+                    <p className="text-theme-500 text-white shadow-md">
                       We provide complete professional services in our state of
                       the art service centres designed to keep your ride running
                       smoothly and impressively.
                     </p>
                   </div>
+                  {/* <!-- Adjustments to text shadow for better visibility --> */}
                   <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
@@ -691,11 +677,15 @@ function BuyPage() {
               </div>
             </div>
           </section>
-
+          {/* form  */}
+          <section>
+            <div className="container">
+              <BuyForm />
+            </div>
+          </section>
           {/* <!-- 
         - #BLOG
       --> */}
-
           <section className="section">
             <Testinomial />
           </section>
