@@ -248,8 +248,8 @@ function Home() {
                         About Us
                       </h3>
                       <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Urban Garage Ride is the ultimate destination you have been
-                        seeking, offering a mesmerizing range of pre-owned
+                        Urban Garage Ride is the ultimate destination you have
+                        been seeking, offering a mesmerizing range of pre-owned
                         luxury cars coupled with exceptional car service.
                       </p>
                     </div>
@@ -293,17 +293,17 @@ function Home() {
             <div className="relative md:h-96">
               <div className="h-full grid grid-cols-1 md:grid-cols-2 ">
                 {/* Overlay div */}
-                <div className="absolute h-full w-full bg-black opacity-50 -z-10"></div>
-                <div className="absolute -z-10 h-full w-full">
+                <div className="absolute h-full w-full bg-black opacity-20 z-10"></div>
+                <div className="absolute z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="https://www.motoroids.com/wp-content/uploads/2020/09/auto-terrence-web-banner-home.jpg"
+                    src="assets/banners/carbanner1.jpeg"
                     alt="Urban Garage"
                   />
                 </div>
                 {/* left container  */}
-                <div className="hidden md:flex items-end justify-center">
+                <div className="hidden  md:flex items-end justify-center">
                   <div className="h-[22rem]">
                     <img
                       loading="lazy"
@@ -314,7 +314,7 @@ function Home() {
                   </div>
                 </div>
                 {/* right container  */}
-                <div className="bg-white p-4 md:p-5 opacity-80">
+                <div className="bg-white p-4 md:p-5 opacity-90">
                   <div className="mb-2">
                     <h3 className="text-theme-semibold font-semibold text-xl">
                       Why Choose
@@ -554,10 +554,10 @@ function Home() {
           {/* OUR SERVICES Banner*/}
           <section className="section text-white" id="hero-banner">
             <div className="relative h-screen">
-              {/* Overlay div with gradient from black to transparent */}
-              <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div>
+              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
+              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className="absolute -z-20 h-full w-full">
+                <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
@@ -565,25 +565,21 @@ function Home() {
                     alt="Urban Garage"
                   />
                 </div>
-                {/* Left container remains unchanged */}
-
-                {/* Right container */}
-                <div className="opacity-80 p-4 md:p-10">
+                {/* <!-- Right container --> */}
+                <div className="opacity-90 p-4 md:p-10 z-20 relative">
                   <div className="mb-2">
-                    {/* <h3 className="text-theme-semibold font-semibold text-xl">
-                      Why Choose
-                    </h3> */}
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl">
+                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
                       Our Services
                     </h2>
                   </div>
                   <div className="mb-2">
-                    <p className="text-theme-500 text-white">
+                    <p className="text-theme-500 text-white shadow-md">
                       We provide complete professional services in our state of
                       the art service centres designed to keep your ride running
                       smoothly and impressively.
                     </p>
                   </div>
+                  {/* <!-- Adjustments to text shadow for better visibility --> */}
                   <div className="grid grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
@@ -609,7 +605,7 @@ function Home() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
+                         <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
