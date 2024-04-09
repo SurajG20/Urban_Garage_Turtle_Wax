@@ -203,7 +203,7 @@ function RecentWork() {
                   </p>
                 </div>
                 <div>
-                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg theme-border-white">
+                  <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg theme-border-white">
                     <Link to={"/sell"}>Sell Your Car</Link>
                   </button>
                 </div>
@@ -251,7 +251,7 @@ function RecentWork() {
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
-                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                    <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
                       Get Directions
                     </button>
                   </div>
@@ -283,7 +283,7 @@ function RecentWork() {
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
-                    <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
+                    <button className="bg-white hover:bg-gray-300 text-gray-800  px-6 text-theme-semibold py-2 rounded-lg ">
                       Get a Direction
                     </button>
                   </div>

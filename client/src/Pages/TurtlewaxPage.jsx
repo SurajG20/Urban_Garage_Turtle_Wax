@@ -75,9 +75,9 @@ function TurtleWaxPage() {
                 {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
                 <div className="max-w-xl flex flex-col gap-y-5">
                   <div>
-                    <h1 className="md:text-6xl h1 text-center md:text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
-                      BUY ONE GET ONE ON SELECTED PRODUCTS <br />
-                      <span className="text-green-900 font-extrabold text-6xl">
+                    <h1 className="md:text-5xl h1 text-center md:text-start text-white leading-[5rem] font-bold tracking-wide text-theme-extrabold ">
+                      BUY ONE <br /> GET ONE ON SELECTED PRODUCTS <br />
+                      <span className="text-green-900 font-extrabold text-5xl md:text-8xl">
                         SAVE NOW
                       </span>
                     </h1>
@@ -97,8 +97,14 @@ function TurtleWaxPage() {
                 WHAT ARE YOU WORKING ON TODAY?
               </h2>
 
-              <div className=" flex justify-end">
-                <div className="relative md:h-96 w-full md:w-[50rem]">
+              <div className="flex justify-end bg-white">
+              
+                <div className="hidden md:block md:w-[30rem] text-black">
+                  <div className="h-full flex justify-center items-center">
+                    <div className="text-8xl text-green-900 font-bold text-theme-bold">GET READY</div>
+                  </div>
+                </div>
+                <div className="relative md:h-96 w-full md:w-[50rem] ">
                   <img
                     className="h-full w-full object-cover object-center"
                     src={carImg[carIndex]}
