@@ -131,64 +131,70 @@ function RecentWork() {
                   </span>
                 </h1>
               </div>
-              <div className="flex gap-12 px-16">
-                <div className="flex flex-col gap-y-5 items-center justify-center ">
-                  <div className="flex justify-center">
-                    <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl">
+
+              <div className="flex flex-col items-center md:flex-row gap-12 px-16">
+                {/* card 1 */}
+                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
+                  <div className="flex justify-center ">
+                    <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <IoDiamondOutline className="text-3xl text-theme-red" />
                       Quality
                     </p>
                   </div>
-                  <p className="text-base text-theme-500">
+                  <p className="text-base text-black text-theme-500">
                     Multi Point Quality Certification
                   </p>
                 </div>
-                <div className="flex flex-col gap-y-5 items-center justify-center ">
+                {/* card 2 */}
+                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
-                    <p className="inline-flex text-theme-semibold  items-center gap-2 font-semibold text-2xl">
+                    <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <GrCertificate className="text-3xl text-theme-red" />
                       Service
                     </p>
                   </div>
-                  <p className="text-base text-theme-500">
+                  <p className="text-base text-black text-theme-500">
                     7 Days Return Policy.
                   </p>
                 </div>
-                <div className="flex flex-col gap-y-5 items-center justify-center ">
+
+                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
                   <div className="flex justify-center">
-                    <p className="inline-flex text-theme-semibold  items-center gap-2 font-semibold text-2xl">
+                    <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <GiReceiveMoney className="text-3xl text-theme-red" />
                       Experience
                     </p>
                   </div>
 
-                  <p className="text-base text-theme-500">
+                  <p className="text-base text-black text-theme-500">
                     #1 in Credit Assitance.
                   </p>
                 </div>
-                <div className="flex flex-col gap-y-5 items-center justify-center ">
+                {/* card 4 */}
+                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
                   <div className="flex justify-center">
-                    <p className="inline-flex text-theme-semibold   items-center gap-2 font-semibold text-2xl">
+                    <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <IoCarSportOutline className="text-3xl text-theme-red" />
                       Choice
                     </p>
                   </div>
-                  <p className="text-base text-theme-500">
+                  <p className="text-base text-theme-500 text-black">
                     Over 1000 Vehicles in Stock
                   </p>
                 </div>
               </div>
             </div>
           </section>
+
           {/* sell banner start */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className="md:h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
-                <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+              <div className="h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+                <h1 className="md:text-4xl text-center h2 font-semibold text-theme-bold tracking-wide md:text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
                 <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
-                <div className="flex gap-x-5">
+                <div className="md:flex gap-x-5">
                   <p className="flex items-center gap-3 text-theme-500">
                     <FaBlenderPhone className="text-lg" />
                     Instant Call Back
@@ -350,7 +356,7 @@ function RecentWork() {
                       </ul>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>

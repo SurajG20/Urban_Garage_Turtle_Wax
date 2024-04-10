@@ -6,7 +6,7 @@ function BuyForm() {
       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold flex gap-2 items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  gap-2 items-center ">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">
               Car Details
@@ -15,7 +15,7 @@ function BuyForm() {
           <p className="text-theme-500">Fields marked with an * are required</p>
         </div>
         {/* second container  */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid md:grid-cols-2 gap-3">
           <div>
             <label
               htmlFor="full-name"
