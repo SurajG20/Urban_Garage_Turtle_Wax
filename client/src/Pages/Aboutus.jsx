@@ -39,7 +39,7 @@ function AboutUs() {
                   </h2>
                   <div className="mb-5">
                     <p className="text-theme-500">
-                      Luxury Ride is the ultimate destination you have been
+                      Urban Garage is the ultimate destination you have been
                       seeking, offering a mesmerizing range of pre-owned luxury
                       cars coupled with exceptional car service. With a
                       successful presence in the Indian market since 2022, we
@@ -71,6 +71,70 @@ function AboutUs() {
                   }}
                 >
                   <div className="relative z-10"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/*Meets The Minds*/}
+          <section className="section get-start text-white">
+            <div className="container">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title text-center text-theme-semibold ">
+                  Meets The Minds
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                  At Luxury Ride, our leadership team embodies a perfect blend
+                  of expertise, vision, and unwavering commitment, guiding our
+                  organization towards unparalleled success and innovation.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2  md:grid-cols-3 justify-items-center gap-x-5 gap-y-5">
+                {/* card 1 */}
+                <div>
+                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/Himanshu.png"
+                      alt="Urban Garage About Us"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="h4">Himanshu Arya</h4>
+                    <p className="p text-theme-500">Co-Founder & CEO</p>
+                  </div>
+                </div>
+                {/* card 2 */}
+                <div>
+                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/Sumit.png"
+                      alt="Urban Garage About Us"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="h4">Himanshu Arya</h4>
+                    <p className="p text-theme-500">Co-Founder & CEO</p>
+                  </div>
+                </div>
+                {/* card 3 */}
+                <div>
+                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/Himanshu.png"
+                      alt="Urban Garage About Us"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="h4">Himanshu Arya</h4>
+                    <p className="p text-theme-500">Co-Founder & CEO</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,83 +219,68 @@ function AboutUs() {
             </div>
           </section>
 
-          {/* OUR SERVICES Banner*/}
-          <section className="section text-white" id="hero-banner">
-            <div className="relative h-screen">
-              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
-              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
-              <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className="absolute -z-0 h-full w-full">
-                  <img
-                    loading="lazy"
-                    className="h-full w-full object-cover object-left"
-                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt="Urban Garage"
-                  />
+          <section className="section">
+            <div className="container">
+              <div className="grid md:grid-cols-3 gap-5">
+                {/* left content  */}
+                <div className="flex flex-col gap-5">
+                  <div className="w-56 h-42 ml-auto rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/join-img2.png"
+                      alt="Urban Garage about us"
+                    />
+                  </div>
+                  <div className="h-72 w-48  rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/join-img3.png"
+                      alt="Urban Garage about us"
+                    />
+                  </div>
                 </div>
-                {/* <!-- Right container --> */}
-                <div className="opacity-90 p-4 md:p-10 z-20 relative">
-                  <div className="mb-2">
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
-                      Our Services
-                    </h2>
+                {/* content */}
+                <div>
+                  <p className="mb-2 text-theme-bold text-theme-semibold">
+                    Turn Your Big Ideas Into Reality!
+                  </p>
+                  <p className=" mb-3 p text-theme-500">
+                    We know that success means different things to different
+                    people and you may be driven to climb the leadership ladder,
+                    make a positive impact on the world around you, continually
+                    expand your skill set, pursue the perfect work-life balance,
+                    or all of the above. When you go beyond with Luxury Ride,
+                    you can be whatever you want to be. Just be the best you are
+                  </p>
+                  <div>
+                    <button className="px-5 bg-theme-red rounded-lg text-white py-2 theme-border-red text-theme-semibold">
+                      view Opportunities
+                    </button>
                   </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-white shadow-md">
-                      We provide complete professional services in our state of
-                      the art service centres designed to keep your ride running
-                      smoothly and impressively.
-                    </p>
+                </div>
+                {/* right content  */}
+                <div className="flex flex-col gap-5">
+                  <div className="w-56 h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/join-img2.png"
+                      alt="Urban Garage about us"
+                    />
                   </div>
-                  {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          <TiTick className="text-red-600 text-xl" />
-                          OEM/OES Parts
-                        </li>
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> PAN India
-                          Delivery
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> In House
-                          Service Available
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Service package
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Service
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Car Care
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Buy Extended Warranty
-                    </button>
+                  <div className="h-72 w-48 ml-auto rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="https://luxuryride.in/img/join-img3.png"
+                      alt="Urban Garage about us"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-
-          {/* testinomials  */}
-
-          <section className="section">
-            <Testinomial />
           </section>
 
           <section className="section">
