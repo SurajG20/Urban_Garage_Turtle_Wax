@@ -134,19 +134,19 @@ function RecentWork() {
 
               <div className="flex flex-col items-center md:flex-row gap-12 px-16">
                 {/* card 1 */}
-                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
+                <div className="bg-white w-full h-36 rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center ">
                     <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <IoDiamondOutline className="text-3xl text-theme-red" />
                       Quality
                     </p>
                   </div>
-                  <p className="text-base text-black text-theme-500">
+                  <p className="text-base text-center text-black text-theme-500">
                     Multi Point Quality Certification
                   </p>
                 </div>
                 {/* card 2 */}
-                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
+                <div className="bg-white w-full h-36  rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <GrCertificate className="text-3xl text-theme-red" />
@@ -158,7 +158,7 @@ function RecentWork() {
                   </p>
                 </div>
 
-                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
+                <div className="bg-white w-full h-36  rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <GiReceiveMoney className="text-3xl text-theme-red" />
@@ -166,19 +166,19 @@ function RecentWork() {
                     </p>
                   </div>
 
-                  <p className="text-base text-black text-theme-500">
+                  <p className="text-base text-center text-black text-theme-500">
                     #1 in Credit Assitance.
                   </p>
                 </div>
                 {/* card 4 */}
-                <div className="bg-white w-full rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
+                <div className="bg-white w-full h-36  rounded-lg p-5 flex flex-col gap-y-5 items-center justify-center  ">
                   <div className="flex justify-center">
                     <p className="inline-flex text-theme-semibold items-center gap-2 font-semibold text-2xl text-black">
                       <IoCarSportOutline className="text-3xl text-theme-red" />
                       Choice
                     </p>
                   </div>
-                  <p className="text-base text-theme-500 text-black">
+                  <p className="text-base text-center text-theme-500 text-black">
                     Over 1000 Vehicles in Stock
                   </p>
                 </div>
