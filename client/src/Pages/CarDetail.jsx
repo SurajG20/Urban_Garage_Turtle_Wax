@@ -5,7 +5,7 @@ import data from "../server.json";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 import errImg from "../../public/assets/loading.jpeg";
-console.log(errImg);
+
 // icons
 // import { TiTick } from "react-icons/ti";
 // import { FaBlenderPhone } from "react-icons/fa";

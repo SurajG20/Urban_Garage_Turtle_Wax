@@ -35,7 +35,7 @@ function AboutUs() {
 
                 <div>
                   <h2 className="h1  font-bold text-theme-bold">
-                    About Luxury Ride
+                    About <span className="text-theme-red hover:undeline"></span> Urban Garage !
                   </h2>
                   <div className="mb-5">
                     <p className="text-theme-500">
