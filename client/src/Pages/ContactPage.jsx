@@ -42,11 +42,11 @@ function Contactus() {
                   <div>
                     <h3 className="h3 text-theme-semibold">Our Head Office</h3>
                   </div>
-                  <div className="h-56">
+                  <div className="h-72">
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center rounded-2xl"
-                      src="assets/garage/garage1.jpeg"
+                      src="assets/garage/garage-one.jpeg"
                       alt="Urban Garage Head Office"
                     />
                   </div>
@@ -100,7 +100,7 @@ function Contactus() {
                       <span className="text-theme-red">Ask us!</span>
                     </h2>
                   </div>
-                  <div className="flex flex-col md:grid grid-cols-2 gap-5">
+                  <div className="flex flex-col md:grid md:grid-cols-2 gap-5 md:gap-10">
                     <div>
                       <label
                         htmlFor=""
@@ -209,7 +209,7 @@ function Contactus() {
               <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage1.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-one.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10 flex flex-col gap-3">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -223,7 +223,7 @@ function Contactus() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Book a visit
                       </button>
                       <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -235,7 +235,7 @@ function Contactus() {
 
                 {/* card 2 */}
 
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage4.jpeg')]">
+                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10 flex flex-col gap-3">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
@@ -249,7 +249,7 @@ function Contactus() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Book a visit
                       </button>
                       <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -486,16 +486,16 @@ function Contactus() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="outline hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>
