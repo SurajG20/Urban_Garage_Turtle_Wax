@@ -224,26 +224,26 @@ function AboutUs() {
               <div className="grid md:grid-cols-3 gap-5">
                 {/* left content  */}
                 <div className="flex flex-col gap-5">
-                  <div className="w-56 h-42 ml-auto rounded-xl overflow-hidden">
+                  <div className="w-56 h-42  rounded-xl overflow-hidden">
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img2.png"
+                      src="https://luxuryride.in/img/join-img.png"
                       alt="Urban Garage about us"
                     />
                   </div>
-                  <div className="h-72 w-48  rounded-xl overflow-hidden">
+                  <div className="h-72 w-48 ml-auto rounded-xl overflow-hidden">
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img3.png"
+                      src="https://luxuryride.in/img/join-img1.png"
                       alt="Urban Garage about us"
                     />
                   </div>
                 </div>
                 {/* content */}
                 <div>
-                  <p className="mb-2 text-theme-bold text-theme-semibold">
+                  <p className="mb-2 text-theme-bold text-theme-semibold hover:text-theme-red hover:underline">
                     Turn Your Big Ideas Into Reality!
                   </p>
                   <p className=" mb-3 p text-theme-500">
