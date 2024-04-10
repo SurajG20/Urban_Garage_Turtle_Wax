@@ -119,7 +119,18 @@ function Footer() {
                 to="/service"
                 className="footer-link flex items-center gap-x-1"
               >
-                <span>Our Services</span>
+                <span>Services</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about-us"
+                className="footer-link flex items-center gap-x-1"
+              >
+                <span>About Us</span>
                 <span>
                   <HiOutlineExternalLink />
                 </span>

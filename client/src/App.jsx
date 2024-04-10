@@ -12,6 +12,7 @@ import RecentWork from "./Pages/RecentWorkPage";
 import Contactus from "./Pages/ContactPage";
 import TurtleWaxPage from "./Pages/TurtlewaxPage";
 import CarDetail from "./Pages/CarDetail";
+import AboutUs from "./Pages/Aboutus";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
       <Route path="/recent-work" element={<RecentWork />} />
       <Route path="/contact-us" element={<Contactus />} />
+      <Route path="/about-us" element={<AboutUs />} />
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );
