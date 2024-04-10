@@ -1005,7 +1005,7 @@ p {
 \*-----------------------------------*/
 
 .footer {
-  color: var(--independence);
+  color: lightgray;
 }
 
 .footer a {
@@ -1051,6 +1051,7 @@ p {
 }
 
 .footer-link {
+  color: white;
   font-size: var(--fs-6);
   padding-block: 6px;
 }

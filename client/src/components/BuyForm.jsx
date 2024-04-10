@@ -15,7 +15,7 @@ function BuyForm() {
           <p className="text-theme-500">Fields marked with an * are required</p>
         </div>
         {/* second container  */}
-        <div className="grid md:grid-cols-2 gap-3">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-10">
           <div>
             <label
               htmlFor="full-name"
