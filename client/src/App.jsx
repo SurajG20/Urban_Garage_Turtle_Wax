@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 // pages import
@@ -13,8 +13,23 @@ import Contactus from "./Pages/ContactPage";
 import TurtleWaxPage from "./Pages/TurtlewaxPage";
 import CarDetail from "./Pages/CarDetail";
 import AboutUs from "./Pages/Aboutus";
+import Preloader from "./components/Preloader";
 
 function App() {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      // Set a timer for the preloader to show before the main content is rendered
+      const timer = setTimeout(() => setLoading(false), 2000); // Adjust the time as needed
+
+      // Clean up the timer
+      return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+      return <Preloader />;
+    }
   return (
     <Routes>
       <Route path="/" element={<Home />} />

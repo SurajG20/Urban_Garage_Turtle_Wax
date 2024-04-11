@@ -11,6 +11,8 @@ import { IoLocationSharp, IoMail } from "react-icons/io5";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
+import { MdDirections } from "react-icons/md";
+
 
 function Contactus() {
   return (
@@ -40,7 +42,9 @@ function Contactus() {
                 {/* left container  */}
                 <div className="flex flex-col gap-5">
                   <div>
-                    <h3 className="h3 text-theme-semibold">Our Head Office</h3>
+                    <h3 className="h3 text-theme-semibold underline">
+                      Our Head Office
+                    </h3>
                   </div>
                   <div className="h-72">
                     <img
@@ -51,7 +55,7 @@ function Contactus() {
                     />
                   </div>
                   <div>
-                    <h3 className="h4 text-theme-semibold">
+                    <h3 className="h4 text-theme-semibold  ">
                       Head Office Details
                     </h3>
                   </div>
@@ -60,23 +64,32 @@ function Contactus() {
                       <span>
                         <IoLocationSharp className="text-theme-red text-2xl" />
                       </span>
-                      <span className="p text-theme-500">
-                        261, Ground Floor, Lane Number-5, Westend Marg,
-                        Saidulajab, Saket, New Delhi, Delhi 110030 Get
-                        Directions
+                      <span className="p text-theme-500 flex gap-x-3 flex-wrap">
+                        Plot No 98, Industrial Area Phase I, Chandigarh, 160002
+                        <span>
+                          <Link
+                            className="text-theme-red text-theme-semibold underline flex gap-x-2 items-center"
+                            target="_blank"
+                            to={
+                              "https://www.google.com/maps/dir//Plot+No+98,+Industrial+Area+Phase+I,+Chandigarh,+160002/@30.70935,76.7218037,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fed0d68f936e9:0xd6fcbf0dac51de9f!2m2!1d76.8041805!2d30.7093577?entry=ttu"
+                            }
+                          >
+                            Get Direction <MdDirections className="text-xl"/>
+                          </Link>
+                        </span>
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="p text-theme-500">
                         <FaBlenderPhone className="text-lg text-theme-red" />
                       </span>
-                      <span>+91 9999 9999 99</span>
+                      <span>+91 7744900001</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span>
                         <IoMail className="text-lg text-theme-red" />
                       </span>
-                      <span>info@gmail.com</span>
+                      <span>support@dcbi.in</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span>
@@ -309,7 +322,7 @@ function Contactus() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-black text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -317,7 +330,7 @@ function Contactus() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 font-semibold text-sm">
+                        <div className="text-theme-500 text-black font-semibold text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -325,7 +338,7 @@ function Contactus() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-black text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
@@ -370,23 +383,23 @@ function Contactus() {
                         <div className="text-theme-500 text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-black text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
                       <div className="bg-gray-200  px-5 text-center rounded-md">
-                        <div className="text-theme-500 text-theme-red">
+                        <div className="text-theme-500  text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 font-semibold text-sm">
+                        <div className="text-theme-500 text-black font-semibold text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
                       <div className="bg-gray-200  px-5 text-center rounded-md">
-                        <div className="text-theme-500 text-theme-red">
+                        <div className="text-theme-500  text-theme-red">
                           8,000
                         </div>
-                        <div className="text-theme-500 text-sm">
+                        <div className="text-theme-500 text-black text-sm">
                           Sq. Ft. Area
                         </div>
                       </div>
