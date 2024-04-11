@@ -19,6 +19,13 @@ app.use(cors());
 // Routes
 app.use("/admin", adminRoutes);
 
+// In your main app file (app.js or similar)
+app.get('/', (req, res) => {
+  console.log('Test route hit');
+  res.status(200).send('Welcome To Urban Garage!');
+});
+
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.DB_URI)

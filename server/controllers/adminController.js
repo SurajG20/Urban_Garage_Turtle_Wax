@@ -30,6 +30,7 @@ exports.sendNotificationMail = async (req, res) => {
 
 // Example Admin function
 exports.listAllAdmins = async (req, res) => {
+  console.log("Request received to list all admins");
   try {
     const admins = await Admin.find();
     res.json(admins);
@@ -37,3 +38,4 @@ exports.listAllAdmins = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
