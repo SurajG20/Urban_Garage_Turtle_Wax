@@ -1,70 +1,29 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
-const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
+const adminRoutes = require("./routes/adminRoutes");
 
-const SECRET_KEY = "airbnbsecretkey";
-const bcrypt = require("bcrypt");
-const multer = require("multer");
-// image downloader
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+dotenv.config();
 
-// middleswares
+// Middlewares
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.static("public"));
+app.use("/uploads", express.static("uploads"));
 app.use(cors());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-// jwt  middleware
-const authenticateMiddleware = async (req, res, next) => {
-  try {
-    const token = req.headers.authorization.split(" ")[1]; // Assuming the token is sent in the Authorization header
-    const decodedToken = jwt.verify(token, "yourSecretKeyHere");
-    const user = await User.findById(decodedToken.userId);
 
-    if (!user) {
-      throw new Error("User not found");
-    }
+// Routes
+app.use("/admin", adminRoutes);
 
-    req.user = user;
-    next();
-  } catch (error) {
-    res.status(401).json({ error: "Unauthorized" });
-  }
-};
+// Connect to MongoDB
+mongoose
+  .connect(process.env.DB_URI)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Could not connect to MongoDB:", err));
 
-// Mongoose connection
-async function connectToDatabase() {
-  try {
-    await mongoose.connect(
-      "mongodb+srv://akshitlogin7400:akshit%40123@cluster0.jcnv7xt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-    );
-    console.log("Connected to MongoDB database");
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error.message);
-  }
-}
-connectToDatabase();
-
-//  multer code for file upload images
-const storage = multer.diskStorage({
-  destination: "./uploads",
-  filename: (req, file, cb) => {
-    const timestamp = new Date().getTime();
-    const uniqueFilename = `airbnb-Image-${timestamp}.jpg`;
-    cb(null, uniqueFilename);
-  },
-});
-const upload = multer({ storage });
-app.post("/upload", upload.single("image"), (req, res) => {
-  if (!req.file) {
-    return res.status(400).json({ message: "No image file provided" });
-  }
-  const imagePath = path.join(req.file.filename);
-  res.json({ imagePath: imagePath });
-});
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
