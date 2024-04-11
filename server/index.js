@@ -3,17 +3,14 @@ const app = express();
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const User = require("./models/Users");
+
 const SECRET_KEY = "airbnbsecretkey";
 const bcrypt = require("bcrypt");
 const multer = require("multer");
-const Place = require("./models/Place");
 // image downloader
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
-
-
 
 // middleswares
 app.use(express.json());
@@ -37,16 +34,11 @@ const authenticateMiddleware = async (req, res, next) => {
   }
 };
 
-
 // Mongoose connection
 async function connectToDatabase() {
   try {
     await mongoose.connect(
-      "mongodb+srv://airbnb:akshit123@cluster0.gzr9dgg.mongodb.net/?retryWrites=true&w=majority",
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
+      "mongodb+srv://akshitlogin7400:akshit%40123@cluster0.jcnv7xt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     );
     console.log("Connected to MongoDB database");
   } catch (error) {
@@ -54,7 +46,6 @@ async function connectToDatabase() {
   }
 }
 connectToDatabase();
-
 
 //  multer code for file upload images
 const storage = multer.diskStorage({
@@ -73,7 +64,6 @@ app.post("/upload", upload.single("image"), (req, res) => {
   const imagePath = path.join(req.file.filename);
   res.json({ imagePath: imagePath });
 });
-
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
