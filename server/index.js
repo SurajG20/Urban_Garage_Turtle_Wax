@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const adminRoutes = require("./routes/adminRoutes");
+const productRoutes = require("./routes/productRoutes"); 
 
 dotenv.config();
 
@@ -18,6 +20,9 @@ app.use(cors());
 
 // Routes
 app.use("/admin", adminRoutes);
+// Product routes GET (/products) to list products.||POST /products to add a new product.
+app.use("/products", productRoutes);
+
 
 // In your main app file (app.js or similar)
 app.get('/', (req, res) => {
