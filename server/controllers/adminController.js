@@ -1,27 +1,39 @@
 const Admin = require("../models/adminModel");
-const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+const nodemailer = require("nodemailer");
 
-exports.loginAdmin = async (req, res) => {
-  const { username, password } = req.body;
-
+// Function to send notifications via email
+exports.sendNotificationMail = async (req, res) => {
+  const { name, email, title, message } = req.body;
   try {
-    const admin = await Admin.findOne({ username });
-    if (!admin) {
-      return res.status(404).send("User not found");
-    }
-
-    const isValid = await bcrypt.compare(password, admin.password);
-    if (!isValid) {
-      return res.status(401).send("Invalid credentials");
-    }
-
-    const token = jwt.sign({ userId: admin._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.AUTHUSER,
+        pass: process.env.AUTHPASS,
+      },
     });
-    res.json({ token });
+    const mailOptions = {
+      from: process.env.AUTHUSER,
+      to: email,
+      subject: title,
+      html: `<h1>Hi ${name}</h1><p>${message}</p>`,
+    };
+    let info = await transporter.sendMail(mailOptions);
+    res.send("Email sent: " + info.response);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Server error");
+    res.status(500).send("Error in sending email");
+  }
+};
+
+// Example Admin function
+exports.listAllAdmins = async (req, res) => {
+  try {
+    const admins = await Admin.find();
+    res.json(admins);
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
   }
 };
