@@ -5,16 +5,18 @@ import axios from "axios";
 
 function AdminLogin() {
   const loginMutation = useMutation((data) => {
-    return axios.post("/api/login", data);
+    return axios.post("http://localhost:3000/admin", data);
   });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const username = event.target.email.value;
+    const username = event.target.username.value;
     const password = event.target.password.value;
 
     loginMutation.mutate({ username, password });
   };
+
+  console.log(loginMutation);
 
   return (
     <div
@@ -41,16 +43,16 @@ function AdminLogin() {
           </div>
           <div className="mb-5">
             <label
-              htmlFor="email"
+              htmlFor="username"
               className="block text-sm font-medium text-gray-700"
             >
               Username
             </label>
             <input
               placeholder="Enter Username"
-              type="email"
-              id="email"
-              name="email"
+              type="text"
+              id="username"
+              name="username"
               className="py-2 px-3 mt-1 bg-gray-200 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none rounded-md"
             />
           </div>
