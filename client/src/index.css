@@ -1604,6 +1604,9 @@ p {
 .border-theme-gray {
   border: 1px solid lightgrey;
 }
+.border-theme-black {
+  border: 1px solid black;
+}
 .outline-theme-red {
   outline: 1px solid #f50303;
 }

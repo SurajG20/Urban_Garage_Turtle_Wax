@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 // icons
 import { MdPerson } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
@@ -138,9 +136,13 @@ function Header() {
 
         <div className="header-actions">
           <div className="header-contact">
-          <div className="text-theme-red text-theme-semibold text-xl">
-            Admin Dashboard
-          </div>
+            {" "}
+            t-
+            <Link to={"/add-product"}>
+              <div className="text-theme-red hover:text-white text-theme-semibold text-xl">
+                + Add Product
+              </div>
+            </Link>
             {/* <Link
               to="tel:+917909200001"
               target="_blank"
@@ -148,7 +150,6 @@ function Header() {
             >
               +91 7744900001
             </Link> */}
-
             {/* <span className="contact-time text-theme-500">
               Mon - Sat: 9:00 am - 6:00 pm
             </span> */}

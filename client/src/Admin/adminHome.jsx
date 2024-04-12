@@ -63,18 +63,18 @@ function AdminDashboard() {
       <Header />
       <main className="flex-grow ">
         <section>
-          <div className="container">
+          <div className="container mt-20">
             <ul role="list" className="divide-y divide-gray-100">
               {people.map((person) => (
                 <li
                   key={person.email}
-                  className="flex justify-between gap-x-6 py-5"
+                  className="flex flex-col gap-y-5 md:flex-row justify-between gap-x-6 py-5"
                 >
                   <div className="flex min-w-0 gap-x-4">
                     <img
-                      className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                      className="h-32 w-36 flex-none rounded-xl bg-gray-50"
                       src={person.imageUrl}
-                      alt=""
+                      alt="Urban Garage "
                     />
                     <div className="min-w-0 flex-auto">
                       <p className="text-sm font-semibold leading-6 text-gray-900">
@@ -83,29 +83,25 @@ function AdminDashboard() {
                       <p className="mt-1 truncate text-xs leading-5 text-gray-500">
                         {person.email}
                       </p>
+                      <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                        {person.email}
+                      </p>
+                      <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                        {person.email}
+                      </p>
                     </div>
                   </div>
-                  <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                    <p className="text-sm leading-6 text-gray-900">
-                      {person.role}
-                    </p>
-                    {person.lastSeen ? (
-                      <p className="mt-1 text-xs leading-5 text-gray-500">
-                        Last seen{" "}
-                        <time dateTime={person.lastSeenDateTime}>
-                          {person.lastSeen}
-                        </time>
-                      </p>
-                    ) : (
-                      <div className="mt-1 flex items-center gap-x-1.5">
-                        <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        </div>
-                        <p className="text-xs leading-5 text-gray-500">
-                          Online
-                        </p>
-                      </div>
-                    )}
+                  <div className="min-w-36 flex gap-2  sm:flex-col justify-center gap-y-5 sm:items-end">
+                    <div className="w-full">
+                      <button className="py-2 w-full border-theme-black text-black text-theme-semibold rounded-md">
+                        Edit
+                      </button>
+                    </div>
+                    <div className="w-full">
+                      <button className="py-2 w-full bg-black text-white text-theme-semibold  rounded-md">
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </li>
               ))}
