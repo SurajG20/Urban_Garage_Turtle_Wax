@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 // icons
 import { MdPerson } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
@@ -12,7 +14,7 @@ function Header() {
       <div className="container">
         <div className="overlay" data-overlay></div>
 
-        <Link to="/" className="logo flex items-center">
+        <Link to="/" className="logo flex items-center gap-x-2">
           <div className="h-12">
             <img
               className="h-full"
@@ -40,7 +42,7 @@ function Header() {
         </nav> */}
 
         {/* mobile navbar */}
-        <div className={`mobile-nav p-4 ${mobiNavbar ? "show" : ""}`}>
+        {/* <div className={`mobile-nav p-4 ${mobiNavbar ? "show" : ""}`}>
           <div className="flex justify-between items-center mb-10">
             <Link to="/" className="logo">
               <div className="h-12">
@@ -126,28 +128,30 @@ function Header() {
             </li>
           </ul>
           <div>
-            '
             <Link to={"/contact-us"}>
               <button className="py-2 px-5 w-full bg-white font-semibold">
                 Contact us
               </button>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <div className="header-actions">
           <div className="header-contact">
-            <Link
+          <div className="text-theme-red text-theme-semibold text-xl">
+            Admin Dashboard
+          </div>
+            {/* <Link
               to="tel:+917909200001"
               target="_blank"
               className="contact-link text-theme-500"
             >
               +91 7744900001
-            </Link>
+            </Link> */}
 
-            <span className="contact-time text-theme-500">
+            {/* <span className="contact-time text-theme-500">
               Mon - Sat: 9:00 am - 6:00 pm
-            </span>
+            </span> */}
           </div>
 
           <Link
