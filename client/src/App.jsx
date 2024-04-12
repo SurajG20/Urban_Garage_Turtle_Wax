@@ -17,6 +17,7 @@ import Preloader from "./components/Preloader";
 // Admin Routes
 import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Admin/adminHome";
+import AddProduct from "./Admin/addProduct";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/login" element={<AdminLogin />} />
       <Route path="/admin-dashboard" element={<AdminDashboard/>} />
+      <Route path="/add-product/:id" element={<AddProduct/>} />
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );
