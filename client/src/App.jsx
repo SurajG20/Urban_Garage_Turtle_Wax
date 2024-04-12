@@ -16,6 +16,7 @@ import AboutUs from "./Pages/Aboutus";
 import Preloader from "./components/Preloader";
 // Admin Routes
 import AdminLogin from "./Pages/AdminLogin";
+import AdminDashboard from "./Admin/adminHome";
 
 
 function App() {
@@ -46,7 +47,8 @@ function App() {
       <Route path="/recent-work" element={<RecentWork />} />
       <Route path="/contact-us" element={<Contactus />} />
       <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/login" element={<AdminLogin/>} />
+      <Route path="/login" element={<AdminLogin />} />
+      <Route path="/admin-dashboard" element={<AdminDashboard/>} />
       <Route path="*" element={<PPFPage />} />
     </Routes>
   );
