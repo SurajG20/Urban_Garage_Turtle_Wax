@@ -1,7 +1,21 @@
 import React from "react";
+import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function AdminLogin() {
+  const loginMutation = useMutation((data) => {
+    return axios.post("/api/login", data);
+  });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const username = event.target.email.value;
+    const password = event.target.password.value;
+
+    loginMutation.mutate({ username, password });
+  };
+
   return (
     <div
       className="h-screen flex justify-center items-center bg-no-repeat bg-cover bg-center relative p-4"
@@ -10,11 +24,10 @@ function AdminLogin() {
           "url('https://images.unsplash.com/photo-1551522435-a13afa10f103?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
       }}
     >
-      <div className="absolute inset-0  opacity-50 bg-gray-50 blur-xl"></div>{" "}
-      {/* Overlay */}
+      <div className="absolute inset-0 opacity-50 bg-gray-50 blur-xl"></div>
       <div className="p-5 w-full md:w-1/3 bg-white rounded-lg shadow-lg z-10">
-        <form>
-          <div className="mb-10 ">
+        <form onSubmit={handleSubmit}>
+          <div className="mb-10">
             <div className="h-16 w-16 m-auto mb-5">
               <Link to={"/"}>
                 <img
@@ -28,7 +41,7 @@ function AdminLogin() {
           </div>
           <div className="mb-5">
             <label
-              htmlFor="username"
+              htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
               Username
@@ -57,7 +70,10 @@ function AdminLogin() {
             />
           </div>
           <div className="mb-4">
-            <button className="bg-theme-red text-white py-2 px-5 rounded-lg">
+            <button
+              type="submit"
+              className="bg-theme-red text-white py-2 px-5 rounded-lg"
+            >
               Submit
             </button>
           </div>

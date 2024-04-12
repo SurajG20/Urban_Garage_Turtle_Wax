@@ -19,6 +19,10 @@ import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Admin/adminHome";
 import AddProduct from "./Admin/addProduct";
 
+// react query 
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
 
@@ -36,23 +40,25 @@ function App() {
       return <Preloader />;
     }
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/buy" element={<BuyPage />} />
-      <Route path="/buy/car-detail/:id" element={<CarDetail />} />
-      <Route path="/sell" element={<SellPage />} />
-      <Route path="/service" element={<ServicePage />} />
-      <Route path="/coating" element={<CoatingPage />} />
-      <Route path="/ppf" element={<PPFPage />} />
-      <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
-      <Route path="/recent-work" element={<RecentWork />} />
-      <Route path="/contact-us" element={<Contactus />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/login" element={<AdminLogin />} />
-      <Route path="/admin-dashboard" element={<AdminDashboard/>} />
-      <Route path="/add-product/:id" element={<AddProduct/>} />
-      <Route path="*" element={<PPFPage />} />
-    </Routes>
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/buy" element={<BuyPage />} />
+        <Route path="/buy/car-detail/:id" element={<CarDetail />} />
+        <Route path="/sell" element={<SellPage />} />
+        <Route path="/service" element={<ServicePage />} />
+        <Route path="/coating" element={<CoatingPage />} />
+        <Route path="/ppf" element={<PPFPage />} />
+        <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
+        <Route path="/recent-work" element={<RecentWork />} />
+        <Route path="/contact-us" element={<Contactus />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/login" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/add-product/:id" element={<AddProduct />} />
+        <Route path="*" element={<PPFPage />} />
+      </Routes>
+    </QueryClientProvider>
   );
 }
 
