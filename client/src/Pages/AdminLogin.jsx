@@ -1,12 +1,40 @@
-import React from "react";
+import React,{useState} from "react";
 import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
+
 
 function AdminLogin() {
-  const loginMutation = useMutation((data) => {
-    return axios.post("http://localhost:3000/admin", data);
-  });
+  const navigate = useNavigate();
+  const { login } = useAuth();
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const loginMutation = useMutation(
+    (data) => {
+      return axios.post("http://localhost:3000/admin", data);
+    },
+    {
+      onSuccess: (data) => {
+        login(data.data);
+        navigate("/admin-dashboard");
+      },
+      onError: (error) => {
+        // Handle error state and message
+        setErrorMessage(
+          error.response.data.error || "An unexpected error occurred"
+        );
+      },
+
+      onError: (error) => {
+        // Handle error state and message
+        setErrorMessage(
+          error.response.data.error || "An unexpected error occurred"
+        );
+      },
+    }
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,8 +43,6 @@ function AdminLogin() {
 
     loginMutation.mutate({ username, password });
   };
-
-  console.log(loginMutation);
 
   return (
     <div

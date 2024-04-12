@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 // pages import
@@ -18,46 +18,62 @@ import Preloader from "./components/Preloader";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Admin/adminHome";
 import AddProduct from "./Admin/addProduct";
-
-// react query 
+import { AuthProvider } from "./AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
+// react query
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
-    const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Set a timer for the preloader to show before the main content is rendered
+    const timer = setTimeout(() => setLoading(false), 2000); // Adjust the time as needed
 
-    useEffect(() => {
-      // Set a timer for the preloader to show before the main content is rendered
-      const timer = setTimeout(() => setLoading(false), 2000); // Adjust the time as needed
+    // Clean up the timer
+    return () => clearTimeout(timer);
+  }, []);
 
-      // Clean up the timer
-      return () => clearTimeout(timer);
-    }, []);
-
-    if (loading) {
-      return <Preloader />;
-    }
+  if (loading) {
+    return <Preloader />;
+  }
   return (
     <QueryClientProvider client={queryClient}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/buy" element={<BuyPage />} />
-        <Route path="/buy/car-detail/:id" element={<CarDetail />} />
-        <Route path="/sell" element={<SellPage />} />
-        <Route path="/service" element={<ServicePage />} />
-        <Route path="/coating" element={<CoatingPage />} />
-        <Route path="/ppf" element={<PPFPage />} />
-        <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
-        <Route path="/recent-work" element={<RecentWork />} />
-        <Route path="/contact-us" element={<Contactus />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/login" element={<AdminLogin />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/add-product/:id" element={<AddProduct />} />
-        <Route path="*" element={<PPFPage />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/buy" element={<BuyPage />} />
+          <Route path="/buy/car-detail/:id" element={<CarDetail />} />
+          <Route path="/sell" element={<SellPage />} />
+          <Route path="/service" element={<ServicePage />} />
+          <Route path="/coating" element={<CoatingPage />} />
+          <Route path="/ppf" element={<PPFPage />} />
+          <Route path="/turtle-wax-products" element={<TurtleWaxPage />} />
+          <Route path="/recent-work" element={<RecentWork />} />
+          <Route path="/contact-us" element={<Contactus />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/login" element={<AdminLogin />} />
+          <Route
+            path="/admin-dashboard"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/add-product/:id"
+            element={
+              <ProtectedRoute>
+                <AddProduct />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<PPFPage />} />
+        </Routes>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
