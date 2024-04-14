@@ -6,15 +6,15 @@ function BuyForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
-    CarBrand: "",
-    manufactureYear: "",
+    carBrand: "",
+    modelYear: "",
     fuelType: "",
     budget: "",
   });
 
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
-    return axios.post("/api/submit-car-details", data);
+    return axios.post("http://localhost:3000/buyCar-users", data);
   });
 
   const handleChange = (event) => {
@@ -95,15 +95,16 @@ function BuyForm() {
           </div>
           <div>
             <label
-              htmlFor="full-name"
+              htmlFor="modelYear"
               className="text-theme-500 flex items-center"
             >
               Model Year<span className="text-red-600">*</span>
             </label>
             <input
+              id="modelYear"
               required
-              name="manufactureYear"
-              value={formData.manufactureYear}
+              name="modelYear"
+              value={formData.modelYear}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Model Year"
@@ -113,15 +114,15 @@ function BuyForm() {
 
           <div>
             <label
-              htmlFor="CarBrand"
+              htmlFor="carBrand"
               className="text-theme-500 flex items-center"
             >
               Car Brand/Car Model<span className="text-red-600">*</span>
             </label>
             <select
-              name="CarBrand"
-              value={formData.CarBrand}
-              id="fuel-type"
+              name="carBrand"
+              value={formData.carBrand}
+              id="carBrand"
               className="p-2 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               onChange={handleChange}
             >
@@ -157,11 +158,30 @@ function BuyForm() {
             </select>
           </div>
 
-          <div className="hidden md:flex items-center justify-center">
+          <div>
+            <label
+              htmlFor="budget"
+              className="text-theme-500 flex items-center"
+            >
+              Budget<span className="text-red-600">*</span>
+            </label>
+            <input
+              id="budget"
+              required
+              name="budget"
+              value={formData.budget}
+              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              type="number"
+              placeholder="Enter Your Budget"
+              onChange={handleChange}
+            />
+          </div>
+
+          {/* <div className="hidden md:flex items-center justify-center">
             <h2 className="h2 text-theme-red text-theme-bold">
               URBAN GARAGE LUXURY CARS !
             </h2>
-          </div>
+          </div> */}
           <div className="mt-5">
             <button
               type="submit"

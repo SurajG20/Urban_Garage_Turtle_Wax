@@ -1,25 +1,25 @@
-const BuyCar = require("../models/productModel");
+const sellCar = require("../model/sellModel");
 
-exports.listAllProducts = async (req, res) => {
+exports.allSellCarUsers = async (req, res) => {
   try {
-    const products = await Product.find();
-    res.json(products);
+    const allBuyCarsUsers = await sellCar.find();
+    console.log(allBuyCarsUsers);
+    res.json(allBuyCarsUsers);
   } catch (error) {
     res.status(500).json({ error: "Server error" });
   }
 };
 
-exports.addProduct = async (req, res) => {
+exports.addSellCarUser = async (req, res) => {
+  console.log(req.body);
   try {
-    // Create a new product instance and save it to the database
-    const product = new Product({
+    const buyCarUser = new sellCar({
       ...req.body,
-      img: req.file ? req.file.path : "default.jpg", // Include the file path if uploaded
     });
-    await product.save();
-    res.json({ message: "Product added successfully", product: product });
+    await buyCarUser.save();
+    res.json({ message: "User added successfully", user: buyCarUser });
   } catch (error) {
-    console.error("Failed to add product:", error);
+    console.error("Failed to add user:", error);
     res.status(500).json({ error: "Server error" });
   }
 };

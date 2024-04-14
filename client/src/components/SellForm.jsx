@@ -6,7 +6,7 @@ function SellForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
-    manufactureYear: "",
+    modelYear: "",
     ownerType: "first",
     kilometersDriven: "",
     carName: "",
@@ -99,15 +99,16 @@ function SellForm() {
           </div>
           <div>
             <label
-              htmlFor="full-name"
+              htmlFor="modelYear"
               className="text-theme-500 flex items-center"
             >
               Model Year<span className="text-red-600">*</span>
             </label>
             <input
+              id="modelYear"
               required
-              name="manufactureYear"
-              value={formData.manufactureYear}
+              name="modelYear"
+              value={formData.modelYear}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Model Year"
