@@ -1,8 +1,7 @@
-const Admin = require("../models/adminModel")
+const Admin = require("../models/adminAuthModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
-
 
 // Function to send notifications via email
 exports.sendNotificationMail = async (req, res) => {
@@ -31,7 +30,6 @@ exports.sendNotificationMail = async (req, res) => {
 
 // Example Admin function
 exports.AdminLogin = async (req, res) => {
-  
   const { username, password } = req.body;
 
   try {
@@ -72,4 +70,3 @@ exports.AdminLogin = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
-
