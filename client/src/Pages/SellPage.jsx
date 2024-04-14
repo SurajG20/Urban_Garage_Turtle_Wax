@@ -6,6 +6,8 @@ import CarCard from "../components/CarCard";
 import data from "../server.json";
 import { Link } from "react-router-dom";
 import Dropdown from "../utils/Dropdown";
+import SellForm from "../components/SellForm";
+
 
 import Image from "../utils/Image";
 // icons
@@ -16,13 +18,14 @@ import { MdOutlinePayments } from "react-icons/md";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
+
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
 import { FaCirclePlus, FaCircleMinus } from "react-icons/fa6";
-import BuyForm from "../components/BuyForm";
+
 
 function SellPage() {
   const [cars, setCars] = useState([]);
@@ -468,8 +471,17 @@ function SellPage() {
           </section>
 
           <section>
-            <div className="container">
-              <BuyForm />
+            <div className="container ">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title text-center text-theme-semibold text-white">
+                  Get In Touch
+                </h2>
+                <p className="p flex items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Sell your luxury car to  <span className="text-theme-red text-theme-bold mx-2">URBAN GARAGE</span>experts for hassle free
+                  process and best market price.
+                </p>
+              </div>
+              <SellForm />
             </div>
           </section>
 

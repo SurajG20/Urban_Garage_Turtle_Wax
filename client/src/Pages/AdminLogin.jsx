@@ -28,12 +28,7 @@ function AdminLogin() {
         );
       },
 
-      onError: (error) => {
-        // Handle error state and message
-        setErrorMessage(
-          error.response.data.error || "An unexpected error occurred"
-        );
-      },
+     
     }
   );
 
