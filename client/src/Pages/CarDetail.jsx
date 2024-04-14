@@ -63,7 +63,7 @@ function CarDetail() {
             <div className="container">
               <div className="mb-10 grid md:grid-cols-2 gap-x-10 text-white">
                 <div className="mb-5 flex flex-col gap-y-3">
-                  <div className="text-theme-red md:h2 h3 text-center md:text-start">
+                  <div className="uppercase tracking-wider text-theme-red text-theme-bold md:h2 h3 text-center md:text-start">
                     {carDetail.name}
                   </div>
 

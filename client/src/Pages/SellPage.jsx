@@ -473,10 +473,10 @@ function SellPage() {
           <section>
             <div className="container ">
               <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title text-center text-theme-semibold text-white">
+                <h2 className="h1 section-title text-center text-theme-semibold text-white">
                   Get In Touch
                 </h2>
-                <p className="p flex items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
+                <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
                   Sell your luxury car to  <span className="text-theme-red text-theme-bold mx-2">URBAN GARAGE</span>experts for hassle free
                   process and best market price.
                 </p>

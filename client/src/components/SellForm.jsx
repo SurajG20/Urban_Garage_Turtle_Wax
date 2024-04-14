@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useMutation } from "react-query";
 
 function SellForm() {
@@ -6,33 +7,40 @@ function SellForm() {
     fullName: "",
     mobileNumber: "",
     manufactureYear: "",
-    ownerType: "",
+    ownerType: "first",
     kilometersDriven: "",
     carName: "",
-    fuelType: "",
+    fuelType: "Disel",
     regCity: "",
     address: "",
   });
-  const mutation = useMutation((newData) => {
-    return fetch("/api/submit-car-details", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newData),
-    });
+
+  // Setup mutation using React Query and Axios
+  const formMutation = useMutation((data) => {
+    console.log("Data:", data);
+    return axios.post("/api/submit-car-details", data);
   });
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value,
     }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    mutation.mutate(formData);
+    formMutation.mutate(formData, {
+      onSuccess: (response) => {
+        console.log("Success:", response.data);
+        // You can perform actions on success, e.g., navigate, show message
+      },
+      onError: (error) => {
+        console.error("Error:", error);
+        // Handle errors, e.g., show error notifications
+      },
+    });
   };
 
   return (
@@ -46,7 +54,9 @@ function SellForm() {
               Car Details
             </span>{" "}
           </h3>
-          <p className="text-theme-500">Fields marked with an * are required</p>
+          <p className="text-theme-500 text-theme-red">
+            Fields marked with an * are required
+          </p>
         </div>
         {/* second container  */}
         <form
@@ -82,7 +92,7 @@ function SellForm() {
               name="mobileNumber"
               value={formData.mobileNumber}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-              type="text"
+              type="number"
               placeholder="Enter Mobile Number"
               onChange={handleChange}
             />
@@ -99,7 +109,7 @@ function SellForm() {
               name="manufactureYear"
               value={formData.manufactureYear}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-              type="text"
+              type="number"
               placeholder="Enter Model Year"
               onChange={handleChange}
             />
@@ -135,7 +145,7 @@ function SellForm() {
               name="kilometersDriven"
               value={formData.kilometersDriven}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-              type="text"
+              type="number"
               placeholder="Enter kilometers Driven"
               onChange={handleChange}
             />
@@ -206,7 +216,7 @@ function SellForm() {
             </label>
             <input
               required
-              name="state-name"
+              name="address"
               value={formData.address}
               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
@@ -216,7 +226,7 @@ function SellForm() {
           </div>
           <div className="mt-5">
             <button
-              type="button"
+              type="submit"
               className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
             >
               Submit
