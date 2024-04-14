@@ -6,11 +6,10 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 function fetchPeople() {
-  return axios.get("http://localhost:3000/buyCar-users");
+  return axios.get("http://localhost:3000/sellCar-users");
 }
 
-
-function BuyCarUser() {
+function SellCarUser() {
   const { data, error, isError, isLoading } = useQuery("people", fetchPeople, {
     select: (data) => data.data,
   });
@@ -28,9 +27,9 @@ function BuyCarUser() {
       <Header />
       <main className="flex-grow h-[80vh] overflow-y-auto">
         <section>
-          <div className="container mt-20">
+          <div className="px-5 mt-20">
             <ul role="list" className="divide-y divide-gray-100">
-              <li className="grid grid-cols-2 md:grid-cols-4">
+              <li className="grid grid-cols-2 md:grid-cols-6">
                 <div className="font-bold h3 text-theme-red text-theme-bold text-center">
                   User Details
                 </div>
@@ -38,7 +37,13 @@ function BuyCarUser() {
                   Car Name/Car Model
                 </div>
                 <div className="font-bold h3 text-theme-red text-theme-bold text-center">
-                  Fuel Type/Budget
+                  Fuel Type/Kms
+                </div>
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
+                  Owner /Kms
+                </div>
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
+                  Reg.City /Address
                 </div>
                 <div className="font-bold h3 text-theme-red text-theme-bold text-center">
                   Contact User
@@ -48,7 +53,7 @@ function BuyCarUser() {
                 <>
                   <li
                     key={users._id}
-                    className="grid grid-cols-4 gap-x-6 py-5 bg-gray-300 px-2 mb-1"
+                    className="grid grid-cols-6 gap-x-6 py-5 bg-gray-300 px-2 mb-1"
                   >
                     <div className="flex min-w-0 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
@@ -60,14 +65,34 @@ function BuyCarUser() {
                         </p>
                       </div>
                     </div>
+                    <div className="flex min-w-0 gap-x-4">
+                      <div className="min-w-0 flex-auto text-center">
+                        <p className="text-xl  font-semibold leading-6 text-gray-900">
+                          {users.carName}
+                        </p>
+                        <p className="mt-1 truncate text-md leading-5 text-gray-900">
+                          {users.modelYear}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex min-w-0 gap-x-4">
+                      <div className="min-w-0 flex-auto text-center">
+                        <p className="text-xl  font-semibold leading-6 text-gray-900">
+                          {users.fuelType}
+                        </p>
+                        <p className="mt-1 truncate text-md leading-5 text-gray-900">
+                          {users.kilometersDriven}
+                        </p>
+                      </div>
+                    </div>
                     {/* car details   */}
                     <div className="flex min-w-92 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
                         <p className="text-xl font-semibold leading-6 text-gray-900">
-                          {users.carBrand}
+                          {users.ownerType}
                         </p>
                         <p className="mt-1 truncate text-md leading-5 text-gray-900">
-                          {users.modelYear}
+                          {users.kilometersDriven}
                         </p>
                       </div>
                     </div>
@@ -75,10 +100,10 @@ function BuyCarUser() {
                     <div className="flex items-center justify-center min-w-92 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
                         <p className="text-xl font-semibold leading-6 text-gray-900">
-                          {users.fuelType}
+                          {users.regCity}  
                         </p>
                         <p className="mt-1 truncate text-md leading-5 text-gray-900">
-                         ₹ {users.budget} /-
+                           {users.address} /-
                         </p>
                       </div>
                     </div>
@@ -112,4 +137,4 @@ function BuyCarUser() {
   );
 }
 
-export default BuyCarUser;
+export default SellCarUser;

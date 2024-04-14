@@ -23,6 +23,7 @@ import ProtectedRoute from "./ProtectedRoute";
 // react query
 import { QueryClient, QueryClientProvider } from "react-query";
 import BuyCarUser from "./Admin/buyCarUsers";
+import SellCarUser from "./Admin/sellCarUsers";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <BuyCarUser />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sellCar-users"
+            element={
+              <ProtectedRoute>
+                <SellCarUser/>
               </ProtectedRoute>
             }
           />
