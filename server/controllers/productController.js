@@ -11,10 +11,9 @@ exports.listAllProducts = async (req, res) => {
 
 exports.addProduct = async (req, res) => {
   try {
-    // Create a new product instance and save it to the database
     const product = new Product({
       ...req.body,
-      img: req.file ? req.file.path : "default.jpg", // Include the file path if uploaded
+      img: req.file.path, // Image URL from Cloudinary
     });
     await product.save();
     res.json({ message: "Product added successfully", product: product });
@@ -23,3 +22,4 @@ exports.addProduct = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+

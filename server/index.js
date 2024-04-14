@@ -32,7 +32,7 @@ app.use("/sellCar-users", sellCarRoutes);
 
 // In your main app file (app.js or similar)
 app.get("/", (req, res) => {
-  console.log("Test route hit");
+  console.log("Welcome To Urban Garage!");
   res.status(200).send("Welcome To Urban Garage!");
 });
 
