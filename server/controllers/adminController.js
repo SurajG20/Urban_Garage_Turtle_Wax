@@ -31,7 +31,7 @@ exports.sendNotificationMail = async (req, res) => {
 
 // Example Admin function
 exports.AdminLogin = async (req, res) => {
-  console.log(req.body);
+  
   const { username, password } = req.body;
 
   try {

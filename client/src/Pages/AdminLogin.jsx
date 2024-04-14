@@ -17,6 +17,7 @@ function AdminLogin() {
     },
     {
       onSuccess: (data) => {
+        console.log("success", data.data)
         login(data.data);
         navigate("/admin-dashboard");
       },
