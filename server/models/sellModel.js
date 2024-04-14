@@ -12,5 +12,5 @@ const sellCarSchema = new mongoose.Schema({
   address: { type: String, required: true },
 });
 
-const sellCar = mongoose.model("BuyCar", sellCarSchema);
+const sellCar = mongoose.model("SellCar", sellCarSchema);
 module.exports = sellCar;
