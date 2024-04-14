@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null); // User should include role info, e.g., { username: 'admin', role: 'admin' }
 
   const login = (userData) => {
-    setUser(userData);
+    setUser({ ...userData, role: "admin" });
   };
 
   const logout = () => {
@@ -14,6 +14,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const isAdmin = () => {
+    console.log("Checking admin status for user:", user);
     return user && user.role === "admin";
   };
 
