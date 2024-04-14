@@ -22,6 +22,7 @@ import { AuthProvider } from "./AuthContext";
 import ProtectedRoute from "./ProtectedRoute";
 // react query
 import { QueryClient, QueryClientProvider } from "react-query";
+import BuyCarUser from "./Admin/buyCarUsers";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/buyCar-users"
+            element={
+              <ProtectedRoute>
+                <BuyCarUser />
               </ProtectedRoute>
             }
           />
