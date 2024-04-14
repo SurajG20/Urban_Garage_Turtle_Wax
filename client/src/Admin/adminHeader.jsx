@@ -25,7 +25,7 @@ function Header() {
           </div>
         </Link>
 
-        {/* <nav className="navbar " data-navbar>
+        <nav className="navbar " data-navbar>
           <ul className="navbar-list flex gap-8">
             <li>
               <Link
@@ -33,14 +33,41 @@ function Header() {
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                All Products
+                All Cars
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/buy"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                Buy Car
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/buy"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                Sell Car
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/buy"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                Contact Form
               </Link>
             </li>
           </ul>
-        </nav> */}
+        </nav>
 
         {/* mobile navbar */}
-        {/* <div className={`mobile-nav p-4 ${mobiNavbar ? "show" : ""}`}>
+        <div className={`mobile-nav p-4 ${mobiNavbar ? "show" : ""}`}>
           <div className="flex justify-between items-center mb-10">
             <Link to="/" className="logo">
               <div className="h-12">
@@ -132,12 +159,12 @@ function Header() {
               </button>
             </Link>
           </div>
-        </div> */}
+        </div>
 
         <div className="header-actions">
           <div className="header-contact">
             {" "}
-            t-
+            
             <Link to={"/add-product"}>
               <div className="text-theme-red hover:text-white text-theme-semibold text-xl">
                 + Add Product
