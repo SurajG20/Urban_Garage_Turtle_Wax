@@ -18,7 +18,7 @@ function SellForm() {
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
    
-    return axios.post("/api/submit-car-details", data);
+    return axios.post("http://localhost:3000/sellCar-users", data);
   });
 
   const handleChange = (event) => {
