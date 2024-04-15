@@ -1,7 +1,14 @@
-// File: cloudinaryConfig.js
+const dotenv = require("dotenv");
+dotenv.config();
+
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
+// console.log(
+//   process.env.CLOUD_NAME,
+//   process.env.CLOUD_API_KEY,
+//   process.env.CLOUD_SECRET_KEY
+// );
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,

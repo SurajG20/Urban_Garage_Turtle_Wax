@@ -1,7 +1,7 @@
 const Product = require("../models/productModel");
 
 exports.listAllProducts = async (req, res) => {
-  console.log("listAllProducts", req.body);
+  
   try {
     const products = await Product.find();
     res.json(products);
@@ -11,18 +11,17 @@ exports.listAllProducts = async (req, res) => {
 };
 
 exports.addProduct = async (req, res) => {
-  console.log("addProduct", req.body);
   try {
-    const urls = [];
-    req.files.forEach((file) => {
-      urls.push(file.path); // Assuming multer-cloudinary automatically handles uploads
-    });
+    if (!req.files || req.files.length === 0) {
+      throw new Error("No files uploaded.");
+    }
+
+    const urls = req.files.map((file) => file.path);
 
     const product = new Product({
       ...req.body,
-      img: urls, // Store all image URLs in the 'img' field
+      img: urls,
     });
-
     await product.save();
     res.json({ message: "Product added successfully", product });
   } catch (error) {
