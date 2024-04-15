@@ -1,4 +1,4 @@
-const sellCar = require("../models/sellCarModel");
+const sellCar = require("../models/SellCarModel");
 
 exports.allSellCarUsers = async (req, res) => {
   try {
