@@ -1,94 +1,116 @@
 import React from "react";
+import { useQuery } from "react-query";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
+import axios from "axios";
 
-const people = [
-  {
-    name: "Leslie Alexander",
-    email: "leslie.alexander@example.com",
-    role: "Co-Founder / CEO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: "3h ago",
-    lastSeenDateTime: "2023-01-23T13:23Z",
-  },
-  {
-    name: "Michael Foster",
-    email: "michael.foster@example.com",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: "3h ago",
-    lastSeenDateTime: "2023-01-23T13:23Z",
-  },
-  {
-    name: "Dries Vincent",
-    email: "dries.vincent@example.com",
-    role: "Business Relations",
-    imageUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: null,
-  },
-  {
-    name: "Lindsay Walton",
-    email: "lindsay.walton@example.com",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: "3h ago",
-    lastSeenDateTime: "2023-01-23T13:23Z",
-  },
-  {
-    name: "Courtney Henry",
-    email: "courtney.henry@example.com",
-    role: "Designer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: "3h ago",
-    lastSeenDateTime: "2023-01-23T13:23Z",
-  },
-  {
-    name: "Tom Cook",
-    email: "tom.cook@example.com",
-    role: "Director of Product",
-    imageUrl:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    lastSeen: null,
-  },
-];
+
+const fetchData = async () => {
+  const { data } = await axios.get("http://localhost:3000/products");
+  return data;
+};
 
 function AdminDashboard() {
+  const { data, error, isLoading } = useQuery("data", fetchData);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>An error occurred: {error.message}</div>;
+  console.log(data[0]);
   return (
     <div className="bg-white min-h-screen flex flex-col ">
       <Header />
       <main className="flex-grow ">
         <section>
-          <div className="container mt-20">
-            <ul role="list" className="divide-y divide-gray-100">
-              {people.map((person) => (
+          <div className="max-w-7xl m-auto mt-20">
+            <ul role="list" className="w-full divide-y  divide-gray-100">
+              {data.map((item) => (
                 <li
-                  key={person.email}
-                  className="flex flex-col gap-y-5 md:flex-row justify-between gap-x-6 py-5"
+                  key={item._id}
+                  className="w-full bg-gray-300 px-10 mb-1 flex  flex-col gap-y-5 md:flex-row justify-between gap-x-6 py-5"
                 >
-                  <div className="flex min-w-0 gap-x-4">
+                  <div className="w-full  flex min-w-0 gap-x-4">
                     <img
                       className="h-32 w-36 flex-none rounded-xl bg-gray-50"
-                      src={person.imageUrl}
+                      src={
+                        item.img.length > 0
+                          ? item.img[0]
+                          : "assets/loading.jpeg"
+                      }
                       alt="Urban Garage "
                     />
-                    <div className="min-w-0 flex-auto">
-                      <p className="text-sm font-semibold leading-6 text-gray-900">
-                        {person.name}
-                      </p>
-                      <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                        {person.email}
-                      </p>
-                      <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                        {person.email}
-                      </p>
-                      <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                        {person.email}
-                      </p>
+                    <div className="w-full grid grid-cols-3 gap-x-20">
+                      {/* col2 */}
+                      <div className="min-w-0 mt-2 flex-auto">
+                        <p className="text-2xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
+                          <span className="text-black font-bold">Name :</span>{" "}
+                          <span className="text-theme-red text-theme-semibold">
+                            {item.name}
+                          </span>
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">Model :</span>
+                          {item.model}
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">
+                            Company Brand :
+                          </span>{" "}
+                          {item.make}
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">
+                            {"Model Year "}
+                          </span>
+                          {item.modelyear}
+                        </p>
+                      </div>
+                      {/* col3 */}
+                      <div className="min-w-0 mt-2 flex-auto">
+                        <p className="text-2xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
+                          <span className="text-black font-bold">Price :</span>{" "}
+                          <span className="text-theme-red text-theme-semibold">
+                            ₹ {item.price} /-
+                          </span>
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">Fuel :</span>
+                          {item.fuel}
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">
+                            Kms Driven:
+                          </span>{" "}
+                          {item.kms} km
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">
+                            {"Ownership"}
+                          </span>
+                          {item.owner}
+                        </p>
+                      </div>
+                      {/* col4 */}
+                      <div className="min-w-0 mt-2 flex-auto">
+                        <p className="text-2xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
+                          <span className="text-black font-bold">
+                            Reg.Year :
+                          </span>{" "}
+                          <span className="text-theme-red text-theme-semibold">
+                            {item.reg}
+                          </span>
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">Color :</span>
+                          {item.colour}
+                        </p>
+                        <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
+                          <span className="text-black font-bold">
+                            Insurance :
+                          </span>{" "}
+                          {item.insurance}
+                        </p>
+                      
+                      </div>
                     </div>
                   </div>
                   <div className="min-w-36 flex gap-2  sm:flex-col justify-center gap-y-5 sm:items-end">
