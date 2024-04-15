@@ -289,7 +289,7 @@ p {
   left: 0;
   width: 100%;
   transition: var(--transition);
-  z-index: 999;
+  z-index: 900;
 }
 
 .header.active {
