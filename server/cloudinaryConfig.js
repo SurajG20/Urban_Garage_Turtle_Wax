@@ -1,8 +1,7 @@
+// File: cloudinaryConfig.js
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
-
 const multer = require("multer");
-const dotenv = require("dotenv");
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -20,4 +19,3 @@ const storage = new CloudinaryStorage({
 const parser = multer({ storage: storage });
 
 module.exports = parser;
-

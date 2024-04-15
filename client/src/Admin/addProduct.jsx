@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
 
-// form data
-import { useState } from "react";
+
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 
@@ -12,7 +11,49 @@ function classNames(...classes) {
 }
 
 function AddProduct() {
-  const [agreed, setAgreed] = useState(false);
+   const [formData, setFormData] = useState({
+     images: [],
+   });
+
+   const handleInputChange = (event) => {
+     const { name, value, files } = event.target;
+     if (files) {
+       setFormData((prevState) => ({
+         ...prevState,
+         [name]: files,
+       }));
+     } else {
+       setFormData((prevState) => ({
+         ...prevState,
+         [name]: value,
+       }));
+     }
+   };
+
+   const handleSubmit = async (event) => {
+     event.preventDefault();
+     const dataToSend = new FormData();
+     Object.keys(formData).forEach((key) => {
+       if (key === "images") {
+         [...formData[key]].forEach((file) => {
+           dataToSend.append(key, file); // Ensures multiple files are appended
+         });
+       } else {
+         dataToSend.append(key, formData[key]);
+       }
+     });
+
+     try {
+       const response = await fetch("/api/products/add-product", {
+         method: "POST",
+         body: dataToSend,
+       });
+       const result = await response.json();
+       console.log(result);
+     } catch (error) {
+       console.error("Error uploading product:", error);
+     }
+   };
 
   return (
     <div className="bg-white min-h-screen flex flex-col ">
@@ -246,6 +287,31 @@ function AddProduct() {
                         autoComplete="insurance"
                         className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Insurance Details.."
+                      />
+                    </div>
+                  </div>
+                  {/* Image Upload */}
+                  <div className="">
+                    <label
+                      htmlFor="images"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Upload Images
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        type="file"
+                        name="images"
+                        id="images"
+                        multiple
+                        accept="image/*"
+                        className="block w-full text-sm text-gray-500
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-violet-50 file:text-violet-700
+        hover:file:bg-violet-100
+      "
                       />
                     </div>
                   </div>

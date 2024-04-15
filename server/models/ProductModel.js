@@ -13,8 +13,7 @@ const productSchema = new mongoose.Schema({
   colour: { type: String, required: true },
   insurance: { type: String, required: true },
   img: [{ type: String, required: true }],
-  description: { type: String, required: true },
-  available: { type: Boolean, required: true },
+
 });
 
 const Product = mongoose.model("Product", productSchema);
