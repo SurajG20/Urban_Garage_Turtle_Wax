@@ -21,168 +21,241 @@ function AddProduct() {
         <section>
           <div className="container ">
             <div className="isolate bg-white px-6 py-24  lg:px-8">
-            
               <form
                 action="#"
                 method="POST"
                 className="mx-auto mt-16 max-w-6xl sm:mt-10"
               >
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                  {/* Car Name */}
                   <div>
                     <label
-                      htmlFor="first-name"
+                      htmlFor="car-name"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      First name
+                      Car Name
                     </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="first-name"
-                        id="first-name"
+                        name="name"
+                        id="car-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Name/Model"
                       />
                     </div>
                   </div>
+                  {/* Car Model Name*/}
                   <div>
                     <label
-                      htmlFor="last-name"
+                      htmlFor="car-model"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Last name
+                      Car Model Name
                     </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="last-name"
-                        id="last-name"
-                        autoComplete="family-name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        name="model"
+                        id="car-model"
+                        autoComplete="car-model"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Model"
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  {/* Car Model Year */}
+                  <div className="">
                     <label
-                      htmlFor="company"
+                      htmlFor="modelyear"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Company
+                      Car Model Year
                     </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="company"
-                        id="company"
+                        name="modelyear"
+                        id="modelyear"
                         autoComplete="organization"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Model Year"
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  {/* Company/Brand Name */}
+                  <div className="">
                     <label
-                      htmlFor="email"
+                      htmlFor="make"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Email
+                      Company/Brand Name
                     </label>
                     <div className="mt-2.5">
                       <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        autoComplete="email"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        type="text"
+                        name="make"
+                        id="make"
+                        autoComplete="Company Name"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Company/Brand Name"
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  {/* car price  */}
+                  <div className="">
                     <label
-                      htmlFor="phone-number"
+                      htmlFor="price"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Phone number
-                    </label>
-                    <div className="relative mt-2.5">
-                      <div className="absolute inset-y-0 left-0 flex items-center">
-                        <label htmlFor="country" className="sr-only">
-                          Country
-                        </label>
-                        <select
-                          id="country"
-                          name="country"
-                          className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                        >
-                          <option>US</option>
-                          <option>CA</option>
-                          <option>EU</option>
-                        </select>
-                        <ChevronDownIcon
-                          className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <input
-                        type="tel"
-                        name="phone-number"
-                        id="phone-number"
-                        autoComplete="tel"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Message
+                      Price
                     </label>
                     <div className="mt-2.5">
-                      <textarea
-                        name="message"
-                        id="message"
-                        rows={4}
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        defaultValue={""}
+                      <input
+                        type="Number"
+                        name="price"
+                        id="price"
+                        autoComplete="price"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Price.."
                       />
                     </div>
                   </div>
-                  <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-                    <div className="flex h-6 items-center">
-                      <Switch
-                        checked={agreed}
-                        onChange={setAgreed}
-                        className={classNames(
-                          agreed ? "bg-indigo-600" : "bg-gray-200",
-                          "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        )}
+                  {/* Car Owner */}
+                  <div className="">
+                    <label
+                      htmlFor="owner"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Car Owner
+                    </label>
+                    <div className="mt-2.5">
+                      <select
+                        type="text"
+                        name="owner"
+                        id="owner"
+                        autoComplete="organization"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Model Year"
                       >
-                        <span className="sr-only">Agree to policies</span>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            agreed ? "translate-x-3.5" : "translate-x-0",
-                            "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
-                          )}
-                        />
-                      </Switch>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                      </select>
                     </div>
-                    <Switch.Label className="text-sm leading-6 text-gray-600">
-                      By selecting this, you agree to our{" "}
-                      <a href="#" className="font-semibold text-indigo-600">
-                        privacy&nbsp;policy
-                      </a>
-                      .
-                    </Switch.Label>
-                  </Switch.Group>
+                  </div>
+                  {/* Reg.Year */}
+                  <div className="">
+                    <label
+                      htmlFor="reg.year"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Reg.Year
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        type="Number"
+                        name="reg"
+                        id="reg.year"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Registration Year"
+                      />
+                    </div>
+                  </div>
+                  {/* Kilometers driven  */}
+                  <div className="">
+                    <label
+                      htmlFor="kms"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Kilomerters Driven
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        type="Number"
+                        name="kms"
+                        id="kms"
+                        autoComplete="kms"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Kilometers Driven"
+                      />
+                    </div>
+                  </div>
+                  {/* fuel */}
+                  <div className="">
+                    <label
+                      htmlFor="fuel"
+                      className=" text-sm font-semibold leading-6 text-gray-900 flex items-center gap-2"
+                    >
+                      Fuel Type{" "}
+                      <span className="text-sm text-gray-600">
+                        (Disel/Petrol/EV/Hybrid)
+                      </span>
+                    </label>
+                    <div className="mt-2.5">
+                      <select
+                        type="text"
+                        name="fuel"
+                        id="fuel"
+                        autoComplete="kms"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Kilometers Driven"
+                      >
+                        <option value="Disel">Disel</option>
+                        <option value="Disel">Petrol</option>
+                        <option value="Disel">EV</option>
+                        <option value="Disel">Hybrid</option>
+                      </select>
+                    </div>
+                  </div>
+                  {/* Car Color */}
+                  <div className="">
+                    <label
+                      htmlFor="colour"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Car Color
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        type="text"
+                        name="colour"
+                        id="colour"
+                        autoComplete="colour"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Car Color.."
+                      />
+                    </div>
+                  </div>
+                  {/* insurance */}
+                  <div className="">
+                    <label
+                      htmlFor="insurance"
+                      className="block text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Insurance
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        type="text"
+                        name="insurance"
+                        id="insurance"
+                        autoComplete="insurance"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        placeholder="Enter Insurance Details.."
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div className="mt-10">
                   <button
                     type="submit"
-                    className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                   >
-                    Let's talk
+                    Add Product
                   </button>
                 </div>
               </form>
