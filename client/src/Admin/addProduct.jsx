@@ -29,7 +29,6 @@ function AddProduct() {
     }
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const dataToSend = new FormData();
@@ -54,8 +53,6 @@ function AddProduct() {
         method: "POST",
         body: dataToSend, // Send FormData
         headers: {
-          // Do not set 'Content-Type' header, let the browser set it because it includes the boundary
-          // 'Accept' is optional: specify that the client expects JSON response
           Accept: "application/json",
         },
       });
@@ -64,12 +61,25 @@ function AddProduct() {
       const result = await response.json();
       console.log(result);
       alert("Product added successfully!");
+      setFormData({
+        images: [], // Reset images array
+        name: "",
+        model: "",
+        modelyear: "",
+        make: "",
+        price: "",
+        owner: "",
+        reg: "",
+        kms: "",
+        fuel: "",
+        colour: "",
+        insurance: "",
+      });
     } catch (error) {
       console.error("Error uploading product:", error);
       alert(`Failed to add product: ${error.message}`);
     }
   };
-
 
   return (
     <div className="bg-white min-h-screen flex flex-col ">

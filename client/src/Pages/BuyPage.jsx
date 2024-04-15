@@ -133,9 +133,25 @@ function BuyPage() {
               </ul>
             </div>
           </section>
+          <hr className="container py-4" />
           {/* <!-- 
         - #GET START
       --> */}
+          {/* form  */}
+          <section>
+            <div className="container">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title flex items-center justify-center text-center text-theme-semibold text-white">
+                  Buy Your Luxury Car From <span className="text-theme-red mx-2">URBAN GARAGE</span>
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Experience a seamless purchasing process and unbeatable market
+                  prices with our experts.
+                </p>
+              </div>
+              <BuyForm />
+            </div>
+          </section>
           {/* hero Banner section Start  */}
           <section className="section" id="hero-banner">
             <div className="relative md:h-96">
@@ -677,12 +693,7 @@ function BuyPage() {
               </div>
             </div>
           </section>
-          {/* form  */}
-          <section>
-            <div className="container">
-              <BuyForm />
-            </div>
-          </section>
+
           {/* <!-- 
         - #BLOG
       --> */}

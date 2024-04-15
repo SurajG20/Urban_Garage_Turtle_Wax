@@ -30,7 +30,15 @@ function BuyForm() {
     formMutation.mutate(formData, {
       onSuccess: (response) => {
         console.log("Success:", response.data);
-        // You can perform actions on success, e.g., navigate, show message
+        setFormData({
+          fullName: "",
+          mobileNumber: "",
+          carBrand: "",
+          modelYear: "",
+          fuelType: "",
+          budget: "",
+        })
+        
       },
       onError: (error) => {
         console.error("Error:", error);
@@ -44,7 +52,8 @@ function BuyForm() {
       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  gap-2 items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  gapx-2 py-2 h-12
+           items-center ">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">
               Car Details
@@ -70,7 +79,8 @@ function BuyForm() {
               required
               name="fullName"
               value={formData.fullName}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Enter Name"
               onChange={handleChange}
@@ -87,7 +97,8 @@ function BuyForm() {
               required
               name="mobileNumber"
               value={formData.mobileNumber}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Mobile Number"
               onChange={handleChange}
@@ -105,7 +116,8 @@ function BuyForm() {
               required
               name="modelYear"
               value={formData.modelYear}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Model Year"
               onChange={handleChange}
@@ -123,7 +135,8 @@ function BuyForm() {
               name="carBrand"
               value={formData.carBrand}
               id="carBrand"
-              className="p-2 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               onChange={handleChange}
             >
               <option value="audi">Audi</option>
@@ -148,7 +161,8 @@ function BuyForm() {
               name="fuelType"
               value={formData.fuelType}
               id="fuel-type"
-              className="p-2 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               onChange={handleChange}
             >
               <option value="Petrol">Petrol</option>
@@ -170,7 +184,8 @@ function BuyForm() {
               required
               name="budget"
               value={formData.budget}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12
+               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Your Budget"
               onChange={handleChange}

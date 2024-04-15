@@ -34,7 +34,18 @@ function SellForm() {
     formMutation.mutate(formData, {
       onSuccess: (response) => {
         console.log("Success:", response.data);
-        // You can perform actions on success, e.g., navigate, show message
+        setFormData({
+          fullName: "",
+          mobileNumber: "",
+          modelYear: "",
+          ownerType: "first",
+          kilometersDriven: "",
+          carName: "",
+          fuelType: "Disel",
+          regCity: "",
+          address: "",
+        });
+        
       },
       onError: (error) => {
         console.error("Error:", error);
@@ -48,7 +59,7 @@ function SellForm() {
       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  gap-2 items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  gapx-2 py-2 h-12 items-center ">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">
               Car Details
@@ -74,7 +85,7 @@ function SellForm() {
               required
               name="fullName"
               value={formData.fullName}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Enter Name"
               onChange={handleChange}
@@ -91,7 +102,7 @@ function SellForm() {
               required
               name="mobileNumber"
               value={formData.mobileNumber}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Mobile Number"
               onChange={handleChange}
@@ -109,7 +120,7 @@ function SellForm() {
               required
               name="modelYear"
               value={formData.modelYear}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Model Year"
               onChange={handleChange}
@@ -127,7 +138,7 @@ function SellForm() {
               name="ownerType"
               value={formData.ownerType}
               id="owner-type"
-              className="p-2 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               onChange={handleChange}
             >
               <option value="first">First Owner</option>
@@ -145,7 +156,7 @@ function SellForm() {
               required
               name="kilometersDriven"
               value={formData.kilometersDriven}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter kilometers Driven"
               onChange={handleChange}
@@ -160,7 +171,7 @@ function SellForm() {
               Car Name/Car Model<span className="text-red-600">*</span>
             </label>
             <input
-              className="p-2  bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12  bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               required
               name="carName"
               value={formData.carName}
@@ -181,7 +192,7 @@ function SellForm() {
               name="fuelType"
               value={formData.fuelType}
               id="fuel-type"
-              className="p-2 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               onChange={handleChange}
             >
               <option value="first">Petrol</option>
@@ -202,7 +213,7 @@ function SellForm() {
               required
               name="regCity"
               value={formData.regCity}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Select City"
               onChange={handleChange}
@@ -219,7 +230,7 @@ function SellForm() {
               required
               name="address"
               value={formData.address}
-              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Select State"
               onChange={handleChange}
