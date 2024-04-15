@@ -24,6 +24,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
 import BuyCarUser from "./Admin/buyCarUsers";
 import SellCarUser from "./Admin/sellCarUsers";
+import Error from "./Pages/Error";
 
 const queryClient = new QueryClient();
 
@@ -89,7 +90,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<PPFPage />} />
+          <Route path="*" element={<Error/>} />
         </Routes>
       </AuthProvider>
     </QueryClientProvider>
