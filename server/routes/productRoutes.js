@@ -7,7 +7,7 @@ const {
   listAllProducts,
 } = require("../controllers/productController");
 
-router.post("/add-product", parser.array("images"), addProduct);
+router.post("/", parser.array("images"), addProduct);
 router.get("/", listAllProducts);
 
 module.exports = router;

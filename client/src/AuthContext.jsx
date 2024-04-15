@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const isAdmin = () => {
-    console.log("Checking admin status for user:", user);
+    // console.log("Checking admin status for user:", user);
     return user && user.role === "admin";
   };
 

@@ -44,7 +44,7 @@ function AddProduct() {
      });
 
      try {
-       const response = await fetch("/api/products/add-product", {
+       const response = await fetch("http://localhost:3000/products", {
          method: "POST",
          body: dataToSend,
        });

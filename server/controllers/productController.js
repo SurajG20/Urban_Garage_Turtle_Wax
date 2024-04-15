@@ -1,6 +1,7 @@
 const Product = require("../models/productModel");
 
 exports.listAllProducts = async (req, res) => {
+  console.log("listAllProducts", req.body);
   try {
     const products = await Product.find();
     res.json(products);
@@ -10,6 +11,7 @@ exports.listAllProducts = async (req, res) => {
 };
 
 exports.addProduct = async (req, res) => {
+  console.log("addProduct", req.body);
   try {
     const urls = [];
     req.files.forEach((file) => {
