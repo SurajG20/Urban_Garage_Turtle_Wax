@@ -55,8 +55,8 @@ function BuyForm() {
         <SuccessAlertBanner
           style={"bg-white text-gray-900 "}
           titleSyle={"text-green-700"}
-          title="Success"
-          msg="Your msg is Saved Successfully"
+          title={"Success"}
+          msg={"Your msg is Saved Successfully"}
         />
       ) : null}
 

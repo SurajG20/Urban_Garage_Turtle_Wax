@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RxCross1 } from "react-icons/rx";
-function SuccessAlertBanner({ style, titleSyle,title, msg }) {
+function SuccessAlertBanner({ style, titleSyle, title, msg }) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function SuccessAlertBanner({ style, titleSyle,title, msg }) {
     return () => clearTimeout(timer);
   }, []);
 
-  if (visible) return null;
+  if (!visible) return null;
 
   return (
     <div
@@ -32,9 +32,7 @@ function SuccessAlertBanner({ style, titleSyle,title, msg }) {
         }}
         className="flex items-center justify-center gap-2 text-theme-500 "
       >
-        <strong
-          className={`${titleSyle} text-3xl text-theme-bold`}
-        >
+        <strong className={`${titleSyle} text-2xl text-theme-bold`}>
           Success!
         </strong>
         <span className="h3"> Your operation was successful.</span>
