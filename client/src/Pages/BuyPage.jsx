@@ -142,7 +142,8 @@ function BuyPage() {
             <div className="container">
               <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title flex items-center justify-center text-center text-theme-semibold text-white">
-                  Buy Your Luxury Car From <span className="text-theme-red mx-2">URBAN GARAGE</span>
+                  Buy Your Luxury Car From{" "}
+                  <span className="text-theme-red mx-2">URBAN GARAGE</span>
                 </h2>
                 <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
                   Experience a seamless purchasing process and unbeatable market
@@ -570,11 +571,11 @@ function BuyPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-two.jpeg')",
                   }}
-                  className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-80 md:h-96 p-4 border border-black flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap uppercase">
                       Service Packages
                     </h1>
                     <p className="p font-extrabold text-theme-500">
@@ -585,9 +586,11 @@ function BuyPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
+                      <Link to={"/service"}>
+                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Know more
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -598,20 +601,22 @@ function BuyPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-four.jpeg')",
                   }}
-                  className="relative h-80 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-80 md:h-96 border border-black p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                      Extended Warranty
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap uppercase">
+                      RECENT WORK
                     </h1>
                     <p className="p font-extrabold text-theme-500">
-                      Looking to extend your warranty coverage? Up to 8 years
-                      additional warranty coverage is available even after
-                      original coverage expiry.
+                      Recently visited a new location? Discover the latest
+                      additions to our service network and explore our
+                      state-of-the-art facilities, now available even beyond the
+                      original network's boundaries.
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
+                      <Link to={"/recent-work"}></Link>
                       <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>

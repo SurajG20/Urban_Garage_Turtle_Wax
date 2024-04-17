@@ -507,12 +507,21 @@ function Home() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Book a visit
-                      </button>
-                      <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                        Get Directions
-                      </button>
+                      <Link to={"/contact-us"}>
+                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Book a visit
+                        </button>
+                      </Link>
+                      <Link
+                        target="_blank"
+                        to={
+                          "https://www.google.com/maps/dir//Plot+No+98,+Industrial+Area+Phase+I,+Chandigarh,+160002/@30.70935,76.7218037,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fed0d68f936e9:0xd6fcbf0dac51de9f!2m2!1d76.8041805!2d30.7093577?entry=ttu"
+                        }
+                      >
+                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                          Get Directions
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -528,7 +537,7 @@ function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
-                      Karnal
+                      URBAN GARAGE SERVICE
                     </h1>
                     <p className="p font-extrabold text-theme-500 mb-2">
                       Witness the grandeur of India's largest pre-owned car
@@ -538,12 +547,16 @@ function Home() {
                     </p>
 
                     <div className="flex gap-x-3">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Book a visit
-                      </button>
-                      <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                        Get a Direction
-                      </button>
+                      <Link to={""}>
+                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Book a visit
+                        </button>
+                      </Link>
+                      <Link target="_blank" to={""}>
+                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                          Get a Direction
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -605,7 +618,7 @@ function Home() {
                       </ul>
                     </div>
                   </div>
-                         <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
+                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book Service package
                     </button>

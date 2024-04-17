@@ -37,9 +37,59 @@ function Footer() {
             </p>
           </div>
           {/* quick link  */}
-          <div className="flex flex-col ">
+          <div className=" flex flex-col ">
             <li>
               <p className="footer-list-title">Quick Links</p>
+            </li>
+
+            <li>
+              <Link to="/buy" className="footer-link flex items-center gap-x-1">
+                <span>Buy</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sell"
+                className="footer-link flex items-center gap-x-1"
+              >
+                <span>Sell</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/service"
+                className="footer-link flex items-center gap-x-1"
+              >
+                <span>Services</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about-us"
+                className="footer-link flex items-center gap-x-1"
+              >
+                <span>About Us</span>
+                <span>
+                  <HiOutlineExternalLink />
+                </span>
+              </Link>
+            </li>
+          </div>
+
+          {/* Service  */}
+
+          <div className="flex flex-col ">
+            <li>
+              <p className="footer-list-title">Services</p>
             </li>
 
             <li>
@@ -83,54 +133,6 @@ function Footer() {
                 className="footer-link flex items-center gap-x-1"
               >
                 <span>Coating</span>
-                <span>
-                  <HiOutlineExternalLink />
-                </span>
-              </Link>
-            </li>
-          </div>
-          {/* Service  */}
-          <div className=" flex flex-col ">
-            <li>
-              <p className="footer-list-title">Services</p>
-            </li>
-
-            <li>
-              <Link to="/buy" className="footer-link flex items-center gap-x-1">
-                <span>Buy</span>
-                <span>
-                  <HiOutlineExternalLink />
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sell"
-                className="footer-link flex items-center gap-x-1"
-              >
-                <span>Sell</span>
-                <span>
-                  <HiOutlineExternalLink />
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/service"
-                className="footer-link flex items-center gap-x-1"
-              >
-                <span>Services</span>
-                <span>
-                  <HiOutlineExternalLink />
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about-us"
-                className="footer-link flex items-center gap-x-1"
-              >
-                <span>About Us</span>
                 <span>
                   <HiOutlineExternalLink />
                 </span>
