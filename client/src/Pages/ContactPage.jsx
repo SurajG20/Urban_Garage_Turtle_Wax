@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useMutation } from "react-query";
+import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Testinomial from "../components/Testinomial";
-import data from "../server.json";
+import Testimonial from "../components/Testinomial";
 import { Link } from "react-router-dom";
 
 // icons
@@ -13,8 +14,34 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { MdDirections } from "react-icons/md";
 
-
 function Contactus() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    mobileNumber: "",
+    email: "",
+    queryType: "",
+    message: "",
+  });
+
+  const { mutate, isLoading, isSuccess, isError, error } = useMutation(
+    (data) => {
+      return axios.post("http://localhost:3000/contact-us", data);
+    }
+  );
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    mutate(formData);
+  };
   return (
     <div className="relative">
       <Navbar />
@@ -46,11 +73,11 @@ function Contactus() {
                       Our Head Office
                     </h3>
                   </div>
-                  <div className="h-72">
+                  <div className="md:h-96 w-full border rounded-2xl overflow-hidden shadow shadow-white border-white">
                     <img
                       loading="lazy"
-                      className="h-full w-full object-cover object-center rounded-2xl"
-                      src="assets/garage/garage-one.jpeg"
+                      className="h-full w-full object-cover object-center "
+                      src="assets/banners/banner1.jpg"
                       alt="Urban Garage Head Office"
                     />
                   </div>
@@ -74,7 +101,7 @@ function Contactus() {
                               "https://www.google.com/maps/dir//Plot+No+98,+Industrial+Area+Phase+I,+Chandigarh,+160002/@30.70935,76.7218037,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fed0d68f936e9:0xd6fcbf0dac51de9f!2m2!1d76.8041805!2d30.7093577?entry=ttu"
                             }
                           >
-                            Get Direction <MdDirections className="text-xl"/>
+                            Get Direction <MdDirections className="text-xl" />
                           </Link>
                         </span>
                       </span>
@@ -113,44 +140,59 @@ function Contactus() {
                       <span className="text-theme-red">Ask us!</span>
                     </h2>
                   </div>
-                  <div className="flex flex-col md:grid md:grid-cols-2 gap-5 md:gap-10">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col md:grid md:grid-cols-2 gap-5 md:gap-10"
+                  >
                     <div>
                       <label
-                        htmlFor=""
+                        htmlFor="firstName"
                         className="text-theme-500 flex items-center"
                       >
                         First Name <span className="text-theme-red">*</span>
                       </label>
                       <input
+                        id="firstName"
+                        required
                         className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         placeholder="Enter Your First Name"
                       />
                     </div>
                     {/* Last Name */}
                     <div>
                       <label
-                        htmlFor=""
+                        htmlFor="lastName"
                         className="text-theme-500 flex items-center"
                       >
                         Last Name<span className="text-theme-red">*</span>
                       </label>
                       <input
+                        id="lastName"
+                        required
                         className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         placeholder="Enter Your Last Name"
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor=""
+                        htmlFor="mobileNumber"
                         className="text-theme-500 flex items-center"
                       >
                         Mobile Number<span className="text-theme-red">*</span>
                       </label>
                       <input
+                        id="mobileNumber"
+                        required
                         className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
+                        name="mobileNumber"
+                        value={formData.mobileNumber}
+                        onChange={handleChange}
                         placeholder="Enter Your Mobile Number"
                       />
                     </div>
@@ -162,35 +204,56 @@ function Contactus() {
                         Email<span className="text-theme-red">*</span>
                       </label>
                       <input
+                        id="email"
+                        required
                         className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Enter Your Email Id"
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor=""
+                        htmlFor="queryType"
                         className="text-theme-500 flex items-center"
                       >
                         Select Query<span className="text-theme-red">*</span>
                       </label>
-                      <input
-                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
-                        placeholder="Select Select Query"
-                      />
+                      <select
+                        id="queryType"
+                        required
+                        className="p-2 w-full bg-gray-50 text-black text-sm text-theme-500 border-theme-gray outline-none"
+                        name="description"
+                        value={formData.queryType}
+                        onChange={handleChange}
+                        placeholder="Select Query"
+                      >
+                        <option value="Buy car">Buy Car </option>
+                        <option value="Sell Car">Sell Car</option>
+                        <option value="Coating Service">
+                          Coating Service{" "}
+                        </option>
+                        <option value="Coating Service">
+                          Coating Service{" "}
+                        </option>
+                      </select>
                     </div>
                     <div className="col-span-2">
                       <label
-                        htmlFor=""
+                        htmlFor="message"
                         className="text-theme-500 flex items-center"
                       >
                         Describe Your Query
                         <span className="text-theme-red">**</span>
                       </label>
                       <textarea
+                        id="message"
+                        required
                         className="p-2 w-full bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        type="text"
+                        name="description"
+                        value={formData.message}
+                        onChange={handleChange}
                         placeholder="Write Your Query Here"
                       />
                     </div>
@@ -199,7 +262,7 @@ function Contactus() {
                         Submit
                       </button>
                     </div>
-                  </div>
+                  </form>
                   <div></div>
                 </div>
               </div>
@@ -531,7 +594,7 @@ function Contactus() {
           </section>
 
           {/* testinomials  */}
-          <Testinomial />
+          <Testimonial />
         </article>
       </main>
       <Footer />

@@ -109,12 +109,21 @@ function RecentWork() {
                   </div>
                 </div>
                 {/* right container  */}
-                <div className="bg-white order-1 rounded-md overflow-hidden theme-border-white">
-                  <iframe
+                <div className="bg-white order-1 rounded-xl overflow-hidden theme-border-white">
+                  <video
+                    width="100%"
+                    height="auto"
+                    controls
+                    preload="auto"
+                    playsinline
                     loading="lazy"
-                    className="h-full w-full object-cover object-center"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                  ></iframe>
+                  >
+                    <source
+                      src="assets/video/urban-garage.MOV"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
