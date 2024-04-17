@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useMutation } from "react-query";
-import SuccessAlertBanner from "./AlertBanner";
 
 function BuyForm() {
-  const [success, setSuccess] = useState(false);
-  const [msg, setMsg] = useState("");
+
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
@@ -32,7 +30,6 @@ function BuyForm() {
     event.preventDefault();
     formMutation.mutate(formData, {
       onSuccess: (response) => {
-        setSuccess(true);
         setFormData({
           fullName: "",
           mobileNumber: "",
@@ -51,15 +48,6 @@ function BuyForm() {
 
   return (
     <div>
-      {success ? (
-        <SuccessAlertBanner
-          style={"bg-white text-gray-900 "}
-          titleSyle={"text-green-700"}
-          title={"Success"}
-          msg={"Your msg is Saved Successfully"}
-        />
-      ) : null}
-
       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
         {/* first container  */}
         <div>
