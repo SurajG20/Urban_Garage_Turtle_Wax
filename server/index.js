@@ -6,10 +6,11 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 // Routes 
-const adminRoutes = require("./routes/adminRoutes");
-const productRoutes = require("./routes/productRoutes");
-const buyCarRoutes = require("./routes/buyCarRoutes");
-const  sellCarRoutes = require( "./routes/sellCarRoutes");
+const adminRoutes = require("./routes/adminRoutes.js");
+const productRoutes = require("./routes/productRoutes.js");
+const buyCarRoutes = require("./routes/buyCarRoutes.js");
+const sellCarRoutes = require("./routes/sellCarRoutes.js");
+const contactRoutes = require("./routes/contactRoutes.js");
 
 dotenv.config();
 
@@ -25,10 +26,10 @@ app.use(cors());
 app.use("/admin", adminRoutes);
 // Product routes GET (/products) to list products.||POST /products to add a new product.
 app.use("/products", productRoutes);
-// buyCar routes GET (/buyCar-users) to list all users who want to buy a car.;
+// buy car and sell car routes GET (/buyCar-users) to list all users who want to buy a car.;
 app.use("/buyCar-users", buyCarRoutes);
-
 app.use("/sellCar-users", sellCarRoutes);
+app.use("/contact", contactRoutes);
 
 // In your main app file (app.js or similar)
 app.get("/", (req, res) => {
