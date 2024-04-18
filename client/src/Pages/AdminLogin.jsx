@@ -13,7 +13,7 @@ function AdminLogin() {
 
   const loginMutation = useMutation(
     (data) => {
-      return axios.post("http://localhost:3000/admin", data);
+      return axios.post(`${import.meta.env.VITE_API_URL}/admin`, data);
     },
     {
       onSuccess: (data) => {
