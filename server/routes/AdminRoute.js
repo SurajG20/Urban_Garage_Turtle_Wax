@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const adminController = require("../controllers/adminController.js");
+const adminController = require("../controllers/Admin.js");
 
 // Assuming you have a GET method in your controller
 router.post("/", adminController.AdminLogin);

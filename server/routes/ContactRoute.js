@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const contactControllers = require("../controllers/contactControllers.js");
+const contactControllers = require("../controllers/ContactController.js");
 
 // Route to get all products
 router.get("/", contactControllers.allcontactUsers);

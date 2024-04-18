@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const buyCarController = require("../controllers/buyCarController.js");
+const buyCarController = require("../controllers/BuyCarController.js");
 
 
 // Route to get all products

@@ -213,6 +213,8 @@ function AddProduct() {
                         placeholder="Enter Car Model Year"
                         onChange={handleInputChange}
                       >
+
+                        <option value="">--select owner Type--</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -285,6 +287,7 @@ function AddProduct() {
                         placeholder="Enter Kilometers Driven"
                         onChange={handleInputChange}
                       >
+                        <option value="--/--">--select Fuel Type--</option>
                         <option value="Diesel">Diesel</option>
                         <option value="Petrol">Petrol</option>
                         <option value="EV">EV</option>

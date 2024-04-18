@@ -1,9 +1,9 @@
-const sellCar = require("../models/sellCarModel.js");
+const SellCar = require("../models/Sell.js");
 
 exports.allSellCarUsers = async (req, res) => {
   try {
-    const allBuyCarsUsers = await sellCar.find();
-   
+    const allBuyCarsUsers = await SellCar.find();
+
     res.json(allBuyCarsUsers);
   } catch (error) {
     res.status(500).json({ error: "Server error" });
@@ -13,7 +13,7 @@ exports.allSellCarUsers = async (req, res) => {
 exports.addSellCarUser = async (req, res) => {
   console.log(req.body);
   try {
-    const buyCarUser = new sellCar({
+    const buyCarUser = new SellCar({
       ...req.body,
     });
     await buyCarUser.save();
