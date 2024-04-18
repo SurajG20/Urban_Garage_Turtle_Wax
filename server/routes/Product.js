@@ -5,7 +5,7 @@ const parser = require("../cloudinaryConfig.js");
 
 const product =require("../controllers/Product.js")
 
-router.post("/", parser.array("images"), addProduct);
-router.get("/", listAllProducts);
+router.post("/", parser.array("images"), product.addProduct);
+router.get("/", product.listAllProducts);
 
 module.exports = router;
