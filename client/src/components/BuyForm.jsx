@@ -113,8 +113,8 @@ function BuyForm() {
               Model Year<span className="text-red-600">*</span>
             </label>
             <input
-              id="modelYear"
               required
+              id="modelYear"
               name="modelYear"
               value={formData.modelYear}
               className="px-2 py-2 h-12
@@ -133,6 +133,7 @@ function BuyForm() {
               Car Brand/Car Model<span className="text-red-600">*</span>
             </label>
             <select
+              required
               name="carBrand"
               value={formData.carBrand}
               id="carBrand"

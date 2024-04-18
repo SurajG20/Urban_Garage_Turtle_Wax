@@ -61,20 +61,8 @@ function AddProduct() {
       const result = await response.json();
       console.log(result);
       alert("Product added successfully!");
-      setFormData({
-        images: [], // Reset images array
-        name: "",
-        model: "",
-        modelyear: "",
-        make: "",
-        price: "",
-        owner: "",
-        reg: "",
-        kms: "",
-        fuel: "",
-        colour: "",
-        insurance: "",
-      });
+      // Redirect to products page
+
     } catch (error) {
       console.error("Error uploading product:", error);
       alert(`Failed to add product: ${error.message}`);
@@ -86,11 +74,17 @@ function AddProduct() {
       <Header />
       <main className="flex-grow ">
         <section>
-          <div className="container ">
-            <div className="isolate bg-white px-6 py-24  lg:px-8">
+          <div className="container px-6 py-24  lg:px-8">
+            <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
+            
+              <h1 className="text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
+                Add New CAR
+              </h1>
+              <p className="text-sm text-theme-500 text-theme-red">
+                ** all fields in the form are mandatory **
+              </p>
               <form
                 onSubmit={handleSubmit}
-                method="POST"
                 className="mx-auto mt-16 max-w-6xl sm:mt-10"
               >
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -98,17 +92,18 @@ function AddProduct() {
                   <div>
                     <label
                       htmlFor="car-name"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Car Name
+                      Car Name <span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="name"
                         id="car-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Name/Model"
                         onChange={handleInputChange}
                       />
@@ -118,17 +113,18 @@ function AddProduct() {
                   <div>
                     <label
                       htmlFor="car-model"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Car Model Name
+                      Car Model Name<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="model"
                         id="car-model"
                         autoComplete="car-model"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Model"
                         onChange={handleInputChange}
                       />
@@ -138,17 +134,18 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="modelyear"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Car Model Year
+                      Car Model Year<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="modelyear"
                         id="modelyear"
                         autoComplete="organization"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Model Year"
                         onChange={handleInputChange}
                       />
@@ -158,17 +155,19 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="make"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
                       Company/Brand Name
+                      <span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="make"
                         id="make"
                         autoComplete="Company Name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Company/Brand Name"
                         onChange={handleInputChange}
                       />
@@ -178,17 +177,18 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="price"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Price
+                      Price<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="Number"
                         name="price"
                         id="price"
                         autoComplete="price"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Price.."
                         onChange={handleInputChange}
                       />
@@ -198,17 +198,18 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="owner"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Car Owner
+                      Car Owner<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <select
+                        required
                         type="text"
                         name="owner"
                         id="owner"
                         autoComplete="organization"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Model Year"
                         onChange={handleInputChange}
                       >
@@ -224,16 +225,17 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="reg.year"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Reg.Year
+                      Reg.No<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
-                        type="Number"
+                        required
+                        type="text"
                         name="reg"
                         id="reg.year"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Registration Year"
                         onChange={handleInputChange}
                       />
@@ -243,17 +245,19 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="kms"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
                       Kilomerters Driven
+                      <span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="Number"
                         name="kms"
                         id="kms"
                         autoComplete="kms"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Kilometers Driven"
                         onChange={handleInputChange}
                       />
@@ -263,27 +267,28 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="fuel"
-                      className=" text-sm font-semibold leading-6 text-gray-900 flex items-center gap-2"
+                      className=" text-sm text-theme-semibold  leading-6 text-gray-900 flex items-center gap-2"
                     >
-                      Fuel Type{" "}
+                      Fuel Type <span className="text-theme-red">*</span>
                       <span className="text-sm text-gray-600">
-                        (Disel/Petrol/EV/Hybrid)
+                        (Diesel/Petrol/EV/Hybrid)
                       </span>
                     </label>
                     <div className="mt-2.5">
                       <select
+                        required
                         type="text"
                         name="fuel"
                         id="fuel"
                         autoComplete="kms"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Kilometers Driven"
                         onChange={handleInputChange}
                       >
-                        <option value="Disel">Disel</option>
-                        <option value="Disel">Petrol</option>
-                        <option value="Disel">EV</option>
-                        <option value="Disel">Hybrid</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="EV">EV</option>
+                        <option value="Hybrid">Hybrid</option>
                       </select>
                     </div>
                   </div>
@@ -291,17 +296,18 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="colour"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Car Color
+                      Car Color<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="colour"
                         id="colour"
                         autoComplete="colour"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Car Color.."
                         onChange={handleInputChange}
                       />
@@ -311,17 +317,18 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="insurance"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Insurance
+                      Insurance<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="insurance"
                         id="insurance"
                         autoComplete="insurance"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                        className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Insurance Details.."
                         onChange={handleInputChange}
                       />
@@ -331,32 +338,33 @@ function AddProduct() {
                   <div className="">
                     <label
                       htmlFor="images"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                     >
-                      Upload Images
+                      Upload Images<span className="text-theme-red">*</span>
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="file"
                         name="images" // This should match the name used in parser.array()
                         id="images"
                         multiple
                         accept="image/*"
                         onChange={handleInputChange}
-                        className="block w-full text-sm text-gray-500
+                        className="text-theme-bold w-full text-sm text-gray-500
                           file:mr-4 file:py-2 file:px-4
                           file:rounded-full file:border-0
-                          file:text-sm file:font-semibold
+                          file:text-sm file:text-theme-semibold flex items-center
                           file:bg-violet-50 file:text-violet-700
                           hover:file:bg-violet-100"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="mt-10">
+                <div className="mt-10 ">
                   <button
                     type="submit"
-                    className="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                    className="text-theme-bold m-auto w-4/5 text-center rounded-md bg-red-600 px-3.5 py-2.5 flex justify-center text-sm text-theme-semibold  items-center text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                   >
                     Add Product
                   </button>

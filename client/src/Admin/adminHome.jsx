@@ -40,7 +40,7 @@ function AdminDashboard() {
                     />
                     <div className="w-full grid grid-cols-3 gap-x-20">
                       {/* col2 */}
-                      <div className="min-w-0 mt-2 flex-auto">
+                      <div className="col-span-3 min-w-0 mt-2 flex-auto">
                         <p className="text-2xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
                           <span className="text-black font-bold">Name :</span>{" "}
                           <span className="text-theme-red text-theme-semibold">

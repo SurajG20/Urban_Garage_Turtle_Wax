@@ -1656,3 +1656,12 @@ p {
 .group:hover .group-hover\:block {
   display: block;
 }
+
+
+/* input field css  */
+
+input,select{
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #e5e5e5;
+}
