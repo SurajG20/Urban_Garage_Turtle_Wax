@@ -5,9 +5,11 @@ import Footer from "../components/Footer";
 import axios from "axios";
 
 const fetchData = async () => {
-  const { data } = await axios.get("http://localhost:3000/products");
+  const { data } = await axios.get(`http://localhost:3000/products`);
   return data;
 };
+
+
 
 function AdminDashboard() {
   const { data, error, isLoading } = useQuery("data", fetchData);

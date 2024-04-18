@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Herohome from "../components/Herohome";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
 import Banner from "../components/Banner";
-import data from "../server.json";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 // icons
@@ -13,24 +14,24 @@ import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
-import garage4 from "../../public/assets/garage/garage-four.jpeg";
+
+
+
+function fetchCars() {
+  const url = `${import.meta.env.VITE_API_URL}/products`;
+  return axios.get(url).then((res) => res.data);
+}
 
 function Home() {
-  const [cars, setCars] = useState([]);
+    const { data, error, isLoading, isError } = useQuery("cars", fetchCars);
 
-  useEffect(() => {
-    setCars(data.cars);
-  }, []);
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
 
-  //  useEffect(() => {
-  //    const fetchData = async () => {
-  //     fetch("your-api-endpoint")
-  //       .then((response) => response.json())
-  //       .then((data) => setCars(data.cars));
-  //      setCars(data.cars);
-  //    };
-  //    fetchData();
-  //  }, []);
+    if (isError) {
+      return <div>Error: {error.message}</div>;
+    }
 
   return (
     <div className="relative">
@@ -276,12 +277,11 @@ function Home() {
               </div>
 
               <ul className="featured-car-list">
-                {cars &&
-                  cars.map((item) => (
-                    <li key={item._id}>
-                      <CarCard item={item} />
-                    </li>
-                  ))}
+                {data?.map((item) => (
+                  <li key={item._id}>
+                    <CarCard item={item} />
+                  </li>
+                ))}
               </ul>
             </div>
           </section>
