@@ -6,7 +6,7 @@ import data from "../server.json";
 import Testinomial from "../components/Testinomial";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
-
+import { useCarContext } from "../CarsContent";
 // icons
 import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
@@ -18,6 +18,7 @@ import BuyForm from "../components/BuyForm";
 
 function BuyPage() {
   const [cars, setCars] = useState([]);
+  const data = useCarContext();
 
   const backgroundImg = {
     backgroundImage: `

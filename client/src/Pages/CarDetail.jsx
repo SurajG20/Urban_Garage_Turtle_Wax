@@ -5,11 +5,13 @@ import data from "../server.json";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 import errImg from "../../public/assets/loading.jpeg";
+import { useCarContext } from "../CarsContent";
+
 // Ebook Content
 import axios from "axios";
 import { useMutation } from "react-query";
 import Modal from "./EbookNow";
-
+import Preloader from "../components/Preloader";
 // icons
 // import { TiTick } from "react-icons/ti";
 // import { FaBlenderPhone } from "react-icons/fa";
@@ -20,17 +22,11 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
 
 function CarDetail() {
+const { cars } = useCarContext(); 
   const { id } = useParams();
+  const [tab , setTab] = useState(0)
   const [carDetail, setCarDetail] = useState({});
-  useEffect(() => {
-    const carId = parseInt(id, 10);
-    const foundCar = data.cars.find((car) => car._id == carId);
 
-    // Set the found car to state
-    if (foundCar) {
-      setCarDetail(foundCar);
-    }
-  }, [id]);
 
   // E-book button
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,7 +46,7 @@ function CarDetail() {
 
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
-    return axios.post("http://localhost:3000/buyCar-users", data);
+    return axios.post(`${import.meta.env.VITE_API_URL}/buyCar-users`, data);
   });
 
   const handleChange = (event) => {
@@ -81,6 +77,38 @@ function CarDetail() {
       },
     });
   };
+
+  if (!cars.length) {
+    return (
+      <>
+        <Preloader message="please wait ...."/>
+      </>
+    );
+  }
+
+
+ useEffect(() => {
+    // To debug and see your cars data
+   const carId = parseInt(id, 10); 
+
+   const foundCar = cars.find((car) => car._id == id); // 
+
+   if (foundCar) {
+    console.log("Found car:", foundCar)
+     setCarDetail(foundCar);
+   }
+ }, [id, cars]); // Include 'id' and 'cars' in the dependency array
+
+ if (!carDetail) {
+   return (
+     <>
+       <Preloader message="please wait ...." />
+     </>
+   );
+ }
+
+
+  
 
   return (
     <>
@@ -114,7 +142,7 @@ function CarDetail() {
               <div className="mb-10 grid md:grid-cols-2 gap-x-10 text-white">
                 <div className="mb-5 flex flex-col gap-y-3">
                   <div className="uppercase tracking-wider text-theme-red text-theme-bold md:h2 h3 text-center md:text-start">
-                    {carDetail.name}
+                    {carDetail?.name}
                   </div>
 
                   <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
@@ -123,27 +151,31 @@ function CarDetail() {
                         Reg.Year
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail.modelyear}
+                        {carDetail?.modelyear}
                       </div>
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
                         Req.State
                       </div>
-                      <div className="text-theme-semibold">{carDetail.reg}</div>
+                      <div className="text-theme-semiboldn uppercase">
+                        {carDetail?.reg}
+                      </div>
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
                         KMs Driven
                       </div>
-                      <div className="text-theme-semibold">{carDetail.kms}</div>
+                      <div className="text-theme-semibold">
+                        {carDetail?.kms}
+                      </div>
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
                         Ownership
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail.owner}
+                        {carDetail?.owner}
                       </div>
                     </div>
                     <div>
@@ -151,7 +183,7 @@ function CarDetail() {
                         Fuel Type
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail.fuel}
+                        {carDetail?.fuel}
                       </div>
                     </div>
                   </div>
@@ -163,7 +195,7 @@ function CarDetail() {
                     <div className="flex items-center gap-x-3">
                       <span className="text-theme-500 text-gray-400">IND</span>
                       <span className="h3 text-them-semibold text-theme-bold text-theme-red">
-                        {carDetail.price}
+                        {carDetail?.price}
                       </span>
                       <span>/-</span>
                     </div>
@@ -179,7 +211,7 @@ function CarDetail() {
                       <span className="text-theme-500 text-gray-400">
                         <IoLocation />
                       </span>
-                      <span className="text-md text-them-semibold text-theme-semibold ">
+                      <span className="text-md text-them-semibold text-theme-semibold uppercase">
                         Uttar Pradesh
                       </span>
                     </div>
@@ -199,30 +231,22 @@ function CarDetail() {
                 </div>
               </div>
               {/* main  Page content */}
-              <div className="md:h-[75vh] md:grid md:grid-cols-8 gap-5">
+              <div className="md:h-[75vh] md:grid md:grid-cols-8 gap-5 mr-5">
                 {/* images grid  */}
-                <div className="h-full w-full md:col-span-2 flex md:flex-col gap-2 overflow-x-auto md md:overflow-y-auto">
-                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
-                    <Image
-                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
-                      alt="Urban Garage Car"
-                      onError={errImg}
-                    />
-                  </div>
-                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
-                    <Image
-                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
-                      alt="Urban Garage Car"
-                      onError={errImg}
-                    />
-                  </div>
-                  <div className="flex-shrink-0 md:h-36 w-48 md:w-full">
-                    <Image
-                      src="https://content.helloviewer.io/1920/64a024fb8d6ab54f4d2e0bfe/bb274b7d-c277-49e0-a6a3-b5296f65e5e0/slot/3.jpg"
-                      alt="Urban Garage Car"
-                      onError={errImg}
-                    />
-                  </div>
+                <div className="h-full w-full mr-5 md:col-span-2 p-2 flex md:flex-col gap-5 overflow-x-auto md:overflow-y-auto">
+                  {carDetail?.img?.map((url, index) => (
+                    <div
+                      onClick={() => setTab(index)}
+                      key={index}
+                      className="flex-shrink-0 md:h-36 w-48 md:w-full border-theme-white hover:cursor-pointer rounded-md overflow-hidden mr-2 hover:shadow-md"
+                    >
+                      <img
+                        src={url}
+                        alt={`Urban Garage Car ${index + 1}`}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                  ))}
                 </div>
 
                 {/* image container  */}
@@ -230,12 +254,13 @@ function CarDetail() {
                   <img
                     className="h-full w-full object-cover object-center"
                     src={
-                      carDetail.img && carDetail.img.length > 0
-                        ? carDetail.img[0]
+                      carDetail && carDetail.img && carDetail.img.length > 0
+                        ? carDetail.img[tab]
                         : errImg
                     }
-                    alt={`Urban Garage ${carDetail.name}`}
-                    // Ensure image scales correctly
+                    alt={`Urban Garage ${carDetail ? carDetail.name : "Car"}`}
+          
+                    
                   />
                 </div>
               </div>
@@ -311,7 +336,7 @@ function CarDetail() {
                 Model Year<span className="text-red-600">*</span>
               </label>
               <input
-              disabled
+                disabled
                 id="modelYear"
                 required
                 name="modelYear"

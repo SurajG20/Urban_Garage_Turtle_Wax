@@ -25,7 +25,7 @@ function Contactus() {
   });
 
   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
-    (data) => axios.post("http://localhost:3000/contact", data),
+    (data) => axios.post(`${import.meta.env.VITE_API_URL}/contact`, data),
     {
       onSuccess: () => {
         setFormData({

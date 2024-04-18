@@ -15,7 +15,7 @@ function BuyForm() {
 
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
-    return axios.post("http://localhost:3000/buyCar-users", data);
+    return axios.post(`${import.meta.env.VITE_API_URL}/buyCar-users`, data);
   });
 
   const handleChange = (event) => {

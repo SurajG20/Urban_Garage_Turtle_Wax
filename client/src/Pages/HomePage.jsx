@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Herohome from "../components/Herohome";
+// import Herohome from "../components/Herohome";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
 import Banner from "../components/Banner";

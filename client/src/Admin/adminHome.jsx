@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import axios from "axios";
 
 const fetchData = async () => {
-  const { data } = await axios.get(`http://localhost:3000/products`);
+  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/products`);
   return data;
 };
 

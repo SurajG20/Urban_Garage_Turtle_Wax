@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 function fetchPeople() {
-  return axios.get("http://localhost:3000/sellCar-users");
+  return axios.get(`${import.meta.env.VITE_API_URL}/sellCar-users`);
 }
 
 function SellCarUser() {

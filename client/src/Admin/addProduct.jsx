@@ -49,7 +49,7 @@ function AddProduct() {
     });
 
     try {
-      const response = await fetch("http://localhost:3000/products", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/products`, {
         method: "POST",
         body: dataToSend, // Send FormData
         headers: {
@@ -76,7 +76,6 @@ function AddProduct() {
         <section>
           <div className="container px-6 py-24  lg:px-8">
             <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
-            
               <h1 className="text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
                 Add New CAR
               </h1>
@@ -213,7 +212,6 @@ function AddProduct() {
                         placeholder="Enter Car Model Year"
                         onChange={handleInputChange}
                       >
-
                         <option value="">--select owner Type--</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
@@ -282,7 +280,7 @@ function AddProduct() {
                         type="text"
                         name="fuel"
                         id="fuel"
-                        autoComplete="kms"
+                        autoComplete="fuel"
                         className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                         placeholder="Enter Kilometers Driven"
                         onChange={handleInputChange}
