@@ -65,6 +65,7 @@ function CarDetail() {
     event.preventDefault();
     formMutation.mutate(formData, {
       onSuccess: (response) => {
+        console.log("Success:", response);
         setFormData({
           fullName: "",
           mobileNumber: "",
@@ -119,7 +120,7 @@ function CarDetail() {
                   <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        Regd.Year
+                        Reg.Year
                       </div>
                       <div className="text-theme-semibold">
                         {carDetail.modelyear}
@@ -162,7 +163,7 @@ function CarDetail() {
                     <div className="flex items-center gap-x-3">
                       <span className="text-theme-500 text-gray-400">IND</span>
                       <span className="h3 text-them-semibold text-theme-bold text-theme-red">
-                        91,90,000
+                        {carDetail.price}
                       </span>
                       <span>/-</span>
                     </div>
@@ -310,10 +311,11 @@ function CarDetail() {
                 Model Year<span className="text-red-600">*</span>
               </label>
               <input
+              disabled
                 id="modelYear"
                 required
                 name="modelYear"
-                value={formData.modelYear}
+                value={carDetail.modelyear}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
                 type="number"
@@ -331,7 +333,8 @@ function CarDetail() {
               </label>
               <input
                 name="carBrand"
-                value={formData.carBrand}
+                disabled
+                value={carDetail.name}
                 id="carBrand"
                 className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -350,7 +353,7 @@ function CarDetail() {
               <input
                 required
                 name="fuelType"
-                value={formData.fuelType}
+                value={carDetail.fuel}
                 id="fuel-type"
                 className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -368,12 +371,13 @@ function CarDetail() {
               </label>
               <input
                 id="budget"
+                disabled
                 required
                 name="budget"
-                value={formData.budget}
+                value={carDetail.price}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-                type="number"
+                type="text"
                 placeholder="Enter Your Budget"
                 onChange={handleChange}
               />
@@ -388,7 +392,7 @@ function CarDetail() {
               </button>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <h3 className="text-theme-semibold p-0">URBAN GARAGE !</h3> 
+              <h3 className="text-theme-semibold p-0">URBAN GARAGE !</h3>
               <h2 className="h2  text-theme-bold text-theme-red">Contant Us</h2>
             </div>
           </form>

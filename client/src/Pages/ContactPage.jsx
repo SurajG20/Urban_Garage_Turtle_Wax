@@ -25,8 +25,18 @@ function Contactus() {
   });
 
   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
-    (data) => {
-      return axios.post("http://localhost:3000/contact-us", data);
+    (data) => axios.post("http://localhost:3000/contact", data),
+    {
+      onSuccess: () => {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          mobileNumber: "",
+          email: "",
+          queryType: "",
+          message: "",
+        });
+      },
     }
   );
 
@@ -42,6 +52,7 @@ function Contactus() {
     event.preventDefault();
     mutate(formData);
   };
+
   return (
     <div className="relative">
       <Navbar />
@@ -154,7 +165,7 @@ function Contactus() {
                       <input
                         id="firstName"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
@@ -172,7 +183,7 @@ function Contactus() {
                       <input
                         id="lastName"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
@@ -189,7 +200,7 @@ function Contactus() {
                       <input
                         id="mobileNumber"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
                         name="mobileNumber"
                         value={formData.mobileNumber}
                         onChange={handleChange}
@@ -206,7 +217,7 @@ function Contactus() {
                       <input
                         id="email"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -224,7 +235,7 @@ function Contactus() {
                         id="queryType"
                         required
                         className="p-2 w-full bg-gray-50 text-black text-sm text-theme-500 border-theme-gray outline-none"
-                        name="description"
+                        name="queryType"
                         value={formData.queryType}
                         onChange={handleChange}
                         placeholder="Select Query"
@@ -234,6 +245,7 @@ function Contactus() {
                         <option value="Coating Service">
                           Coating Service{" "}
                         </option>
+                        <option value="PPF Service">PPF Service </option>
                         <option value="Coating Service">
                           Coating Service{" "}
                         </option>
@@ -250,8 +262,8 @@ function Contactus() {
                       <textarea
                         id="message"
                         required
-                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 border-theme-gray outline-none"
-                        name="description"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        name="message"
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Write Your Query Here"

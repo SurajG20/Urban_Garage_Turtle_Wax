@@ -19,12 +19,12 @@ function AddProduct() {
     if (files) {
       setFormData((prevState) => ({
         ...prevState,
-        [name]: files, // Handle files differently because it's a FileList
+        [name]: files,
       }));
     } else {
       setFormData((prevState) => ({
         ...prevState,
-        [name]: value, // Handle regular inputs
+        [name]: value,
       }));
     }
   };
