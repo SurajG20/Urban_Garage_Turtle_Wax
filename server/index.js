@@ -6,11 +6,11 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 // Routes 
-const adminRoutes = require("./routes/adminRoutes.js");
-const productRoutes = require("./routes/productRoutes.js");
-const buyCarRoutes = require("./routes/buyCarRoutes.js");
-const sellCarRoutes = require("./routes/sellCarRoutes.js");
-const contactRoutes = require("./routes/contactRoutes.js");
+const AdminRoute = require("./routes/Admin.js");
+const ProductRoute = require("./routes/Product.js");
+const BuyCarRoute = require("./routes/Buy.js");
+const SellCarRoute = require("./routes/Sell.js");
+const ContactRoute = require("./routes/Contact.js");
 
 dotenv.config();
 
@@ -23,13 +23,17 @@ app.use("/uploads", express.static("uploads"));
 app.use(cors());
 
 // Routes
-app.use("/admin", adminRoutes);
+app.use("/admin", AdminRoute);
+
 // Product routes GET (/products) to list products.||POST /products to add a new product.
-app.use("/products", productRoutes);
+app.use("/products", ProductRoute);
+
 // buy car and sell car routes GET (/buyCar-users) to list all users who want to buy a car.;
-app.use("/buyCar-users", buyCarRoutes);
-app.use("/sellCar-users", sellCarRoutes);
-app.use("/contact", contactRoutes);
+app.use("/buyCar-users", BuyCarRoute);
+
+app.use("/sellCar-users", SellCarRoute);
+// get for contact form users and post for adding new users
+app.use("/contact", ContactRoute);
 
 // In your main app file (app.js or similar)
 app.get("/", (req, res) => {

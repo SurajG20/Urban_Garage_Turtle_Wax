@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const sellCarController = require("../controllers/SellCarController.js");
+const sellCarController = require("../controllers/SellCar.js");
 
 // Route to get all products
 router.get("/", sellCarController.allSellCarUsers);
