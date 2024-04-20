@@ -15,23 +15,21 @@ import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 
-
-
 function fetchCars() {
   const url = `${import.meta.env.VITE_API_URL}/products`;
   return axios.get(url).then((res) => res.data);
 }
 
 function Home() {
-    const { data, error, isLoading, isError } = useQuery("cars", fetchCars);
+  const { data, error, isLoading, isError } = useQuery("cars", fetchCars);
 
-    if (isLoading) {
-      return <div>Loading...</div>;
-    }
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-    if (isError) {
-      return <div>Error: {error.message}</div>;
-    }
+  if (isError) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className="relative">
@@ -508,7 +506,7 @@ function Home() {
 
                     <div className="flex gap-x-3">
                       <Link to={"/contact-us"}>
-                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                           Book a visit
                         </button>
                       </Link>
@@ -518,7 +516,7 @@ function Home() {
                           "https://www.google.com/maps/dir//Plot+No+98,+Industrial+Area+Phase+I,+Chandigarh,+160002/@30.70935,76.7218037,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fed0d68f936e9:0xd6fcbf0dac51de9f!2m2!1d76.8041805!2d30.7093577?entry=ttu"
                         }
                       >
-                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 tracking-wide text-theme-semibold py-2 rounded-lg ">
                           Get Directions
                         </button>
                       </Link>
@@ -548,12 +546,12 @@ function Home() {
 
                     <div className="flex gap-x-3">
                       <Link to={""}>
-                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                           Book a visit
                         </button>
                       </Link>
                       <Link target="_blank" to={""}>
-                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                        <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 tracking-wide text-theme-semibold py-2 rounded-lg ">
                           Get a Direction
                         </button>
                       </Link>
@@ -619,16 +617,16 @@ function Home() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>

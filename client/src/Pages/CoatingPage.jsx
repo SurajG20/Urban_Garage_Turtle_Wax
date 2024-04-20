@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/Herohome";
 import Testinomial from "../components/Testinomial";
-import data from "../server.json";
-import { Link } from "react-router-dom";
+import { useMutation } from "react-query";
+import axios from "axios";
 // import Dropdown from "../utils/Dropdown";
 
 // icons
@@ -28,21 +28,52 @@ function CoatingPage() {
     backgroundRepeat: "no-repeat",
     backdropFilter: "blur(8px)",
   };
-  const [cars, setCars] = useState([]);
 
-  useEffect(() => {
-    setCars(data.cars);
-  }, []);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    mobileNumber: "",
+    carName: "",
+    carBrand: "",
+    cityName: "",
+    stateName: "",
+  });
 
-  //  useEffect(() => {
-  //    const fetchData = async () => {
-  //     fetch("your-api-endpoint")
-  //       .then((response) => response.json())
-  //       .then((data) => setCars(data.cars));
-  //      setCars(data.cars);
-  //    };
-  //    fetchData();
-  //  }, []);
+  // Update form state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // React Query mutation setup
+  const mutation = useMutation((data) => {
+    return axios.post(`${import.meta.env.VITE_API_URL}/service`, data);
+  });
+
+  const handleSubmit = (e) => {
+   
+    e.preventDefault();
+    mutation.mutate(formData, {
+      onSuccess: (response) => {
+        // Handle success scenario
+        alert("Submission successful:", response.data);
+        setFormData({
+          fullName: "",
+          mobileNumber: "",
+          carName: "",
+          carBrand: "",
+          cityName: "",
+          stateName: "",
+        });
+      },
+      onError: (error) => {
+        // Handle error scenario
+        console.error("Submission error:", error);
+      },
+    });
+  };
 
   return (
     <div className="relative">
@@ -101,7 +132,7 @@ function CoatingPage() {
 
                       <div className="grid grid-cols-3">
                         {/* rating  */}
-                        <div className="flex flex-col items-center gap-2">
+                        <div className="flex flex-col justify-between items-center  gap-2">
                           <div className="flex items-center gap-1">
                             <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
                             <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
@@ -116,7 +147,7 @@ function CoatingPage() {
                           </div>
                         </div>
 
-                        <div className="flex flex-col items-center gap-2">
+                        <div className="flex flex-col justify-between items-center gap-2">
                           <div className="flex items-center gap-1">
                             <h2 className="text-white text-xl md:text-2xl text-theme-semibold">
                               5000+
@@ -129,7 +160,7 @@ function CoatingPage() {
                           </div>
                         </div>
 
-                        <div className="flex flex-col items-center gap-2">
+                        <div className="flex flex-col justify-between items-center gap-2">
                           <div className="flex items-center gap-1">
                             <h2 className="text-white text-xl md:text-2xl  text-theme-semibold">
                               8000+
@@ -144,7 +175,7 @@ function CoatingPage() {
                       </div>
                     </div>
                     {/* right container  */}
-                    <div className="h-full">
+                    <form onSubmit={handleSubmit} className="h-full">
                       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
                         {/* first container  */}
                         <div>
@@ -171,7 +202,10 @@ function CoatingPage() {
                             </label>
                             <input
                               required
-                              name="full-name"
+                              id="full-name"
+                              name="fullName"
+                              value={formData.fullName}
+                              onChange={handleChange}
                               className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               type="text"
                               placeholder="Enter Name"
@@ -179,16 +213,19 @@ function CoatingPage() {
                           </div>
                           <div>
                             <label
-                              htmlFor="number"
+                              htmlFor="mobile-number"
                               className="text-theme-500 flex items-center"
                             >
                               Mobile <span className="text-red-600">*</span>
                             </label>
                             <input
                               required
-                              name="number"
-                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               type="text"
+                              id="mobile-number"
+                              name="mobileNumber"
+                              value={formData.mobileNumber}
+                              onChange={handleChange}
+                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               placeholder="Enter Mobile Number"
                             />
                           </div>
@@ -197,28 +234,63 @@ function CoatingPage() {
                               htmlFor="car-name"
                               className="text-theme-500 flex items-center"
                             >
-                              Car<span className="text-red-600">*</span>
+                              Car Model<span className="text-red-600">*</span>
                             </label>
                             <input
-                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               required
-                              name="car-name"
                               type="text"
+                              id="car-name"
+                              name="carName"
+                              value={formData.carName}
+                              onChange={handleChange}
+                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               placeholder="Enter Car Brand/Model"
                             />
                           </div>
                           <div>
                             <label
-                              htmlFor="service-name"
+                              htmlFor="car-brand"
                               className="text-theme-500 flex items-center"
                             >
-                              Service<span className="text-red-600">*</span>
+                              Car Brand
+                              <span className="text-red-600">*</span>
+                            </label>
+                            <select
+                              required
+                              type="text"
+                              id="car-brand"
+                              name="carBrand"
+                              value={formData.carBrand}
+                              onChange={handleChange}
+                              className="p-2 w-full bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
+                              placeholder="Select Car Brand"
+                            >
+                              <option value="">--- Select Brand ---</option>
+                              <option value="audi">Audi</option>
+                              <option value="Mercedes">Mercedes</option>
+                              <option value="BMW">BMW</option>
+                              <option value="Jaguar">Jaguar</option>
+                              <option value="Luxus">luxus</option>
+                              <option value="Porche">Porche</option>
+                              <option value="Volvo">Volvo</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label
+                              htmlFor="city-name"
+                              className="text-theme-500 flex items-center"
+                            >
+                              City<span className="text-red-600">*</span>
                             </label>
                             <input
-                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                              name="service-name"
+                              required
+                              id="city-name"
                               type="text"
-                              placeholder="Enter Select Service"
+                              name="cityName"
+                              value={formData.cityName}
+                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+                              onChange={handleChange}
+                              placeholder="Select City"
                             />
                           </div>
                           <div>
@@ -230,36 +302,27 @@ function CoatingPage() {
                             </label>
                             <input
                               required
-                              name="state-name"
-                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+                              id="state-name"
                               type="text"
+                              name="stateName"
+                              value={formData.stateName}
+                              onChange={handleChange}
+                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
                               placeholder="Select State"
-                            />
-                          </div>
-                          <div>
-                            <label
-                              htmlFor="city-name"
-                              className="text-theme-500 flex items-center"
-                            >
-                              City<span className="text-red-600">*</span>
-                            </label>
-                            <input
-                              required
-                              name="city-name"
-                              className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                              type="text"
-                              placeholder="Select City"
                             />
                           </div>
                         </div>
                         {/* third container  */}
                         <div className="mt-5">
-                          <button className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold">
+                          <button
+                            type="submit"
+                            className="px-10 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
+                          >
                             Submit
                           </button>
                         </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>

@@ -97,13 +97,14 @@ function TurtleWaxPage() {
                 WHAT ARE YOU WORKING ON TODAY?
               </h2>
 
-              <div className="flex justify-end bg-white">
-              
-                <div className="hidden md:block md:w-[30rem] text-black">
+              <div className="flex justify-end">
+                {/* Text Container  */}
+                <div className="hidden md:block md:w-[30rem] bg-white text-black">
                   <div className="h-full flex justify-center items-center">
                     <div className="text-8xl text-green-900 font-bold text-theme-bold">GET READY</div>
                   </div>
                 </div>
+                {/* image Container  */}
                 <div className="relative md:h-96 w-full md:w-[50rem] ">
                   <img
                     className="h-full w-full object-cover object-center"

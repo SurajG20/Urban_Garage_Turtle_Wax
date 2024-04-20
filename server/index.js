@@ -11,6 +11,7 @@ const ProductRoute = require("./routes/Product.js");
 const BuyCarRoute = require("./routes/Buy.js");
 const SellCarRoute = require("./routes/Sell.js");
 const ContactRoute = require("./routes/Contact.js");
+const ServiceRoute = require("./routes/Service.js");
 
 dotenv.config();
 
@@ -32,6 +33,10 @@ app.use("/products", ProductRoute);
 app.use("/buyCar-users", BuyCarRoute);
 
 app.use("/sellCar-users", SellCarRoute);
+
+// get for contact form users and post for adding new users
+app.use("/service", ServiceRoute);
+
 // get for contact form users and post for adding new users
 app.use("/contact", ContactRoute);
 
