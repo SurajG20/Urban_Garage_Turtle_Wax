@@ -138,9 +138,10 @@ function BuyForm() {
               value={formData.carBrand}
               id="carBrand"
               className="px-2 py-2 h-12
-               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
+              <option value="">--- Select Brand ---</option>
               <option value="audi">Audi</option>
               <option value="Mercedes">Mercedes</option>
               <option value="BMW">BMW</option>
@@ -164,9 +165,10 @@ function BuyForm() {
               value={formData.fuelType}
               id="fuel-type"
               className="px-2 py-2 h-12
-               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
+              <option value="">--- Select Fuel Type ---</option>
               <option value="Petrol">Petrol</option>
               <option value="Disel">Disel</option>
               <option value="EV">EV</option>
@@ -202,7 +204,7 @@ function BuyForm() {
           <div className="mt-5">
             <button
               type="submit"
-              className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
+              className="px-8 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
             >
               Submit
             </button>

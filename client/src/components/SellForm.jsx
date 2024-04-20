@@ -38,10 +38,10 @@ function SellForm() {
           fullName: "",
           mobileNumber: "",
           modelYear: "",
-          ownerType: "first",
+          ownerType: "",
           kilometersDriven: "",
           carName: "",
-          fuelType: "Disel",
+          fuelType: "",
           regCity: "",
           address: "",
         });
@@ -138,11 +138,15 @@ function SellForm() {
               name="ownerType"
               value={formData.ownerType}
               id="owner-type"
-              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
-              <option value="first">First Owner</option>
-              <option value="second">Second Owner</option>
+              <option value="">--- Select Owner Type ---</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
             </select>
           </div>
           <div>
@@ -192,13 +196,14 @@ function SellForm() {
               name="fuelType"
               value={formData.fuelType}
               id="fuel-type"
-              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
+              <option value="">--- Select Fuel Type ---</option>
               <option value="first">Petrol</option>
-              <option value="second">Disel</option>
-              <option value="second">EV</option>
-              <option value="second">Hybrid</option>
+              <option value="Disel">Disel</option>
+              <option value="EV">EV</option>
+              <option value="Hybrid">Hybrid</option>
             </select>
           </div>
 
@@ -239,7 +244,7 @@ function SellForm() {
           <div className="mt-5">
             <button
               type="submit"
-              className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
+              className="px-8 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
             >
               Submit
             </button>

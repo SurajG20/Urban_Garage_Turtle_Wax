@@ -158,14 +158,14 @@ function Contactus() {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center mb-1"
                       >
                         First Name <span className="text-theme-red">*</span>
                       </label>
                       <input
                         id="firstName"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black  outline-none rounded-md cursor-pointer"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
@@ -176,14 +176,14 @@ function Contactus() {
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center  mb-1"
                       >
                         Last Name<span className="text-theme-red">*</span>
                       </label>
                       <input
                         id="lastName"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black  outline-none rounded-md cursor-pointer"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
@@ -193,14 +193,14 @@ function Contactus() {
                     <div>
                       <label
                         htmlFor="mobileNumber"
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center  mb-1"
                       >
                         Mobile Number<span className="text-theme-red">*</span>
                       </label>
                       <input
                         id="mobileNumber"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black  outline-none rounded-md cursor-pointer"
                         name="mobileNumber"
                         value={formData.mobileNumber}
                         onChange={handleChange}
@@ -210,14 +210,14 @@ function Contactus() {
                     <div>
                       <label
                         htmlFor=""
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center  mb-1"
                       >
                         Email<span className="text-theme-red">*</span>
                       </label>
                       <input
                         id="email"
                         required
-                        className="p-2 bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black  outline-none rounded-md cursor-pointer"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -227,19 +227,22 @@ function Contactus() {
                     <div>
                       <label
                         htmlFor="queryType"
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center  mb-1"
                       >
                         Select Query<span className="text-theme-red">*</span>
                       </label>
                       <select
                         id="queryType"
                         required
-                        className="p-2 w-full bg-gray-50 text-black text-sm text-theme-500 border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none rounded-md cursor-pointer "
                         name="queryType"
                         value={formData.queryType}
                         onChange={handleChange}
                         placeholder="Select Query"
                       >
+                        <option value="" >
+                          --- Service Type ---
+                        </option>
                         <option value="Buy car">Buy Car </option>
                         <option value="Sell Car">Sell Car</option>
                         <option value="Coating Service">
@@ -254,15 +257,16 @@ function Contactus() {
                     <div className="col-span-2">
                       <label
                         htmlFor="message"
-                        className="text-theme-500 flex items-center"
+                        className="text-theme-500 flex items-center  mb-1"
                       >
                         Describe Your Query
                         <span className="text-theme-red">**</span>
                       </label>
                       <textarea
                         id="message"
+                        rows={6}
                         required
-                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none"
+                        className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none rounded-md"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
@@ -270,7 +274,7 @@ function Contactus() {
                       />
                     </div>
                     <div className="">
-                      <button className="px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold">
+                      <button className="px-8 py-2 rounded-lg bg-theme-red text-white text-theme-semibold">
                         Submit
                       </button>
                     </div>

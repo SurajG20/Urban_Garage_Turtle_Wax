@@ -13,7 +13,9 @@ import { useMutation } from "react-query";
 import Modal from "./EbookNow";
 import Preloader from "../components/Preloader";
 // icons
-// import { TiTick } from "react-icons/ti";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { IoMdCall } from "react-icons/io";
+
 // import { FaBlenderPhone } from "react-icons/fa";
 // import { FaCar } from "react-icons/fa";
 // import { FaMoneyCheckAlt } from "react-icons/fa";
@@ -22,11 +24,10 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
 
 function CarDetail() {
-const { cars } = useCarContext(); 
+  const { cars } = useCarContext();
   const { id } = useParams();
-  const [tab , setTab] = useState(0)
+  const [tab, setTab] = useState(0);
   const [carDetail, setCarDetail] = useState({});
-
 
   // E-book button
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,34 +82,30 @@ const { cars } = useCarContext();
   if (!cars.length) {
     return (
       <>
-        <Preloader message="please wait ...."/>
+        <Preloader message="please wait ...." />
       </>
     );
   }
 
-
- useEffect(() => {
+  useEffect(() => {
     // To debug and see your cars data
-   const carId = parseInt(id, 10); 
+    const carId = parseInt(id, 10);
 
-   const foundCar = cars.find((car) => car._id == id); // 
+    const foundCar = cars.find((car) => car._id == id); //
 
-   if (foundCar) {
-    console.log("Found car:", foundCar)
-     setCarDetail(foundCar);
-   }
- }, [id, cars]); // Include 'id' and 'cars' in the dependency array
+    if (foundCar) {
+      console.log("Found car:", foundCar);
+      setCarDetail(foundCar);
+    }
+  }, [id, cars]); // Include 'id' and 'cars' in the dependency array
 
- if (!carDetail) {
-   return (
-     <>
-       <Preloader message="please wait ...." />
-     </>
-   );
- }
-
-
-  
+  if (!carDetail) {
+    return (
+      <>
+        <Preloader message="please wait ...." />
+      </>
+    );
+  }
 
   return (
     <>
@@ -193,7 +190,9 @@ const { cars } = useCarContext();
                   {/* card 1 */}
                   <div className="flex flex-col items-center md:items-start justify-between gap-2">
                     <div className="flex items-center gap-x-3">
-                      <span className="text-theme-500 text-gray-400">IND</span>
+                      <span className="text-theme-500 text-gray-400 whitespace-nowrap">
+                        ₹ IND
+                      </span>
                       <span className="h3 text-them-semibold text-theme-bold text-theme-red">
                         {carDetail?.price}
                       </span>
@@ -201,7 +200,7 @@ const { cars } = useCarContext();
                     </div>
                     <div className="flex items-center gap-x-3">
                       <span className="text-theme-500 text-gray-400">
-                        <IoShieldCheckmark />
+                        <IoShieldCheckmark className="text-theme-red" />
                       </span>
                       <span className="text-md text-them-semibold text-theme-semibold ">
                         Inclusions & Benefits
@@ -209,7 +208,7 @@ const { cars } = useCarContext();
                     </div>
                     <div className="flex items-center gap-x-3">
                       <span className="text-theme-500 text-gray-400">
-                        <IoLocation />
+                        <IoLocation className="text-theme-red" />
                       </span>
                       <span className="text-md text-them-semibold text-theme-semibold uppercase">
                         Uttar Pradesh
@@ -217,16 +216,48 @@ const { cars } = useCarContext();
                     </div>
                   </div>
                   {/* card 2 */}
-                  <div className="md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
-                    <button className="px-5 w-full py-2 text-theme-semibold bg-theme-red rounded-md">
-                      Book Test Drive
-                    </button>
-                    <button
-                      onClick={openModal}
-                      className="py-2 w-full px-5 bg-theme-white text-theme-semibold text-black rounded-md"
-                    >
-                      E-Book Now
-                    </button>
+                  <div className="md:col-span-2 grid grid-cols-2 gap-2 gap-y-5 justify-center items-center">
+                    <div className="col-span-2 grid grid-cols-2 gap-2 items-center justify-center w-full">
+                      <button className="px-5 w-full py-2 text-theme-semibold  bg-theme-red rounded-md">
+                        Book Test Drive
+                      </button>
+                      <button
+                        onClick={openModal}
+                        className="py-2 w-full px-5 bg-theme-white text-theme-semibold text-black rounded-md"
+                      >
+                        E-Book Now
+                      </button>
+                    </div>
+                    <div className="col-span-2 grid grid-cols-4 gap-2 ">
+                      <Link
+                        target="_blank"
+                        to={""}
+                        className="w-full h-full flex justify-center items-center px-3 py-2 bg-blue-600"
+                      >
+                        <FaFacebookF className="text-lg" />
+                      </Link>
+                      <Link
+                        target="_blank"
+                        to={""}
+                        className="w-full h-full flex justify-center items-center bg-white text-pink-600"
+                      >
+                        <FaInstagram className="text-lg" />
+                      </Link>
+                      <Link
+                        target="_blank"
+                        to={""}
+                        className="w-full h-full flex justify-center items-center bg-green-600"
+                      >
+                        <FaWhatsapp className="text-lg" />
+                      </Link>
+                      <Link
+                        target="_blank"
+                        to={""}
+                        className="w-full h-full flex justify-center items-center bg-blue-700"
+                      >
+                        <IoMdCall className="text-lg" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -259,8 +290,6 @@ const { cars } = useCarContext();
                         : errImg
                     }
                     alt={`Urban Garage ${carDetail ? carDetail.name : "Car"}`}
-          
-                    
                   />
                 </div>
               </div>
