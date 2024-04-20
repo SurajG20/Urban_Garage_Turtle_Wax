@@ -155,7 +155,7 @@ function CarDetail() {
                       <div className="text-theme-500 text-gray-400">
                         Req.State
                       </div>
-                      <div className="text-theme-semiboldn uppercase">
+                      <div className="text-theme-semibold uppercase">
                         {carDetail?.reg}
                       </div>
                     </div>
@@ -203,7 +203,7 @@ function CarDetail() {
                         <IoShieldCheckmark className="text-theme-red" />
                       </span>
                       <span className="text-md text-them-semibold text-theme-semibold ">
-                        Inclusions & Benefits
+                        {carDetail?.insurance}
                       </span>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -211,7 +211,7 @@ function CarDetail() {
                         <IoLocation className="text-theme-red" />
                       </span>
                       <span className="text-md text-them-semibold text-theme-semibold uppercase">
-                        Uttar Pradesh
+                        Chandigardh
                       </span>
                     </div>
                   </div>
@@ -231,28 +231,28 @@ function CarDetail() {
                     <div className="col-span-2 grid grid-cols-4 gap-2 ">
                       <Link
                         target="_blank"
-                        to={""}
+                        to={"https://www.facebook.com/UrbanGarageIndia"}
                         className="w-full h-full flex justify-center items-center px-3 py-2 bg-blue-600"
                       >
                         <FaFacebookF className="text-lg" />
                       </Link>
                       <Link
                         target="_blank"
-                        to={""}
+                        to={"https://www.instagram.com/urbangarageindia/"}
                         className="w-full h-full flex justify-center items-center bg-white text-pink-600"
                       >
                         <FaInstagram className="text-lg" />
                       </Link>
                       <Link
+                        to="https://wa.me/917744900001"
                         target="_blank"
-                        to={""}
                         className="w-full h-full flex justify-center items-center bg-green-600"
                       >
                         <FaWhatsapp className="text-lg" />
                       </Link>
                       <Link
                         target="_blank"
-                        to={""}
+                        to="tel:+917744900001"
                         className="w-full h-full flex justify-center items-center bg-blue-700"
                       >
                         <IoMdCall className="text-lg" />
@@ -262,26 +262,29 @@ function CarDetail() {
                 </div>
               </div>
               {/* main  Page content */}
-              <div className="md:h-[75vh] md:grid md:grid-cols-8 gap-5 mr-5">
+              <div className="md:h-[75vh] md:grid md:grid-cols-12 gap-2 ">
                 {/* images grid  */}
-                <div className="h-full w-full mr-5 md:col-span-2 p-2 flex md:flex-col gap-5 overflow-x-auto md:overflow-y-auto">
+                <div className="h-full w-full md:col-span-3 flex md:flex-col gap-2 p-1 overflow-x-auto md:overflow-y-auto">
                   {carDetail?.img?.map((url, index) => (
                     <div
                       onClick={() => setTab(index)}
                       key={index}
-                      className="flex-shrink-0 md:h-36 w-48 md:w-full border-theme-white hover:cursor-pointer rounded-md overflow-hidden mr-2 hover:shadow-md"
+                      className="flex-shrink-0 theme-border-white md:h-40 w-42 md:w-full border-theme-white hover:cursor-pointer rounded-md overflow-hidden relative group"
                     >
                       <img
                         src={url}
                         alt={`Urban Garage Car ${index + 1}`}
                         className="w-full h-full object-cover object-center"
                       />
+                      {/* Animated red overlay */}
+
+                      {/* <div className="absolute inset-0 bg-white transform translate-y-full opacity-10 group-hover:translate-y-0 transition-transform duration-300 ease-out"></div> */}
                     </div>
                   ))}
                 </div>
 
                 {/* image container  */}
-                <div className="col-span-6 h-64 md:h-[75vh]">
+                <div className="col-span-9 h-64 md:h-[75vh] theme-border-white rounded-md overflow-hidden">
                   <img
                     className="h-full w-full object-cover object-center"
                     src={

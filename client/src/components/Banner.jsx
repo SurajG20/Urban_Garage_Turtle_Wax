@@ -12,20 +12,20 @@ function Banner() {
   return (
     <>
       {tab && (
-        <div className="hidden fixed bottom-10 right-10 md:flex flex-row items-center gap-2">
+        <div className="hidden fixed bottom-5 right-10 md:flex flex-row items-center gap-2">
           <Link
             to="https://wa.me/917744900001"
             target="_blank"
-            className=" theme-border-white rounded-lg bg-white p-3  hover:cursor-pointer"
+            className="bg-green-700 text-white theme-border-white  px-5 py-3  hover:cursor-pointer"
           >
-            <FaWhatsapp className="text-3xl text-gray-800" />
+            <FaWhatsapp className="text-3xl" />
           </Link>
           <Link
             target="_blank"
-            to="tel:917744900001"
-            className=" theme-border-white rounded-lg bg-white p-3  hover:cursor-pointer"
+            to="tel:+917744900001"
+            className="bg-blue-700 text-white theme-border-white  px-5 py-3   hover:cursor-pointer"
           >
-            <IoCall className="text-3xl text-gray-800" />
+            <IoCall className="text-3xl" />
           </Link>
           <div
             className="absolute -top-5 bg-white -right-5 rounded-lg hover:cursor-pointer"

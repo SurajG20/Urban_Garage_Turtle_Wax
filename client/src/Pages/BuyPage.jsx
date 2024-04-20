@@ -15,10 +15,10 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import { MdVerifiedUser } from "react-icons/md";
 import { TbChecklist } from "react-icons/tb";
 import BuyForm from "../components/BuyForm";
-
+import { ErrorAlert, LoadingAlert } from "../components/Alerts";
 function BuyPage() {
-  const [cars, setCars] = useState([]);
-  const data = useCarContext();
+  
+   const { cars, isLoading, isError, error } = useCarContext();
 
   const backgroundImg = {
     backgroundImage: `
@@ -34,19 +34,8 @@ function BuyPage() {
     backdropFilter: "blur(8px)",
   };
 
-  useEffect(() => {
-    setCars(data.cars);
-  }, []);
 
-  //  useEffect(() => {
-  //    const fetchData = async () => {
-  //     fetch("your-api-endpoint")
-  //       .then((response) => response.json())
-  //       .then((data) => setCars(data.cars));
-  //      setCars(data.cars);
-  //    };
-  //    fetchData();
-  //  }, []);
+
 
   return (
     <div>
@@ -107,33 +96,34 @@ function BuyPage() {
           {/* <!-- 
         - #FEATURED CAR
       --> */}
-          <section
-            className="section featured-car text-white"
-            id="featured-car"
-          >
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 mb-5 text-theme-semibold section-title m-auto">
-                  Take A Glimpse Of Our Collection
-                </h2>
-                {/* 
-                <Link to="#" className="featured-car-link">
-                  <span>Veja mais</span>
-
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link> */}
-              </div>
-
-              <ul className="featured-car-list">
-                {cars &&
-                  cars.map((item) => (
+          {isLoading ? (
+            <LoadingAlert msg="Loading..." />
+          ) : isError ? (
+            <ErrorAlert msg={error.message} />
+          ) : (
+            <section
+              className="section featured-car text-white"
+              id="featured-car"
+            >
+              <div className="container">
+                <div className="mb-5 md:mb-10">
+                  <h2 className="h2 text-theme-semibold text-center section-title m-auto">
+                    Take A Glimpse Of Our Collection
+                  </h2>
+                  <p className="p max-w-3xl m-auto text-center text-theme-500">
+                    Explore our curated selection of luxury cars online.
+                  </p>
+                </div>
+                <ul className="featured-car-list">
+                  {cars.map((item) => (
                     <li key={item._id}>
                       <CarCard item={item} />
                     </li>
                   ))}
-              </ul>
-            </div>
-          </section>
+                </ul>
+              </div>
+            </section>
+          )}
           <hr className="container py-4" />
           {/* <!-- 
         - #GET START
@@ -544,9 +534,11 @@ function BuyPage() {
                   </p>
                 </div>
                 <div>
-                  <button className="bg-white text-gray-700 px-6 text-theme-semibold py-2 rounded-lg ">
-                    Sell Your Car
-                  </button>
+                  <Link to={"/sell"}>
+                    <button className="bg-white hover:bg-gray-300 text-gray-700 px-8 text-theme-semibold py-2 rounded-lg ">
+                      Sell Your Car
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -588,7 +580,7 @@ function BuyPage() {
 
                     <div className="flex gap-x-3 mt-5">
                       <Link to={"/service"}>
-                        <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                           Know more
                         </button>
                       </Link>
@@ -617,10 +609,11 @@ function BuyPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <Link to={"/recent-work"}></Link>
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
+                      <Link to={"/recent-work"}>
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Know more
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -682,18 +675,30 @@ function BuyPage() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Service package
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <Link
+                      to={"/service"}
+                      className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
+                    >
                       Book Service
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book Car Care
-                    </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Buy Extended Warranty
-                    </button>
+                    </Link>
+                    <Link
+                      to={"/recent-work"}
+                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
+                    >
+                      Recent Work
+                    </Link>
+                    <Link
+                      to={"/coating"}
+                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
+                    >
+                      Coating & Wrapping
+                    </Link>
+                    <Link
+                      to={"/ppf"}
+                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colorss"
+                    >
+                      PPF & Ceramic Coating
+                    </Link>
                   </div>
                 </div>
               </div>

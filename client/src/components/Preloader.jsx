@@ -1,6 +1,6 @@
 import React from "react";
 
-function Preloader({message="Loaidng..."}) {
+function Preloader({message="Loading..."}) {
   return (
     <div className="h-screen flex justify-center items-center bg-theme-black text-white">
       <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
@@ -8,7 +8,7 @@ function Preloader({message="Loaidng..."}) {
           <img
             className="h-full w-full object-cover object-center"
             src="assets/logo/light-logo.png"
-            alt=""
+            alt="Urban Garage"
           />
         </div>
         <div>

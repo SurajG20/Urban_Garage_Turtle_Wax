@@ -1,4 +1,5 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useContext } from "react";
+import { useQuery } from "react-query";
 import axios from "axios";
 
 const CarContext = createContext();
@@ -6,21 +7,25 @@ const CarContext = createContext();
 export const useCarContext = () => useContext(CarContext);
 
 export const CarProvider = ({ children }) => {
-  const [cars, setCars] = useState([]);
+  const fetchCars = async () => {
+    const url = `${import.meta.env.VITE_API_URL}/products`;
+    const response = await axios.get(url);
+    return response.data; // Assuming the API returns the array directly
+  };
 
-  useEffect(() => {
-    const fetchCars = async () => {
-      const url = `${import.meta.env.VITE_API_URL}/products`;
-      try {
-        const response = await axios.get(url);
-        setCars(response.data); // Assuming the API returns the array directly
-      } catch (error) {
-        console.error("Failed to fetch cars:", error);
-      }
-    };
+  const {
+    data: cars,
+    error,
+    isLoading,
+    isError,
+  } = useQuery("cars", fetchCars, {
+    onError: (error) => {
+      console.error("Failed to fetch cars:", error);
+    },
+  });
 
-    fetchCars();
-  }, []);
+  // Optionally, handle loading and error states globally or provide them via context
+  const value = { cars, isLoading, isError, error };
 
-  return <CarContext.Provider value={{ cars }}>{children}</CarContext.Provider>;
+  return <CarContext.Provider value={value}>{children}</CarContext.Provider>;
 };

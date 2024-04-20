@@ -14,6 +14,7 @@ import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
+import { ErrorAlert, LoadingAlert } from "../components/Alerts";
 
 function fetchCars() {
   const url = `${import.meta.env.VITE_API_URL}/products`;
@@ -23,13 +24,6 @@ function fetchCars() {
 function Home() {
   const { data, error, isLoading, isError } = useQuery("cars", fetchCars);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error: {error.message}</div>;
-  }
 
   return (
     <div className="relative">
@@ -257,32 +251,44 @@ function Home() {
               </ul>
             </div>
           </section>
-          <section
-            className="section featured-car text-white"
-            id="featured-car"
-          >
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 mb-5 text-theme-semibold section-title m-auto">
-                  Take A Glimpse Of Our Collection
-                </h2>
-                {/* 
-                <Link to="#" className="featured-car-link">
-                  <span>Veja mais</span>
 
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </Link> */}
-              </div>
-
-              <ul className="featured-car-list">
-                {data?.map((item) => (
-                  <li key={item._id}>
-                    <CarCard item={item} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
+          {/* feature cars  */}
+          {isLoading ? (
+            <>
+              <LoadingAlert msg="Loading..." />
+            </>
+          ) : isError ? (
+            <>
+              <ErrorAlert msg={`${error.message}`} />
+            </>
+          ) : (
+            <>
+              {/* Dynamic content that depends on the loaded data */}
+              <section
+                className="section featured-car text-white"
+                id="featured-car"
+              >
+                <div className="container">
+                  <div className="mb-5 md:mb-10">
+                    <h2 className="h2  text-theme-semibold text-center section-title m-auto">
+                      Take A Glimpse Of Our Collection
+                    </h2>
+                    <br />
+                    <p className="p max-w-3xl m-auto text-center text-theme-500">
+                      Explore our curated selection of luxury cars online.
+                    </p>
+                  </div>
+                  <ul className="featured-car-list">
+                    {data?.map((item) => (
+                      <li key={item._id}>
+                        <CarCard item={item} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            </>
+          )}
           {/* <!-- 
         - #GET START
       --> */}

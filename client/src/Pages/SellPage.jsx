@@ -386,9 +386,11 @@ function SellPage() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book a Appointment Now
-                    </button>
+                    <Link to={"/contact-us"}>
+                      <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        Book a Appointment Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -477,8 +479,11 @@ function SellPage() {
                   Get In Touch
                 </h2>
                 <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
-                  Sell your luxury car to  <span className="text-theme-red text-theme-bold mx-2">URBAN GARAGE</span>experts for hassle free
-                  process and best market price.
+                  Sell your luxury car to{" "}
+                  <span className="text-theme-red text-theme-bold mx-2">
+                    URBAN GARAGE
+                  </span>
+                  experts for hassle free process and best market price.
                 </p>
               </div>
               <SellForm />
@@ -520,9 +525,11 @@ function SellPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
+                      <Link to={"/service"}>
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Know more
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -538,7 +545,7 @@ function SellPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                      Extended Warranty
+                      Recent Work
                     </h1>
                     <p className="p font-extrabold text-theme-500">
                       Looking to extend your warranty coverage? Up to 8 years
@@ -547,9 +554,11 @@ function SellPage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
+                      <Link to={"/recent-work"}>
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                          Know more
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

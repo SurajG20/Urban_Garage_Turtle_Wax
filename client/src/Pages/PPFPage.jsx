@@ -604,16 +604,16 @@ function PPFPage() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors">
                       Book Service package
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors">
                       Book Service
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors">
                       Book Car Care
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>

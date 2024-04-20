@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useMutation } from "react-query";
+import { SuccessAlert, ErrorAlert } from "./Alerts";
 
 function SellForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
     modelYear: "",
-    ownerType: "first",
+    ownerType: "",
     kilometersDriven: "",
     carName: "",
-    fuelType: "Disel",
+    fuelType: "",
     regCity: "",
     address: "",
   });
 
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
-   
     return axios.post(`${import.meta.env.VITE_API_URL}/sellCar-users`, data);
   });
 
@@ -55,7 +55,13 @@ function SellForm() {
   };
 
   return (
-    <div>
+    <>
+      <>
+        {formMutation.isSuccess && <SuccessAlert msg="Saved Successfully!" />}
+        {formMutation.isError && (
+          <ErrorAlert msg="Failed! Try again..." />
+        )}
+      </>
       <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
         {/* first container  */}
         <div>
@@ -242,17 +248,43 @@ function SellForm() {
             />
           </div>
           <div className="mt-5">
-            <button
-              type="submit"
-              className="px-8 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
-            >
-              Submit
-            </button>
+            {formMutation.isLoading ? (
+              <button
+                type="button"
+                className="bg-theme-red text-white flex justify-center items-center py-2 px-5 rounded-lg"
+                disabled
+              >
+                <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                  {/* SVG content for spinner icon */}
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.231 5.789 3.222 7.778l2.778-2.487zM14.708 22a7.962 7.962 0 005.292-2H24c-1.231 1.789-3 3.208-5.084 4.084l-4.208-4.084z"
+                  ></path>
+                </svg>
+                Processing...
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="bg-theme-red text-white py-2 px-8 rounded-lg"
+              >
+                Submit
+              </button>
+            )}
           </div>
         </form>
         {/* third container  */}
       </div>
-    </div>
+    </>
   );
 }
 
