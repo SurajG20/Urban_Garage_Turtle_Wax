@@ -6,15 +6,13 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 function fetchPeople() {
-  return axios.get(`${import.meta.env.VITE_API_URL}/contact`);
+  return axios.get(`${import.meta.env.VITE_API_URL}/service`);
 }
 
-function ContactUser() {
+function ServiceUsers() {
   const { data, error, isError, isLoading } = useQuery("people", fetchPeople, {
     select: (data) => data.data,
-    
   });
-  console.log(data);
 
   if (isLoading) {
     return <span>Loading...</span>;
@@ -31,17 +29,17 @@ function ContactUser() {
         <section>
           <div className="container mt-20">
             <ul role="list" className="divide-y divide-gray-100">
-              <li className="grid grid-cols-2 md:grid-cols-5">
-                <div className="uppercase font-bold h3 text-theme-red text-theme-bold text-center">
+              <li className="grid grid-cols-2 md:grid-cols-4">
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
                   User Details
                 </div>
-                <div className="uppercase font-bold h3 text-theme-red text-theme-bold text-center">
-                  Query Type
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
+                  Car Name/Car Model
                 </div>
-                <div className="uppercase col-span-2 font-bold h3 text-theme-red text-theme-bold text-center">
-                  Message
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
+                  Fuel Type/Budget
                 </div>
-                <div className="uppercase font-bold h3 text-theme-red text-theme-bold text-center">
+                <div className="font-bold h3 text-theme-red text-theme-bold text-center">
                   Contact User
                 </div>
               </li>
@@ -49,12 +47,12 @@ function ContactUser() {
                 <>
                   <li
                     key={users._id}
-                    className="grid grid-cols-5 gap-x-6 py-5 bg-gray-300 px-2 mb-1"
+                    className="grid grid-cols-4 gap-x-6 py-5 bg-gray-300 px-2 mb-1"
                   >
                     <div className="flex min-w-0 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
                         <p className="text-xl  font-semibold leading-6 text-gray-900">
-                          {`${users.firstName} ${users.lastName}`}
+                          {users.fullName}
                         </p>
                         <p className="mt-1 truncate text-md leading-5 text-gray-900">
                           {users.mobileNumber}
@@ -64,16 +62,22 @@ function ContactUser() {
                     {/* car details   */}
                     <div className="flex min-w-92 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
-                        <p className="text-md font-semibold leading-6 text-gray-900">
-                          {users.queryType}
+                        <p className="text-xl font-semibold leading-6 text-gray-900">
+                          {users.carBrand}
+                        </p>
+                        <p className="mt-1 truncate text-md leading-5 text-gray-900">
+                          {users.modelYear}
                         </p>
                       </div>
                     </div>
                     {/* fuel and budget */}
-                    <div className="col-span-2 flex items-center justify-center min-w-92 gap-x-4">
+                    <div className="flex items-center justify-center min-w-92 gap-x-4">
                       <div className="min-w-0 flex-auto text-center">
-                        <p className="text-md font-semibold leading-6 text-gray-900">
-                          {users.message}
+                        <p className="text-xl font-semibold leading-6 text-gray-900">
+                          {users.fuelType}
+                        </p>
+                        <p className="mt-1 truncate text-md leading-5 text-gray-900">
+                          ₹ {users.budget} /-
                         </p>
                       </div>
                     </div>
@@ -107,4 +111,4 @@ function ContactUser() {
   );
 }
 
-export default ContactUser;
+export default ServiceUsers;

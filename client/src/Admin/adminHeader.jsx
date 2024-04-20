@@ -42,7 +42,7 @@ function Header() {
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Buy Car
+                Buy 
               </Link>
             </li>
             <li>
@@ -51,16 +51,25 @@ function Header() {
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Sell Car
+                Sell 
               </Link>
             </li>
             <li>
               <Link
-                to="/contact-form"
+                to="/service-users"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Contact Form
+                Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact-users"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                Contact Us
               </Link>
             </li>
           </ul>

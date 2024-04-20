@@ -25,6 +25,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import BuyCarUser from "./Admin/buyCarUsers";
 import SellCarUser from "./Admin/sellCarUsers";
 import Error from "./Pages/Error";
+import ContactUser from "./Admin/contactUsers";
+import ServiceUsers from "./Admin/serviceUsers";
 
 const queryClient = new QueryClient();
 
@@ -78,7 +80,23 @@ function App() {
             path="/sellCar-users"
             element={
               <ProtectedRoute>
-                <SellCarUser/>
+                <SellCarUser />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/service-users"
+            element={
+              <ProtectedRoute>
+                <SellCarUser />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/contact-users"
+            element={
+              <ProtectedRoute>
+                <ContactUser/>
               </ProtectedRoute>
             }
           />
@@ -86,11 +104,11 @@ function App() {
             path="/add-product"
             element={
               <ProtectedRoute>
-                <AddProduct />
+                <ServiceUsers/>
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<Error/>} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </AuthProvider>
     </QueryClientProvider>

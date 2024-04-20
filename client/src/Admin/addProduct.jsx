@@ -62,7 +62,6 @@ function AddProduct() {
       console.log(result);
       alert("Product added successfully!");
       // Redirect to products page
-
     } catch (error) {
       console.error("Error uploading product:", error);
       alert(`Failed to add product: ${error.message}`);
@@ -76,7 +75,7 @@ function AddProduct() {
         <section>
           <div className="container px-6 py-24  lg:px-8">
             <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
-              <h1 className="text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
+              <h1 className="mb-10 text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
                 Add New CAR
               </h1>
               <p className="text-sm text-theme-500 text-theme-red">
