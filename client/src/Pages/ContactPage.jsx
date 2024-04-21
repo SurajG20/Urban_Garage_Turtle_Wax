@@ -273,8 +273,10 @@ function Contactus() {
                         </label>
                         <textarea
                           id="message"
-                          rows={6}
+                          rows={4}
+                          type="text"
                           required
+                          maxLength={215}
                           className="p-2 w-full bg-gray-50 text-sm text-theme-500 text-black border-theme-gray outline-none rounded-md"
                           name="message"
                           value={formData.message}

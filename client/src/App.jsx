@@ -84,19 +84,21 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/service-users"
-            element={
-              <ProtectedRoute>
-                <SellCarUser />
-              </ProtectedRoute>
-            }
-          />
+
           <Route
             path="/contact-users"
             element={
               <ProtectedRoute>
-                <ContactUser/>
+                <ContactUser />
+              </ProtectedRoute>
+            }
+          />
+      
+          <Route
+            path="/service-users"
+            element={
+              <ProtectedRoute>
+                <ServiceUsers />
               </ProtectedRoute>
             }
           />
@@ -104,7 +106,7 @@ function App() {
             path="/add-product"
             element={
               <ProtectedRoute>
-                <ServiceUsers/>
+                <AddProduct />
               </ProtectedRoute>
             }
           />

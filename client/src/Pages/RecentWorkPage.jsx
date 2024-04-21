@@ -225,6 +225,12 @@ function RecentWork() {
               </div>
             </div>
           </section>
+          
+          {/* gallery  */}
+
+
+
+
           {/* sell banner end  */}
 
           <section className="section get-start text-white">

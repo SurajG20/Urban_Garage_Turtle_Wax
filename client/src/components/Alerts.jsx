@@ -20,7 +20,7 @@ function SuccessAlert({ msg = "Success ...." }) {
     <div
       style={{ zIndex: 1000 }}
       role="alert"
-      className="fixed inset-0 flex min-h-min justify-center z-50"
+      className="fixed top-5 inset-0 flex min-h-min justify-center z-50"
       data-dismissible="alert"
     >
       <div className="flex items-center text-theme-extrabold justify-between min-w-56 px-4 py-2 text-base text-white bg-green-600 rounded-md font-regular relative">
@@ -50,7 +50,7 @@ function LoadingAlert({ msg = "Loading... ! Please Wait..." }) {
     <div
       style={{ zIndex: 1000 }}
       role="alert"
-      className="fixed inset-0 flex min-h-min justify-center z-50"
+      className="fixed top-5 inset-0 flex min-h-min justify-center z-50"
       data-dismissible="alert"
     >
       <div className="flex items-center justify-between min-w-56 px-4 py-2 text-base text-gray-800 bg-white rounded-md font-regular relative">
@@ -81,7 +81,7 @@ function ErrorAlert({ msg = "Error!  Try Again..." }) {
     <div
       style={{ zIndex: 1000 }}
       role="alert"
-      className="fixed inset-0 flex min-h-min justify-center z-50"
+      className="fixed top-5 inset-0 flex min-h-min justify-center z-50"
       data-dismissible="alert"
     >
       <div className="flex items-center justify-between min-w-96 px-4 py-2 text-base text-white bg-red-500 rounded-md font-regular relative">
