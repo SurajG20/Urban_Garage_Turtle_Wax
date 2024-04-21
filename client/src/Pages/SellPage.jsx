@@ -387,7 +387,7 @@ function SellPage() {
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
                     <Link to={"/contact-us"}>
-                      <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-white hover:text-gray-900 text-white px-6 py-2 rounded-lg bg-transparent text-theme-semibold transition-colors">
                         Book a Appointment Now
                       </button>
                     </Link>

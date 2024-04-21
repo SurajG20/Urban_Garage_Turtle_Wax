@@ -16,16 +16,16 @@ function Banner() {
           <Link
             to="https://wa.me/917744900001"
             target="_blank"
-            className="bg-green-700 text-white theme-border-white  px-5 py-3  hover:cursor-pointer"
+            className="bg-green-700 text-white theme-border-white   px-6 py-2   hover:cursor-pointer"
           >
-            <FaWhatsapp className="text-3xl" />
+            <FaWhatsapp className="text-2xl" />
           </Link>
           <Link
             target="_blank"
             to="tel:+917744900001"
-            className="bg-blue-700 text-white theme-border-white  px-5 py-3   hover:cursor-pointer"
+            className="bg-blue-700 text-white theme-border-white  px-6 py-2   hover:cursor-pointer"
           >
-            <IoCall className="text-3xl" />
+            <IoCall className="text-2xl" />
           </Link>
           <div
             className="absolute -top-5 bg-white -right-5 rounded-lg hover:cursor-pointer"

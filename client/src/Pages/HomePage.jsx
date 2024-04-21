@@ -623,16 +623,16 @@ function Home() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Service
                     </button>
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Book Car Care
                     </button>
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>
