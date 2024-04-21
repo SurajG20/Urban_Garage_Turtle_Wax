@@ -408,7 +408,7 @@ function ServicePage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -430,7 +430,7 @@ function ServicePage() {
                     </p>
 
                     <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                      <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                         Know more
                       </button>
                     </div>
@@ -610,25 +610,38 @@ function ServicePage() {
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! Start */}
           <section className="section get-start text-white">
             <div className="container ">
-              <h2 className="h2 mb-5 md:mb-10 section-title text-center text-theme-semibold">
-                Original Parts Partner
-              </h2>
-              <p className=" max-w-3xl m-auto text-center text-theme-500">
-                We source only 100% genuine and authentic spare parts from
-                reputed vendors and suppliers ensuring what goes into your car
-                is nothing but the best.
-              </p>
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title text-center text-theme-semibold">
+                  Original Parts Partner
+                </h2>
+                <p className=" max-w-3xl m-auto text-center text-theme-500">
+                  We source only 100% genuine and authentic spare parts from
+                  reputed vendors and suppliers ensuring what goes into your car
+                  is nothing but the best.
+                </p>
+              </div>
 
-              <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 has-scrollbar">
-                <div className="h-28 w-auto m-auto ">
+              <div className=" grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-6 ">
+                {/* card 1 */}
+                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loading="lazy"
-                    className="h-full w-full object-cover object-center"
+                    className=" h-full w-full object-cover object-center"
+                    src="https://turtlewax.in/cdn/shop/files/TW_Icon_Wordmark_RGB.png?v=1696332285"
+                    alt="Urban Garage Partner "
+                  />
+                </div>
+                {/* card 2 */}
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                  <img
+                    loading="lazy"
+                    className=" h-full w-full object-cover object-center"
                     src="https://luxuryride.in/img/spare-parts1.png"
                     alt="Urban Garage Partner "
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                {/* card 3 */}
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -636,7 +649,8 @@ function ServicePage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                {/* card 4 */}
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -644,7 +658,8 @@ function ServicePage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                {/* card 5 */}
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -652,7 +667,8 @@ function ServicePage() {
                     alt="Urban Garage Partner"
                   />
                 </div>
-                <div className="h-28 w-auto m-auto">
+                {/* card 6*/}
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -764,16 +780,16 @@ function ServicePage() {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold transition-colors">
                       Book Service package
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
                       Book Service
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
                       Book Car Care
                     </button>
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
                       Buy Extended Warranty
                     </button>
                   </div>

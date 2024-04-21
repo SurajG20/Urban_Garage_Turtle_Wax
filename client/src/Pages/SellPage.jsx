@@ -526,7 +526,7 @@ function SellPage() {
 
                     <div className="flex gap-x-3 mt-5">
                       <Link to={"/service"}>
-                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                           Know more
                         </button>
                       </Link>
@@ -555,7 +555,7 @@ function SellPage() {
 
                     <div className="flex gap-x-3 mt-5">
                       <Link to={"/recent-work"}>
-                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                           Know more
                         </button>
                       </Link>
@@ -569,11 +569,11 @@ function SellPage() {
           {/* Faqs  banner end  */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className="mb-5 md:mb-10">
+              <div className="mb-5 md:mb-10 ">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
                   Frequently Asked Questions On Sell
                 </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
+                <p className="p max-w-3xl m-auto text-center text-theme-500 ">
                   Have questions? We’re here to help.
                 </p>
               </div>
@@ -588,7 +588,7 @@ function SellPage() {
                     onClick={() => handleOpen(1)}
                   >
                     <p className="text-start  text-theme-semibold">
-                      How Long Does It Take To Sell My Car?
+                      How Long Does It Take To Sell My Car ?
                     </p>
                     <p className=" absolute right-0">
                       {open === 1 ? <FaCircleMinus /> : <FaCirclePlus />}
@@ -615,7 +615,7 @@ function SellPage() {
                     onClick={() => handleOpen(2)}
                   >
                     <p className="text-start text-theme-semibold">
-                      Does My Car Stay With Me?
+                      Does My Car Stay With Me ?
                     </p>
 
                     <p className=" absolute right-0">
@@ -646,7 +646,7 @@ function SellPage() {
                     onClick={() => handleOpen(3)}
                   >
                     <p className="text-start text-theme-semibold">
-                      Do I Have To Pay Anything Upfront?
+                      Do I Have To Pay Anything Upfront ?
                     </p>
                     <p className="absolute right-0">
                       {open === 3 ? <FaCircleMinus /> : <FaCirclePlus />}
@@ -675,7 +675,7 @@ function SellPage() {
                     onClick={() => handleOpen(4)}
                   >
                     <p className="text-start text-theme-semibold">
-                      Do You Provide Home Inspection?
+                      Do You Provide Home Inspection ?
                     </p>
                     <p className="absolute right-0">
                       {open === 4 ? <FaCircleMinus /> : <FaCirclePlus />}
@@ -715,7 +715,7 @@ function SellPage() {
                   </div>
                 </div>
                 <div>
-                  <button className="py-2 px-8 text-theme-semibold text-white bg-theme-red rounded-lg">
+                  <button className="py-2 px-8 text-theme-semibold hover:text-white hover:bg-theme-red bg-white text-gray-900 rounded-lg">
                     Get In Touch
                   </button>
                 </div>

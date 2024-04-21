@@ -6,7 +6,7 @@ const serviceSchema = new mongoose.Schema({
   carName: { type: String, required: true },
   carBrand: { type: String, required: true },
   cityName: { type: String, required: true },
-  stateName: { type: String, required: true }
+  stateName: { type: String, required: true },
 });
 
 const Service = mongoose.model("Service", serviceSchema);

@@ -580,7 +580,7 @@ function BuyPage() {
 
                     <div className="flex gap-x-3 mt-5">
                       <Link to={"/service"}>
-                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                           Know more
                         </button>
                       </Link>
@@ -610,7 +610,7 @@ function BuyPage() {
 
                     <div className="flex gap-x-3 mt-5">
                       <Link to={"/recent-work"}>
-                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-800 px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                           Know more
                         </button>
                       </Link>

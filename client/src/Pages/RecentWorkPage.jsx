@@ -263,7 +263,7 @@ function RecentWork() {
                   </p>
 
                   <div className="relative z-10 flex gap-x-3">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
                     <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
@@ -295,7 +295,7 @@ function RecentWork() {
                   </p>
 
                   <div className="relative z-10 flex gap-x-3">
-                    <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
+                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
                       Book a visit
                     </button>
                     <button className="bg-white hover:bg-gray-300 text-gray-800  px-6 text-theme-semibold py-2 rounded-lg ">
