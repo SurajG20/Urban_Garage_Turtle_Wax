@@ -13,6 +13,8 @@ import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
+import { MdSlowMotionVideo } from "react-icons/md";
+
 
 function PPFPage() {
     const backgroundImg = {
@@ -61,7 +63,7 @@ function PPFPage() {
               >
                 <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
                 <div className="container">
-                  <div className="grid md:grid-cols-2 md:gap-x-52">
+                  <div className="grid md:grid-cols-2 gap-y-10 md:gap-x-52">
                     {/* left container  */}
                     <div className="flex flex-col  gap-y-5">
                       <div>
@@ -72,7 +74,7 @@ function PPFPage() {
 
                       <div>
                         <ul className="flex flex-col gap-y-5">
-                          <li className="flex gap-2 items-center">
+                          <li className="flex gap-2 items-center justify-start">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
@@ -80,15 +82,15 @@ function PPFPage() {
                               Recommended by 10,000+ customers across India
                             </span>
                           </li>
-                          <li className="flex gap-2 items-center">
+                          <li className="flex gap-2 items-center justify-start">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
-                            <span className="text-white text-theme-semibold">
+                            <span className="text-white  text-theme-semibold">
                               Your trusted partner in top-tier car care
                             </span>
                           </li>
-                          <li className="flex gap-2 items-center">
+                          <li className="flex gap-2 items-center justify-start">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
@@ -145,10 +147,10 @@ function PPFPage() {
                     </div>
                     {/* right container  */}
                     <div className="h-full">
-                      <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
+                      <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
                         {/* first container  */}
                         <div>
-                          <h3 className="h2 text-theme-semibold flex gap-2 items-center ">
+                          <h3 className="h2 text-theme-semibold flex flex-col md:flex-row gap-2 md:items-center ">
                             <span className="text-black">
                               Please Enter Your{" "}
                             </span>
@@ -339,9 +341,15 @@ function PPFPage() {
                       </ul>
                     </div>
 
-                    <div className="">
+                    <div className="flex gap-2">
                       <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                         Enquire Now
+                      </button>
+                      <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
+                        <span>
+                          <MdSlowMotionVideo />
+                        </span>{" "}
+                        Watch Now
                       </button>
                     </div>
                   </div>
@@ -406,9 +414,15 @@ function PPFPage() {
                       </ul>
                     </div>
 
-                    <div className="">
+                    <div className="flex gap-2">
                       <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                         Enquire Now
+                      </button>
+                      <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
+                        <span>
+                          <MdSlowMotionVideo />
+                        </span>{" "}
+                        Watch Now
                       </button>
                     </div>
                   </div>
@@ -472,9 +486,15 @@ function PPFPage() {
                       </ul>
                     </div>
 
-                    <div className="">
+                    <div className="flex gap-2">
                       <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                         Enquire Now
+                      </button>
+                      <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
+                        <span>
+                          <MdSlowMotionVideo />
+                        </span>{" "}
+                        Watch Now
                       </button>
                     </div>
                   </div>
@@ -538,9 +558,15 @@ function PPFPage() {
                       </ul>
                     </div>
 
-                    <div className="">
+                    <div className="flex gap-2">
                       <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                         Enquire Now
+                      </button>
+                      <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
+                        <span>
+                          <MdSlowMotionVideo />
+                        </span>{" "}
+                        Watch Now
                       </button>
                     </div>
                   </div>

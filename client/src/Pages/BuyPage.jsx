@@ -52,7 +52,7 @@ function BuyPage() {
             >
               {/* <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div> */}
               <div className="absolute -z-10 bg-gradient-to-l from-black to-transparent  opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-              <div className="h-full w-full flex items-center justify-end py-10 px-5">
+              <div className="h-full w-full flex items-center justify-end py-10 md:px-5">
                 <div className="min-w-3xl">
                   <div className="mb-10">
                     <h2 className="h2 text-theme-semibold text-white">

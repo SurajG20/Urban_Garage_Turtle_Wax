@@ -51,11 +51,11 @@ function BuyForm() {
         {formMutation.isSuccess && <SuccessAlert msg="Saved Successfully!" />}
         {formMutation.isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
-      <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
+      <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div>
           <h3
-            className="h2 text-theme-semibold md:flex  gapx-2 py-2 h-12
+            className="h2 text-theme-semibold md:flex  gapx-2 py-2 md:h-12
            items-center "
           >
             <span className="text-black">Please Enter Your </span>
@@ -99,6 +99,8 @@ function BuyForm() {
             </label>
             <input
               required
+              maxLength={10}
+              minLength={10}
               name="mobileNumber"
               value={formData.mobileNumber}
               className="px-2 py-2 h-12
@@ -119,6 +121,7 @@ function BuyForm() {
               required
               id="modelYear"
               name="modelYear"
+              maxLength={4}
               value={formData.modelYear}
               className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -137,6 +140,7 @@ function BuyForm() {
             </label>
             <select
               required
+              type="text"
               name="carBrand"
               value={formData.carBrand}
               id="carBrand"
@@ -164,6 +168,7 @@ function BuyForm() {
             </label>
             <select
               required
+              type="text"
               name="fuelType"
               value={formData.fuelType}
               id="fuel-type"

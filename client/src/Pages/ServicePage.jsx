@@ -623,7 +623,7 @@ function ServicePage() {
 
               <div className=" grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-6 ">
                 {/* card 1 */}
-                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -632,7 +632,7 @@ function ServicePage() {
                   />
                 </div>
                 {/* card 2 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -641,7 +641,7 @@ function ServicePage() {
                   />
                 </div>
                 {/* card 3 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -650,7 +650,7 @@ function ServicePage() {
                   />
                 </div>
                 {/* card 4 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -659,7 +659,7 @@ function ServicePage() {
                   />
                 </div>
                 {/* card 5 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -668,7 +668,7 @@ function ServicePage() {
                   />
                 </div>
                 {/* card 6*/}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="h-full md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -754,7 +754,7 @@ function ServicePage() {
                     </p>
                   </div>
                   {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
+                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex gap-2 text-white items-center text-theme-500">
