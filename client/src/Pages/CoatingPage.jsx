@@ -6,7 +6,6 @@ import Testinomial from "../components/Testinomial";
 import { useMutation } from "react-query";
 import axios from "axios";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
-// import Dropdown from "../utils/Dropdown";
 
 // icons
 import { TiTick } from "react-icons/ti";
@@ -15,6 +14,7 @@ import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import { MdSlowMotionVideo } from "react-icons/md";
+import CardGallery from "../components/CardGallery";
 
 function CoatingPage() {
   const backgroundImg = {
@@ -289,23 +289,35 @@ function CoatingPage() {
                               >
                                 City<span className="text-red-600">*</span>
                               </label>
-                              <input
+                              <select
                                 required
                                 id="city-name"
                                 type="text"
                                 name="cityName"
                                 value={formData.cityName}
-                                className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+                                className="p-2 w-full bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
                                 onChange={handleChange}
                                 placeholder="Select City"
-                              />
+                              >
+                                <option value="">
+                                  --- Select Service Type ---
+                                </option>
+                                <option value="Ceramic Coating">
+                                  Ceramic Coating
+                                </option>
+                                <option value="Detailing">Detailing</option>
+                                <option value="Peelable Paint">
+                                  Peelable Paint
+                                </option>
+                                <option value="Car Wash">Car Wash</option>
+                              </select>
                             </div>
                             <div>
                               <label
                                 htmlFor="state-name"
                                 className="text-theme-500 flex items-center"
                               >
-                                State<span className="text-red-600">*</span>
+                                Address<span className="text-red-600">*</span>
                               </label>
                               <input
                                 required
@@ -424,6 +436,115 @@ function CoatingPage() {
             </>
 
             {/* hero Banner section End  */}
+
+            {/* what is Coating */}
+            <section className="section get-start text-white">
+              {/* container 1 */}
+              <div className="container ">
+                <div className="mb-5 md:mb-10p max-w-3xl">
+                  <h2 className="h2 section-title text-start text-theme-semibold flex items-center ">
+                    What is{" "}
+                    <span className="mx-2 text-theme-red text-theme-bold">
+                      Ceramic Coating ?
+                    </span>
+                  </h2>
+                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                    Ceramic coating is a clear coat which includes a liquid
+                    polymer. These come in many forms and types depending upon
+                    the composition of the coating. There are two components
+                    that add together to form Ceramic coating. The Physical
+                    which Protects and the Shine comes from the Chemical
+                    component.
+                  </p>
+                  <br />
+                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                    When ceramic coating is applied on a car’s body, the polymer
+                    forms a chemical bonding with the factory paint.
+                  </p>
+                  <br />
+                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                    Once coated, it can only be removed by abrasion and not by
+                    any chemicals. If done correctly, ceramic coating can even
+                    last the lifetime of the car.
+                  </p>
+                </div>
+                {/* card 1 */}
+                <div></div>
+              </div>
+            </section>
+
+            {/* what is icons  */}
+            <section className="section get-start text-white">
+              {/* container 1 */}
+              <div className="container mb-10">
+                <div className="flex flex-col gap-10">
+                  <h2 className="h2 mb-5   section-title center justify-center text-theme-semibold flex items-center ">
+                    Benefits of
+                    <span className="mx-2 text-theme-red text-theme-bold">
+                      Ceramic Coating
+                    </span>
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-10">
+                    {/* card 1 */}
+                    <div className="grid md:grid-cols-4 gap-5 items-center justify-center">
+                      <div className="bg-white rounded-full">
+                        <img
+                          src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Hydrophobic-in-Nature.webp"
+                          alt="urban garage"
+                        />
+                      </div>
+                      <div className="col-span-3">
+                        <h2 className="h2 text-start text-theme-500">
+                          HYDROPHOBIC IN NATURE CERAMIC COATING
+                        </h2>
+                      </div>
+                    </div>
+                    {/* card 2 */}
+                    <div className="grid md:grid-cols-4 gap-5 items-center">
+                      <div className="bg-white rounded-full">
+                        <img
+                          src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-Chemical-Stains.webp"
+                          alt="urban garage"
+                        />
+                      </div>
+                      <div className="col-span-3">
+                        <h2 className="h2 text-start text-theme-500">
+                          PROTECTION FROM UV RAYS
+                        </h2>
+                      </div>
+                    </div>
+                    {/* card 3 */}
+                    <div className="grid md:grid-cols-4 gap-5 items-center">
+                      <div className="bg-white rounded-full">
+                        <img
+                          src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-UV-Rays.webp"
+                          alt="urban garage"
+                        />
+                      </div>
+                      <div className="col-span-3">
+                        <h2 className="h2 text-start text-theme-500">
+                          PROTECTION FROM CHEMICAL STAINS
+                        </h2>
+                      </div>
+                    </div>
+                    {/* card 4 */}
+                    <div className="grid md:grid-cols-4 gap-5 items-center">
+                      <div className="bg-white rounded-full">
+                        <img
+                          src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/The-Glossy-Touch.webp"
+                          alt="urban garage"
+                        />
+                      </div>
+                      <div className="col-span-3">
+                        <h2 className="h2 text-start text-theme-500">
+                          THE GLOSSY TOUCH CERAMIC COATING
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* Transform Your Car The Way You Want */}
 
@@ -657,7 +778,7 @@ function CoatingPage() {
                 </div>
               </div>
               {/* container 4 */}
-              <div className="container mb-10 md:mb-20">
+              <div className="container ">
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
                   <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
@@ -731,6 +852,8 @@ function CoatingPage() {
               </div>
             </section>
 
+            <CardGallery />
+
             {/* OUR SERVICES */}
             <section className="section text-white" id="hero-banner">
               <div className="relative h-screen">
@@ -740,16 +863,16 @@ function CoatingPage() {
                   <div className="absolute -z-0 h-full w-full">
                     <img
                       loading="lazy"
-                      className="h-full w-full object-cover object-left"
-                      src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
+                      className="h-full w-full object-cover object-top"
+                      src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yMl9waG90b19vZl9zcG9ydF9jYXJfd2l0aF9zb2FwX2ZvYW1fZnJvbV9jYXJfd19kZWM4ZDcwNS0wMGU3LTQ3ZjgtYmI3Ny03ZWI5MjcxZmNkNjlfMS5qcGc.jpg"
                       alt="Urban Garage"
                     />
                   </div>
                   {/* <!-- Right container --> */}
                   <div className="opacity-90 p-4 md:p-10 z-20 relative">
                     <div className="mb-2">
-                      <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
-                        Our Services
+                      <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md flex items-center gap-2">
+                        Ceramic <span className="text-theme-red">Wash</span>
                       </h2>
                     </div>
                     <div className="mb-2">

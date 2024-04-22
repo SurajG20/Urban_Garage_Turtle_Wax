@@ -4,7 +4,7 @@ import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
-import { Link } from "react-router-dom";
+
 
 function fetchPeople() {
   return axios.get(`${import.meta.env.VITE_API_URL}/buyCar-users`);
