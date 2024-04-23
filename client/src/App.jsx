@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 // pages import
 import Home from "./Pages/HomePage";
 import BuyPage from "./Pages/BuyPage";
@@ -31,22 +31,22 @@ import ServiceUsers from "./Admin/serviceUsers";
 const queryClient = new QueryClient();
 
 function App() {
-   const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  // Preloader effect
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
-   // Preloader effect
-   useEffect(() => {
-     const timer = setTimeout(() => setLoading(false), 2000);
-     return () => clearTimeout(timer);
-   }, []);
+  // Scroll to top effect
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
 
-   // Scroll to top effect
-   useEffect(() => {
-     window.scrollTo(0, 0);
-   }, []);
-
-   if (loading) {
-     return <Preloader />;
-   }
+  if (loading) {
+    return <Preloader />;
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -97,7 +97,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-      
+
           <Route
             path="/service-users"
             element={
