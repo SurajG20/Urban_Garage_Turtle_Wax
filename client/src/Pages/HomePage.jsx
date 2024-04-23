@@ -53,200 +53,218 @@ function Home() {
               <ul className="get-start-list grid grid-cols-1 md:grid-cols-4">
                 {/* Buy  */}
                 <li>
-                  <div
-                    className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden theme-border-white"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                  <Link to={"/buy"}>
+                    <div
+                      className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden theme-border-white"
+                      style={{
+                        backgroundImage:
+                          "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Choose from an hand selected premium collection of
-                        Pre-Owned Luxuary Cars
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Buy
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Choose from an hand selected premium collection of
+                          Pre-Owned Luxuary Cars
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Sell  */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Red Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                  <Link to={"/sell"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Red Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Sell
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Now, Sell Your Car on Your Fingertips in 59 minutes.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Sell
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Now, Sell Your Car on Your Fingertips in 59 minutes.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Service */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                  <Link to={"/service"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Service
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Now, Sell Your Car on Your Fingertips in 59 minutes.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Service
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Now, Sell Your Car on Your Fingertips in 59 minutes.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Car care  */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                  <Link to={"coating"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Car Care
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Experience the ultimate in car protection or just give
-                        your car a spa day.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Car Care
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Experience the ultimate in car protection or just give
+                          your car a spa day.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
-                {/* Products  */}
+                {/* PPF  */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-90"></div>
+                  <Link to={"/ppf"}>
+                    <div
+                      className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-90"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Products
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Explore our range and discover products that redefine
-                        excellence.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          PPF
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Explore our range and discover products that redefine
+                          excellence.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* turtle wax produdcts  */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
+                  <Link to={"/turtle-wax-products"}>
+                    <div
+                      className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Turtle wax products
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        At Turtle Wax, we’re a dedicated team of auto
-                        enthusiasts that live and breathe Turtle Wax® & auto
-                        culture.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Turtle wax products
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          At Turtle Wax, we’re a dedicated team of auto
+                          enthusiasts that live and breathe Turtle Wax® & auto
+                          culture.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Recent work */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage: "url('assets/garage/garage-four.jpeg')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
+                  <Link to={"/recent-work"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('assets/garage/garage-four.jpeg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        Turtle wax products
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        At Turtle Wax, we’re a dedicated team of auto
-                        enthusiasts that live and breathe Turtle Wax® & auto
-                        culture.
-                      </p>
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Turtle wax products
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          At Turtle Wax, we’re a dedicated team of auto
+                          enthusiasts that live and breathe Turtle Wax® & auto
+                          culture.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* About us  */}
                 <li>
-                  <div
-                    className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage: "url('assets/garage/garage-one.jpeg')",
-                    }}
-                  >
-                    {/* Gradient Overlay for the Lower Part with Blue Shade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
+                  <Link to={"/about-us"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
-                    {/* Content */}
-                    <div className="group z-10 relative p-4">
-                      <h3 className="text-white text-2xl text-theme-bold font-bold">
-                        About Us
-                      </h3>
-                      <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
-                        Urban Garage Ride is the ultimate destination you have
-                        been seeking, offering a mesmerizing range of pre-owned
-                        luxury cars coupled with exceptional car service.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          About Us
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Urban Garage Ride is the ultimate destination you have
+                          been seeking, offering a mesmerizing range of
+                          pre-owned luxury cars coupled with exceptional car
+                          service.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -302,7 +320,7 @@ function Home() {
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="assets/banners/carbanner1.jpeg"
+                    src="assets/banners/banner11.jpeg"
                     alt="Urban Garage"
                   />
                 </div>
@@ -448,7 +466,7 @@ function Home() {
           {/* banner  */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-[url(https://api.luxuryride.in/public/cms-page/selling_your_car-1689576424628-941539955-sell-your-car-desktop.png);] text-theme-500">
+              <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-cover bg-[url(assets/banners/banner12.jpeg);] text-theme-500">
                 <h1 className="text-2xl md:text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
@@ -468,9 +486,11 @@ function Home() {
                   </p>
                 </div>
                 <div>
-                  <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                    Sell Your Car
-                  </button>
+                  <Link to={"/sell"}>
+                    <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                      Sell Your Car
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -512,7 +532,7 @@ function Home() {
 
                     <div className="flex gap-x-3">
                       <Link to={"/contact-us"}>
-                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                           Book a visit
                         </button>
                       </Link>
@@ -533,14 +553,14 @@ function Home() {
                 {/* card 2 */}
 
                 <div
-                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-96  p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
                     backgroundImage: `url(assets/garage/garage-four.jpeg)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
+                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide md:text-nowrap mb-3">
                       URBAN GARAGE SERVICE
                     </h1>
                     <p className="p font-extrabold text-theme-500 mb-2">
@@ -552,7 +572,7 @@ function Home() {
 
                     <div className="flex gap-x-3">
                       <Link to={""}>
-                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
+                        <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent tracking-wide text-theme-semibold transition-colors">
                           Book a visit
                         </button>
                       </Link>
@@ -570,10 +590,10 @@ function Home() {
 
           {/* OUR SERVICES Banner*/}
           <section className="section text-white" id="hero-banner">
-            <div className="relative h-screen">
+            <div className="relative min-h-min">
               {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
               <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
-              <div className="h-full grid grid-cols-1 md:grid-cols-2">
+              <div className="h-full grid grid-cols-1 items-center md:grid-cols-2">
                 <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"

@@ -17,8 +17,7 @@ import { TbChecklist } from "react-icons/tb";
 import BuyForm from "../components/BuyForm";
 import { ErrorAlert, LoadingAlert } from "../components/Alerts";
 function BuyPage() {
-  
-   const { cars, isLoading, isError, error } = useCarContext();
+  const { cars, isLoading, isError, error } = useCarContext();
 
   const backgroundImg = {
     backgroundImage: `
@@ -33,9 +32,6 @@ function BuyPage() {
     backgroundRepeat: "no-repeat",
     backdropFilter: "blur(8px)",
   };
-
-
-
 
   return (
     <div>
@@ -132,7 +128,7 @@ function BuyPage() {
           <section>
             <div className="container">
               <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title flex items-center justify-center text-center text-theme-semibold text-white">
+                <h2 className="h2 section-title flex flex-col md:flex-row items-center justify-center text-center text-theme-semibold text-white">
                   Buy Your Luxury Car From{" "}
                   <span className="text-theme-red mx-2">URBAN GARAGE</span>
                 </h2>
@@ -144,6 +140,7 @@ function BuyPage() {
               <BuyForm />
             </div>
           </section>
+
           {/* hero Banner section Start  */}
           <section className="section" id="hero-banner">
             <div className="relative md:h-96">
@@ -154,7 +151,7 @@ function BuyPage() {
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="assets/banners/carbanner1.jpeg"
+                    src="assets/banners/banner11.jpeg"
                     alt="Urban Garage"
                   />
                 </div>
@@ -164,7 +161,7 @@ function BuyPage() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-left"
-                      src="https://luxuryride.in/_next/image?url=%2Fimg%2FManmohan-banner.png&w=3840&q=75"
+                      src="assets/banners/banner11.jpeg"
                       alt="Uran Garage"
                     />
                   </div>
@@ -298,7 +295,7 @@ function BuyPage() {
           </section>
           {/* An Exciting Lineup Of Top Brands In Our Showrooms! End */}
           {/* services  */}
-          <section className="section get-start text-white">
+          <section className="section  mt-20 md:mt-16  get-start text-white">
             <div className="container">
               <div className="mb-5 md:mb-10">
                 <h2 className="h2 section-title text-center text-theme-semibold ">
@@ -313,200 +310,218 @@ function BuyPage() {
               <ul className="get-start-list grid grid-cols-1 md:grid-cols-4">
                 {/* Buy  */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/buy"}>
+                    <div
+                      className="relative flex items-end rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden theme-border-white"
+                      style={{
+                        backgroundImage:
+                          "url('https://images.unsplash.com/photo-1559167628-4be72e2c264f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-boldtext-white  text-theme-bold">
-                        Buy
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Buy
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Choose from an hand selected premium collection of
+                          Pre-Owned Luxuary Cars
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Sell  */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/sell"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://wallpapers.com/images/high/car-pictures-nd7l8nd4skb9wuah.webp')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Red Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Sell
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Sell
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Now, Sell Your Car on Your Fingertips in 59 minutes.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Service */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/service"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://wallpapers.com/images/high/car-repair-2560-x-1709-wallpaper-636vaflv6nxnjh7x.webp')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Service
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Service
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Now, Sell Your Car on Your Fingertips in 59 minutes.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Car care  */}
                 <li>
-                  <div
-                    className="relative theme-border-white theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"coating"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://www.5kcarcare.com/branch-assets/assets/img/about.jpg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Car care
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Car Care
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Experience the ultimate in car protection or just give
+                          your car a spa day.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
-                {/* Products  */}
+                {/* PPF  */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                  <Link to={"/ppf"}>
+                    <div
+                      className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-90"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Products
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          PPF
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Explore our range and discover products that redefine
+                          excellence.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
-                {/* Turtle wax Products */}
+                {/* turtle wax produdcts  */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage:
-                        "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/turtle-wax-products"}>
+                    <div
+                      className="relative flex items-end theme-border-white theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('https://www.turtlewax.com/cdn/shop/files/PDP2000x2000_300dpi_600x600.jpg?v=1707815615')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-60"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Turtle wax Products
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Turtle wax products
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          At Turtle Wax, we’re a dedicated team of auto
+                          enthusiasts that live and breathe Turtle Wax® & auto
+                          culture.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
                 {/* Recent work */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-2xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage: "url('assets/garage/garage-four.jpeg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/recent-work"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage:
+                          "url('assets/garage/garage-four.jpeg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
-                    {/* Content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        Recent work
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          Turtle wax products
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          At Turtle Wax, we’re a dedicated team of auto
+                          enthusiasts that live and breathe Turtle Wax® & auto
+                          culture.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
 
-                {/* About Us */}
+                {/* About us  */}
                 <li>
-                  <div
-                    className="relative theme-border-white flex items-end rounded-3xl h-60 bg-cover bg-center overflow-hidden"
-                    style={{
-                      backgroundImage: "url('assets/garage/garage-one.jpeg')",
-                    }}
-                  >
-                    {/* Overlay Element */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  <Link to={"/about-us"}>
+                    <div
+                      className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
+                      style={{
+                        backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                      }}
+                    >
+                      {/* Gradient Overlay for the Lower Part with Blue Shade */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent opacity-80"></div>
 
-                    {/* content */}
-                    <div className="z-10 relative p-4">
-                      <h3 className="text-3xl text-white font-bold text-theme-bold">
-                        About Us
-                      </h3>
-                      <p className="hidden text-white mt-2">
-                        If you are going to use a passage of Lorem Ipsum, you
-                        need to be sure.
-                      </p>
+                      {/* Content */}
+                      <div className="group z-10 relative p-4">
+                        <h3 className="text-white text-2xl text-theme-bold font-bold">
+                          About Us
+                        </h3>
+                        <p className="hidden text-sm group-hover:block opacity-0 group-hover:opacity-100 mt-2 translate-y-2 group-hover:-translate-y-1 transition-all duration-1000 ease-in-out">
+                          Urban Garage Ride is the ultimate destination you have
+                          been seeking, offering a mesmerizing range of
+                          pre-owned luxury cars coupled with exceptional car
+                          service.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -521,15 +536,15 @@ function BuyPage() {
                 <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
                 <div className="flex flex-col md:flex-row gap-x-5">
                   <p className="flex items-center gap-3 text-theme-500">
-                    <FaBlenderPhone className="text-lg" />
+                    <FaBlenderPhone className="text-xl" />
                     Instant Call Back
                   </p>
                   <p className="flex items-center gap-3 text-theme-500">
-                    <FaCar className="text-lg" />
+                    <FaCar className="text-xl" />
                     Doorstep Evalution
                   </p>
                   <p className="flex items-center gap-3 text-theme-500">
-                    <FaMoneyCheckAlt className="text-lg" />
+                    <FaMoneyCheckAlt className="text-xl" />
                     Instants Payment
                   </p>
                 </div>
@@ -564,7 +579,7 @@ function BuyPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-two.jpeg')",
                   }}
-                  className="relative h-80 md:h-96 p-4 border border-black flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-80 md:h-96 border theme-border-white hover:shadow-sm hover:shadow-white p-4 border border-black flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
@@ -594,7 +609,7 @@ function BuyPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-four.jpeg')",
                   }}
-                  className="relative h-80 md:h-96 border border-black p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-80 md:h-96  theme-border-white hover:shadow-sm hover:shadow-white border border-black p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
@@ -621,89 +636,6 @@ function BuyPage() {
             </div>
           </section>
           {/* OUR SERVICES */}
-          <section className="section text-white" id="hero-banner">
-            <div className="relative h-screen">
-              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
-              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
-              <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className="absolute -z-0 h-full w-full">
-                  <img
-                    loading="lazy"
-                    className="h-full w-full object-cover object-left"
-                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt="Urban Garage"
-                  />
-                </div>
-                {/* <!-- Right container --> */}
-                <div className="opacity-90 p-4 md:p-10 z-20 relative">
-                  <div className="mb-2">
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
-                      Our Services
-                    </h2>
-                  </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-white shadow-md">
-                      We provide complete professional services in our state of
-                      the art service centres designed to keep your ride running
-                      smoothly and impressively.
-                    </p>
-                  </div>
-                  {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          <TiTick className="text-red-600 text-xl" />
-                          OEM/OES Parts
-                        </li>
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> PAN India
-                          Delivery
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> In House
-                          Service Available
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <Link
-                      to={"/service"}
-                      className="theme-border-white text-center hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
-                    >
-                      Book Service
-                    </Link>
-                    <Link
-                      to={"/recent-work"}
-                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
-                    >
-                      Recent Work
-                    </Link>
-                    <Link
-                      to={"/coating"}
-                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colors"
-                    >
-                      Coating & Wrapping
-                    </Link>
-                    <Link
-                      to={"/ppf"}
-                      className="theme-border-white text-center  hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold tracking-wide transition-colorss"
-                    >
-                      PPF & Ceramic Coating
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* <!-- 
         - #BLOG

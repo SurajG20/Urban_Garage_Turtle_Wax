@@ -206,8 +206,8 @@ function CoatingPage() {
                                 Name<span className="text-red-600">*</span>
                               </label>
                               <input
-                                required
                                 id="full-name"
+                                required
                                 name="fullName"
                                 value={formData.fullName}
                                 onChange={handleChange}
@@ -224,8 +224,8 @@ function CoatingPage() {
                                 Mobile <span className="text-red-600">*</span>
                               </label>
                               <input
+                                type="mobile-number"
                                 required
-                                type="number"
                                 maxLength={10}
                                 minLength={10}
                                 id="mobile-number"
@@ -244,9 +244,9 @@ function CoatingPage() {
                                 Car Model<span className="text-red-600">*</span>
                               </label>
                               <input
-                                required
-                                type="text"
                                 id="car-name"
+                                required
+                                type="car-name"
                                 name="carName"
                                 value={formData.carName}
                                 onChange={handleChange}
@@ -263,9 +263,9 @@ function CoatingPage() {
                                 <span className="text-red-600">*</span>
                               </label>
                               <select
+                                id="car-brand"
                                 required
                                 type="text"
-                                id="car-brand"
                                 name="carBrand"
                                 value={formData.carBrand}
                                 onChange={handleChange}
@@ -290,8 +290,8 @@ function CoatingPage() {
                                 Service<span className="text-red-600">*</span>
                               </label>
                               <select
-                                required
                                 id="city-name"
+                                required
                                 type="text"
                                 name="cityName"
                                 value={formData.cityName}
@@ -437,9 +437,8 @@ function CoatingPage() {
 
             {/* what is Coating */}
             <section className="section get-start text-white relative">
-              <div className="absolute w-full md:w-[32rem] right-0 top-1/3">
+              <div className="hidden md:block absolute w-full md:w-[32rem] right-0 top-20">
                 <img
-
                   src="assets/banners/car6.png"
                   className="scale-x-[-1] h-full w-full object-cover object-center"
                   alt="urban garage"
@@ -454,7 +453,7 @@ function CoatingPage() {
                       Ceramic Coating ?
                     </span>
                   </h2>
-                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                  <p className="p max-w-3xl m-auto text-justify text-theme-500">
                     Ceramic coating is a clear coat which includes a liquid
                     polymer. These come in many forms and types depending upon
                     the composition of the coating. There are two components
@@ -463,12 +462,12 @@ function CoatingPage() {
                     component.
                   </p>
                   <br />
-                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                  <p className="p max-w-3xl m-auto text-justify text-theme-500">
                     When ceramic coating is applied on a car’s body, the polymer
                     forms a chemical bonding with the factory paint.
                   </p>
                   <br />
-                  <p className="p max-w-3xl m-auto text-start text-theme-500">
+                  <p className="p max-w-3xl m-auto text-justify text-theme-500">
                     Once coated, it can only be removed by abrasion and not by
                     any chemicals. If done correctly, ceramic coating can even
                     last the lifetime of the car.
@@ -495,6 +494,7 @@ function CoatingPage() {
                     <div className=" grid  md:grid-cols-4 gap-5 items-center justify-center">
                       <div className="bg-white h-28 w-28 rounded-full ">
                         <img
+                          loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Hydrophobic-in-Nature.webp"
                           alt="urban garage"
                         />
@@ -509,6 +509,7 @@ function CoatingPage() {
                     <div className="grid md:grid-cols-4 gap-5 items-center">
                       <div className="bg-white h-28 w-28 rounded-full">
                         <img
+                          loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-Chemical-Stains.webp"
                           alt="urban garage"
                         />
@@ -523,6 +524,7 @@ function CoatingPage() {
                     <div className="grid md:grid-cols-4 gap-5 items-center">
                       <div className="bg-white h-28 w-28 rounded-full">
                         <img
+                          loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-UV-Rays.webp"
                           alt="urban garage"
                         />
@@ -537,6 +539,7 @@ function CoatingPage() {
                     <div className="grid md:grid-cols-4 gap-5 items-center">
                       <div className="bg-white h-28 w-28 rounded-full">
                         <img
+                          loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/The-Glossy-Touch.webp"
                           alt="urban garage"
                         />
@@ -570,24 +573,27 @@ function CoatingPage() {
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
-                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
+                  <div className="md:col-span-3 h-72 md:h-96 rounded-2xl overflow-hidden theme-border-white">
                     <img
                       loading="lazy"
                       className="w-full h-full object-cover object-center"
-                      src="https://luxuryride.in/_next/image?url=%2Fimg%2Fppf-banner.png&w=1920&q=75"
+                      src="https://spn-sta.spinny.com/blog/20220217155723/ezgif.com-gif-maker-2022-02-17T155636.048.jpg?compress=true&quality=80&w=1200&dpr=1.5"
                       alt="Urban Garage Coating"
                     />
                   </div>
                   {/* card 2 */}
                   <div className="md:col-span-2  flex flex-col gap-y-2 items-start justify-between rounded-2xl   text-theme-500">
-                    <div className="flex flex-col  gap-y-5">
+                    <div className="flex flex-col gap-y-5">
                       <div>
                         <h1 className="h2 text-start text-theme-bold  font-bold tracking-wide text-theme-semibold">
-                          PPF (Paint Protection Film)
+                          Teflon Coating
                         </h1>
                         <p className="p text-lg text-theme-semibold ">
-                          Guard your car with invisible armor, up to 12-years
-                          warranty shielding against road wear and tear
+                          Teflon coating is a synthetic fluoropolymer material
+                          that bonds to your car’s paint and forms a layer over
+                          it. This layer provides protection from minor
+                          scratches and helps keep the shine on your car lasting
+                          for longer.
                         </p>
                       </div>
 
@@ -597,27 +603,32 @@ function CoatingPage() {
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
-                            <span className=" text-theme-semibold">
-                              Self-healing technology, seamlessly erasing minor
-                              scratches and swirl marks.
+                            <span className=" text-theme-500">
+                              <b>Prevention of scratches:</b> A teflon layer on
+                              top of the paint prevents these particles from
+                              scratching the paint surface.
                             </span>
                           </li>
                           <li className="flex gap-2 items-center">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
-                            <span className=" text-theme-semibold">
-                              HydroShield technology for unparalleled defense
-                              against the elements.
+                            <span className=" text-theme-500">
+                              <b>Makes the surface hydrophobic:</b> Accumulated
+                              water on the paint surface can also cause stains,
+                              but a teflon layer causes the surface to be
+                              hydrophobic, causing the water to slip away.
                             </span>
                           </li>
                           <li className="flex gap-2 items-center">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
-                            <span className=" text-theme-semibold">
-                              High-gloss PPF, engineered for enduring shine and
-                              non-yellowing perfection.
+                            <span className=" text-theme-500">
+                              <b>Shine lasts longer:</b> The inclusion of a
+                              Teflon layer makes your car’s shine last for
+                              longer as it protects the paint surface from the
+                              effects of the natural elements.
                             </span>
                           </li>
                         </ul>
@@ -642,7 +653,7 @@ function CoatingPage() {
               <div className="container mb-10 md:mb-20">
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
-                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
+                  <div className="md:col-span-3 h-72 md:h-96 rounded-2xl overflow-hidden theme-border-white">
                     <img
                       loading="lazy"
                       className="w-full h-full object-cover object-center"
@@ -715,7 +726,7 @@ function CoatingPage() {
               <div className="container mb-10 md:mb-20">
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
-                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
+                  <div className="md:col-span-3 h-72 md:h-96 rounded-2xl overflow-hidden theme-border-white">
                     <img
                       loading="lazy"
                       className="w-full h-full object-cover object-center"
@@ -787,7 +798,7 @@ function CoatingPage() {
               <div className="container ">
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
-                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
+                  <div className="md:col-span-3 h-72 md:h-96 rounded-2xl overflow-hidden theme-border-white">
                     <img
                       loading="lazy"
                       className="w-full h-full object-cover object-center"
@@ -858,11 +869,13 @@ function CoatingPage() {
               </div>
             </section>
 
-            <CardGallery />
+            <section>
+              <CardGallery />
+            </section>
 
             {/* OUR SERVICES */}
             <section className="section text-white" id="hero-banner">
-              <div className="relative h-screen">
+              <div className="relative min-h-min">
                 {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
                 <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
                 <div className="h-full grid grid-cols-1 md:grid-cols-2">

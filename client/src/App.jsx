@@ -31,19 +31,23 @@ import ServiceUsers from "./Admin/serviceUsers";
 const queryClient = new QueryClient();
 
 function App() {
-  const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Set a timer for the preloader to show before the main content is rendered
-    const timer = setTimeout(() => setLoading(false), 2000); // Adjust the time as needed
+   // Preloader effect
+   useEffect(() => {
+     const timer = setTimeout(() => setLoading(false), 2000);
+     return () => clearTimeout(timer);
+   }, []);
 
-    // Clean up the timer
-    return () => clearTimeout(timer);
-  }, []);
+   // Scroll to top effect
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
 
-  if (loading) {
-    return <Preloader />;
-  }
+   if (loading) {
+     return <Preloader />;
+   }
+
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>

@@ -29,7 +29,7 @@ function Footer() {
               </div>
             </Link>
 
-            <p className="footer-text">
+            <p className=" footer-text text-theme-500 text-xl">
               Urban Garage is the destination that you’ve been looking for all
               this time. Comprising of the most enthralling lineup of pre-owned
               luxury cars, We offer a car ecosystem to cater all your automotive
@@ -43,7 +43,10 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="/buy" className="footer-link flex items-center gap-x-1">
+              <Link
+                to="/buy"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
+              >
                 <span>Buy</span>
                 <span>
                   <HiOutlineExternalLink />
@@ -53,7 +56,7 @@ function Footer() {
             <li>
               <Link
                 to="/sell"
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Sell</span>
                 <span>
@@ -64,7 +67,7 @@ function Footer() {
             <li>
               <Link
                 to="/service"
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Services</span>
                 <span>
@@ -75,7 +78,7 @@ function Footer() {
             <li>
               <Link
                 to="/about-us"
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>About Us</span>
                 <span>
@@ -95,7 +98,7 @@ function Footer() {
             <li>
               <Link
                 to="/turtle-wax-products"
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Turtle Wax Products</span>
                 <span>
@@ -107,7 +110,7 @@ function Footer() {
             <li>
               <Link
                 to="/recent-work"
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Recent Work</span>
                 <span>
@@ -119,7 +122,7 @@ function Footer() {
             <li>
               <Link
                 to={"/ppf"}
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold "
               >
                 <span>PPF</span>
                 <span>
@@ -130,7 +133,7 @@ function Footer() {
             <li>
               <Link
                 to={"/coating"}
-                className="footer-link flex items-center gap-x-1"
+                className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Coating</span>
                 <span>
@@ -140,13 +143,16 @@ function Footer() {
             </li>
           </div>
           {/* For Assistance */}
-          <div className=" flex flex-col ">
+          <div className=" flex flex-col text-theme-semibold">
             <li>
               <p className="footer-list-title">For Assistance</p>
             </li>
 
             <li>
-              <Link to="tel:+917744900001" className="footer-link">
+              <Link
+                to="tel:+917744900001"
+                className="footer-link text-theme-semibold"
+              >
                 +91 7744900001
               </Link>
             </li>

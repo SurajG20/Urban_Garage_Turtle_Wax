@@ -200,7 +200,7 @@ function Navbar() {
                 +91 7744900001
               </Link>
 
-              <span className="contact-time text-theme-500">
+              <span className="block text-white text-theme-400">
                 Mon - Sat: 9:00 am - 6:00 pm
               </span>
             </div>

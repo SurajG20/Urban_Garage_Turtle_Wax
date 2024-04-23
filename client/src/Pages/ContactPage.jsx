@@ -11,7 +11,7 @@ import { TiTick } from "react-icons/ti";
 import { IoLocationSharp, IoMail } from "react-icons/io5";
 import { FaBlenderPhone } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { MdDirections } from "react-icons/md";
 
 function Contactus() {
@@ -138,7 +138,7 @@ function Contactus() {
                       </div>
                       <div className="flex items-center gap-2">
                         <span>
-                          <IoMail className="text-lg text-theme-red" />
+                          <FaPhoneAlt className="text-lg text-theme-red" />
                         </span>
                         <span>+91 7744900001</span>
                       </div>
@@ -404,75 +404,6 @@ function Contactus() {
               <div className="container">
                 <div className="mb-5 md:mb-10">
                   <h2 className="h2 section-title text-center text-theme-semibold ">
-                    Our Experience Centres
-                  </h2>
-                  <p className="p max-w-3xl m-auto text-center text-theme-500">
-                    Test drive, learn about services and more at your nearest
-                    showroom.
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
-                  {/* card 1 */}
-
-                  <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-one.jpeg')]">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                    <div className="relative z-10 flex flex-col gap-3">
-                      <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                        CHANDIGARH
-                      </h1>
-                      <p className="p tracking-wider text-justify font-bold text-theme-500">
-                        Standing at the heart of the Millennium city, our team
-                        of seasoned experts offers an array luxury car services
-                        and tailored solutions to cater to your every automotive
-                        requirement.
-                      </p>
-
-                      <div className="flex gap-x-3">
-                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                          Book a visit
-                        </button>
-                        <button className="bg-white hover:bg-gray-300 text-gray-900 px-8 text-theme-semibold py-2 rounded-lg ">
-                          Get Directions
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* card 2 */}
-
-                  <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garage/garage-four.jpeg')]">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                    <div className="relative z-10 flex flex-col gap-3">
-                      <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                        Karnal
-                      </h1>
-                      <p className="p tracking-wider text-justify font-bold text-theme-500">
-                        Witness the grandeur of India's largest pre-owned car
-                        experience centre, where our highly skilled team of
-                        experts bring you a wide array of comprehensive
-                        car-related services.
-                      </p>
-
-                      <div className="flex gap-x-3">
-                        <button className="theme-border-white hover:bg-theme-red text-white px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                          Book a visit
-                        </button>
-                        <button className="bg-white hover:bg-gray-300 text-gray-900  px-8 text-theme-semibold py-2 rounded-lg ">
-                          Get a Direction
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Our Experience Centres */}
-            <section className="section get-start text-white">
-              <div className="container">
-                <div className="mb-5 md:mb-10">
-                  <h2 className="h2 section-title text-center text-theme-semibold ">
                     Explore Our Service Centres
                   </h2>
                   <p className="p max-w-3xl m-auto text-center text-theme-500">
@@ -488,7 +419,7 @@ function Contactus() {
                     {/* New wrapper for positioning */}
                     <div className="relative z-0 w-96 rounded-2xl">
                       {/* img-container */}
-                      <div className="h-64 overflow-hidden rounded-2xl">
+                      <div className="h-64 border theme-border-white shadow hover:shadow-white overflow-hidden rounded-2xl">
                         <img
                           loading="lazy"
                           className="h-full w-full object-cover object-center"
@@ -507,36 +438,42 @@ function Contactus() {
                           </div>
                         </div>
                         <div className="bg-gray-200  px-5 text-center rounded-md">
-                          <div className="text-theme-500 text-theme-red">
-                            8,000
+                          <div className="text-theme-500  text-theme-red">
+                            250+
                           </div>
                           <div className="text-theme-500 text-black font-semibold text-sm">
-                            Sq. Ft. Area
+                            Cars
                           </div>
                         </div>
                         <div className="bg-gray-200  px-5 text-center rounded-md">
-                          <div className="text-theme-500 text-theme-red">
-                            8,000
+                          <div className="text-theme-500  text-theme-red">
+                            500+
                           </div>
                           <div className="text-theme-500 text-black text-sm">
-                            Sq. Ft. Area
+                            Customers
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="flex flex-col gap-y-5">
                       <div>
-                        <h3 className="h3 text-theme-semibold">
-                          Karnal Service Centre
-                        </h3>
+                        <h3 className="h3 text-theme-semibold">Chandigarh</h3>
                         <p className="p text-theme-500">
-                          118, Milestone, Nh-1, Karnal, (Haryana) – 132001
+                          Plot No 98, Industrial Area Phase I, Chandigarh,
+                          160002
                         </p>
                       </div>
                       <div className="flex gap-5">
-                        <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
-                          Get Directions
-                        </button>
+                        <Link
+                          target="_blank"
+                          to={
+                            "https://www.google.com/maps/dir//urbangarage/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390fed0d68f936e9:0xd6fcbf0dac51de9f?sa=X&ved=1t:3061&ictx=111"
+                          }
+                        >
+                          <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
+                            Get Directions
+                          </button>
+                        </Link>
                         <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
                           Book Visit
                         </button>
@@ -549,7 +486,7 @@ function Contactus() {
                     {/* New wrapper for positioning */}
                     <div className="relative z-0 w-96 rounded-2xl">
                       {/* img-container */}
-                      <div className="h-64 overflow-hidden rounded-2xl">
+                      <div className="h-64  border theme-border-white shadow hover:shadow-white overflow-hidden rounded-2xl">
                         <img
                           loading="lazy"
                           className="h-full w-full object-cover object-center"
@@ -569,18 +506,18 @@ function Contactus() {
                         </div>
                         <div className="bg-gray-200  px-5 text-center rounded-md">
                           <div className="text-theme-500  text-theme-red">
-                            8,000
+                            250+
                           </div>
                           <div className="text-theme-500 text-black font-semibold text-sm">
-                            Sq. Ft. Area
+                            Cars
                           </div>
                         </div>
                         <div className="bg-gray-200  px-5 text-center rounded-md">
                           <div className="text-theme-500  text-theme-red">
-                            8,000
+                            800+
                           </div>
                           <div className="text-theme-500 text-black text-sm">
-                            Sq. Ft. Area
+                            Customers
                           </div>
                         </div>
                       </div>
@@ -588,11 +525,11 @@ function Contactus() {
                     <div className="flex flex-col gap-y-5">
                       <div>
                         <h3 className="h3 text-theme-semibold">
-                          Delhi Service Centre
+                          Service Centre
                         </h3>
                         <p className="p text-theme-500">
-                          Khasra No. 98, 2, GT Karnal Road,Dham, Alipur, Delhi,
-                          110036
+                          Plot No 98, Industrial Area Phase 1, Chandigarh -
+                          160002
                         </p>
                       </div>
                       <div className="flex gap-5">

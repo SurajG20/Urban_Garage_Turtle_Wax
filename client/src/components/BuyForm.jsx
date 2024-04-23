@@ -53,17 +53,17 @@ function BuyForm() {
       </>
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
-        <div>
+        <div className="mb-5">
           <h3
-            className="h2 text-theme-semibold md:flex  gapx-2 py-2 md:h-12
-           items-center "
+            className="h2 text-theme-semibold flex flex-col md:flex-row  gap-x-2 py-2 md:h-12
+           items-start md:items-center justify-center  text-center md:text-left"
           >
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">
-              Car Details
+              Car Details !
             </span>{" "}
           </h3>
-          <p className="text-theme-500 text-theme-red">
+          <p className="text-theme-500 text-start md:text-center text-theme-red">
             Fields marked with an * are required
           </p>
         </div>
@@ -80,6 +80,7 @@ function BuyForm() {
               Full Name<span className="text-red-600">*</span>
             </label>
             <input
+              id="full-name"
               required
               name="fullName"
               value={formData.fullName}
@@ -98,6 +99,7 @@ function BuyForm() {
               Mobile <span className="text-red-600">*</span>
             </label>
             <input
+              id="number"
               required
               maxLength={10}
               minLength={10}
@@ -118,8 +120,8 @@ function BuyForm() {
               Model Year<span className="text-red-600">*</span>
             </label>
             <input
-              required
               id="modelYear"
+              required
               name="modelYear"
               maxLength={4}
               value={formData.modelYear}
@@ -139,11 +141,11 @@ function BuyForm() {
               Car Brand/Car Model<span className="text-red-600">*</span>
             </label>
             <select
+              id="carBrand"
               required
               type="text"
               name="carBrand"
               value={formData.carBrand}
-              id="carBrand"
               className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
@@ -161,17 +163,17 @@ function BuyForm() {
 
           <div>
             <label
-              htmlFor="owner-type"
+              htmlFor="fuelType"
               className="text-theme-500 flex items-center"
             >
               Fuel Type<span className="text-red-600">*</span>
             </label>
             <select
+              id="fuelType"
               required
               type="text"
               name="fuelType"
               value={formData.fuelType}
-              id="fuel-type"
               className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}

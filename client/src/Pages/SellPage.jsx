@@ -112,7 +112,7 @@ function SellPage() {
                     </div> */}
                     <div className="flex justify-start items-center mt-5">
                       <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -120,7 +120,7 @@ function SellPage() {
                             alt="Urban Gradge BMW"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -128,7 +128,7 @@ function SellPage() {
                             alt="Urban Gradge Mercedes"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -136,7 +136,7 @@ function SellPage() {
                             alt="Urban Gradge Chevrolet"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -144,7 +144,7 @@ function SellPage() {
                             alt="Urban Gradge Ferrari"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -152,7 +152,7 @@ function SellPage() {
                             alt="Urban Gradge Ford"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -160,7 +160,7 @@ function SellPage() {
                             alt="Urban Gradge Porsche"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -168,7 +168,7 @@ function SellPage() {
                             alt="Urban Gradge Toyota"
                           />
                         </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer">
+                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
                           <img
                             loading="lazy"
                             className="h-full w-full object-contain object-center"
@@ -413,7 +413,7 @@ function SellPage() {
               <div className="grid md:grid-cols-3 gap-x-5 gap-y-5">
                 {/* card 1 */}
 
-                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 shadow shadow-white p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       className="h-full w-full object-contain object-center"
@@ -432,7 +432,7 @@ function SellPage() {
 
                 {/* card 2 */}
 
-                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 shadow shadow-white p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       className="h-full w-full object-contain object-center"
@@ -451,7 +451,7 @@ function SellPage() {
                 </div>
 
                 {/* card 3 */}
-                <div className="md:h-72 p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
+                <div className="md:h-72 shadow shadow-white p-10 flex flex-col theme-border-white gap-y-3 items-center justify-center rounded-2xl ">
                   <div className="bg-slate-200 p-5 rounded-full">
                     <img
                       className="h-full w-full object-contain object-center"
@@ -510,7 +510,7 @@ function SellPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-two.jpeg')",
                   }}
-                  className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative border theme-border-white hover:shadow-sm hover:shadow-white h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
@@ -540,7 +540,7 @@ function SellPage() {
                   style={{
                     backgroundImage: "url('assets/garage/garage-four.jpeg')",
                   }}
-                  className="relative h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-72 md:h-96 border theme-border-white hover:shadow-sm hover:shadow-white p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">

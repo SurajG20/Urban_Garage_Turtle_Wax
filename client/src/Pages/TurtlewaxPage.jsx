@@ -100,10 +100,15 @@ function TurtleWaxPage() {
               <div className="flex justify-end">
                 {/* Text Container  */}
                 <div className="hidden md:block md:w-[30rem] bg-white text-black">
-                  <div className="h-full flex justify-center items-center">
-                    <div className="text-8xl text-green-900 font-bold text-theme-bold">
+                  <div className="h-full flex flex-col justify-center items-start">
+                    <h2 className="text-8xl text-green-900 font-bold text-theme-bold">
                       GET READY
-                    </div>
+                    </h2>
+                    <h2 className="text-4xl px-2 text-green-900 font-bold text-theme-bold">
+                      {
+                        "TO MAKE YOUR CAR SHINE WITH OUR EXCLUSIVE TURTLEWAX PRODUCTS"
+                      }
+                    </h2>
                   </div>
                 </div>
                 {/* image Container  */}
@@ -314,210 +319,6 @@ function TurtleWaxPage() {
             </div>
           </section>
 
-          {/* Explore Our Service Centres */}
-          <section className="section get-start text-white">
-            <div className="container">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Explore Our Service Centres
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
-                  Schedule your maintenances, repairs and other services easily
-                  with a Urban Garage Service Centres near you.
-                </p>
-              </div>
-
-              <div className="md:flex justify-center gap-x-5 gap-y-5">
-                {/* card 1 */}
-
-                <div className=" flex flex-col gap-y-8">
-                  {/* New wrapper for positioning */}
-                  <div className="relative z-0 w-full md:w-96 theme-border-white rounded-2xl">
-                    {/* img-container */}
-                    <div className="h-64 overflow-hidden rounded-2xl">
-                      <img
-                        className="h-full w-full object-cover object-center"
-                        src="assets/garage/garage-two.jpeg"
-                        alt="Urban Garage"
-                        loading="lazy"
-                      />
-                    </div>
-                    {/* Absolute container moved here, outside the overflow-hidden container */}
-                    <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
-                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-
-                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 font-semibold text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-
-                      <div className="bg-gray-200 text-black  px-5 text-center theme-border-white rounded-md">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-y-5">
-                    <div>
-                      <h3 className="h3 text-theme-semibold">
-                        Karnal Service Centre
-                      </h3>
-                      <p className="p text-theme-500">
-                        118, Milestone, Nh-1, Karnal, (Haryana) – 132001
-                      </p>
-                    </div>
-                    <div className="flex gap-5">
-                      <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
-                        Get Directions
-                      </button>
-                      <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
-                        Book Visit
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                {/* card 2 */}
-
-                <div className="flex flex-col gap-y-8 bordder">
-                  {/* New wrapper for positioning */}
-                  <div className="relative z-0 w-full md:w-96 rounded-2xl theme-border-white">
-                    {/* img-container */}
-                    <div className="h-64 overflow-hidden rounded-2xl">
-                      <Image
-                        src="assets/garage/garage4.jpeg"
-                        alt="Urban Garage"
-                        onError="assets/garage/garage-two.jpeg"
-                      />
-                    </div>
-                    {/* Absolute container moved here, outside the overflow-hidden container */}
-                    <div className="absolute z-20 bottom-0 -mb-5 w-full flex justify-around">
-                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 font-semibold text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-                      <div className="bg-gray-200 text-black  px-5 text-center rounded-md theme-border-white">
-                        <div className="text-theme-500 text-theme-red">
-                          8,000
-                        </div>
-                        <div className="text-theme-500 text-sm">
-                          Sq. Ft. Area
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-y-5 ">
-                    <div className="">
-                      <h3 className="h3 text-theme-semibold">
-                        Delhi Service Centre
-                      </h3>
-                      <p className="p text-theme-500">
-                        Khasra No. 98, 2, GT Karnal Road,Dham, Alipur, Delhi,
-                        110036
-                      </p>
-                    </div>
-                    <div className="flex gap-5">
-                      <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
-                        Get Directions
-                      </button>
-                      <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
-                        Book Visit
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* service location banners */}
-          <section className="section get-start text-white">
-            <div className="container">
-              {/* <div className="mb-5">
-                <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Our Experience Centres
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
-                  Test drive, learn about services and more at your nearest
-                  showroom.
-                </p>
-              </div> */}
-
-              <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
-                {/* card 1 */}
-
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/get-your-car.png')]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                      Service Packages
-                    </h1>
-                    <p className="p font-extrabold text-theme-500">
-                      We strive to build long lasting relationships with our
-                      clients and that is why we provide you with every kinds
-                      after-sales service with our comprehensive service
-                      packages.
-                    </p>
-
-                    <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* card 2 */}
-
-                <div className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('https://luxuryride.in/img/Extended-Warranty.png')]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                      Extended Warranty
-                    </h1>
-                    <p className="p font-extrabold text-theme-500">
-                      Looking to extend your warranty coverage? Up to 8 years
-                      additional warranty coverage is available even after
-                      original coverage expiry.
-                    </p>
-
-                    <div className="flex gap-x-3 mt-5">
-                      <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-8 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Know more
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Save BIG With Urban Garage */}
           <section className="section text-white ">
             <div className="container">
@@ -529,7 +330,7 @@ function TurtleWaxPage() {
 
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
                 {/* card 1 */}
-                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                <div className="theme-border-white shadow hover:shadow-white rounded-xl overflow-hidden">
                   <div className="h-48">
                     <Image
                       src="https://luxuryride.in/img/Free-Pick-drop.png"
@@ -549,7 +350,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 2 */}
-                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                <div className="theme-border-white shadow hover:shadow-white rounded-xl overflow-hidden">
                   <div className="h-48">
                     <Image
                       src="https://luxuryride.in/img/oem-parts.png"
@@ -568,7 +369,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 3 */}
-                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                <div className="theme-border-white shadow hover:shadow-white rounded-xl overflow-hidden">
                   <div className="h-48">
                     <Image
                       src="https://luxuryride.in/img/30-days-warranty.png"
@@ -587,7 +388,7 @@ function TurtleWaxPage() {
                   </div>
                 </div>
                 {/* card 4 */}
-                <div className="border border-gray-400 rounded-xl overflow-hidden">
+                <div className="theme-border-white shadow hover:shadow-white rounded-xl overflow-hidden">
                   <div className="h-48">
                     <Image
                       src="https://luxuryride.in/img/transparent-billing.png"
@@ -615,9 +416,9 @@ function TurtleWaxPage() {
               <div className="h-full grid grid-cols-1 items-center justify-center md:grid-cols-2 rounded-2xl overflow-hidden theme-border-white">
                 {/* left container  */}
                 <div className="md:flex items-end justify-center">
-                  <div className="md:h-96 w-full">
+                  <div className="h-96 w-full">
                     <Image
-                      src="https://luxuryride.in/img/service-works.png"
+                      src="assets/banners/banner13.jpeg"
                       alt="Urban Garage"
                       onError="assets/loading.jpeg"
                     />
@@ -703,7 +504,7 @@ function TurtleWaxPage() {
 
               <div className=" grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-6 ">
                 {/* card 1 */}
-                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className=" md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -712,7 +513,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 2 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loading="lazy"
                     className=" h-full w-full object-cover object-center"
@@ -721,7 +522,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 3 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -730,7 +531,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 4 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -739,7 +540,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 5 */}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -748,7 +549,7 @@ function TurtleWaxPage() {
                   />
                 </div>
                 {/* card 6*/}
-                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl">
+                <div className="md:h-28 md:w-36 m-auto bg-gray-100 theme-border-white rounded-xl transition-transform duration-300 transform hover:scale-105">
                   <img
                     loaging="lazy"
                     className="h-full w-full object-cover object-center"
@@ -804,78 +605,7 @@ function TurtleWaxPage() {
             </div>
           </section>
           {/* sell banner end  */}
-          {/* OUR SERVICES */}
-          <section className="section text-white" id="hero-banner">
-            <div className="relative h-screen">
-              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
-              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
-              <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className="absolute -z-0 h-full w-full">
-                  <img
-                    loading="lazy"
-                    className="h-full w-full object-cover object-left"
-                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
-                    alt="Urban Garage"
-                  />
-                </div>
-                {/* <!-- Right container --> */}
-                <div className="opacity-90 p-4 md:p-10 z-20 relative">
-                  <div className="mb-2">
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
-                      Our Services
-                    </h2>
-                  </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-white shadow-md">
-                      We provide complete professional services in our state of
-                      the art service centres designed to keep your ride running
-                      smoothly and impressively.
-                    </p>
-                  </div>
-                  {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          <TiTick className="text-red-600 text-xl" />
-                          OEM/OES Parts
-                        </li>
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> PAN India
-                          Delivery
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> In House
-                          Service Available
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> 350+ Check
-                          Evaluations
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold transition-colors">
-                      Book Service package
-                    </button>
-                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
-                      Book Service
-                    </button>
-                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
-                      Book Car Care
-                    </button>
-                    <button className="theme-border-white hover:bg-white text-white hover:text-gray-900 px-6 py-2 rounded-lg bg-transparent text-theme-semibold  transition-colors">
-                      Buy Extended Warranty
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
           {/* testinomials  */}
           <Testinomial />
         </article>

@@ -7,12 +7,11 @@ function CardGallery() {
       <section className="section get-start text-white">
         <div className="container">
           <div className="mb-5 md:mb-10">
-            <h2 className="h2 section-title text-center text-theme-semibold ">
-              Our 3D Models
+            <h2 className="h2 section-title text-center text-theme-semibold flex flex-col  md:flex-row gap-x-2 justify-center">
+              Customize Your Ride with <span className="text-theme-red">URBAN GARAGE !</span>
             </h2>
             <p className="p max-w-3xl m-auto text-center text-theme-500">
-              Test drive, learn about services and more at your nearest
-              showroom.
+              Transform Your Car to Match Your Style
             </p>
           </div>
 
@@ -36,14 +35,14 @@ function CardGallery() {
               <img
                 loading="lazy"
                 src="assets/cars/AUDI-A6-35TDI-S-LINE.png"
-                className="character"
+                className="character "
               />
             </div>
             {/* card 2 */}
             <div className="card">
               <div className="wrapper theme-border-white shadow shadow-white rounded-2xl overflow-hidden hover:cursor-pointer">
                 <img
-                  className="h-full w-full object-cover object-right"
+                  className="h-full w-full object-cover object-right bg-gray-900"
                   loading="lazy"
                   src="assets/banners/car6.png"
                   alt="Urban Garage"
