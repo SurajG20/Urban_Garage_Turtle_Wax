@@ -21,7 +21,7 @@ function RecentWork() {
       rgba(0, 0, 0, 0.8), 
       rgba(0, 0, 0, 0)
     ),
-    url('https://c1.wallpaperflare.com/preview/649/915/591/car-mechanic-automobile-service-thumbnail.jpg')`,
+    url('https://i.pinimg.com/474x/57/c4/82/57c4822086aae768506f1f18c4c23e74.jpg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -225,11 +225,8 @@ function RecentWork() {
               </div>
             </div>
           </section>
-          
+
           {/* gallery  */}
-
-
-
 
           {/* sell banner end  */}
 
@@ -250,48 +247,17 @@ function RecentWork() {
 
                 <div
                   style={{
-                    backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                    backgroundImage:
+                      "url('https://i.pinimg.com/474x/91/02/bc/9102bcfc07d68b0ecab3a4a6ff5a9bad.jpg')",
                   }}
-                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
+                  className="relative bg-cover h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
                 >
                   {/* <!-- Black blur effect overlay --> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
 
                   {/* <!-- Content --> */}
                   <h1 className="relative z-10 text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                    CHANDIGARH
-                  </h1>
-                  <p className="relative z-10 font-extrabold text-theme-500">
-                    Standing at the heart of the Millennium city, our team of
-                    seasoned experts offers an array luxury car services and
-                    tailored solutions to cater to your every automotive
-                    requirement.
-                  </p>
-
-                  <div className="relative z-10 flex gap-x-3">
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book a visit
-                    </button>
-                    <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                      Get Directions
-                    </button>
-                  </div>
-                </div>
-
-                {/* card 2 */}
-
-                <div
-                  style={{
-                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
-                  }}
-                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
-                >
-                  {/* <!-- Black gradient drop effect overlay --> */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
-
-                  {/* <!-- Content --> */}
-                  <h1 className="relative z-10 text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
-                    Karnal
+                    Ceramic Coating
                   </h1>
                   <p className="relative z-10 font-extrabold text-theme-500">
                     Witness the grandeur of India's largest pre-owned car
@@ -301,19 +267,49 @@ function RecentWork() {
                   </p>
 
                   <div className="relative z-10 flex gap-x-3">
-                    <button className="theme-border-white hover:bg-theme-red text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                      Book a visit
-                    </button>
-                    <button className="bg-white hover:bg-gray-300 text-gray-800  px-6 text-theme-semibold py-2 rounded-lg ">
-                      Get a Direction
-                    </button>
+                    <Link to={"/coating"}>
+                      <button className="text-white theme-border-white hover:bg-gray-300 hover:text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                        Explore more
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* card 2 */}
+
+                <div
+                  style={{
+                    backgroundImage:
+                      "url('https://i.pinimg.com/474x/e9/ed/5d/e9ed5de789fb886890f21ae4a42cdf1c.jpg')",
+                  }}
+                  className="relative bg-cover h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl overflow-hidden text-white text-theme-500"
+                >
+                  {/* <!-- Black gradient drop effect overlay --> */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
+
+                  {/* <!-- Content --> */}
+                  <h1 className="relative z-10 text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
+                    PPF( Paint Protection Film)
+                  </h1>
+                  <p className="relative z-10 font-extrabold text-theme-500">
+                    PPf is a transparent film that is applied to the exterior of
+                    a vehicle to protect it from scratches, dents, or swirls. It
+                    is a great way to protect your car's paint job. It is a
+                    great way to protect your car's paint job.
+                  </p>
+
+                  <div className="relative z-10 flex gap-x-3">
+                    <Link to={"/ppf"}>
+                      <button className="text-white theme-border-white hover:bg-gray-300 hover:text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
+                        Explore more
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-         
           <section>
             <Testinomial />
           </section>

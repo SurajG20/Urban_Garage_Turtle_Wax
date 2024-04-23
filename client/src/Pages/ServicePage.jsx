@@ -43,7 +43,9 @@ function ServicePage() {
         - #HERO
       --> */}
           <HeroSection
-            imgURL={"assets/garage/garage-four.jpeg"}
+            imgURL={
+              "https://i.pinimg.com/474x/8e/e2/cf/8ee2cf74d200737498b14660dd017834.jpg"
+            }
             title={"Find The Best Pocket Friendly Car Service For You!"}
           />
           {/* Life Is Too Short To Spend At A Repair Shop */}
@@ -730,7 +732,6 @@ function ServicePage() {
           </section>
           {/* sell banner end  */}
 
-        
           {/* testinomials  */}
           <Testinomial />
         </article>
