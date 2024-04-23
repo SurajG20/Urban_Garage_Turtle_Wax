@@ -197,7 +197,7 @@ function CoatingPage() {
                             </p>
                           </div>
                           {/* second container  */}
-                          <div className="grid grid-cols-2 gap-3">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div>
                               <label
                                 htmlFor="full-name"
@@ -287,7 +287,7 @@ function CoatingPage() {
                                 htmlFor="city-name"
                                 className="text-theme-500 flex items-center"
                               >
-                                City<span className="text-red-600">*</span>
+                                Service<span className="text-red-600">*</span>
                               </label>
                               <select
                                 required
@@ -299,9 +299,7 @@ function CoatingPage() {
                                 onChange={handleChange}
                                 placeholder="Select City"
                               >
-                                <option value="">
-                                  --- Select Service Type ---
-                                </option>
+                                <option value="">--- Select Service ---</option>
                                 <option value="Ceramic Coating">
                                   Ceramic Coating
                                 </option>
@@ -438,7 +436,15 @@ function CoatingPage() {
             {/* hero Banner section End  */}
 
             {/* what is Coating */}
-            <section className="section get-start text-white">
+            <section className="section get-start text-white relative">
+              <div className="absolute w-full md:w-[32rem] right-0 top-1/3">
+                <img
+
+                  src="assets/banners/car6.png"
+                  className="scale-x-[-1] h-full w-full object-cover object-center"
+                  alt="urban garage"
+                />
+              </div>
               {/* container 1 */}
               <div className="container ">
                 <div className="mb-5 md:mb-10p max-w-3xl">
@@ -478,16 +484,16 @@ function CoatingPage() {
               {/* container 1 */}
               <div className="container mb-10">
                 <div className="flex flex-col gap-10">
-                  <h2 className="h2 mb-5   section-title center justify-center text-theme-semibold flex items-center ">
+                  <h2 className="h2 mb-5  section-title text-start justify-center text-theme-semibold md:flex items-center ">
                     Benefits of
-                    <span className="mx-2 text-theme-red text-theme-bold">
+                    <span className="md:mx-2 text-theme-red text-theme-bold">
                       Ceramic Coating
                     </span>
                   </h2>
                   <div className="grid md:grid-cols-2 gap-10">
                     {/* card 1 */}
-                    <div className="grid md:grid-cols-4 gap-5 items-center justify-center">
-                      <div className="bg-white rounded-full">
+                    <div className=" grid  md:grid-cols-4 gap-5 items-center justify-center">
+                      <div className="bg-white h-28 w-28 rounded-full ">
                         <img
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Hydrophobic-in-Nature.webp"
                           alt="urban garage"
@@ -501,7 +507,7 @@ function CoatingPage() {
                     </div>
                     {/* card 2 */}
                     <div className="grid md:grid-cols-4 gap-5 items-center">
-                      <div className="bg-white rounded-full">
+                      <div className="bg-white h-28 w-28 rounded-full">
                         <img
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-Chemical-Stains.webp"
                           alt="urban garage"
@@ -515,7 +521,7 @@ function CoatingPage() {
                     </div>
                     {/* card 3 */}
                     <div className="grid md:grid-cols-4 gap-5 items-center">
-                      <div className="bg-white rounded-full">
+                      <div className="bg-white h-28 w-28 rounded-full">
                         <img
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/Protection-from-UV-Rays.webp"
                           alt="urban garage"
@@ -529,7 +535,7 @@ function CoatingPage() {
                     </div>
                     {/* card 4 */}
                     <div className="grid md:grid-cols-4 gap-5 items-center">
-                      <div className="bg-white rounded-full">
+                      <div className="bg-white h-28 w-28 rounded-full">
                         <img
                           src="https://www.thedetailingmafia.com/assets/images/pages/ourservices/The-Glossy-Touch.webp"
                           alt="urban garage"
@@ -564,7 +570,7 @@ function CoatingPage() {
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
                   {/* card 1 */}
-                  <div className="md:col-span-3 md:h-72 rounded-2xl overflow-hidden theme-border-white">
+                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
                     <img
                       loading="lazy"
                       className="w-full h-full object-cover object-center"
@@ -587,7 +593,7 @@ function CoatingPage() {
 
                       <div>
                         <ul className="flex flex-col gap-y-5 text-white">
-                          <li className="flex gap-2 items-center">
+                          <li className="flex gap-2 items-center ">
                             <span className="p-1 rounded-full bg-green-600">
                               <TiTick className="text-white" />
                             </span>
@@ -617,7 +623,7 @@ function CoatingPage() {
                         </ul>
                       </div>
 
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 justify-center md:justify-start">
                         <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                           Enquire Now
                         </button>
@@ -690,7 +696,7 @@ function CoatingPage() {
                         </ul>
                       </div>
 
-                      <div className="flex gap-2">
+                      <div className="flex justify-center md:justify-start gap-2">
                         <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                           Enquire Now
                         </button>
@@ -762,7 +768,7 @@ function CoatingPage() {
                         </ul>
                       </div>
 
-                      <div className="flex gap-2">
+                      <div className="flex justify-center md:justify-start gap-2">
                         <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                           Enquire Now
                         </button>
@@ -835,7 +841,7 @@ function CoatingPage() {
                         </ul>
                       </div>
 
-                      <div className="flex gap-2">
+                      <div className="flex justify-center md:justify-start gap-2">
                         <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                           Enquire Now
                         </button>

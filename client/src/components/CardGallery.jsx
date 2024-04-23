@@ -8,7 +8,7 @@ function CardGallery() {
         <div className="container">
           <div className="mb-5 md:mb-10">
             <h2 className="h2 section-title text-center text-theme-semibold ">
-              Our Experience Centres
+              Our 3D Models
             </h2>
             <p className="p max-w-3xl m-auto text-center text-theme-500">
               Test drive, learn about services and more at your nearest
@@ -19,11 +19,12 @@ function CardGallery() {
           <div className="gallery grid md:grid-cols-2 gap-x-5 gap-y-5">
             {/* card 1 */}
             <div className="card">
-              <div className="wrapper rounded-2xl overflow-hidden hover:cursor-pointer">
+              <div className="wrapper rounded-2xl theme-border-white shadow shadow-white overflow-hidden hover:cursor-pointer">
                 <img
                   className="h-full w-full object-cover object-center"
                   loading="lazy"
                   src="assets/cars/AUDI-A6-35TDI-S-LINE.jpeg"
+                  alt="Urban Garage"
                   // className="cover-image"
                 />
               </div>
@@ -40,11 +41,12 @@ function CardGallery() {
             </div>
             {/* card 2 */}
             <div className="card">
-              <div className="wrapper rounded-2xl overflow-hidden hover:cursor-pointer">
+              <div className="wrapper theme-border-white shadow shadow-white rounded-2xl overflow-hidden hover:cursor-pointer">
                 <img
                   className="h-full w-full object-cover object-right"
                   loading="lazy"
-                  src="assets/banners/car15.jpeg"
+                  src="assets/banners/car6.png"
+                  alt="Urban Garage"
                   // className="cover-image"
                 />
               </div>
@@ -56,7 +58,7 @@ function CardGallery() {
               <div className="rounded-2xl character overflow-hidden hover:cursor-pointer">
                 <img
                   loading="lazy"
-                  src="assets/banners/car6.jpeg"
+                  src="assets/banners/car15.jpeg"
                   className=""
                 />
               </div>
