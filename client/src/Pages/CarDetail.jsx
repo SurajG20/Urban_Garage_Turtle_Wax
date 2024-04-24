@@ -262,16 +262,17 @@ function CarDetail() {
                 </div>
               </div>
               {/* main  Page content */}
-              <div className="md:h-[75vh] md:grid md:grid-cols-12 gap-2 ">
+              <div className="md:h-[75vh] md:grid md:grid-cols-12 gap-2 gap-y-5 ">
                 {/* images grid  */}
-                <div className="h-full w-full md:col-span-3 flex md:flex-col gap-2 p-1 overflow-x-auto md:overflow-y-auto">
+                <div className="h-full mb-5 w-full md:col-span-3 flex md:flex-col gap-2 p-1 overflow-x-auto md:overflow-y-auto">
                   {carDetail?.img?.map((url, index) => (
                     <div
                       onClick={() => setTab(index)}
                       key={index}
-                      className="flex-shrink-0 theme-border-white md:h-40 w-42 md:w-full border-theme-white hover:cursor-pointer rounded-md overflow-hidden relative group"
+                      className="flex-shrink-0 theme-border-white h-36 md:h-40 w-42 md:w-full border-theme-white hover:cursor-pointer rounded-md overflow-hidden relative group"
                     >
                       <img
+                        loading="lazy"
                         src={url}
                         alt={`Urban Garage Car ${index + 1}`}
                         className="w-full h-full object-cover object-center"
@@ -284,8 +285,9 @@ function CarDetail() {
                 </div>
 
                 {/* image container  */}
-                <div className="col-span-9 h-64 md:h-[75vh] theme-border-white rounded-md overflow-hidden">
+                <div className="col-span-9 h-72 md:h-[75vh] theme-border-white rounded-md overflow-hidden">
                   <img
+                    loading="laxy"
                     className="h-full w-full object-cover object-center"
                     src={
                       carDetail && carDetail.img && carDetail.img.length > 0

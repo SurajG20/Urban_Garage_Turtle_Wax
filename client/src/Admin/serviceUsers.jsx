@@ -5,6 +5,19 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
+// icons 
+
+// icons 
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { IoSpeedometerSharp } from "react-icons/io5";
+import { FaCar } from "react-icons/fa";
+import { FaAddressCard } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaMoneyBillAlt } from "react-icons/fa";
+
+
 function fetchPeople() {
   return axios.get(`${import.meta.env.VITE_API_URL}/service`);
 }
@@ -45,12 +58,15 @@ function ServiceUsers() {
     <>
       <>
         {deleteServiceUserMutation.isLoading && (
-          <isLoading msg="Deleting ..." />
+          <LoadingAlert msg="Deleting ..." />
+        )}
+        {deleteServiceUserMutation.isSuccess && (
+          <SuccessAlert msg="Successfully Deleted" />
         )}
         {deleteServiceUserMutation.isError && (
           <ErrorAlert msg="Failed! Try again..." />
         )}
-        {isLoading && <isLoading msg="Loadin... Please wait" />}
+        {isLoading && <LoadingAlert msg="Loading... Please wait" />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className=" min-h-screen flex flex-col">
@@ -63,19 +79,36 @@ function ServiceUsers() {
                   <thead className="text-xs text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3  text-center">
-                        Customer Name
+                        <p className="flex items-center justify-center gap-2">
+                          <FaUser className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Customer Name</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Mobile No
+                        <p className="flex items-center justify-center gap-2">
+                          <FaPhoneAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Mobile No</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Car Name/Car Model
+                        <p className="flex items-center justify-center gap-2">
+                          <FaCar className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">
+                            Car Name/Car Model
+                          </span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Service
+                        <p className="flex items-center justify-center gap-2">
+                          <FaCalendarAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Service</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Action
+                        <p className="flex items-center justify-center gap-2">
+                          {" "}
+                          <span className="text-gray-800">Action</span>
+                        </p>
                       </th>
                     </tr>
                   </thead>
@@ -104,10 +137,10 @@ function ServiceUsers() {
                             {users.cityName}
                           </td>
 
-                          <td className="px-6 py-4 text-gray-700">
+                          <td className="px-6 py-4 text-gray-700 flex justify-center">
                             <button
                               onClick={() => deleteServiceUser(users._id)} // Assuming handleDelete is defined elsewhere
-                              className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
+                              className="font-medium text-theme-red  dark:text-theme-red hover:underline text-center"
                             >
                               Delete
                             </button>

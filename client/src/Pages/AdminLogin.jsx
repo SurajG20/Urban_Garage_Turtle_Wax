@@ -19,7 +19,7 @@ function AdminLogin() {
     {
       onSuccess: (data) => {
         login(data.data);
-        navigate("/admin-dashboard");
+        navigate("/admin/cars");
       },
    
       onError: (error) => {

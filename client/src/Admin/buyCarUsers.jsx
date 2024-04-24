@@ -4,6 +4,15 @@ import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
+// icons 
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { IoSpeedometerSharp } from "react-icons/io5";
+import { FaCar } from "react-icons/fa";
+import { FaAddressCard } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaMoneyBillAlt } from "react-icons/fa";
 
 function fetchPeople() {
   return axios.get(`${import.meta.env.VITE_API_URL}/buyCar-users`);
@@ -17,30 +26,19 @@ function BuyCarUser() {
       select: (data) => data.data,
     }
   );
-  const deleteMutation = useMutation(
-    (id) => {// Log attempt with ID
-     
-      return axios.delete(`${import.meta.env.VITE_API_URL}/buyCar-users/${id}`);
-    },
-    {
-      onSuccess: () => {
-        queryClient.invalidateQueries("people");
-        SuccessAlert({ msg: "User successfully deleted" });
-      },
-      onError: (error) => {
-        ErrorAlert({ msg: "Failed to delete user!" });
-      },
-    }
-  );
+  const deleteMutation = useMutation((id) => {
+    return axios.delete(`${import.meta.env.VITE_API_URL}/buyCar-users/${id}`);
+  });
 
-   const handleDelete = (id) => {
-     deleteMutation.mutate(id);
-   };
+  const handleDelete = (id) => {
+    deleteMutation.mutate(id);
+  };
 
   return (
     <>
       <>
         {deleteMutation.isLoading && <LoadingAlert msg="Deleting..." />}
+        {deleteMutation.isSuccess && <SuccessAlert msg="Successfully Deleted" />}
         {deleteMutation.isError && (
           <ErrorAlert msg={deleteMutation.error.message} />
         )}
@@ -56,23 +54,46 @@ function BuyCarUser() {
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                   <thead className="text-xs text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                      <th scope="col" className="px-6 py-3  text-center">
+                      <th
+                        scope="col"
+                        className="px-6 py-3  flex justify-center items-center gap-1"
+                      >
+                        <span>
+                          <FaUser className="text-theme-red text-lg" />
+                        </span>{" "}
                         Customer Name
                       </th>
-                      <th scope="col" className="px-6 py-3 text-center">
-                        Mobile No
+                      <th scope="col" className="px-6 py-3 text-center ">
+                        <p className="flex items-center justify-center gap-2">
+                          <FaPhoneAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Mobile No</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Car Model/Company
+                        <p className="flex items-center justify-center gap-2">
+                          <FaCar className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">
+                            Car Model/Company
+                          </span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Model Year
+                        <p className="flex items-center justify-center gap-2">
+                          <FaCalendarAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Model Year</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Fuel Type
+                        <p className="flex items-center justify-center gap-2">
+                          <BsFillFuelPumpFill className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Fuel Type</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Budget
+                        <p className="flex items-center justify-center gap-2">
+                          <FaMoneyBillAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Budget</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
                         Action

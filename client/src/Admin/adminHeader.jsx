@@ -29,7 +29,7 @@ function Header() {
           <ul className="navbar-list flex gap-8">
             <li>
               <Link
-                to="/admin-dashboard"
+                to="/admin/cars"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -42,7 +42,7 @@ function Header() {
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Buy 
+                Buy
               </Link>
             </li>
             <li>
@@ -51,7 +51,7 @@ function Header() {
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Sell 
+                Sell
               </Link>
             </li>
             <li>

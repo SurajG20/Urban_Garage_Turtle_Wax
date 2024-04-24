@@ -57,9 +57,14 @@ function SellCarUser() {
     <>
       <>
         {deleteSellCarUserMutation.isLoading && (
-          <deleteSellCarUserMutation.isLoading msg="Loadin... Please wait" />
+          <LoadingAlert msg="Deleting..." />
         )}
-        {isError && <ErrorAlert msg="Failed! Try again..." />}
+        {deleteSellCarUserMutation.isSuccess && (
+          <SuccessAlert msg="Successfully Deleted" />
+        )}
+        {deleteSellCarUserMutation.isError && (
+          <ErrorAlert msg="Failed! Try again..." />
+        )}
         {isLoading && <isLoading msg="Loadin... Please wait" />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
@@ -111,9 +116,8 @@ function SellCarUser() {
                         scope="col"
                         className="px-6 py-3 text-center flex items-center"
                       >
-                        Reg.City /{" "}
                         <FaAddressCard className="text-theme-red mx-1" />
-                        Address
+                        Reg.City / Address
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
                         Action

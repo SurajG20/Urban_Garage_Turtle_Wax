@@ -124,6 +124,7 @@ function BuyForm() {
               required
               name="modelYear"
               maxLength={4}
+              minLength={4}
               value={formData.modelYear}
               className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"

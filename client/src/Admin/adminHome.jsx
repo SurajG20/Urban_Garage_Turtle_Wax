@@ -42,8 +42,8 @@ function AdminDashboard() {
   return (
     <>
       <>
-        {isLoading && <isLoading msg="Loading Please wait ..." />}
-        {deleteMutation.isLoading && <isLoading msg="Deleting Product..." />}
+        {isLoading && <LoadingAlert msg="Loading Please wait ..." />}
+        {deleteMutation.isLoading && <ErrorAlert msg="Deleting Product..." />}
 
         {isSuccess && <SuccessAlert msg="Welcome Admin" />}
         {deleteMutation.isSuccess && (

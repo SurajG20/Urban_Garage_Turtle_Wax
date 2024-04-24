@@ -6,45 +6,58 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
 
+// icons 
+import { MdMessage } from "react-icons/md";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+
 
 function fetchPeople() {
   return axios.get(`${import.meta.env.VITE_API_URL}/contact`);
 }
 
 function ContactUser() {
-  const { data, error,isSuccess, isError, isLoading } = useQuery("people", fetchPeople, {
-    select: (data) => data.data,
-    
-  });
+  const { data, error, isSuccess, isError, isLoading } = useQuery(
+    "people",
+    fetchPeople,
+    {
+      select: (data) => data.data,
+    }
+  );
 
-   const deleteContactUserMutation = useMutation(
-     (id) => {
-        console.log(id);
-        return axios.delete(`${import.meta.env.VITE_API_URL}/contact/${id}`);
-     },
-     {
-       onSuccess: () => {
-         queryClient.invalidateQueries("contacts");
-         console.log("Contact user successfully deleted");
-       },
-       onError: (error) => {
-         console.log("Failed to delete contact user!");
-       },
-     }
-   );
+  const deleteContactUserMutation = useMutation(
+    (id) => {
+      return axios.delete(`${import.meta.env.VITE_API_URL}/contact/${id}`);
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries("contacts");
+        console.log("Contact user successfully deleted");
+      },
+      onError: (error) => {
+        console.log("Failed to delete contact user!");
+      },
+    }
+  );
 
-   const deleteContactUser = async (id) => {
-     try {
-       await deleteContactUserMutation.mutateAsync(id);
-     } catch (error) {
-       console.error("Error when deleting contact user:", error);
-     }
-   };
+  const deleteContactUser = async (id) => {
+    try {
+      await deleteContactUserMutation.mutateAsync(id);
+    } catch (error) {
+      console.error("Error when deleting contact user:", error);
+    }
+  };
 
   return (
     <>
       <>
-        {deleteContactUserMutation.isLoading && <isLoading msg="Deleting..." />}
+        {deleteContactUserMutation.isLoading && (
+          <LoadingAlert msg="Deleting..." />
+        )}
+        {deleteContactUserMutation.isSuccess && (
+          <SuccessAlert msg="Successfully Deleted" />
+        )}
         {deleteContactUserMutation.isError && (
           <ErrorAlert msg="Failed! Try again..." />
         )}
@@ -61,16 +74,28 @@ function ContactUser() {
                   <thead className="text-xs text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3  text-center">
-                        Customer Name
+                        <p className="flex items-center justify-center gap-2">
+                          <FaUser className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Customer Name</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Mobile No
+                        <p className="flex items-center justify-center gap-2">
+                          <FaPhoneAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Mobile No</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Query Type
+                        <p className="flex items-center justify-center gap-2">
+                          <FaCalendarAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Query Type</span>
+                        </p>
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        Message
+                        <p className="flex items-center justify-center gap-2">
+                          <MdMessage className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800"> Message</span>
+                        </p>
                       </th>
 
                       <th scope="col" className="px-6 py-3 text-center">
@@ -101,16 +126,13 @@ function ContactUser() {
                           </td>
                           <td className="px-6 py-4 text-gray-700  text-xs text-justify">
                             {/* {users.message} */}
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Ipsa nostrum doloribus aut deleniti
-                            accusantium placeat perspiciatis veritatis incidunt
-                            saepe iusto! Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.
+                            {users.message?.users.message.length > 50
+                              ? users.message.substring(0, 50) + "..."
+                              : users.message}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700">
                             <button
-                              
                               onClick={() => deleteContactUser(users._id)} // Assuming handleDelete is defined elsewhere
                               className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
