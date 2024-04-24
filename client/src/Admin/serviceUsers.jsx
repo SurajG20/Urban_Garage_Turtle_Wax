@@ -18,30 +18,28 @@ function ServiceUsers() {
     }
   );
 
-    const deleteServiceUserMutation = useMutation(
-      (id) => {
-       
-        return axios.delete(`${import.meta.env.VITE_API_URL}/service/${id}`);
+  const deleteServiceUserMutation = useMutation(
+    (id) => {
+      return axios.delete(`${import.meta.env.VITE_API_URL}/service/${id}`);
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries("serviceUsers");
+        console.log("Service user successfully deleted");
       },
-      {
-        onSuccess: () => {
-          queryClient.invalidateQueries("serviceUsers");
-          console.log("Service user successfully deleted");
-        },
-        onError: (error) => {
-          console.log("Failed to delete service user!");
-        },
-      }
-    );
+      onError: (error) => {
+        console.log("Failed to delete service user!");
+      },
+    }
+  );
 
-    const deleteServiceUser = async (id) => {
-      try {
-        await deleteServiceUserMutation.mutateAsync(id);
-      } catch (error) {
-        console.error("Error when deleting service user:", error);
-      }
-    };
-   
+  const deleteServiceUser = async (id) => {
+    try {
+      await deleteServiceUserMutation.mutateAsync(id);
+    } catch (error) {
+      console.error("Error when deleting service user:", error);
+    }
+  };
 
   return (
     <>
@@ -107,13 +105,12 @@ function ServiceUsers() {
                           </td>
 
                           <td className="px-6 py-4 text-gray-700">
-                            <Link
-                              to=""
+                            <button
                               onClick={() => deleteServiceUser(users._id)} // Assuming handleDelete is defined elsewhere
                               className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
                               Delete
-                            </Link>
+                            </button>
                           </td>
                         </tr>
                       ))
