@@ -18,3 +18,17 @@ exports.addServiceUser = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+exports.deleteServiceUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedUser = await Service.findByIdAndDelete(id);
+    if (!deletedUser) {
+      return res.status(404).json({ message: "Service user not found" });
+    }
+    res.json({ message: "Service user deleted successfully" });
+  } catch (error) {
+    console.error("Failed to delete service user:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};

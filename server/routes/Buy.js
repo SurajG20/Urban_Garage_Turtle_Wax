@@ -8,4 +8,6 @@ router.get("/", buyCarController.allBuyCarUsers);
 
 router.post("/", buyCarController.addBuyCarUser);
 
+router.delete("/:id", buyCarController.deleteBuyCarUser);
+
 module.exports = router;

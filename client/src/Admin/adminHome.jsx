@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import axios from "axios";
@@ -16,12 +16,41 @@ function AdminDashboard() {
     fetchData
   );
 
+  const deleteMutation = useMutation(
+    (id) => {
+      
+      return axios.delete(`${import.meta.env.VITE_API_URL}/products/${id}`);
+    },
+    // {
+    //   onSuccess: () => {
+    //     console.log("Product successfully deleted");
+    //   },
+    //   onError: (error) => {
+    //     console.error("Error deleting product:", error);
+    //   },
+    // }
+  );
+
+  const deleteProduct = async (id) => {
+    try {
+      await deleteMutation.mutateAsync(id);
+    } catch (error) {
+      console.error("Error deleting product:", error);
+    }
+  };
+
   return (
     <>
       <>
         {isLoading && <isLoading msg="Loading Please wait ..." />}
+        {deleteMutation.isLoading && <isLoading msg="Deleting Product..." />}
+
         {isSuccess && <SuccessAlert msg="Welcome Admin" />}
+        {deleteMutation.isSuccess && (
+          <SuccessAlert msg="Product successfully deleted" />
+        )}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
+        {deleteMutation.isError && <ErrorAlert msg="Failed to Delete" />}
       </>
       <div className="bg-theme-black min-h-screen flex flex-col ">
         <Header />
@@ -53,9 +82,11 @@ function AdminDashboard() {
                         </div>
 
                         {/* col2 */}
-                        <div className="col-span-2 grid grid-cols-2">
-                          <p className="col-span-2 text-xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
-                            <span className="text-black font-bold">Name :</span>{" "}
+                        <div className="col-span-2 grid md:grid-cols-2">
+                          <p className="col-span-2 md:text-xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
+                            <span className="text-black font-bold whitespace-nowrap">
+                              Name :
+                            </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
                               {item.name}
                             </span>
@@ -130,14 +161,12 @@ function AdminDashboard() {
                           </p>
                         </div>
                       </div>
-                      <div className="min-w-36 flex gap-2  sm:flex-col justify-center gap-y-5 sm:items-end">
+                      <div className="min-w-36 flex gap-2  sm:flex-col justify-end gap-y-5 sm:items-end">
                         <div className="w-full">
-                          <button className="py-2 w-full border-theme-black text-black text-theme-semibold rounded-md">
-                            Edit
-                          </button>
-                        </div>
-                        <div className="w-full">
-                          <button className="py-2 w-full bg-black text-white text-theme-semibold  rounded-md">
+                          <button
+                            onClick={() => deleteProduct(item._id)}
+                            className="py-2 w-full bg-black text-white text-theme-semibold  rounded-md"
+                          >
                             Delete
                           </button>
                         </div>

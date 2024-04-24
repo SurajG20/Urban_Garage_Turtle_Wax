@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
@@ -17,18 +17,44 @@ function ContactUser() {
     
   });
 
+   const deleteContactUserMutation = useMutation(
+     (id) => {
+        console.log(id);
+        return axios.delete(`${import.meta.env.VITE_API_URL}/contact/${id}`);
+     },
+     {
+       onSuccess: () => {
+         queryClient.invalidateQueries("contacts");
+         console.log("Contact user successfully deleted");
+       },
+       onError: (error) => {
+         console.log("Failed to delete contact user!");
+       },
+     }
+   );
+
+   const deleteContactUser = async (id) => {
+     try {
+       await deleteContactUserMutation.mutateAsync(id);
+     } catch (error) {
+       console.error("Error when deleting contact user:", error);
+     }
+   };
+
   return (
     <>
       <>
+        {deleteContactUserMutation.isLoading && <isLoading msg="Deleting..." />}
+        {deleteContactUserMutation.isError && (
+          <ErrorAlert msg="Failed! Try again..." />
+        )}
         {isLoading && <isLoading msg="Loadin... Please wait" />}
-        {isSuccess && <SuccessAlert msg=" Successfull!" />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow h-[80vh] overflow-y-auto">
           <section>
-           
             <div className="mx-2 mt-20">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -75,18 +101,21 @@ function ContactUser() {
                           </td>
                           <td className="px-6 py-4 text-gray-700  text-xs text-justify">
                             {/* {users.message} */}
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum doloribus aut deleniti accusantium placeat perspiciatis veritatis incidunt saepe iusto!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Ipsa nostrum doloribus aut deleniti
+                            accusantium placeat perspiciatis veritatis incidunt
+                            saepe iusto! Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
                           </td>
-                      
+
                           <td className="px-6 py-4 text-gray-700">
-                            <a
-                              href="#"
-                              onClick={() => handleDelete(users.id)} // Assuming handleDelete is defined elsewhere
+                            <button
+                              
+                              onClick={() => deleteContactUser(users._id)} // Assuming handleDelete is defined elsewhere
                               className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
                               Delete
-                            </a>
+                            </button>
                           </td>
                         </tr>
                       ))

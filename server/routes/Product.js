@@ -7,5 +7,6 @@ const product =require("../controllers/Product.js")
 
 router.post("/", parser.array("images"), product.addProduct);
 router.get("/", product.listAllProducts);
+router.delete("/:id", product.deleteProduct);
 
 module.exports = router;

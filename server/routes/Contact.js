@@ -6,5 +6,5 @@ const contactControllers = require("../controllers/Contact.js");
 router.get("/", contactControllers.allcontactUsers);
 
 router.post("/", contactControllers.addContactFormUser);
-
+router.delete("/:id", contactControllers.deleteContactFormUser);
 module.exports = router;

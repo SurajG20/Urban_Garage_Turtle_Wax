@@ -1,10 +1,9 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
-
 
 function fetchPeople() {
   return axios.get(`${import.meta.env.VITE_API_URL}/buyCar-users`);
@@ -18,14 +17,34 @@ function BuyCarUser() {
       select: (data) => data.data,
     }
   );
+  const deleteMutation = useMutation(
+    (id) => {// Log attempt with ID
+     
+      return axios.delete(`${import.meta.env.VITE_API_URL}/buyCar-users/${id}`);
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries("people");
+        SuccessAlert({ msg: "User successfully deleted" });
+      },
+      onError: (error) => {
+        ErrorAlert({ msg: "Failed to delete user!" });
+      },
+    }
+  );
 
-
+   const handleDelete = (id) => {
+     deleteMutation.mutate(id);
+   };
 
   return (
     <>
       <>
+        {deleteMutation.isLoading && <LoadingAlert msg="Deleting..." />}
+        {deleteMutation.isError && (
+          <ErrorAlert msg={deleteMutation.error.message} />
+        )}
         {isLoading && <isLoading msg="Loadin... Please wait" />}
-        {isSuccess && <SuccessAlert msg=" Successfull!" />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className="bg-theme-black min-h-screen flex flex-col">
@@ -93,13 +112,12 @@ function BuyCarUser() {
                             {users.budget}
                           </td>
                           <td className="px-6 py-4 text-gray-700">
-                            <a
-                              href="#"
-                              onClick={() => handleDelete(users.id)} // Assuming handleDelete is defined elsewhere
+                            <button
+                              onClick={() => handleDelete(users._id)}
                               className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
                               Delete
-                            </a>
+                            </button>
                           </td>
                         </tr>
                       ))

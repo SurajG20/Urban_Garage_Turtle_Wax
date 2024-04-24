@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
@@ -18,20 +18,47 @@ function ServiceUsers() {
     }
   );
 
-  console.log(data);
+    const deleteServiceUserMutation = useMutation(
+      (id) => {
+       
+        return axios.delete(`${import.meta.env.VITE_API_URL}/service/${id}`);
+      },
+      {
+        onSuccess: () => {
+          queryClient.invalidateQueries("serviceUsers");
+          console.log("Service user successfully deleted");
+        },
+        onError: (error) => {
+          console.log("Failed to delete service user!");
+        },
+      }
+    );
+
+    const deleteServiceUser = async (id) => {
+      try {
+        await deleteServiceUserMutation.mutateAsync(id);
+      } catch (error) {
+        console.error("Error when deleting service user:", error);
+      }
+    };
+   
 
   return (
     <>
       <>
+        {deleteServiceUserMutation.isLoading && (
+          <isLoading msg="Deleting ..." />
+        )}
+        {deleteServiceUserMutation.isError && (
+          <ErrorAlert msg="Failed! Try again..." />
+        )}
         {isLoading && <isLoading msg="Loadin... Please wait" />}
-        {isSuccess && <SuccessAlert msg=" Successfull!" />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className=" min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow h-[80vh] overflow-y-auto">
           <section>
-
             <div className="mx-2 mt-20">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -47,7 +74,7 @@ function ServiceUsers() {
                         Car Name/Car Model
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
-                        City/Address
+                        Service
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
                         Action
@@ -76,13 +103,13 @@ function ServiceUsers() {
                           </td>
 
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.city}/ {users.address}
+                            {users.cityName}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700">
                             <Link
                               to=""
-                              onClick={() => handleDelete(users.id)} // Assuming handleDelete is defined elsewhere
+                              onClick={() => deleteServiceUser(users._id)} // Assuming handleDelete is defined elsewhere
                               className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
                               Delete
