@@ -9,12 +9,12 @@ import { CarProvider } from "./CarsContent.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <CarProvider>
           <App />
         </CarProvider>
       </QueryClientProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
