@@ -5,8 +5,6 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Switch } from "@headlessui/react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -68,6 +66,10 @@ function AddProduct() {
   const handleInputChange = (event) => {
     const { name, value, files, type } = event.target;
     if (type === "file") {
+        if (files.length > 6) {
+          <ErrorAlert msg="You can only upload up to 6 Images." />;
+          return; 
+        }
       setFormData((prevState) => ({
         ...prevState,
         [name]: files,
@@ -389,7 +391,6 @@ function AddProduct() {
                           required
                           type="file"
                           name="images"
-                          
                           id="images"
                           multiple
                           accept="image/*"

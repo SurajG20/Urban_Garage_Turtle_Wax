@@ -1,7 +1,6 @@
 const Product = require("../models/Product");
 
 exports.listAllProducts = async (req, res) => {
-  
   try {
     const products = await Product.find();
     res.json(products);
@@ -15,12 +14,13 @@ exports.addProduct = async (req, res) => {
     if (!req.files || req.files.length === 0) {
       throw new Error("No files uploaded.");
     }
-
+    const thumbnailUrl = req.files[0].path;
     const urls = req.files.map((file) => file.path);
 
     const product = new Product({
       ...req.body,
       img: urls,
+      thumbnail: thumbnailUrl,
     });
     await product.save();
     res.json({ message: "Product added successfully", product });
@@ -42,8 +42,3 @@ exports.deleteProduct = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
-
-
-
-
-
