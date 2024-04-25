@@ -24,6 +24,7 @@ function AddProduct() {
     colour: "",
     insurance: "",
     images: [],
+    thumbnail: null,
   });
 
   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
@@ -55,6 +56,7 @@ function AddProduct() {
           colour: "",
           insurance: "",
           images: [],
+          thumbnail: null,
         });
       },
       onError: (error) => {
