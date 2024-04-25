@@ -25,11 +25,23 @@ const storage = new CloudinaryStorage({
   folder: "product_images",
   allowedFormats: ["jpg", "png", "jpeg"],
   transformation: [{ width: 500, height: 500, crop: "limit" }],
-  // Optionally add a different folder or transformations for thumbnails if needed
 });
 
+const parser = multer({
+  storage: storage,
+  fileFilter: function (req, file, cb) {
+    if (file.fieldname === "thumbnail") {
+      // Custom handling for thumbnail
+      // Apply different transformations or storage settings if needed
+    }
+    cb(null, true);
+  },
+}).fields([
+  { name: "images", maxCount: 8 },
+  { name: "thumbnail", maxCount: 1 },
+]);
 
 
-const parser = multer({ storage: storage });
+// const parser = multer({ storage: storage });
 
 module.exports = parser;

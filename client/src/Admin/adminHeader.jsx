@@ -16,7 +16,7 @@ function Header() {
           <div className="h-12">
             <img
               className="h-full"
-              src={"assets/logo/light-logo.png"}
+              src={"assets/logo/light-logo-2.png"}
               alt="URBAN Garage"
             />
           </div>

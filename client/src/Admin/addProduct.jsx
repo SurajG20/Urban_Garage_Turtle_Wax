@@ -66,14 +66,22 @@ function AddProduct() {
   const handleInputChange = (event) => {
     const { name, value, files, type } = event.target;
     if (type === "file") {
-        if (files.length > 6) {
-          <ErrorAlert msg="You can only upload up to 6 Images." />;
-          return; 
+      if (name === "thumbnail") {
+        // Ensuring only one file is processed for thumbnail
+        if (files.length > 1) {
+          alert("You can only upload one image for the thumbnail.");
+          return;
         }
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: files,
-      }));
+        setFormData((prevState) => ({
+          ...prevState,
+          thumbnail: files[0],
+        }));
+      } else if (name === "images") {
+        setFormData((prevState) => ({
+          ...prevState,
+          images: files,
+        }));
+      }
     } else {
       setFormData((prevState) => ({
         ...prevState,
@@ -82,20 +90,22 @@ function AddProduct() {
     }
   };
 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const dataToSend = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
-      if (key === "images") {
-        Array.from(value).forEach((file) => {
-          dataToSend.append("images", file);
-        });
+      if (key === "images" && value) {
+        Array.from(value).forEach((file) => dataToSend.append("images", file));
+      } else if (key === "thumbnail" && value) {
+        dataToSend.append("thumbnail", value);
       } else {
         dataToSend.append(key, value);
       }
     });
     mutate(dataToSend);
   };
+
 
   return (
     <>
@@ -375,6 +385,32 @@ function AddProduct() {
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                           placeholder="Enter Insurance Details.."
                           onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+                    {/*Thubnail Image Upload */}
+                    <div className="">
+                      <label
+                        htmlFor="thubnail-image"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Upload Thubnail Images
+                        <span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="file"
+                          name="thumbnail"
+                          id="thubnail-image"
+                          accept="image/*"
+                          onChange={handleInputChange}
+                          className="text-theme-bold w-full text-sm text-gray-500
+                          file:mr-4 file:py-2 file:px-4
+                          file:rounded-full file:border-0
+                          file:text-sm file:text-theme-semibold flex items-center
+                          file:bg-violet-50 file:text-violet-700
+                          hover:file:bg-violet-100"
                         />
                       </div>
                     </div>

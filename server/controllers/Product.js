@@ -11,14 +11,15 @@ exports.listAllProducts = async (req, res) => {
 
 exports.addProduct = async (req, res) => {
   try {
-    if (!req.files || req.files.length === 0) {
-      throw new Error("No files uploaded.");
+    const { files, body } = req;
+    if (!files || !files.images || !files.thumbnail) {
+      throw new Error("Required images or thumbnail not uploaded.");
     }
-    const thumbnailUrl = req.files[0].path;
-    const urls = req.files.map((file) => file.path);
+    const thumbnailUrl = files.thumbnail[0].path; // Accessing the thumbnail
+    const urls = files.images.map((file) => file.path); // Handling multiple images
 
     const product = new Product({
-      ...req.body,
+      ...body,
       img: urls,
       thumbnail: thumbnailUrl,
     });
@@ -29,6 +30,7 @@ exports.addProduct = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
 
 exports.deleteProduct = async (req, res) => {
   try {

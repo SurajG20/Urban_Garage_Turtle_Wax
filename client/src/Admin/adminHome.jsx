@@ -10,6 +10,7 @@ const fetchData = async () => {
   return data;
 };
 
+
 function AdminDashboard() {
   const { data, error, isLoading, isError, isSuccess } = useQuery(
     "data",
