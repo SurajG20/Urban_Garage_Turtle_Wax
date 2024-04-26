@@ -255,7 +255,7 @@ function SellPage() {
           {/* Selling Your Car Made Easy */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className=" grid md:grid-cols-2 gap-5">
+              <div className=" grid md:grid-cols-2 gap-5 gap-y-10">
                 {/* left container  */}
                 <div className="relative h-80 rounded-2xl flex justify-center items-center">
                   <div className="absolute z-50 bottom-[-35px] theme-border-white flex justify-center bg-white rounded-md px-10 py-2">
@@ -285,7 +285,7 @@ function SellPage() {
                     </h2>
                   </div>
                   <div className="mb-3">
-                    <p className="text-theme-500 text-md">
+                    <p className="text-justify text-theme-500 text-md">
                       Book your car inspection from our trained evaluators at
                       your doorstep & convenience. Get the most lucrative price
                       in market and experience a completely safe and quick
@@ -333,7 +333,7 @@ function SellPage() {
           </section>
 
           <section className="section text-white" id="hero-banner">
-            <div className="relative h-screen">
+            <div className="relative min-h-min md:h-screen">
               {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
               <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-50"></div>
               <div className="h-full grid grid-cols-1 md:grid-cols-2">
@@ -360,7 +360,7 @@ function SellPage() {
                     </p>
                   </div>
                   {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid grid-cols-2 gap-x-5 mb-10">
+                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
                     <div>
                       <ul className="text-theme-500 flex flex-col gap-y-5">
                         <li className="flex gap-2 text-white items-center text-theme-500">

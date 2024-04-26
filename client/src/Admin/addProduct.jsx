@@ -91,13 +91,57 @@ function AddProduct() {
   //   mutate(dataToSend);
   // };
 
+  // const handleInputChange = (event) => {
+  //   const { name, files, type } = event.target;
+  //   if (type === "file") {
+  //     if (name === "images") {
+  //       const selectedFiles =
+  //         files.length > 8 ? Array.from(files).slice(0, 8) : files;
+  //       setFormData((prevState) => ({
+  //         ...prevState,
+  //         images: selectedFiles,
+  //       }));
+  //       if (files.length > 8) {
+  //         alert("Only the first 8 images will be uploaded.");
+  //       }
+  //     } else if (name === "thumbnail") {
+  //       // Ensure only one file is processed for thumbnail
+  //       setFormData((prevState) => ({
+  //         ...prevState,
+  //         thumbnail: files[0],
+  //       }));
+  //     }
+  //   } else {
+  //     setFormData((prevState) => ({
+  //       ...prevState,
+  //       [name]: event.target.value,
+  //     }));
+  //   }
+  // };
+
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const dataToSend = new FormData();
+  //   // Append data to FormData object
+  //   Object.entries(formData).forEach(([key, value]) => {
+  //     if (key === "images" && value.length) {
+  //       value.forEach((file) => dataToSend.append("images", file));
+  //     } else if (key === "thumbnail" && value) {
+  //       dataToSend.append("thumbnail", value);
+  //     } else {
+  //       dataToSend.append(key, value);
+  //     }
+  //   });
+
+  //   mutate(dataToSend);
+  // };
   const handleInputChange = (event) => {
     const { name, files, type } = event.target;
     if (type === "file") {
       if (name === "images") {
-        // Only take the first 8 images if more than 8 are selected
+        // Select only the first 8 files if more than 8 are uploaded
         const selectedFiles =
-          files.length > 8 ? Array.from(files).slice(0, 8) : files;
+          files.length > 8 ? Array.from(files).slice(0, 8) : Array.from(files);
         setFormData((prevState) => ({
           ...prevState,
           images: selectedFiles,
@@ -123,9 +167,8 @@ function AddProduct() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const dataToSend = new FormData();
-    // Append data to FormData object
     Object.entries(formData).forEach(([key, value]) => {
-      if (key === "images" && value.length) {
+      if (key === "images" && Array.isArray(value)) {
         value.forEach((file) => dataToSend.append("images", file));
       } else if (key === "thumbnail" && value) {
         dataToSend.append("thumbnail", value);
@@ -136,6 +179,7 @@ function AddProduct() {
 
     mutate(dataToSend);
   };
+
 
 
   return (
