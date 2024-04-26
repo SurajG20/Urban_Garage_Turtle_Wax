@@ -75,7 +75,7 @@ function AdminDashboard() {
                             className="h-full w-full flex-none rounded-xl bg-gray-50"
                             src={
                               item.img.length > 0
-                                ? item.img[0]
+                                ? item.thumbnail
                                 : "assets/loading.jpeg"
                             }
                             alt="Urban Garage "

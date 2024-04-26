@@ -24,7 +24,7 @@ function fetchCars() {
 function Home() {
   const { data, error, isLoading, isError } = useQuery("cars", fetchCars);
 
-  console.log(data);
+ 
   return (
     <div className="relative">
       <Navbar />

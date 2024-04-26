@@ -5,106 +5,135 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 function AddProduct() {
-  const [formData, setFormData] = useState({
-    name: "",
-    model: "",
-    modelyear: "",
-    make: "",
-    price: "",
-    owner: "",
-    reg: "",
-    kms: "",
-    fuel: "",
-    colour: "",
-    insurance: "",
-    images: [],
-    thumbnail: null,
-  });
+    const [formData, setFormData] = useState({
+      name: "",
+      model: "",
+      modelyear: "",
+      make: "",
+      price: "",
+      owner: "",
+      reg: "",
+      kms: "",
+      fuel: "",
+      colour: "",
+      insurance: "",
+      images: [],
+      thumbnail: "",
+    });
 
-  const { mutate, isLoading, isSuccess, isError, error } = useMutation(
-    async (data) => {
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/products`,
-        data,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      return response.data;
-    },
-    {
-      onSuccess: () => {
-        
-        setFormData({
-          name: "",
-          model: "",
-          modelyear: "",
-          make: "",
-          price: "",
-          owner: "",
-          reg: "",
-          kms: "",
-          fuel: "",
-          colour: "",
-          insurance: "",
-          images: [],
-          thumbnail: null,
-        });
-      },
-      onError: (error) => {
-        console(`Failed to add product: ${error.message}`);
-      },
-    }
-  );
+   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
+     async (data) => {
+       const response = await axios.post(
+         `${import.meta.env.VITE_API_URL}/products`,
+         data,
+         { headers: { "Content-Type": "multipart/form-data" } }
+       );
+       return response.data;
+     },
+     {
+       onSuccess: () => {
+         setFormData({
+           name: "",
+           model: "",
+           modelyear: "",
+           make: "",
+           price: "",
+           owner: "",
+           reg: "",
+           kms: "",
+           fuel: "",
+           colour: "",
+           insurance: "",
+           images: [],
+           thumbnail: "",
+         });
+         console.log({ msg: "Product Saved Successfully!" });
+       },
+       onError: (error) => {
+         console.log({ msg: `Failed to add product: ${error.message}` });
+       },
+     }
+   );
+
+  //  const handleInputChange = (event) => {
+  //    const { name, files, type } = event.target;
+  //    if (type === "file") {
+  //      setFormData((prevState) => ({
+  //        ...prevState,
+  //        [name]: name === "thumbnail" ? files[0] : files,
+  //      }));
+  //    } else {
+  //      setFormData((prevState) => ({
+  //        ...prevState,
+  //        [name]: event.target.value,
+  //      }));
+  //    }
+  //  };
+
+
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const dataToSend = new FormData();
+  //   Object.entries(formData).forEach(([key, value]) => {
+  //     if (key === "images" && value.length) {
+  //       Array.from(value).forEach((file) => dataToSend.append("images", file));
+  //     } else if (key === "thumbnail" && value) {
+  //       dataToSend.append("thumbnail", value);
+  //     } else {
+  //       dataToSend.append(key, value);
+  //     }
+  //   });
+  //   mutate(dataToSend);
+  // };
 
   const handleInputChange = (event) => {
-    const { name, value, files, type } = event.target;
+    const { name, files, type } = event.target;
     if (type === "file") {
-      if (name === "thumbnail") {
-        // Ensuring only one file is processed for thumbnail
-        if (files.length > 1) {
-          alert("You can only upload one image for the thumbnail.");
-          return;
+      if (name === "images") {
+        // Only take the first 8 images if more than 8 are selected
+        const selectedFiles =
+          files.length > 8 ? Array.from(files).slice(0, 8) : files;
+        setFormData((prevState) => ({
+          ...prevState,
+          images: selectedFiles,
+        }));
+        if (files.length > 8) {
+          alert("Only the first 8 images will be uploaded.");
         }
+      } else if (name === "thumbnail") {
+        // Ensure only one file is processed for thumbnail
         setFormData((prevState) => ({
           ...prevState,
           thumbnail: files[0],
-        }));
-      } else if (name === "images") {
-        setFormData((prevState) => ({
-          ...prevState,
-          images: files,
         }));
       }
     } else {
       setFormData((prevState) => ({
         ...prevState,
-        [name]: value,
+        [name]: event.target.value,
       }));
     }
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const dataToSend = new FormData();
+    // Append data to FormData object
     Object.entries(formData).forEach(([key, value]) => {
-      if (key === "images" && value) {
-        Array.from(value).forEach((file) => dataToSend.append("images", file));
+      if (key === "images" && value.length) {
+        value.forEach((file) => dataToSend.append("images", file));
       } else if (key === "thumbnail" && value) {
         dataToSend.append("thumbnail", value);
       } else {
         dataToSend.append(key, value);
       }
     });
+
     mutate(dataToSend);
   };
 

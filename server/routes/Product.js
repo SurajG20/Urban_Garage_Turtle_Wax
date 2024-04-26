@@ -5,7 +5,15 @@ const parser = require("../cloudinaryConfig.js");
 
 const product =require("../controllers/Product.js")
 
-router.post("/", parser.array("images"), product.addProduct);
+router.post(
+  "/",
+  parser.fields([
+    { name: "thumbnail", maxCount: 1 },
+    { name: "images", maxCount: 8 },
+  ]),
+  product.addProduct
+);
+
 router.get("/", product.listAllProducts);
 router.delete("/:id", product.deleteProduct);
 

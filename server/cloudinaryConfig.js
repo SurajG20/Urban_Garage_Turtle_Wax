@@ -1,10 +1,8 @@
-const dotenv = require("dotenv");
-dotenv.config();
-
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
-
+const dotenv = require("dotenv");
+console.log(process.env.CLOUD_NAME);
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -12,36 +10,15 @@ cloudinary.config({
   api_secret: process.env.CLOUD_SECRET_KEY,
 });
 
-// const storage = new CloudinaryStorage({
-//   cloudinary: cloudinary,
-//   folder: "product_images",
-//   allowedFormats: ["jpg", "png", "jpeg"],
-//   transformation: [{ width: 500, height: 500, crop: "limit" }],
-// });
-// const parser = multer({ storage: storage });
-
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  folder: "product_images",
-  allowedFormats: ["jpg", "png", "jpeg"],
-  transformation: [{ width: 500, height: 500, crop: "limit" }],
+  params: {
+    folder: "product_images",
+    format: async (req, file) => "png", // supports promises as well
+    public_id: (req, file) => new Date().getTime(),
+  },
 });
 
-const parser = multer({
-  storage: storage,
-  fileFilter: function (req, file, cb) {
-    if (file.fieldname === "thumbnail") {
-      // Custom handling for thumbnail
-      // Apply different transformations or storage settings if needed
-    }
-    cb(null, true);
-  },
-}).fields([
-  { name: "images", maxCount: 8 },
-  { name: "thumbnail", maxCount: 1 },
-]);
-
-
-// const parser = multer({ storage: storage });
+const parser = multer({ storage: storage });
 
 module.exports = parser;
