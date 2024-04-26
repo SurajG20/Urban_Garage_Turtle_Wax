@@ -15,10 +15,15 @@ import Preloader from "../components/Preloader";
 // icons
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
-
-// import { FaBlenderPhone } from "react-icons/fa";
-// import { FaCar } from "react-icons/fa";
-// import { FaMoneyCheckAlt } from "react-icons/fa";
+import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { IoSpeedometerSharp } from "react-icons/io5";
+import { FaCar } from "react-icons/fa";
+import { FaAddressCard } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaMoneyBillAlt } from "react-icons/fa";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
@@ -62,7 +67,7 @@ function CarDetail() {
     event.preventDefault();
     formMutation.mutate(formData, {
       onSuccess: (response) => {
-        console.log("Success:", response);
+        
         setFormData({
           fullName: "",
           mobileNumber: "",
@@ -82,22 +87,35 @@ function CarDetail() {
   if (!cars.length) {
     return (
       <>
-        <Preloader message="please wait ...." />
+        <Preloader message="Loading ...." />
       </>
     );
   }
 
   useEffect(() => {
-    // To debug and see your cars data
     const carId = parseInt(id, 10);
-
     const foundCar = cars.find((car) => car._id == id); //
-
     if (foundCar) {
-      console.log("Found car:", foundCar);
       setCarDetail(foundCar);
+      setFormData({
+        fullName: "",
+        mobileNumber: "",
+        carBrand: foundCar.name,
+        modelYear: foundCar.modelyear,
+        fuelType: foundCar.fuel,
+        budget: foundCar.price,
+      });
+    }else{
+      setFormData({
+        fullName: "",
+        mobileNumber: "",
+        carBrand: "",
+        modelYear: "",
+        fuelType: "",
+        budget: "",
+      });
     }
-  }, [id, cars]); // Include 'id' and 'cars' in the dependency array
+  }, [id, cars]);
 
   if (!carDetail) {
     return (
@@ -109,6 +127,15 @@ function CarDetail() {
 
   return (
     <>
+      <>
+        {formMutation.isLoading && <LoadingAlert msg="Successfully..." />}
+        {formMutation.isSuccess && <SuccessAlert msg="Successfully Deleted" />}
+        {formMutation.isError && (
+          <ErrorAlert msg={"Failed ! Try Again..."}/>
+        )}
+        {formMutation && <isLoading msg="Loadin... Please wait" />}
+        {formMutation && <ErrorAlert msg="Failed! Try again..." />}
+      </>
       {/* <Navbar /> */}
       <nav className="container p-4 text-white  bg-theme-black4">
         <div className="grid grid-cols-2 md:grid-cols-3">
@@ -145,7 +172,12 @@ function CarDetail() {
                   <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        Reg.Year
+                        <p className="flex item-center gap-2">
+                          <span className="text-theme-red">
+                            <FaCalendarAlt />
+                          </span>
+                          <span>Reg.Year</span>
+                        </p>
                       </div>
                       <div className="text-theme-semibold">
                         {carDetail?.modelyear}
@@ -153,7 +185,12 @@ function CarDetail() {
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        Req.State
+                        <p className="flex item-center gap-2">
+                          <span className="text-theme-red">
+                            <FaAddressCard />
+                          </span>
+                          <span> Req.No</span>
+                        </p>
                       </div>
                       <div className="text-theme-semibold uppercase">
                         {carDetail?.reg}
@@ -161,7 +198,12 @@ function CarDetail() {
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        KMs Driven
+                        <p className="flex item-center gap-2">
+                          <span className="text-theme-red">
+                            <IoSpeedometerSharp />
+                          </span>
+                          <span>KMs Driven</span>
+                        </p>
                       </div>
                       <div className="text-theme-semibold">
                         {carDetail?.kms}
@@ -169,7 +211,12 @@ function CarDetail() {
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        Ownership
+                        <p className="flex item-center gap-2">
+                          <span className="text-theme-red">
+                            <FaUser />
+                          </span>
+                          <span>Ownership</span>
+                        </p>
                       </div>
                       <div className="text-theme-semibold">
                         {carDetail?.owner}
@@ -177,7 +224,12 @@ function CarDetail() {
                     </div>
                     <div>
                       <div className="text-theme-500 text-gray-400">
-                        Fuel Type
+                        <p className="flex item-center gap-2">
+                          <span className="text-theme-red">
+                            <BsFillFuelPumpFill />
+                          </span>
+                          <span> Fuel Type</span>
+                        </p>
                       </div>
                       <div className="text-theme-semibold">
                         {carDetail?.fuel}
@@ -443,12 +495,99 @@ function CarDetail() {
             </div>
 
             <div className="mt-5 ">
-              <button
-                type="submit"
-                className="w-full m-auto px-5 py-2 rounded-lg bg-theme-red text-white text-theme-semibold"
-              >
-                Submit
-              </button>
+              {formMutation.isLoading ? (
+                <button
+                  type="button"
+                  className="bg-theme-red text-white flex justify-center items-center py-2 px-5 rounded-lg"
+                  disabled
+                >
+                  <svg
+                    className="h-6 w-8 animate-spin stroke-white"
+                    viewBox="0 0 256 256"
+                  >
+                    <line
+                      x1="128"
+                      y1="32"
+                      x2="128"
+                      y2="64"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="195.9"
+                      y1="60.1"
+                      x2="173.3"
+                      y2="82.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="224"
+                      y1="128"
+                      x2="192"
+                      y2="128"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="195.9"
+                      y1="195.9"
+                      x2="173.3"
+                      y2="173.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="128"
+                      y1="224"
+                      x2="128"
+                      y2="192"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="60.1"
+                      y1="195.9"
+                      x2="82.7"
+                      y2="173.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="32"
+                      y1="128"
+                      x2="64"
+                      y2="128"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                    <line
+                      x1="60.1"
+                      y1="60.1"
+                      x2="82.7"
+                      y2="82.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    ></line>
+                  </svg>
+                  Processing...
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="bg-theme-red text-white py-2 px-8 rounded-lg"
+                >
+                  Submit
+                </button>
+              )}
             </div>
             <div className="flex flex-col items-center justify-center">
               <h3 className="text-theme-semibold p-0">URBAN GARAGE !</h3>

@@ -126,9 +126,11 @@ function ContactUser() {
                           </td>
                           <td className="px-6 py-4 text-gray-700  text-xs text-justify">
                             {/* {users.message} */}
-                            {users.message?.users.message.length > 50
-                              ? users.message.substring(0, 50) + "..."
-                              : users.message}
+                            {users && users.message
+                              ? users.message.length > 50
+                                ? `${users.message.substring(0, 50)}...`
+                                : users.message
+                              : null}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700">
