@@ -439,7 +439,7 @@ function CoatingPage() {
             <section className="section get-start text-white relative">
               <div className="hidden md:block absolute w-full md:w-[32rem] right-0 top-20">
                 <img
-                  src="assets/banners/car6.png"
+                  src="/assets/banners/car6.png"
                   className="scale-x-[-1] h-full w-full object-cover object-center"
                   alt="urban garage"
                 />

@@ -6,7 +6,7 @@ function ProductCard({ item }) {
       <figure className="card-banner">
         <div className="">
           <img
-            src={`${item.imgURL ? item.imgURL : "assets/loading.jpeg"}`}
+            src={`${item.imgURL ? item.imgURL : "/assets/loading.jpeg"}`}
             alt="Urban Garage Car"
             loading="lazy"
             className="h-full w-full  object-cover object-center"

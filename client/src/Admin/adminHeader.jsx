@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // icons
 import { MdPerson } from "react-icons/md";
@@ -82,7 +82,7 @@ function Header() {
               <div className="h-12">
                 <img
                   className="h-full"
-                  src={"assets/logo/light-logo.png"}
+                  src={"/assets/logo/light-logo.png"}
                   alt="URBAN Garage"
                 />
               </div>

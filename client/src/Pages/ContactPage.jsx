@@ -94,7 +94,7 @@ function Contactus() {
                       <img
                         loading="lazy"
                         className="h-full w-full object-cover object-center "
-                        src="assets/banners/banner1.jpg"
+                        src="/assets/banners/banner1.jpg"
                         alt="Urban Garage Head Office"
                       />
                     </div>
@@ -491,7 +491,7 @@ function Contactus() {
                           loading="lazy"
                           className="h-full w-full object-cover object-center"
                           src="https://api.luxuryride.in/public/experience-center/service_center_banner-1689853292460-261947597-alipur-service-centre.png"
-                          alt=""
+                          alt="Urban Garage Service Centre"
                         />
                       </div>
                       {/* Absolute container moved here, outside the overflow-hidden container */}
@@ -543,7 +543,7 @@ function Contactus() {
                     </div>
                   </div>
 
-                  {/* <div className="relative h-64 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('assets/garadge/garadge4.jpeg')]">
+                  {/* <div className="relative h-64 p-10 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500 bg-[url('/assets/garadge/garadge4.jpeg')]">
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
                     <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">

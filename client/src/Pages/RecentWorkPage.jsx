@@ -198,7 +198,7 @@ function RecentWork() {
           {/* sell banner start */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className="h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white  bg-cover bg-[url(assets/banners/banner12.jpeg);] text-theme-500">
+              <div className="h-80 flex flex-col gap-y-2 items-center justify-center theme-border-white rounded-2xl text-white  bg-cover bg-[url(/assets/banners/banner12.jpeg);] text-theme-500">
                 <h1 className="md:text-4xl text-center h2 font-semibold text-theme-bold tracking-wide md:text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>

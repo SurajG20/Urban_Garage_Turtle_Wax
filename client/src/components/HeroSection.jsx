@@ -40,7 +40,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon1.png"
+                        src="/assets/icons/icon1.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -48,7 +48,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon2.png"
+                        src="/assets/icons/icon2.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -56,7 +56,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon3.png"
+                        src="/assets/icons/icon3.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -64,7 +64,15 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon4.png"
+                        src="/assets/icons/icon4.png"
+                        alt="/Urban Gradge Service"
+                      />
+                    </div>
+                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
+                      <img
+                        loading="lazy"
+                        className="h-full w-full object-contain object-center"
+                        src="/assets/icons/icon5.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -72,15 +80,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon5.png"
-                        alt="Urban Gradge Service"
-                      />
-                    </div>
-                    <div className="h-16  w-24 bg-white  opacity-40 p-2 rounded-xl border hover:cursor-pointer">
-                      <img
-                        loading="lazy"
-                        className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon6.png"
+                        src="/assets/icons/icon6.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -88,7 +88,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon7.png"
+                        src="/assets/icons/icon7.png"
                         alt="Urban Gradge Service"
                       />
                     </div>
@@ -96,7 +96,7 @@ function HeroSection({ imgURL, title }) {
                       <img
                         loading="lazy"
                         className="h-full w-full object-contain object-center"
-                        src="assets/icons/icon9.png"
+                        src="/assets/icons/icon9.png"
                         alt="Urban Gradge Service"
                       />
                     </div>

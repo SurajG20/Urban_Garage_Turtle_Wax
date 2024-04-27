@@ -5,7 +5,7 @@ function CarCard({ item }) {
     <div className="featured-car-card border-2 shadow-lg border-gray-900 hover:shadow-xl theme-border-white">
       <figure className="card-banner">
         <img
-          src={`${item.img ? item.thumbnail : "assets/loading.jpeg"}`}
+          src={`${item.img ? item.thumbnail : "/assets/loading.jpeg"}`}
           alt="Urban Garage Car"
           loading="lazy"
           width="440"

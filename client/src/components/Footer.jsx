@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../public/assets/logo/light-logo.png"
+
 // icons
 
 import {
@@ -23,7 +23,7 @@ function Footer() {
                 <img
                   loading="lazy"
                   className="h-full w-full object-cover"
-                  src={logo}
+                  src={"/assets/logo/light-logo.png"}
                   alt="Ridex logo"
                 />
               </div>

@@ -22,7 +22,7 @@ function CardGallery() {
                 <img
                   className="h-full w-full object-cover object-center"
                   loading="lazy"
-                  src="assets/cars/AUDI-A6-35TDI-S-LINE.jpeg"
+                  src="/assets/cars/AUDI-A6-35TDI-S-LINE.jpeg"
                   alt="Urban Garage"
                   // className="cover-image"
                 />
@@ -34,7 +34,7 @@ function CardGallery() {
               </div>
               <img
                 loading="lazy"
-                src="assets/cars/AUDI-A6-35TDI-S-LINE.png"
+                src="/assets/cars/AUDI-A6-35TDI-S-LINE.png"
                 className="character "
               />
             </div>
@@ -44,7 +44,7 @@ function CardGallery() {
                 <img
                   className="h-full w-full object-cover object-right bg-gray-900"
                   loading="lazy"
-                  src="assets/banners/car6.png"
+                  src="/assets/banners/car6.png"
                   alt="Urban Garage"
                   // className="cover-image"
                 />
@@ -57,7 +57,7 @@ function CardGallery() {
               <div className="rounded-2xl character overflow-hidden hover:cursor-pointer">
                 <img
                   loading="lazy"
-                  src="assets/banners/car15.jpeg"
+                  src="/assets/banners/car15.jpeg"
                   className=""
                 />
               </div>

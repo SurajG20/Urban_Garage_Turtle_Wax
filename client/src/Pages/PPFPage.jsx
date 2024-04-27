@@ -32,49 +32,49 @@ function PPFPage() {
   };
   const [cars, setCars] = useState([]);
 
- const [formData, setFormData] = useState({
-   fullName: "",
-   mobileNumber: "",
-   carName: "",
-   carBrand: "",
-   cityName: "",
-   stateName: "",
- });
+  const [formData, setFormData] = useState({
+    fullName: "",
+    mobileNumber: "",
+    carName: "",
+    carBrand: "",
+    cityName: "",
+    stateName: "",
+  });
 
- // Update form state
- const handleChange = (e) => {
-   const { name, value } = e.target;
-   setFormData((prev) => ({
-     ...prev,
-     [name]: value,
-   }));
- };
+  // Update form state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
- // React Query mutation setup
- const mutation = useMutation((data) => {
-   return axios.post(`${import.meta.env.VITE_API_URL}/service`, data);
- });
+  // React Query mutation setup
+  const mutation = useMutation((data) => {
+    return axios.post(`${import.meta.env.VITE_API_URL}/service`, data);
+  });
 
- const handleSubmit = (e) => {
-   e.preventDefault();
-   mutation.mutate(formData, {
-     onSuccess: (response) => {
-       // Handle success scenario
-       setFormData({
-         fullName: "",
-         mobileNumber: "",
-         carName: "",
-         carBrand: "",
-         cityName: "",
-         stateName: "",
-       });
-     },
-     onError: (error) => {
-       // Handle error scenario
-       console.error("Submission error:", error);
-     },
-   });
- };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutation.mutate(formData, {
+      onSuccess: (response) => {
+        // Handle success scenario
+        setFormData({
+          fullName: "",
+          mobileNumber: "",
+          carName: "",
+          carBrand: "",
+          cityName: "",
+          stateName: "",
+        });
+      },
+      onError: (error) => {
+        // Handle error scenario
+        console.error("Submission error:", error);
+      },
+    });
+  };
 
   return (
     <>
@@ -441,7 +441,8 @@ function PPFPage() {
             <section className="section get-start text-white relative">
               <div className="hidden md:block absolute w-full md:w-[32rem] right-0 top-0">
                 <img
-                  src="assets/banners/car14.png"
+                  loading="lazy"
+                  src="/assets/banners/car14.png"
                   className=" h-full w-full object-cover object-center"
                   alt="urban garage"
                 />
@@ -502,6 +503,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center justify-center">
                       <div className=" text-gray-800 text-theme-semibold  h-20 w-20 rounded-full ">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/1.webp"
                           alt="urban garage"
@@ -517,6 +519,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/2.webp"
                           alt="urban garage"
@@ -532,6 +535,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/4.webp"
                           alt="urban garage"
@@ -547,6 +551,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/5.webp"
                           alt="urban garage"
@@ -562,6 +567,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/6.webp"
                           alt="urban garage"
@@ -577,6 +583,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/7.webp"
                           alt="urban garage"
@@ -592,6 +599,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/8.webp"
                           alt="urban garage"
@@ -607,6 +615,7 @@ function PPFPage() {
                     <div className="bg-white text-gray-800 rounded-2xl border theme-border-white shadow hover:shadow-white text-theme-semibold  p-2 grid md:grid-cols-4 gap-5 items-center">
                       <div className=" text-theme-semibold  h-20 w-20 rounded-full">
                         <img
+                          className="h-full w-full object-cover object-center"
                           loading="lazy"
                           src="https://www.thedetailingmafia.com/assets/images/pages/ppf/icons/10.webp"
                           alt="urban garage"
@@ -771,7 +780,7 @@ function PPFPage() {
                         <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
                           Enquire Now
                         </button>
-                        <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold  text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
+                        <button className="px-5 py-2 bg-white  text-theme-semibold  text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
                           <span>
                             <MdSlowMotionVideo />
                           </span>{" "}

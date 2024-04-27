@@ -10,7 +10,7 @@ function Herohome() {
       rgba(0, 0, 0, 1), 
       rgba(0, 0, 0, 0)
     ),
-    url('assets/banners/car6.jpeg')`,
+    url('/assets/banners/car6.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -65,7 +65,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand1.png"
+                      src="/assets/brands/brand1.png"
                       alt="Urban Gradge BMW"
                     />
                   </div>
@@ -74,7 +74,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand12.png"
+                      src="/assets/brands/brand12.png"
                       alt="Urban Gradge Mercedes"
                     />
                   </div>
@@ -83,7 +83,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand3.png"
+                      src="/assets/brands/brand3.png"
                       alt="Urban Gradge Chevrolet"
                     />
                   </div>
@@ -92,7 +92,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand9.png"
+                      src="/assets/brands/brand9.png"
                       alt="Urban Gradge Ferrari"
                     />
                   </div>
@@ -101,7 +101,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand5.png"
+                      src="/assets/brands/brand5.png"
                       alt="Urban Gradge Ford"
                     />
                   </div>
@@ -110,7 +110,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand6.png"
+                      src="/assets/brands/brand6.png"
                       alt="Urban Gradge Porsche"
                     />
                   </div>
@@ -119,7 +119,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand7.png"
+                      src="/assets/brands/brand7.png"
                       alt="Urban Gradge Toyota"
                     />
                   </div>
@@ -128,7 +128,7 @@ function Herohome() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-contain object-center"
-                      src="assets/brands/brand8.png"
+                      src="/assets/brands/brand8.png"
                       alt="Urban Gradge Volkswagen"
                     />
                   </div>
