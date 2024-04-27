@@ -93,7 +93,7 @@ function ServicePage() {
                       <div className="h-[3rem]">
                         <div className="h-[3rem]">
                           <Image
-                            src="assets/icons/icon1.png"
+                            src="/assets/icons/icon1.png"
                             alt="Urban Garage AC Service & Repair"
                             onError="assets/icons/loading.png"
                           />

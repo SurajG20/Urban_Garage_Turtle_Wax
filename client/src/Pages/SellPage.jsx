@@ -39,7 +39,7 @@ function SellPage() {
       rgba(0, 0, 0, 0.8), 
       rgba(0, 0, 0, 0)
     ),
-    url('assets/banners/car16.jpeg')`,
+    url('/assets/banners/car16.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -508,7 +508,7 @@ function SellPage() {
 
                 <div
                   style={{
-                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
+                    backgroundImage: "url('/assets/garage/garage-two.jpeg')",
                   }}
                   className="relative border theme-border-white hover:shadow-sm hover:shadow-white h-72 md:h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
@@ -538,7 +538,7 @@ function SellPage() {
 
                 <div
                   style={{
-                    backgroundImage: "url('assets/garage/garage-four.jpeg')",
+                    backgroundImage: "url('/assets/garage/garage-four.jpeg')",
                   }}
                   className="relative h-72 md:h-96 border theme-border-white hover:shadow-sm hover:shadow-white p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >

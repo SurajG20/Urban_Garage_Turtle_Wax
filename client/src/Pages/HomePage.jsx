@@ -219,7 +219,7 @@ function Home() {
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
                         backgroundImage:
-                          "url('assets/garage/garage-four.jpeg')",
+                          "url('/assets/garage/garage-four.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -245,7 +245,7 @@ function Home() {
                     <div
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
-                        backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                        backgroundImage: "url('/assets/garage/garage-one.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -320,7 +320,7 @@ function Home() {
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="assets/banners/banner11.jpeg"
+                    src="/assets/banners/banner11.jpeg"
                     alt="Urban Garage"
                   />
                 </div>
@@ -419,42 +419,42 @@ function Home() {
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-5 gap-y-10 has-scrollbar">
                 <div className="h-16 w-16 m-auto">
                   <Image
-                    src="assets/brands/brand1.png"
+                    src="/assets/brands/brand1.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand12.png"
+                    src="/assets/brands/brand12.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand3.png"
+                    src="/assets/brands/brand3.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-12 md:h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand9.png"
+                    src="/assets/brands/brand9.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16 w-auto m-auto">
                   <Image
-                    src="assets/brands/brand5.png"
+                    src="/assets/brands/brand5.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
                 </div>
                 <div className="h-16  w-auto m-auto">
                   <Image
-                    src="assets/brands/brand6.png"
+                    src="/assets/brands/brand6.png"
                     alt="Urban Garage Brand"
                     onError="assets/icons/loading.png"
                   />
@@ -466,7 +466,7 @@ function Home() {
           {/* banner  */}
           <section className="section get-start text-white">
             <div className="container">
-              <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-cover bg-[url(assets/banners/banner12.jpeg);] text-theme-500">
+              <div className="h-96 md:h-80 flex flex-col gap-y-2 items-center justify-center rounded-2xl text-white bg-cover bg-[url(/assets/banners/banner12.jpeg);] text-theme-500">
                 <h1 className="text-2xl md:text-4xl font-semibold text-theme-bold tracking-wide text-nowrap">
                   Sell Your Car At Highest Price In{" "}
                 </h1>
@@ -515,7 +515,7 @@ function Home() {
                 <div
                   className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
-                    backgroundImage: `url(assets/garage/garage-one.jpeg)`,
+                    backgroundImage: `url(/assets/garage/garage-one.jpeg)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
@@ -555,7 +555,7 @@ function Home() {
                 <div
                   className="relative h-96  p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
-                    backgroundImage: `url(assets/garage/garage-four.jpeg)`,
+                    backgroundImage: `url(/assets/garage/garage-four.jpeg)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>

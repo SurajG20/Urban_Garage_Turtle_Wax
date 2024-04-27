@@ -26,7 +26,7 @@ function BuyPage() {
       rgba(0, 0, 3, 5), 
       rgba(0, 0, 0, 0.0) /* End of the gradient is now fully transparent */
     ),
-    url('assets/banners/car11.jpeg')`,
+    url('/assets/banners/car11.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "left",
     backgroundRepeat: "no-repeat",
@@ -151,7 +151,7 @@ function BuyPage() {
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="assets/banners/banner11.jpeg"
+                    src="/assets/banners/banner11.jpeg"
                     alt="Urban Garage"
                   />
                 </div>
@@ -161,7 +161,7 @@ function BuyPage() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-left"
-                      src="assets/banners/banner11.jpeg"
+                      src="/assets/banners/banner11.jpeg"
                       alt="Uran Garage"
                     />
                   </div>
@@ -476,7 +476,7 @@ function BuyPage() {
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
                         backgroundImage:
-                          "url('assets/garage/garage-four.jpeg')",
+                          "url('/assets/garage/garage-four.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -502,7 +502,7 @@ function BuyPage() {
                     <div
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
-                        backgroundImage: "url('assets/garage/garage-one.jpeg')",
+                        backgroundImage: "url('/assets/garage/garage-one.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -577,9 +577,9 @@ function BuyPage() {
 
                 <div
                   style={{
-                    backgroundImage: "url('assets/garage/garage-two.jpeg')",
+                    backgroundImage: "url('/assets/garage/garage-two.jpeg')",
                   }}
-                  className="relative h-80 md:h-96 border theme-border-white hover:shadow-sm hover:shadow-white p-4 border border-black flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
+                  className="relative h-80 md:h-96  theme-border-white hover:shadow-sm hover:shadow-white p-4 border border-black flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
                   <div className="relative z-10">
@@ -607,7 +607,7 @@ function BuyPage() {
 
                 <div
                   style={{
-                    backgroundImage: "url('assets/garage/garage-four.jpeg')",
+                    backgroundImage: "url('/assets/garage/garage-four.jpeg')",
                   }}
                   className="relative h-80 md:h-96  theme-border-white hover:shadow-sm hover:shadow-white border border-black p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                 >

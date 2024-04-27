@@ -7,7 +7,7 @@ function Preloader({message="Loading..."}) {
         <div className="h-24">
           <img
             className="h-full w-full object-cover object-center"
-            src="assets/logo/light-logo.png"
+            src="/assets/logo/light-logo.png"
             alt="Urban Garage"
           />
         </div>

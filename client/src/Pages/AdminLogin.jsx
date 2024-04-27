@@ -1,11 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
-import { FaEye,FaEyeSlash } from "react-icons/fa6";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 function AdminLogin() {
   const [visible, setVisible] = useState(true);
@@ -21,9 +21,8 @@ function AdminLogin() {
         login(data.data);
         navigate("/admin/cars");
       },
-   
+
       onError: (error) => {
-       
         setErrorMessage(
           error.response.data.error || "An unexpected error occurred"
         );
@@ -63,7 +62,7 @@ function AdminLogin() {
                 <Link to={"/"}>
                   <img
                     className="h-full w-full object-cover object-center"
-                    src="assets/logo/light-logo.png"
+                    src="/assets/logo/light-logo.png"
                     alt="Urban Garage"
                   />
                 </Link>

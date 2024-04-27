@@ -67,7 +67,7 @@ function AboutUs() {
                 <div
                   className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
-                    backgroundImage: `url(assets/garage/garage-four.jpeg)`,
+                    backgroundImage: `url(/assets/garage/garage-four.jpeg)`,
                   }}
                 >
                   <div className="relative z-10"></div>
@@ -159,7 +159,7 @@ function AboutUs() {
                 <div
                   className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
-                    backgroundImage: `url(assets/garage/garage-one.jpeg)`,
+                    backgroundImage: `url(/assets/garage/garage-one.jpeg)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
@@ -190,7 +190,7 @@ function AboutUs() {
                 <div
                   className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
                   style={{
-                    backgroundImage: `url(assets/garage/garage-four.jpeg)`,
+                    backgroundImage: `url(/assets/garage/garage-four.jpeg)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>

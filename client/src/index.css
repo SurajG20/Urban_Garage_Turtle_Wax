@@ -1245,7 +1245,7 @@ p {
 
   .hero-banner {
     display: block;
-    background: url("assets/banners/hero-banner1.jpeg") no-repeat;
+    background: url("/assets/banners/hero-banner1.jpeg") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;

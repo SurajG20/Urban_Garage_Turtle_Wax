@@ -67,7 +67,7 @@ function Navbar() {
             <div className='flex justify-between items-center mb-10'>
               <Link to='/' className='logo'>
                 <div className='h-12'>
-                  <img className='h-full' src={'assets/logo/light-logo.png'} alt='URBAN Garage' />
+                  <img className='h-full' src={'/assets/logo/light-logo.png'} alt='URBAN Garage' />
                 </div>
               </Link>
               <RxCross1 onClick={() => setmobiNavbar(false)} className='text-2xl text-white' />
