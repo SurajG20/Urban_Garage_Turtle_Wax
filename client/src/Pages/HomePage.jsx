@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Image from "../utils/Image";
 import { useQuery } from "react-query";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,15 +8,16 @@ import Footer from "../components/Footer";
 import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
 import Banner from "../components/Banner";
+import { ErrorAlert, LoadingAlert } from "../components/Alerts";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Image from "../utils/Image";
+
 // icons
 import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
 import { FaMoneyCheckAlt } from "react-icons/fa";
-import { ErrorAlert, LoadingAlert } from "../components/Alerts";
+import { FaCar } from "react-icons/fa";
+
+
 
 function fetchCars() {
   const url = `${import.meta.env.VITE_API_URL}/products`;
@@ -472,7 +475,7 @@ function Home() {
                 </h1>
                 <p className="h1 font-extrabold text-theme-bold">59 Minutes</p>
                 <div className="flex flex-col md:flex-row gap-x-5">
-                  <p className="flex  items-center gap-3 text-theme-500">
+                  <p className="flex items-center gap-3 text-theme-500">
                     <FaBlenderPhone className="text-lg" />
                     Instant Call Back
                   </p>

@@ -6,9 +6,9 @@ import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
 // icons 
 import { BsFillFuelPumpFill } from "react-icons/bs";
-import { IoSpeedometerSharp } from "react-icons/io5";
+// import { IoSpeedometerSharp } from "react-icons/io5";
 import { FaCar } from "react-icons/fa";
-import { FaAddressCard } from "react-icons/fa";
+// import { FaAddressCard } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";

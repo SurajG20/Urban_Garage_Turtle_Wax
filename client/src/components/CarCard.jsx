@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { FaAddressCard } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaMoneyBillAlt } from "react-icons/fa";
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { IoSpeedometerSharp } from "react-icons/io5";
+
 function CarCard({ item }) {
   return (
     <div className="featured-car-card border-2 shadow-lg border-gray-900 hover:shadow-xl theme-border-white">
@@ -29,25 +38,36 @@ function CarCard({ item }) {
 
         <ul className="card-list">
           <li className="card-list-item flex flex-col">
-            <span className="card-item-text text-theme-500 text-xs">
-              Reg.year
-            </span>
+            <p className="card-item-text text-theme-500 text-xs flex items-center gap-1 ">
+              <span>
+                <FaAddressCard className="text-theme-red " />
+              </span>
+              <span>Reg.year</span>
+            </p>
             <span className="text-black text-theme-500">
               {item.modelyear ? item.modelyear : "---"}
             </span>
           </li>
 
           <li className="card-list-item flex flex-col">
-            <span className="card-item-text text-theme-500 text-xs">
-              Kms Driven
-            </span>
+            <p className="card-item-text text-theme-500 text-xs flex items-center gap-1">
+              <span>
+                <IoSpeedometerSharp className="text-theme-red " />
+              </span>
+              <span> Kms Driven</span>
+            </p>
             <span className="text-black text-theme-500">
               {item.kms ? item.kms : "---"}
             </span>
           </li>
 
           <li className="card-list-item flex flex-col">
-            <span className="card-item-text text-theme-500 text-xs">Fuel</span>
+            <span className="card-item-text text-theme-500 text-xs flex items-center gap-1 ">
+              <span>
+                <IoSpeedometerSharp className="text-theme-red " />
+              </span>
+              <span>Fuel</span>
+            </span>
             <span className="text-black text-theme-500">
               {item.fuel ? item.fuel : "---"}
             </span>
