@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const dotenv = require("dotenv");
 
-const cookieParser = require("cookie-parser");
 const cors = require("cors");
 // Routes 
 const AdminRoute = require("./routes/Admin.js");
@@ -20,7 +19,7 @@ dotenv.config();
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
 app.use(cors());
@@ -44,11 +43,8 @@ app.use("/contact", ContactRoute);
 
 // In your main app file (app.js or similar)
 app.get("/", (req, res) => {
-  console.log("Welcome To Urban Garage!");
   res.status(200).send("Welcome To Urban Garage!");
 });
-
-
 
 
 // Connect to MongoDB
@@ -57,5 +53,5 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB:", err));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const port = process.env.PORT;
+app.listen(port, () => console.log(`Server running on port ${port}`));
