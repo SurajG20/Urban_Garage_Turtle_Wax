@@ -6,7 +6,7 @@ require("dotenv").config();
 const dotenv = require("dotenv");
 
 const cors = require("cors");
-// Routes 
+// Routes
 const AdminRoute = require("./routes/Admin.js");
 const ProductRoute = require("./routes/Product.js");
 const BuyCarRoute = require("./routes/Buy.js");
@@ -44,7 +44,6 @@ app.use("/contact", ContactRoute);
 app.get("/", (req, res) => {
   res.status(200).send("Welcome To Urban Garage!");
 });
-
 
 // Connect to MongoDB
 mongoose
