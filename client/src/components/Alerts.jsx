@@ -84,7 +84,7 @@ function ErrorAlert({ msg = "Error!  Try Again..." }) {
       className="fixed top-5 inset-0 flex min-h-min justify-center z-50"
       data-dismissible="alert"
     >
-      <div className="flex items-center justify-between min-w-96 px-4 py-2 text-base text-white bg-red-500 rounded-md font-regular relative">
+      <div className="flex items-center justify-between min-w-56 px-4 py-2 text-base text-white bg-red-500 rounded-md font-regular relative">
         <div className="mr-12 text-theme-extrabold">{msg}</div>
         <button className="flex items-center" onClick={() => setVisible(false)}>
           <RxCross2 />

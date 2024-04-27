@@ -533,12 +533,16 @@ function Contactus() {
                         </p>
                       </div>
                       <div className="flex gap-5">
-                        <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
-                          Get Directions
-                        </button>
-                        <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
-                          Book Visit
-                        </button>
+                        <Link to={"/service"}>
+                          <button className="bg-theme-red text-theme-semibold text-white py-2 px-10 rounded-lg hover:bg-white hover:text-theme-red border-2 hover:border-red-600">
+                            Get Directions
+                          </button>
+                        </Link>
+                        <Link>
+                          <button className="text-theme-semibold py-2 px-10 rounded-lg hover:bg-white text-theme-red border-2 hover:border-red-600">
+                            Book Visit
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

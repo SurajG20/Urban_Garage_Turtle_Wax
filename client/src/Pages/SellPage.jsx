@@ -715,9 +715,11 @@ function SellPage() {
                   </div>
                 </div>
                 <div>
-                  <button className="py-2 px-8 text-theme-semibold hover:text-white hover:bg-theme-red bg-white text-gray-900 rounded-lg">
-                    Get In Touch
-                  </button>
+                  <Link to={"/contact-us"}>
+                    <button className="py-2 px-8 text-theme-semibold hover:text-white hover:bg-theme-red bg-white text-gray-900 rounded-lg">
+                      Get In Touch
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
