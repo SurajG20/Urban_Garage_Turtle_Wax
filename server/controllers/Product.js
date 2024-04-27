@@ -5,6 +5,7 @@ exports.listAllProducts = async (req, res) => {
     const products = await Product.find();
     res.json(products);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error: "Server error" });
   }
 };
