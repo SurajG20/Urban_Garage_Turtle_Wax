@@ -5,9 +5,6 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 function AddProduct() {
     const [formData, setFormData] = useState({
