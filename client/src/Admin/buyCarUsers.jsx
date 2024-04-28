@@ -37,12 +37,14 @@ function BuyCarUser() {
   return (
     <>
       <>
-        {deleteMutation.isLoading && <LoadingAlert msg="Deleting..." />}
-        {deleteMutation.isSuccess && <SuccessAlert msg="Successfully Deleted" />}
+        {deleteMutation.isLoading && <LoadingAlert msg="deleting..." />}
+        {deleteMutation.isSuccess && (
+          <SuccessAlert msg="Successfully Deleted" />
+        )}
         {deleteMutation.isError && (
           <ErrorAlert msg={deleteMutation.error.message} />
         )}
-        {isLoading && <isLoading msg="Loadin... Please wait" />}
+        {isLoading && <LoadingAlert msg="Loading..." />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className="bg-theme-black min-h-screen flex flex-col">

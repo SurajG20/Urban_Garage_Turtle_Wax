@@ -20,7 +20,7 @@ import { FaCar } from "react-icons/fa";
 
 
 function fetchCars() {
-  const url = `${import.meta.env.VITE_API_URL}/products`;
+  const url = `${import.meta.env.VITE_API_URL}/car`;
   return axios.get(url).then((res) => res.data);
 }
 

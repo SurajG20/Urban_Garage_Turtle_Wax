@@ -8,7 +8,7 @@ export const useCarContext = () => useContext(CarContext);
 
 export const CarProvider = ({ children }) => {
   const fetchCars = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/products`;
+    const url = `${import.meta.env.VITE_API_URL}/car`;
     const response = await axios.get(url);
     return response.data; // Assuming the API returns the array directly
   };

@@ -18,6 +18,7 @@ import Preloader from "./components/Preloader";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Admin/adminHome";
 import AddProduct from "./Admin/addProduct";
+import AddCar from "./Admin/addCar";
 import { AuthProvider } from "./AuthContext";
 import ProtectedRoute from "./ProtectedRoute";
 // react query
@@ -103,6 +104,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <ServiceUsers />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/add-car"
+            element={
+              <ProtectedRoute>
+                <AddCar />
               </ProtectedRoute>
             }
           />

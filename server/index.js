@@ -9,6 +9,8 @@ const cors = require("cors");
 // Routes
 const AdminRoute = require("./routes/Admin.js");
 const ProductRoute = require("./routes/Product.js");
+const CarRoute = require("./routes/Car.js");
+
 const BuyCarRoute = require("./routes/Buy.js");
 const SellCarRoute = require("./routes/Sell.js");
 const ContactRoute = require("./routes/Contact.js");
@@ -27,7 +29,13 @@ app.use(cors());
 app.use("/admin", AdminRoute);
 
 // Product routes GET (/products) to list products.||POST /products to add a new product.
-app.use("/products", ProductRoute);
+app.use("/car", ProductRoute);
+
+// Product routes GET (/products) to list products.||POST /products to add a new product.
+app.use("/product", ProductRoute);
+
+// Product routes GET (/car) to list cars.||POST cars to add a new product.
+app.use("/car", CarRoute);
 
 // buy car and sell car routes GET (/buyCar-users) to list all users who want to buy a car.;
 app.use("/buyCar-users", BuyCarRoute);

@@ -96,8 +96,18 @@ function Header() {
           <ul className="mobile-nav-list mb-2 flex flex-col gap-3 text-white">
             <li>
               <Link
-                to="/buy"
-                className="mobile-nav-link text-theme-500"
+                to="/admin/cars"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                All Cars
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/buyCar-users"
+                className="navbar-link text-theme-500"
                 data-nav-link
               >
                 Buy
@@ -106,8 +116,8 @@ function Header() {
 
             <li>
               <Link
-                to="/sell"
-                className="mobile-nav-link text-theme-500"
+                to="/sellCar-users"
+                className="navbar-link text-theme-500"
                 data-nav-link
               >
                 Sell
@@ -116,30 +126,20 @@ function Header() {
 
             <li>
               <Link
-                to="/service"
-                className="mobile-nav-link text-theme-500"
+                to="/service-users"
+                className="navbar-link text-theme-500"
                 data-nav-link
               >
                 Service
               </Link>
             </li>
-
             <li>
               <Link
-                to="/coating"
-                className="mobile-nav-link text-theme-500"
+                to="/contact-users"
+                className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Coating
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/ppf"
-                className="mobile-nav-link text-theme-500"
-                data-nav-link
-              >
-                PPF
+                Contact Us
               </Link>
             </li>
             <li>
@@ -149,15 +149,6 @@ function Header() {
                 data-nav-link
               >
                 Turtle Wax Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/recent-work"
-                className="mobile-nav-link text-theme-500"
-                data-nav-link
-              >
-                Recent Work
               </Link>
             </li>
           </ul>
@@ -171,32 +162,27 @@ function Header() {
         </div>
 
         <div className="header-actions">
-          <div className="header-contact">
+          <div className=" flex gap-2 items-center">
             {" "}
-            <Link to={"/add-product"}>
-              <div className="text-theme-red hover:text-white text-theme-semibold text-xl">
-                + Add Product
-              </div>
+            <Link to={"/add-car"}>
+              <button
+                type="submit"
+                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg"
+              >
+                Add Car
+              </button>
             </Link>
-            {/* <Link
-              to="tel:+917909200001"
-              target="_blank"
-              className="contact-link text-theme-500"
-            >
-              +91 7744900001
-            </Link> */}
-            {/* <span className="contact-time text-theme-500">
-              Mon - Sat: 9:00 am - 6:00 pm
-            </span> */}
+          
+            <Link to={"/add-product"}>
+              <button
+                type="submit"
+                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg"
+              >
+                Add Products
+              </button>
+            </Link>
+          
           </div>
-
-          <Link
-            to="/contact-us"
-            className="btn user-btn hidden"
-            aria-label="Profile"
-          >
-            <MdPerson className="text-2xl" />
-          </Link>
 
           <button
             onClick={() => setmobiNavbar(!mobiNavbar)}

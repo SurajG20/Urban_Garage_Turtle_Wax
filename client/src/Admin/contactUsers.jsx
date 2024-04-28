@@ -61,7 +61,7 @@ function ContactUser() {
         {deleteContactUserMutation.isError && (
           <ErrorAlert msg="Failed! Try again..." />
         )}
-        {isLoading && <isLoading msg="Loadin... Please wait" />}
+        {isLoading && <LoadingAlert msg="Loading..." />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
       </>
       <div className="min-h-screen flex flex-col">

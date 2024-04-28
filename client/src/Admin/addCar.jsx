@@ -5,7 +5,7 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
-function AddProduct() {
+function AddCar() {
   const [formData, setFormData] = useState({
     name: "",
     make: "",
@@ -18,7 +18,7 @@ function AddProduct() {
   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
     async (data) => {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/products`,
+        `${import.meta.env.VITE_API_URL}/car`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -28,9 +28,16 @@ function AddProduct() {
       onSuccess: () => {
         setFormData({
           name: "",
+          model: "",
+          modelyear: "",
           make: "",
           price: "",
-          description: "",
+          owner: "",
+          reg: "",
+          kms: "",
+          fuel: "",
+          colour: "",
+          insurance: "",
           images: [],
           thumbnail: "",
         });
@@ -46,6 +53,7 @@ function AddProduct() {
     const { name, files, type } = event.target;
     if (type === "file") {
       if (name === "images") {
+        // Select only the first 8 files if more than 8 are uploaded
         const selectedFiles =
           files.length > 8 ? Array.from(files).slice(0, 8) : Array.from(files);
         setFormData((prevState) => ({
@@ -97,7 +105,7 @@ function AddProduct() {
             <div className="container px-6 py-24  lg:px-8">
               <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
                 <h1 className="mb-10 text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
-                  Add New Product
+                  Add New CAR
                 </h1>
                 <p className="text-sm text-theme-500 text-theme-red">
                   ** all fields in the form are mandatory **
@@ -107,43 +115,43 @@ function AddProduct() {
                   className="mx-auto mt-16 max-w-6xl sm:mt-10"
                 >
                   <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                    {/* Product Name */}
+                    {/* Car Name */}
                     <div>
                       <label
-                        htmlFor="product-name"
+                        htmlFor="car-name"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
-                        Product Name <span className="text-theme-red">*</span>
+                        Car Name <span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
-                          id="product-name"
                           required
                           type="text"
                           name="name"
                           value={formData.name}
+                          id="car-name"
                           autoComplete="given-name"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
-                          placeholder="Enter Product Name"
+                          placeholder="Enter Car Name/Model"
                           onChange={handleInputChange}
                         />
                       </div>
                     </div>
-                    {/* Product Model Name*/}
+                    {/* Car Model Name*/}
                     <div>
                       <label
-                        htmlFor="product-number"
+                        htmlFor="car-model"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
-                        Product Number<span className="text-theme-red">*</span>
+                        Car Model Name<span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
-                          id="product-number"
                           required
                           type="text"
                           name="model"
                           value={formData.model}
+                          id="car-model"
                           autoComplete="car-model"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                           placeholder="Enter Car Model"
@@ -151,52 +159,222 @@ function AddProduct() {
                         />
                       </div>
                     </div>
-
-                    {/* car price  */}
-                    <div className="Price">
+                    {/* Car Model Year */}
+                    <div className="">
                       <label
-                        htmlFor="product-price"
+                        htmlFor="modelyear"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Car Model Year<span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="number"
+                          maxLength={4}
+                          name="modelyear"
+                          value={formData.modelyear}
+                          id="modelyear"
+                          autoComplete="organization"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Car Model Year"
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+                    {/* Company/Brand Name */}
+                    <div className="">
+                      <label
+                        htmlFor="make"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Company/Brand Name
+                        <span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="text"
+                          name="make"
+                          value={formData.make}
+                          id="make"
+                          autoComplete="Company Name"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Car Company/Brand Name"
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+                    {/* car price  */}
+                    <div className="">
+                      <label
+                        htmlFor="price"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
                         Price<span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
-                          id="product-price"
                           required
                           type="Number"
                           name="price"
                           value={formData.price}
+                          id="price"
                           autoComplete="price"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
-                          placeholder="Enter Product Price.."
+                          placeholder="Enter Car Price.."
                           onChange={handleInputChange}
                         />
                       </div>
                     </div>
-                    {/* Descriptoin*/}
-                    <div>
+                    {/* Car Owner */}
+                    <div className="">
                       <label
-                        htmlFor="product-description"
+                        htmlFor="owner"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
-                        Descriptionr<span className="text-theme-red">*</span>
+                        Car Owner<span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
-                        <textarea
-                          id="product-description"
+                        <select
                           required
                           type="text"
-                          name="description"
-                          value={formData.description}
-                          autoComplete="car-model"
+                          name="owner"
+                          value={formData.owner}
+                          id="owner"
+                          autoComplete="organization"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
-                          placeholder="Enter Product Description.."
+                          placeholder="Enter Car Model Year"
+                          onChange={handleInputChange}
+                        >
+                          <option value="">--select owner Type--</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                        </select>
+                      </div>
+                    </div>
+                    {/* Reg.Year */}
+                    <div className="">
+                      <label
+                        htmlFor="reg.year"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Reg.No<span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="text"
+                          name="reg"
+                          value={formData.reg}
+                          id="reg.year"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Car Registration Year"
                           onChange={handleInputChange}
                         />
                       </div>
                     </div>
-
+                    {/* Kilometers driven  */}
+                    <div className="">
+                      <label
+                        htmlFor="kms"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Kilomerters Driven
+                        <span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="Number"
+                          name="kms"
+                          value={formData.kms}
+                          id="kms"
+                          autoComplete="kms"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Kilometers Driven"
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+                    {/* fuel */}
+                    <div className="">
+                      <label
+                        htmlFor="fuel"
+                        className=" text-sm text-theme-semibold  leading-6 text-gray-900 flex items-center gap-2"
+                      >
+                        Fuel Type <span className="text-theme-red">*</span>
+                        <span className="text-sm text-gray-600">
+                          (Diesel/Petrol/EV/Hybrid)
+                        </span>
+                      </label>
+                      <div className="mt-2.5">
+                        <select
+                          required
+                          type="text"
+                          name="fuel"
+                          value={formData.fuel}
+                          id="fuel"
+                          autoComplete="fuel"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Kilometers Driven"
+                          onChange={handleInputChange}
+                        >
+                          <option value="--/--">--select Fuel Type--</option>
+                          <option value="Diesel">Diesel</option>
+                          <option value="Petrol">Petrol</option>
+                          <option value="EV">EV</option>
+                          <option value="Hybrid">Hybrid</option>
+                        </select>
+                      </div>
+                    </div>
+                    {/* Car Color */}
+                    <div className="">
+                      <label
+                        htmlFor="colour"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Car Color<span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="text"
+                          name="colour"
+                          value={formData.colour}
+                          id="colour"
+                          autoComplete="colour"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Car Color.."
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+                    {/* insurance */}
+                    <div className="">
+                      <label
+                        htmlFor="insurance"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Insurance<span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <input
+                          required
+                          type="text"
+                          name="insurance"
+                          value={formData.insurance}
+                          id="insurance"
+                          autoComplete="insurance"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Insurance Details.."
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
                     {/*Thubnail Image Upload */}
                     <div className="">
                       <label
@@ -229,10 +407,7 @@ function AddProduct() {
                         htmlFor="images"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
-                        Upload Images
-                        <span className="text-theme-red font-medium">
-                          **max 8 Images Can Uploaded**
-                        </span>
+                        Upload Images<span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -305,36 +480,36 @@ function AddProduct() {
                             y1="224"
                             x2="128"
                             y2="192"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="24"
                           ></line>
                           <line
                             x1="60.1"
                             y1="195.9"
                             x2="82.7"
                             y2="173.3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="24"
                           ></line>
                           <line
                             x1="32"
                             y1="128"
                             x2="64"
                             y2="128"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="24"
                           ></line>
                           <line
                             x1="60.1"
                             y1="60.1"
                             x2="82.7"
                             y2="82.7"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="24"
                           ></line>
                         </svg>
                         Adding...
@@ -344,7 +519,7 @@ function AddProduct() {
                         type="submit"
                         className="bg-theme-red text-white py-2 px-8 rounded-lg"
                       >
-                        Add New Product
+                        Add New Car
                       </button>
                     )}
                   </div>
@@ -360,4 +535,4 @@ function AddProduct() {
   );
 }
 
-export default AddProduct;
+export default AddCar;

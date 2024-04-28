@@ -22,14 +22,14 @@ function AdminDashboard() {
       
       return axios.delete(`${import.meta.env.VITE_API_URL}/products/${id}`);
     },
-    // {
-    //   onSuccess: () => {
-    //     console.log("Product successfully deleted");
-    //   },
-    //   onError: (error) => {
-    //     console.error("Error deleting product:", error);
-    //   },
-    // }
+    {
+      onSuccess: () => {
+        console.log("Product successfully deleted");
+      },
+      onError: (error) => {
+        console.error("Error deleting product:", error);
+      },
+    }
   );
 
   const deleteProduct = async (id) => {
@@ -43,15 +43,15 @@ function AdminDashboard() {
   return (
     <>
       <>
-        {isLoading && <LoadingAlert msg="Loading Please wait ..." />}
-        {deleteMutation.isLoading && <ErrorAlert msg="Deleting Product..." />}
+        {isLoading && <LoadingAlert msg="Loading..." />}
+        {deleteMutation.isLoading && <LoadingAlert msg="Deleting..." />}
 
         {isSuccess && <SuccessAlert msg="Welcome Admin" />}
         {deleteMutation.isSuccess && (
           <SuccessAlert msg="Product successfully deleted" />
         )}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
-        {deleteMutation.isError && <ErrorAlert msg="Failed to Delete" />}
+        {deleteMutation.isError && <ErrorAlert msg="Failed to delete" />}
       </>
       <div className="bg-theme-black min-h-screen flex flex-col ">
         <Header />

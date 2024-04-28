@@ -12,7 +12,6 @@ function BuyForm() {
     budget: "",
   });
 
-  // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
     return axios.post(`${import.meta.env.VITE_API_URL}/buyCar-users`, data);
   });
@@ -128,7 +127,7 @@ function BuyForm() {
               value={formData.modelYear}
               className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-              type="number"
+              type="Number"
               placeholder="Enter Model Year"
               onChange={handleChange}
             />
@@ -228,72 +227,72 @@ function BuyForm() {
                     y1="32"
                     x2="128"
                     y2="64"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="195.9"
                     y1="60.1"
                     x2="173.3"
                     y2="82.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="224"
                     y1="128"
                     x2="192"
                     y2="128"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="195.9"
                     y1="195.9"
                     x2="173.3"
                     y2="173.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="128"
                     y1="224"
                     x2="128"
                     y2="192"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="60.1"
                     y1="195.9"
                     x2="82.7"
                     y2="173.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="32"
                     y1="128"
                     x2="64"
                     y2="128"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="60.1"
                     y1="60.1"
                     x2="82.7"
                     y2="82.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="24"
                   ></line>
                 </svg>
                 Processing...
