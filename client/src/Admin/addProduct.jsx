@@ -5,6 +5,10 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 347b14b8b647456516ce628476535a4808988291
 function AddProduct() {
   const [formData, setFormData] = useState({
     name: "",

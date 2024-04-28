@@ -3,10 +3,8 @@ import { useQuery, useMutation, useQueryClient } from "react-query";
 import axios from "axios";
 import Header from "./adminHeader";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
 
-// icons 
 import { MdMessage } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -18,6 +16,7 @@ function fetchPeople() {
 }
 
 function ContactUser() {
+  const queryClient = useQueryClient();
   const { data, error, isSuccess, isError, isLoading } = useQuery(
     "people",
     fetchPeople,
