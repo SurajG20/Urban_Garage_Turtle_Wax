@@ -5,8 +5,8 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient();
-import { CarProvider } from './CarsContent.jsx';
-import { ProductProvider } from './ProductContent.jsx';
+import { CarProvider } from './CarContext.jsx';
+import { ProductProvider } from './ProductContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

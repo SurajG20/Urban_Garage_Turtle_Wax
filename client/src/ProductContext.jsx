@@ -10,7 +10,7 @@ export const ProductProvider = ({ children }) => {
   const fetchProducts = async () => {
     const url = `${import.meta.env.VITE_API_URL}/product`;
     const response = await axios.get(url);
-
+    
     return response.data;
   };
 

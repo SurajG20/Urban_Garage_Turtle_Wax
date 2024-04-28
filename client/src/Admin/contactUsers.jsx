@@ -31,7 +31,7 @@ function ContactUser() {
     },
     {
       onSuccess: () => {
-        queryClient.invalidateQueries("contacts");
+        queryClient.invalidateQueries("people");
         console.log("Contact user successfully deleted");
       },
       onError: (error) => {

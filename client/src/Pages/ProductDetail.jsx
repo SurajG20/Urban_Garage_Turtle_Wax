@@ -5,11 +5,11 @@ import data from "../server.json";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 import errImg from "../../public/assets/loading.jpeg";
-import { useCarContext } from "../CarContext";
+import { useProductContext } from "../ProductContext";
 
 // Ebook Content
 import axios from "axios";
-import { useMutation,useQueryClient} from "react-query";
+import { useMutation } from "react-query";
 import Modal from "./EbookNow";
 import Preloader from "../components/Preloader";
 // icons
@@ -18,7 +18,7 @@ import { IoMdCall } from "react-icons/io";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { IoSpeedometerSharp } from "react-icons/io5";
-// import { FaCar } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
 import { FaAddressCard } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 // import { FaPhoneAlt } from "react-icons/fa";
@@ -28,12 +28,12 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
 
-function CarDetail() {
-  const queryClient = useQueryClient();
-  const { cars } = useCarContext();
+function ProductDetail() {
+  const { products, isLoading, isError, error } = useProductContext();
+
   const { id } = useParams();
   const [tab, setTab] = useState(0);
-  const [carDetail, setCarDetail] = useState({});
+  const [productDetail, setProductDetail] = useState({});
 
   // E-book button
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,15 +45,14 @@ function CarDetail() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
-    carBrand: "",
-    modelYear: "",
-    fuelType: "",
-    budget: "",
+    productName: "",
+    productModel: "",
+    productPrice: "",
   });
 
   // Setup mutation using React Query and Axios
   const formMutation = useMutation((data) => {
-    return axios.post(`${import.meta.env.VITE_API_URL}/buyCar-users`, data);
+    return axios.post(`${import.meta.env.VITE_API_URL}/product-customer`, data);
   });
 
   const handleChange = (event) => {
@@ -71,10 +70,9 @@ function CarDetail() {
         setFormData({
           fullName: "",
           mobileNumber: "",
-          carBrand: "",
-          modelYear: "",
-          fuelType: "",
-          budget: "",
+          productName: "",
+          productModel: "",
+          productPrice: "",
         });
       },
       onError: (error) => {
@@ -84,7 +82,7 @@ function CarDetail() {
     });
   };
 
-  if (!cars.length) {
+  if (!products.length) {
     return (
       <>
         <Preloader message="Loading ...." />
@@ -94,16 +92,16 @@ function CarDetail() {
 
   useEffect(() => {
     // const carId = parseInt(id, 10);
-    const foundCar = cars.find((car) => car._id == id); //
-    if (foundCar) {
-      setCarDetail(foundCar);
+    const foundProduct = products.find((product) => product._id == id); //
+    if (foundProduct) {
+      setProductDetail(foundProduct);
       setFormData({
         fullName: "",
         mobileNumber: "",
-        carBrand: foundCar.name,
-        modelYear: foundCar.modelyear,
-        fuelType: foundCar.fuel,
-        budget: foundCar.price,
+        carBrand: foundProduct.name,
+        modelYear: foundProduct.modelyear,
+        fuelType: foundProduct.fuel,
+        budget: foundProduct.price,
       });
     } else {
       setFormData({
@@ -115,9 +113,9 @@ function CarDetail() {
         budget: "",
       });
     }
-  }, [id, cars]);
+  }, [id, products]);
 
-  if (!carDetail) {
+  if (!productDetail) {
     return (
       <>
         <Preloader message="please wait ...." />
@@ -166,7 +164,7 @@ function CarDetail() {
               <div className="mb-10 grid md:grid-cols-2 gap-x-10 text-white">
                 <div className="mb-5 flex flex-col gap-y-3">
                   <div className="uppercase tracking-wider text-theme-red text-theme-bold md:h2 h3 text-center md:text-start">
-                    {carDetail?.name}
+                    {productDetail?.name}
                   </div>
 
                   <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
@@ -182,7 +180,7 @@ function CarDetail() {
                       </div>
 
                       <div className="text-theme-semibold">
-                        {carDetail?.modelyear}
+                        {productDetail?.modelyear}
                       </div>
                     </div>
                     {/* Req.No */}
@@ -196,7 +194,7 @@ function CarDetail() {
                         </p>
                       </div>
                       <div className="text-theme-semibold uppercase">
-                        {carDetail?.reg}
+                        {productDetail?.reg}
                       </div>
                     </div>
                     <div>
@@ -209,7 +207,7 @@ function CarDetail() {
                         </p>
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail?.kms}
+                        {productDetail?.kms}
                       </div>
                     </div>
                     <div>
@@ -222,7 +220,7 @@ function CarDetail() {
                         </p>
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail?.owner}
+                        {productDetail?.owner}
                       </div>
                     </div>
                     <div>
@@ -235,7 +233,7 @@ function CarDetail() {
                         </p>
                       </div>
                       <div className="text-theme-semibold">
-                        {carDetail?.fuel}
+                        {productDetail?.fuel}
                       </div>
                     </div>
                   </div>
@@ -249,7 +247,7 @@ function CarDetail() {
                         ₹ IND
                       </span>
                       <span className="h3 text-them-semibold text-theme-bold text-theme-red">
-                        {carDetail?.price}
+                        {productDetail?.price}
                       </span>
                       <span>/-</span>
                     </div>
@@ -258,7 +256,7 @@ function CarDetail() {
                         <IoShieldCheckmark className="text-theme-red" />
                       </span>
                       <span className="text-md text-them-semibold text-theme-semibold ">
-                        {carDetail?.insurance}
+                        {productDetail?.insurance}
                       </span>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -320,7 +318,7 @@ function CarDetail() {
               <div className="md:h-[75vh] md:grid md:grid-cols-12 gap-2 gap-y-5 ">
                 {/* images grid  */}
                 <div className="h-full mb-5 w-full md:col-span-3 flex md:flex-col gap-2 p-1 overflow-x-auto md:overflow-y-auto">
-                  {carDetail?.img?.map((url, index) => (
+                  {productDetail?.img?.map((url, index) => (
                     <div
                       onClick={() => setTab(index)}
                       key={index}
@@ -345,11 +343,15 @@ function CarDetail() {
                     loading="laxy"
                     className="h-full w-full object-cover object-center"
                     src={
-                      carDetail && carDetail.img && carDetail.img.length > 0
-                        ? carDetail.img[tab]
+                      productDetail &&
+                      productDetail.img &&
+                      productDetail.img.length > 0
+                        ? productDetail.img[tab]
                         : errImg
                     }
-                    alt={`Urban Garage ${carDetail ? carDetail.name : "Car"}`}
+                    alt={`Urban Garage ${
+                      productDetail ? productDetail.name : "Car"
+                    }`}
                   />
                 </div>
               </div>
@@ -429,7 +431,7 @@ function CarDetail() {
                 id="modelYear"
                 required
                 name="modelYear"
-                value={carDetail.modelyear}
+                value={productDetail.modelyear}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
                 type="number"
@@ -448,7 +450,7 @@ function CarDetail() {
               <input
                 name="carBrand"
                 disabled
-                value={carDetail.name}
+                value={productDetail.name}
                 id="carBrand"
                 className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -467,7 +469,7 @@ function CarDetail() {
               <input
                 required
                 name="fuelType"
-                value={carDetail.fuel}
+                value={productDetail.fuel}
                 id="fuel-type"
                 className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -488,7 +490,7 @@ function CarDetail() {
                 disabled
                 required
                 name="budget"
-                value={carDetail.price}
+                value={productDetail.price}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
                 type="text"
@@ -604,4 +606,4 @@ function CarDetail() {
   );
 }
 
-export default CarDetail;
+export default ProductDetail;

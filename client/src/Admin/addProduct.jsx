@@ -5,14 +5,11 @@ import Header from "./adminHeader";
 import Footer from "../components/Footer";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 347b14b8b647456516ce628476535a4808988291
 function AddProduct() {
   const [formData, setFormData] = useState({
     name: "",
-    make: "",
+    modelNumber: "",
     price: "",
     description: "",
     images: [],
@@ -22,7 +19,7 @@ function AddProduct() {
   const { mutate, isLoading, isSuccess, isError, error } = useMutation(
     async (data) => {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/products`,
+        `${import.meta.env.VITE_API_URL}/product`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -32,7 +29,7 @@ function AddProduct() {
       onSuccess: () => {
         setFormData({
           name: "",
-          make: "",
+          modelNumber: "",
           price: "",
           description: "",
           images: [],
@@ -110,7 +107,7 @@ function AddProduct() {
                   onSubmit={handleSubmit}
                   className="mx-auto mt-16 max-w-6xl sm:mt-10"
                 >
-                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
                     {/* Product Name */}
                     <div>
                       <label
@@ -146,8 +143,8 @@ function AddProduct() {
                           id="product-number"
                           required
                           type="text"
-                          name="model"
-                          value={formData.model}
+                          name="modelNumber"
+                          value={formData.modelNumber}
                           autoComplete="car-model"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                           placeholder="Enter Car Model"
@@ -174,28 +171,6 @@ function AddProduct() {
                           autoComplete="price"
                           className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
                           placeholder="Enter Product Price.."
-                          onChange={handleInputChange}
-                        />
-                      </div>
-                    </div>
-                    {/* Descriptoin*/}
-                    <div>
-                      <label
-                        htmlFor="product-description"
-                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
-                      >
-                        Descriptionr<span className="text-theme-red">*</span>
-                      </label>
-                      <div className="mt-2.5">
-                        <textarea
-                          id="product-description"
-                          required
-                          type="text"
-                          name="description"
-                          value={formData.description}
-                          autoComplete="car-model"
-                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
-                          placeholder="Enter Product Description.."
                           onChange={handleInputChange}
                         />
                       </div>
@@ -253,6 +228,29 @@ function AddProduct() {
                           file:text-sm file:text-theme-semibold flex items-center
                           file:bg-violet-50 file:text-violet-700
                           hover:file:bg-violet-100"
+                        />
+                      </div>
+                    </div>
+                    {/* Descriptoin*/}
+                    <div  className="col-span-2">
+                      <label
+                        htmlFor="product-description"
+                        className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
+                      >
+                        Descriptionr<span className="text-theme-red">*</span>
+                      </label>
+                      <div className="mt-2.5">
+                        <textarea
+                          id="product-description"
+                          required
+                          maxLength={500}
+                          type="text"
+                          name="description"
+                          value={formData.description}
+                          autoComplete="car-model"
+                          className="text-theme-bold w-full rounded-md border-0 px-3.5 py-2 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none bg-gray-200"
+                          placeholder="Enter Product Description.."
+                          onChange={handleInputChange}
                         />
                       </div>
                     </div>

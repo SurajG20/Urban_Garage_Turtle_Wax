@@ -46,10 +46,11 @@ function ProductCard({ item }) {
               <span>/-</span>
             </p>
           </div>
-
-          <button className="btn fav-btn" aria-label="Add to favourite list">
-            Buy Now
-          </button>
+          <Link to={"/turtle-wax-product/product-detail/2558"}>
+            <button className="btn fav-btn" aria-label="Add to favourite list">
+              Buy Now
+            </button>
+          </Link>
 
           {/* <button className="btn">Alugue agora</button> */}
         </div>

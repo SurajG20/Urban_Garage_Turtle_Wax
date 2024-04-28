@@ -6,12 +6,11 @@ import axios from "axios";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
 
 const fetchData = async () => {
-  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/car`);
+  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/product`);
   return data;
 };
 
-
-function AdminDashboard() {
+function Product() {
   const queryClient = useQueryClient();
   const { data, error, isLoading, isError, isSuccess } = useQuery(
     "data",
@@ -20,12 +19,11 @@ function AdminDashboard() {
 
   const deleteMutation = useMutation(
     (id) => {
-      
-      return axios.delete(`${import.meta.env.VITE_API_URL}/car/${id}`);
+      return axios.delete(`${import.meta.env.VITE_API_URL}/product/${id}`);
     },
     {
       onSuccess: () => {
-        console.log("Car successfully deleted");
+        console.log("Product successfully deleted");
         queryClient.invalidateQueries("data");
       },
       onError: (error) => {
@@ -48,9 +46,9 @@ function AdminDashboard() {
         {isLoading && <LoadingAlert msg="Loading..." />}
         {deleteMutation.isLoading && <LoadingAlert msg="Deleting..." />}
 
-        {isSuccess && <SuccessAlert msg="Welcome Admin" />}
+        {/* {isSuccess && <SuccessAlert msg="Welcome Admin" />} */}
         {deleteMutation.isSuccess && (
-          <SuccessAlert msg="Car successfully deleted" />
+          <SuccessAlert msg="Product successfully deleted" />
         )}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
         {deleteMutation.isError && <ErrorAlert msg="Failed to delete" />}
@@ -72,14 +70,14 @@ function AdminDashboard() {
                       className="w-full bg-gray-300 px-10 mb-1 flex  flex-col gap-y-5 md:flex-row justify-between gap-x-6 py-5"
                     >
                       <div className="w-full  grid grid-cols-3 min-w-0 gap-x-4">
-                        <div className="img-wrapper">
+                        <div className="h-56 ">
                           <img
                             loading="lazy"
                             className="h-full w-full flex-none rounded-xl bg-gray-50"
                             src={
                               item.img.length > 0
                                 ? item.thumbnail
-                                : "assets/loading.jpeg"
+                                : "/assets/loading.jpeg"
                             }
                             alt="Urban Garage "
                           />
@@ -89,29 +87,17 @@ function AdminDashboard() {
                         <div className="col-span-2 grid md:grid-cols-2">
                           <p className="col-span-2 md:text-xl text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
                             <span className="text-black font-bold whitespace-nowrap">
-                              Name :
+                              Product Name :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              {item.name}
+                              {item.name?item.name:"No name"}
                             </span>
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
-                              Model :
+                              Model Numbe :
                             </span>
-                            {item.model}
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              Company Brand :
-                            </span>{" "}
-                            {item.make}
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              {"Model Year "}
-                            </span>
-                            {item.modelyear}
+                            {item.modelNumber ?item.modelNumber:"No model number"}
                           </p>
 
                           {/* col3 */}
@@ -121,47 +107,20 @@ function AdminDashboard() {
                               Price :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              ₹ {item.price} /-
+                              ₹ {item.price ?item.price:"No price Avaliable"} /-
                             </span>
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">Fuel :</span>
-                            {item.fuel}
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              Kms Driven:
-                            </span>{" "}
-                            {item.kms} km
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              {"Ownership"}
-                            </span>
-                            {item.owner}
                           </p>
 
                           {/* col4 */}
 
-                          <p className="mt-1 text-theme-500  flex gap-x-2 font-semibold leading-6 text-gray-900 uppercase">
-                            <span className="text-black font-bold">
-                              Reg.Year :
-                            </span>{" "}
-                            <span className="text-theme-red text-theme-semibold">
-                              {item.reg}
+                          <p className="col-span-2 mt-1 text-theme-500 flex gap-x-2  text-md leading-5 text-gray-800">
+                            <span className="text-black font-bold whitespace-nowrap">
+                              description :
                             </span>
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              Color :
-                            </span>
-                            {item.colour}
-                          </p>
-                          <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
-                            <span className="text-black font-bold">
-                              Insurance :
-                            </span>{" "}
-                            {item.insurance}
+
+                            {item.description
+                              ? item.description.slice(0, 500) + "..."
+                              : "No description available."}
                           </p>
                         </div>
                       </div>
@@ -189,4 +148,4 @@ function AdminDashboard() {
   );
 }
 
-export default AdminDashboard;
+export default Product;

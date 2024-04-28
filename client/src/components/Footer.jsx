@@ -97,7 +97,8 @@ function Footer() {
 
             <li>
               <Link
-                to="/turtle-wax-products"
+                to="/turtle-wax-product.
+                "
                 className="footer-link flex items-center gap-x-1 text-theme-semibold"
               >
                 <span>Turtle Wax Products</span>

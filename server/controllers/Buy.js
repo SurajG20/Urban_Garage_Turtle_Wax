@@ -10,7 +10,6 @@ exports.allBuyCarUsers = async (req, res) => {
 };
 
 exports.addBuyCarUser = async (req, res) => {
-  console.log(req.body);
   try {
     const buyCarUser = new BuyCar({
       ...req.body,
@@ -40,4 +39,3 @@ exports.deleteBuyCarUser = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
-

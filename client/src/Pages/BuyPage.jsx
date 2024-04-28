@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CarCard from "../components/CarCard";
-import data from "../server.json";
 import Testinomial from "../components/Testinomial";
-import { Link } from "react-router-dom";
 import Image from "../utils/Image";
-import { useCarContext } from "../CarsContent";
+import { useCarContext } from "../CarContext";
 // icons
 import { TiTick } from "react-icons/ti";
 import { FaBlenderPhone } from "react-icons/fa";
@@ -502,7 +501,8 @@ function BuyPage() {
                     <div
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
-                        backgroundImage: "url('/assets/garage/garage-one.jpeg')",
+                        backgroundImage:
+                          "url('/assets/garage/garage-one.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}

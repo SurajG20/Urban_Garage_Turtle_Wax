@@ -20,9 +20,6 @@ function Header() {
               alt="URBAN Garage"
             />
           </div>
-          <div className="text-theme-red text-theme-bold text-2xl">
-            URBAN GARAGE
-          </div>
         </Link>
 
         <nav className="navbar " data-navbar>
@@ -38,7 +35,7 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/buyCar-users"
+                to="/admin/buyCar"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -47,7 +44,7 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/sellCar-users"
+                to="/admin/sellCar"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -56,7 +53,7 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/service-users"
+                to="/admin/service"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -65,7 +62,25 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/contact-users"
+                to="/admin/products"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                All Products
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/buyProduct"
+                className="navbar-link text-theme-500"
+                data-nav-link
+              >
+                 Product Customers
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/customers"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -106,7 +121,7 @@ function Header() {
 
             <li>
               <Link
-                to="/buyCar-users"
+                to="/admin/buyCar"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -116,7 +131,7 @@ function Header() {
 
             <li>
               <Link
-                to="/sellCar-users"
+                to="/admin/sellCar"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -126,7 +141,7 @@ function Header() {
 
             <li>
               <Link
-                to="/service-users"
+                to="/admin/service"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
@@ -135,53 +150,51 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/contact-users"
+                to="/admin/customers"
                 className="navbar-link text-theme-500"
                 data-nav-link
               >
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/turtle-wax-products"
-                className="mobile-nav-link text-theme-500"
-                data-nav-link
-              >
-                Turtle Wax Products
+                Customers
               </Link>
             </li>
           </ul>
           <div>
-            <Link to={"/contact-us"}>
-              <button className="py-2 px-5 w-full bg-white font-semibold">
-                Contact us
-              </button>
-            </Link>
+            <div>
+              <Link to={"/admin/add-car"}>
+                <button className="py-2 px-5 w-full bg-white font-semibold">
+                  add Car
+                </button>
+              </Link>
+            </div>
+            <div>
+              <Link to={"/admin/add-product"}>
+                <button className="py-2 px-5 w-full bg-white font-semibold">
+                  add Product
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="header-actions">
-          <div className=" flex gap-2 items-center">
+          <div className="hidden md:flex gap-2 items-center">
             {" "}
-            <Link to={"/add-car"}>
+            <Link to={"/admin/add-car"}>
               <button
                 type="submit"
-                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg"
+                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg  text-theme-500"
               >
                 Add Car
               </button>
             </Link>
-          
-            <Link to={"/add-product"}>
+            <Link to={"/admin/add-product"}>
               <button
                 type="submit"
-                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg"
+                className="bg-theme-red text-white hover:bg-white hover:text-theme-red py-2 px-8 rounded-lg  text-theme-500"
               >
                 Add Products
               </button>
             </Link>
-          
           </div>
 
           <button

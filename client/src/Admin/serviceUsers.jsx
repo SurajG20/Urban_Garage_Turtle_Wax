@@ -27,7 +27,7 @@ function ServiceUsers() {
     },
     {
       onSuccess: () => {
-        queryClient.invalidateQueries('serviceUsers');
+        queryClient.invalidateQueries("people");
         console.log('Service user successfully deleted');
       },
       onError: (error) => {

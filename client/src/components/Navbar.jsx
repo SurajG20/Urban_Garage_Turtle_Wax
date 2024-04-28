@@ -50,7 +50,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to='/turtle-wax-products' className='navbar-link text-theme-500' data-nav-link>
+                <Link to='/turtle-wax-product' className='navbar-link text-theme-500' data-nav-link>
                   Turtle Wax Products
                 </Link>
               </li>
@@ -103,7 +103,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to='/turtle-wax-products' className='mobile-nav-link text-theme-500' data-nav-link>
+                <Link to='/turtle-wax-product' className='mobile-nav-link text-theme-500' data-nav-link>
                   Turtle Wax Products
                 </Link>
               </li>

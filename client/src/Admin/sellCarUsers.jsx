@@ -31,7 +31,7 @@ function SellCarUser() {
     {
       onSuccess: () => {
         console.log('User successfully deleted');
-        queryClient.invalidateQueries('sellPeople');
+        queryClient.invalidateQueries("people");
       },
       onError: (error) => {
         console.error('Error deleting user:', error);
@@ -50,7 +50,7 @@ function SellCarUser() {
   return (
     <>
       <>
-<<<<<<< HEAD
+
         {deleteSellCarUserMutation.isLoading && (
           <LoadingAlert msg="Deleting..." />
         )}
@@ -62,13 +62,7 @@ function SellCarUser() {
         )}
         {isLoading && <LoadingAlert msg="Loading..." />}
         {isError && <ErrorAlert msg="Failed! Try again..." />}
-=======
-        {deleteSellCarUserMutation.isLoading && <LoadingAlert msg='Deleting...' />}
-        {deleteSellCarUserMutation.isSuccess && <SuccessAlert msg='Successfully Deleted' />}
-        {deleteSellCarUserMutation.isError && <ErrorAlert msg='Failed! Try again...' />}
-        {isLoading && <isLoading msg='Loadin... Please wait' />}
-        {isError && <ErrorAlert msg='Failed! Try again...' />}
->>>>>>> 347b14b8b647456516ce628476535a4808988291
+
       </>
       <div className=' min-h-screen flex flex-col'>
         <Header />

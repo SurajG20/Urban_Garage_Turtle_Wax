@@ -39,7 +39,7 @@ exports.addCar = async (req, res) => {
 exports.deleteCar = async (req, res) => {
   try {
     const { id } = req.params;
-    const car = await Product.findByIdAndDelete(id);
+    const car = await Car.findByIdAndDelete(id);
     if (!car) {
       return res.status(404).json({ message: "Car not found" });
     }
