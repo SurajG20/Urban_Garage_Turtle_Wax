@@ -44,17 +44,7 @@ exports.AdminLogin = async (req, res) => {
         message: "Admin not found",
       });
     }
-    // if Admin presend then compare the password
-    // const isMatch = await bcrypt.compare(password, admin.password);
-    // if (!isMatch) {
-    //   // If the passwords do not match
-    //   return res.status(401).json({
-    //     isAuthenticated: false,
-    //     isAdmin: false,
-    //     message: "Invalid credentials",
-    //   });
-    // }
-
+  
     // If the password matches, send back a success response
     res.json({
       isAuthenticated: true,

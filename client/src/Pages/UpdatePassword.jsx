@@ -7,14 +7,18 @@ import { useAuth } from "../AuthContext";
 import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
-function AdminLogin() {
+function UpdatePassword() {
+  const [tab, setTab] = useState(true);
   const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
   const { login } = useAuth();
   const [errorMessage, setErrorMessage] = useState("");
   const loginMutation = useMutation(
     (data) => {
-      return axios.post(`${import.meta.env.VITE_API_URL}/admin`, data);
+      return axios.post(
+        `${import.meta.env.VITE_API_URL}/admin/update-password`,
+        data
+      );
     },
     {
       onSuccess: (data) => {
@@ -34,8 +38,9 @@ function AdminLogin() {
     event.preventDefault();
     const username = event.target.username.value;
     const password = event.target.password.value;
+    const newpassword = event.target.newpassword.value;
 
-    loginMutation.mutate({ username, password });
+    loginMutation.mutate({ username, password, newpassword });
   };
 
   return (
@@ -68,7 +73,7 @@ function AdminLogin() {
                 </Link>
               </div>
               <h2 className="h2 text-theme-semibold text-center">
-                Admin Login
+                Update Password
               </h2>
             </div>
             <div className="mb-5">
@@ -113,9 +118,37 @@ function AdminLogin() {
                   />
                 )}
               </div>
-              <Link to={"/change-password"} className="mt-1">
-                <p className="text-sm text-end text-theme-500 text-blue-800 hover:text-blue-500">Change password</p>
-              </Link>
+            </div>
+            <div className="mb-5">
+              <label
+                htmlFor="newpassword"
+                className="block text-sm text-theme-semibold text-gray-700"
+              >
+                New Password{" "}
+                <span className="text-theme-red text-sm">
+                  **new password should not be same as old password**
+                </span>
+              </label>
+              <div className="relative">
+                <input
+                  placeholder="Create New Password"
+                  type={`${tab ? "password" : "text"}`}
+                  id="newpassword"
+                  name="newpassword"
+                  className="py-2 text-theme-semibold px-3 mt-1 bg-gray-200 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none rounded-md"
+                />
+                {tab ? (
+                  <FaEyeSlash
+                    className="absolute right-2 top-1/3 hover:cursor-pointer"
+                    onClick={() => setTab(false)}
+                  />
+                ) : (
+                  <FaEye
+                    className="absolute right-2 top-1/3 hover:cursor-pointer"
+                    onClick={() => setTab(true)}
+                  />
+                )}
+              </div>
             </div>
             <div className="mb-4">
               {loginMutation.isLoading ? (
@@ -208,7 +241,7 @@ function AdminLogin() {
                   type="submit"
                   className="bg-theme-red text-white py-2 px-5 rounded-lg text-theme-semibold"
                 >
-                  Login
+                  Create New Password
                 </button>
               )}
             </div>
@@ -219,4 +252,4 @@ function AdminLogin() {
   );
 }
 
-export default AdminLogin;
+export default UpdatePassword;

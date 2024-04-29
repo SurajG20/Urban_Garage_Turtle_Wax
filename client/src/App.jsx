@@ -20,8 +20,10 @@ import CarDetail from "./Pages/CarDetail";
 import ProductDetail from "./Pages/ProductDetail";
 import AboutUs from "./Pages/Aboutus";
 import Preloader from "./components/Preloader";
+
 // Admin Routes
 import AdminLogin from "./Pages/AdminLogin";
+import UpdatePassword from "./Pages/UpdatePassword";
 import AdminDashboard from "./Admin/adminHome";
 import BuyCarUser from "./Admin/buyCarUsers";
 import SellCarUser from "./Admin/sellCarUsers";
@@ -77,8 +79,10 @@ function App() {
           <Route path="/contact-us" element={<Contactus />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/login" element={<AdminLogin />} />
+          <Route path="/change-password" element={<UpdatePassword />} />
 
           {/* Admin Routes Protected */}
+
           <Route
             path="/admin/cars"
             element={

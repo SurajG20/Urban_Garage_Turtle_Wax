@@ -10,13 +10,16 @@ exports.allcontactUsers = async (req, res) => {
 };
 
 exports.addContactFormUser = async (req, res) => {
-  console.log(req.body);
+  
   try {
     const addContactFormUser = new ContactForm({
       ...req.body,
     });
     await addContactFormUser.save();
-    res.json({ message: "User added successfully", ContactUsers: addContactFormUser });
+    res.json({
+      message: "User added successfully",
+      ContactUsers: addContactFormUser,
+    });
   } catch (error) {
     console.error("Failed to add user:", error);
     res.status(500).json({ error: "Server error" });
