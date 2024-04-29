@@ -9,7 +9,7 @@ import { useCarContext } from "../CarContext";
 
 // Ebook Content
 import axios from "axios";
-import { useMutation,useQueryClient} from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 import Modal from "./EbookNow";
 import Preloader from "../components/Preloader";
 // icons
@@ -76,7 +76,7 @@ function CarDetail() {
           fuelType: "",
           budget: "",
         });
-         closeModal();
+        closeModal();
       },
       onError: (error) => {
         console.error("Error:", error);
@@ -274,9 +274,11 @@ function CarDetail() {
                   {/* card 2 */}
                   <div className="md:col-span-2 grid grid-cols-2 gap-2 gap-y-5 justify-center items-center">
                     <div className="col-span-2 grid grid-cols-2 gap-2 items-center justify-center w-full">
-                      <button className="px-5 w-full py-2 text-theme-semibold  bg-theme-red rounded-md">
-                        Book Test Drive
-                      </button>
+                      <Link to={"contact-us"}>
+                        <button className="px-5 w-full py-2 text-theme-semibold  bg-theme-red rounded-md">
+                          Connect  Now
+                        </button>
+                      </Link>
                       <button
                         onClick={openModal}
                         className="py-2 w-full px-5 bg-theme-white text-theme-semibold text-black rounded-md"

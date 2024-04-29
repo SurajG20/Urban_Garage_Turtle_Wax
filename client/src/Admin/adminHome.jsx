@@ -72,7 +72,7 @@ function AdminDashboard() {
                       className="w-full bg-gray-300 px-10 mb-1 flex  flex-col gap-y-5 md:flex-row justify-between gap-x-6 py-5"
                     >
                       <div className="w-full  grid grid-cols-3 min-w-0 gap-x-4">
-                        <div className="img-wrapper">
+                        <div className="h-64 w-full">
                           <img
                             loading="lazy"
                             className="h-full w-full flex-none rounded-xl bg-gray-50"
