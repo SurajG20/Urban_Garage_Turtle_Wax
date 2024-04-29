@@ -32,7 +32,7 @@ function ProductCustomer() {
     },
     {
       onSuccess: () => {
-        queryClient.invalidateQueries("contacts");
+        queryClient.invalidateQueries("people");
         console.log("Contact user successfully deleted");
       },
       onError: (error) => {
@@ -100,7 +100,7 @@ function ProductCustomer() {
                       <th scope="col" className="px-6 py-3 text-center">
                         <p className="flex items-center justify-center gap-2">
                           <span className="text-theme-red text-lg">₹</span>
-                         
+
                           <span className="text-gray-800"> Price</span>
                         </p>
                       </th>
@@ -124,20 +124,27 @@ function ProductCustomer() {
                           <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                             {`${users.fullName}`}
                           </td>
+                          {/* mobile number */}
                           <td className="px-6 py-4 font-medium text-blue-600 dark:text-blue-500 text-center whitespace-nowrap">
                             +91 {users.mobileNumber}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.queryType}
+                            {users.name}
                           </td>
+                          {/* Model Number  */}
+                          <td className="px-6 py-4 text-gray-700 text-center">
+                            {/* {users.message} */}
+                            {
+                              users.modelNumber
+                            }
+                          </td>
+
                           <td className="px-6 py-4 text-gray-700  text-xs text-justify">
                             {/* {users.message} */}
-                            {users && users.message
-                              ? users.message.length > 50
-                                ? `${users.message.substring(0, 50)}...`
-                                : users.message
-                              : null}
+                            {
+                              users.price
+                            }
                           </td>
 
                           <td className="px-6 py-4 text-gray-700">

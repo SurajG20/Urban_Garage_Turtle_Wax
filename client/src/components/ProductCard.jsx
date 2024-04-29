@@ -6,7 +6,7 @@ function ProductCard({ item }) {
       <figure className="card-banner">
         <div className="">
           <img
-            src={`${item.imgURL ? item.imgURL : "/assets/loading.jpeg"}`}
+            src={`${item.thumbnail ? item.thumbnail : "/assets/loading.jpeg"}`}
             alt="Urban Garage Car"
             loading="lazy"
             className="h-full w-full  object-cover object-center"
@@ -46,7 +46,7 @@ function ProductCard({ item }) {
               <span>/-</span>
             </p>
           </div>
-          <Link to={"/turtle-wax-product/product-detail/2558"}>
+          <Link to={`/turtle-wax-product/product-detail/${item._id}`}>
             <button className="btn fav-btn" aria-label="Add to favourite list">
               Buy Now
             </button>

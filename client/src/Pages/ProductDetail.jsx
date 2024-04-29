@@ -35,9 +35,9 @@ function ProductDetail() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
-    productName: "",
-    productModel: "",
-    productPrice: "",
+    name: "",
+    modelNumber: "",
+    price: "",
   });
 
   // Setup mutation using React Query and Axios
@@ -55,6 +55,7 @@ function ProductDetail() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+   
     formMutation.mutate(formData, {
       onSuccess: (response) => {
         setFormData({
@@ -64,6 +65,7 @@ function ProductDetail() {
           modelNumber: "",
           price: "",
         });
+        closeModal();
       },
       onError: (error) => {
         console.error("Error:", error);
@@ -83,7 +85,7 @@ function ProductDetail() {
   useEffect(() => {
     // const carId = parseInt(id, 10);
     const foundProduct = products.find((product) => product._id == id); //
-    console.log("foundProduct", foundProduct);
+   
     if (foundProduct) {
       setProductDetail(foundProduct);
       setFormData({
@@ -99,7 +101,7 @@ function ProductDetail() {
         mobileNumber: "",
         name: "",
         modelNumber: "",
-        productPrice: "",
+        price: "",
       });
     }
   }, [id, products]);
@@ -347,10 +349,10 @@ function ProductDetail() {
                 id="name"
                 required
                 name="name"
-                value={productDetail.name}
+                defaultValue={productDetail.name}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-                type="number"
+                type="string"
                 placeholder="Enter Product Name"
                 onChange={handleChange}
               />

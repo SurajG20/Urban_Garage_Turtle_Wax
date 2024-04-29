@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CarCard from "../components/CarCard";
 import Testinomial from "../components/Testinomial";
-import HeroSection from "../components/HeroSection";
 import { Link } from "react-router-dom";
 import Image from "../utils/Image";
 import data from "../server.json";
+import { useProductContext } from "../ProductContext";
 // icons
 import { TiTick } from "react-icons/ti";
 import { IoIosStar } from "react-icons/io";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import ProductCard from "../components/ProductCard";
 
 function TurtleWaxPage() {
-  const [cars, setCars] = useState([]);
+  const { products, isLoading, isError, error } = useProductContext();
+
   const [carIndex, setCarIndex] = useState(0);
   const carImg = [
     "https://www.turtlewax.com/cdn/shop/files/car_57740be5-a1de-45fe-9308-aead52156bbe_1920x720.png?v=1670861356",
@@ -41,19 +38,6 @@ function TurtleWaxPage() {
     backdropFilter: "blur(8px)",
   };
 
-  useEffect(() => {
-    setCars(data.products);
-  }, []);
-
-  //  useEffect(() => {
-  //    const fetchData = async () => {
-  //     fetch("your-api-endpoint")
-  //       .then((response) => response.json())
-  //       .then((data) => setCars(data.cars));
-  //      setCars(data.cars);
-  //    };
-  //    fetchData();
-  //  }, []);
 
   return (
     <div className="relative">
@@ -64,7 +48,6 @@ function TurtleWaxPage() {
         - #HERO
       --> */}
           {/* featured Products  */}
-
           <section className="">
             <div
               className="abosolute mt-20 md:mt-16 m-1  -z-50 overflow-hidden top-0 h-[65vh] md:h-screen flex items-center justify-start rounded-2xl  md:rounded-none"
@@ -86,7 +69,6 @@ function TurtleWaxPage() {
               </div>
             </div>
           </section>
-
           {/* WHAT ARE YOU WORKING ON TODAY? */}
           <section className="section text-white" id="">
             <div className="container">
@@ -166,42 +148,50 @@ function TurtleWaxPage() {
               </div>
             </div>
           </section>
-
-          {/* <!-- 
-        - #FEATURED Products
-      --> */}
-
-          <section
-            className="section featured-car text-white"
-            id="featured-car"
-          >
-            <div className="container">
-              <div className="title-wrapper">
-                <h2 className="h2 mb-5 md:mb-10 text-theme-semibold section-title m-auto flex items-center flex-wrap justify-center">
-                  TRENDING &nbsp;
-                  <span className="font-bold text-green-900 hover:underline">
-                    TURTLEWAX{" "}
-                  </span>{" "}
-                  &nbsp; PRODUCTS
-                </h2>
-                {/* 
+          {isLoading ? (
+            <>
+              <LoadingAlert msg="Loading..." />
+            </>
+          ) : isError ? (
+            <>
+              <ErrorAlert msg={`${error.message}`} />
+            </>
+          ) : (
+            <>
+              {/* Dynamic content that depends on the loaded data */}
+              <section
+                className="section featured-car text-white"
+                id="featured-car"
+              >
+                <div className="container">
+                  <div className="title-wrapper">
+                    <h2 className="h2 mb-5 md:mb-10 text-theme-semibold section-title m-auto flex items-center flex-wrap justify-center">
+                      TRENDING &nbsp;
+                      <span className="font-bold text-green-900 hover:underline">
+                        TURTLEWAX{" "}
+                      </span>{" "}
+                      &nbsp; PRODUCTS
+                    </h2>
+                    {/* 
                 <Link to="#" className="featured-car-link">
                   <span>Veja mais</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </Link> */}
-              </div>
+                  </div>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                {cars &&
-                  cars.map((item) => (
-                    <li className="w-100" key={item._id}>
-                      <ProductCard item={item} />
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          </section>
+                  <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    {products &&
+                      products.map((item) => (
+                        <li className="w-100" key={item._id}>
+                          <ProductCard item={item} />
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </section>
+            </>
+          )}
 
           {/*  NEW PRODUCTS*/}
           <section className="section text-white " id="">
@@ -279,7 +269,6 @@ function TurtleWaxPage() {
               </div>
             </div>
           </section>
-
           {/* Want to Know Morw Abt  Turtlewax*/}
           <section className="section text-white" id="">
             <div className="">
@@ -318,7 +307,6 @@ function TurtleWaxPage() {
               </div>
             </div>
           </section>
-
           {/* Save BIG With Urban Garage */}
           <section className="section text-white ">
             <div className="container">
@@ -605,7 +593,6 @@ function TurtleWaxPage() {
             </div>
           </section>
           {/* sell banner end  */}
-
           {/* testinomials  */}
           <Testinomial />
         </article>

@@ -76,6 +76,7 @@ function CarDetail() {
           fuelType: "",
           budget: "",
         });
+         closeModal();
       },
       onError: (error) => {
         console.error("Error:", error);
