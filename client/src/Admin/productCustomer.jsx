@@ -118,7 +118,7 @@ function ProductCustomer() {
                     ) : (
                       data.map((users) => (
                         <tr
-                          key={users.id}
+                          key={users._id}
                           className="odd:bg-white odd:dark:bg-gray-600 even:bg-gray-50 even:dark:bg-gray-600 border-b border-gray-300 "
                         >
                           <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">

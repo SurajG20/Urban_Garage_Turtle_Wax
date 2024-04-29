@@ -115,7 +115,7 @@ function RecentWork() {
                     height="auto"
                     controls
                     preload="auto"
-                    playsinline
+                    playsInline
                     loading="lazy"
                   >
                     <source

@@ -446,7 +446,7 @@ function AddCar() {
                             y2="64"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="195.9"
@@ -455,7 +455,7 @@ function AddCar() {
                             y2="82.7"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="224"
@@ -464,7 +464,7 @@ function AddCar() {
                             y2="128"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="195.9"
@@ -473,7 +473,7 @@ function AddCar() {
                             y2="173.3"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="128"
@@ -482,7 +482,7 @@ function AddCar() {
                             y2="192"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="60.1"
@@ -491,7 +491,7 @@ function AddCar() {
                             y2="173.3"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="32"
@@ -500,7 +500,7 @@ function AddCar() {
                             y2="128"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                           <line
                             x1="60.1"
@@ -509,7 +509,7 @@ function AddCar() {
                             y2="82.7"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="24"
+                            strokeWidth="24"
                           ></line>
                         </svg>
                         Adding...
