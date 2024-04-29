@@ -3,10 +3,9 @@ const mongoose = require("mongoose");
 const productCustomerSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
   mobileNumber: { type: String, required: true },
-  productName: { type: String, required: true },
-  productModel: { type: String, required: true },
-  productPrice: { type: String, required: true },
- 
+  name: { type: String, required: true },
+  modelNumber: { type: String, required: true },
+  price: { type: String, required: true },
 });
 
 const ProductCustomer = mongoose.model(

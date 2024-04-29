@@ -97,7 +97,7 @@ function AddProduct() {
           <section>
             <div className="container px-6 py-24  lg:px-8">
               <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
-                <h1 className="mb-10 text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
+                <h1 className="mb-2 text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
                   Add New Product
                 </h1>
                 <p className="text-sm text-theme-500 text-theme-red">
@@ -105,7 +105,7 @@ function AddProduct() {
                 </p>
                 <form
                   onSubmit={handleSubmit}
-                  className="mx-auto mt-16 max-w-6xl sm:mt-10"
+                  className="mx-auto mt-10 max-w-6xl "
                 >
                   <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
                     {/* Product Name */}
@@ -136,7 +136,8 @@ function AddProduct() {
                         htmlFor="product-number"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"
                       >
-                        Product Number<span className="text-theme-red">*</span>
+                        Product Model Number
+                        <span className="text-theme-red">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -232,7 +233,7 @@ function AddProduct() {
                       </div>
                     </div>
                     {/* Descriptoin*/}
-                    <div  className="col-span-2">
+                    <div className="col-span-2">
                       <label
                         htmlFor="product-description"
                         className="text-theme-bold text-sm text-theme-semibold flex items-center leading-6 text-gray-900"

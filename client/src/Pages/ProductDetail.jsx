@@ -16,21 +16,11 @@ import Preloader from "../components/Preloader";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { SuccessAlert, ErrorAlert, LoadingAlert } from "../components/Alerts";
-import { BsFillFuelPumpFill } from "react-icons/bs";
-import { IoSpeedometerSharp } from "react-icons/io5";
-import { FaCar } from "react-icons/fa";
-import { FaAddressCard } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
-// import { FaPhoneAlt } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-// import { FaMoneyBillAlt } from "react-icons/fa";
-import { IoShieldCheckmark } from "react-icons/io5";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { IoLocation } from "react-icons/io5";
+
 
 function ProductDetail() {
   const { products, isLoading, isError, error } = useProductContext();
-
   const { id } = useParams();
   const [tab, setTab] = useState(0);
   const [productDetail, setProductDetail] = useState({});
@@ -70,9 +60,9 @@ function ProductDetail() {
         setFormData({
           fullName: "",
           mobileNumber: "",
-          productName: "",
-          productModel: "",
-          productPrice: "",
+          name: "",
+          modelNumber: "",
+          price: "",
         });
       },
       onError: (error) => {
@@ -93,24 +83,23 @@ function ProductDetail() {
   useEffect(() => {
     // const carId = parseInt(id, 10);
     const foundProduct = products.find((product) => product._id == id); //
+    console.log("foundProduct", foundProduct);
     if (foundProduct) {
       setProductDetail(foundProduct);
       setFormData({
         fullName: "",
         mobileNumber: "",
-        carBrand: foundProduct.name,
-        modelYear: foundProduct.modelyear,
-        fuelType: foundProduct.fuel,
-        budget: foundProduct.price,
+        name: foundProduct.name,
+        modelNumber: foundProduct.modelNumber,
+        price: foundProduct.price,
       });
     } else {
       setFormData({
         fullName: "",
         mobileNumber: "",
-        carBrand: "",
-        modelYear: "",
-        fuelType: "",
-        budget: "",
+        name: "",
+        modelNumber: "",
+        productPrice: "",
       });
     }
   }, [id, products]);
@@ -161,119 +150,35 @@ function ProductDetail() {
         <article>
           <section className="section">
             <div className="container">
-              <div className="mb-10 grid md:grid-cols-2 gap-x-10 text-white">
-                <div className="mb-5 flex flex-col gap-y-3">
+              <div className="mb-10 grid md:grid-cols-3 gap-x-10 gap-y-2 text-white">
+                {/* card 1 */}
+                <div className="mb-5 flex flex-col gap-y-5">
                   <div className="uppercase tracking-wider text-theme-red text-theme-bold md:h2 h3 text-center md:text-start">
                     {productDetail?.name}
                   </div>
 
-                  <div className="grid grid-cols-3 md:grid-cols-5 text-center gap-5 md:gap-3">
-                    {/* Reg Year */}
-                    <div className="flex flex-col items-center">
-                      <div className="text-theme-500 text-gray-400 ">
-                        <p className="flex item-center gap-2">
-                          <span className="text-theme-red">
-                            <FaCalendarAlt />
-                          </span>
-                          <span>Reg.Year</span>
-                        </p>
-                      </div>
-
-                      <div className="text-theme-semibold">
-                        {productDetail?.modelyear}
-                      </div>
-                    </div>
-                    {/* Req.No */}
-                    <div className="flex flex-col items-center">
-                      <div className="text-theme-500 text-gray-400">
-                        <p className="flex item-center gap-2">
-                          <span className="text-theme-red">
-                            <FaAddressCard />
-                          </span>
-                          <span> Req.No</span>
-                        </p>
-                      </div>
-                      <div className="text-theme-semibold uppercase">
-                        {productDetail?.reg}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-theme-500 text-gray-400">
-                        <p className="flex item-center gap-2">
-                          <span className="text-theme-red">
-                            <IoSpeedometerSharp />
-                          </span>
-                          <span>KMs Driven</span>
-                        </p>
-                      </div>
-                      <div className="text-theme-semibold">
-                        {productDetail?.kms}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-theme-500 text-gray-400">
-                        <p className="flex item-center gap-2">
-                          <span className="text-theme-red">
-                            <FaUser />
-                          </span>
-                          <span>Ownership</span>
-                        </p>
-                      </div>
-                      <div className="text-theme-semibold">
-                        {productDetail?.owner}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-theme-500 text-gray-400">
-                        <p className="flex item-center gap-2">
-                          <span className="text-theme-red">
-                            <BsFillFuelPumpFill />
-                          </span>
-                          <span> Fuel Type</span>
-                        </p>
-                      </div>
-                      <div className="text-theme-semibold">
-                        {productDetail?.fuel}
-                      </div>
-                    </div>
+                  <div className="text-start md:gap-3 flex gap-5 items-center">
+                    <span className="text-3xl">₹</span>
+                    <span className=" text-3xl">{productDetail?.price}</span>
+                    <span className=" text-3xl">/-</span>
                   </div>
                 </div>
-
-                <div className="grid md:grid-cols-3 gap-5 items-start">
-                  {/* card 1 */}
-                  <div className="flex flex-col items-center md:items-start justify-between gap-2">
-                    <div className="flex items-center gap-x-3">
-                      <span className="text-theme-500 text-gray-400 whitespace-nowrap">
-                        ₹ IND
-                      </span>
-                      <span className="h3 text-them-semibold text-theme-bold text-theme-red">
-                        {productDetail?.price}
-                      </span>
-                      <span>/-</span>
-                    </div>
-                    <div className="flex items-center gap-x-3">
-                      <span className="text-theme-500 text-gray-400">
-                        <IoShieldCheckmark className="text-theme-red" />
-                      </span>
-                      <span className="text-md text-them-semibold text-theme-semibold ">
-                        {productDetail?.insurance}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-x-3">
-                      <span className="text-theme-500 text-gray-400">
-                        <IoLocation className="text-theme-red" />
-                      </span>
-                      <span className="text-md text-them-semibold text-theme-semibold uppercase">
-                        Chandigardh
-                      </span>
-                    </div>
-                  </div>
+                <div className="flex gap-2 justify-start">
+                  <span className="text-theme-semibold text-lg">
+                    Product Model Number :
+                  </span>
+                  <span>{productDetail?.modelNumber}</span>
+                </div>
+                {/* card 2 */}
+                <div className="flex md:justify-end gap-5 items-center ">
                   {/* card 2 */}
                   <div className="md:col-span-2 grid grid-cols-2 gap-2 gap-y-5 justify-center items-center">
                     <div className="col-span-2 grid grid-cols-2 gap-2 items-center justify-center w-full">
-                      <button className="px-5 w-full py-2 text-theme-semibold  bg-theme-red rounded-md">
-                        Book Test Drive
-                      </button>
+                      <Link to={"/contact-us"}>
+                        <button className="px-5 w-full py-2 text-theme-semibold  bg-theme-red rounded-md">
+                          Connect with us
+                        </button>
+                      </Link>
                       <button
                         onClick={openModal}
                         className="py-2 w-full px-5 bg-theme-white text-theme-semibold text-black rounded-md"
@@ -315,7 +220,7 @@ function ProductDetail() {
                 </div>
               </div>
               {/* main  Page content */}
-              <div className="md:h-[75vh] md:grid md:grid-cols-12 gap-2 gap-y-5 ">
+              <div className="md:h-[75vh] mb-10 md:grid md:grid-cols-12 gap-2 gap-y-5 ">
                 {/* images grid  */}
                 <div className="h-full mb-5 w-full md:col-span-3 flex md:flex-col gap-2 p-1 overflow-x-auto md:overflow-y-auto">
                   {productDetail?.img?.map((url, index) => (
@@ -355,6 +260,14 @@ function ProductDetail() {
                   />
                 </div>
               </div>
+              <div>
+                <p>
+                  <span className="text-theme-bold">Description:</span>{" "}
+                  <ul>
+                    <li>{productDetail?.description}</li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </section>
         </article>
@@ -362,16 +275,16 @@ function ProductDetail() {
       <Footer />
 
       <Modal isOpen={isModalOpen} closeModal={closeModal}>
-        <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
+        <div className="h-full mt-28 md:mt-0 bg-white flex flex-col justify-between md:p-4 rounded-2xl">
           {/* first container  */}
-          <div>
+          <div className="">
             <h3
-              className="h2 text-theme-semibold md:flex  gapx-2 py-2 h-12
+              className="h2 mb-8 md:mb-4 text-theme-semibold  md:flex flex-col md:flex-row gap-x-2 py-1 h-12
            items-center "
             >
               <span className="text-black">Please Enter Your </span>
               <span className="text-theme-red font-semibold hover:underline mx-2">
-                Car Details
+                Product Details
               </span>{" "}
             </h3>
             <p className="text-theme-500 text-theme-red">
@@ -383,6 +296,7 @@ function ProductDetail() {
             onSubmit={handleSubmit}
             className="grid md:grid-cols-2 gap-5 md:gap-10"
           >
+            {/* name */}
             <div>
               <label
                 htmlFor="full-name"
@@ -401,9 +315,10 @@ function ProductDetail() {
                 onChange={handleChange}
               />
             </div>
+            {/* contact number  */}
             <div>
               <label
-                htmlFor="number"
+                htmlFor="mobileNumber"
                 className="text-theme-500 flex items-center"
               >
                 Mobile <span className="text-red-600">*</span>
@@ -419,23 +334,24 @@ function ProductDetail() {
                 onChange={handleChange}
               />
             </div>
+            {/* product name  */}
             <div>
               <label
-                htmlFor="modelYear"
+                htmlFor="name"
                 className="text-theme-500 flex items-center"
               >
-                Model Year<span className="text-red-600">*</span>
+                Product Name<span className="text-red-600">*</span>
               </label>
               <input
                 disabled
-                id="modelYear"
+                id="name"
                 required
-                name="modelYear"
-                value={productDetail.modelyear}
+                name="name"
+                value={productDetail.name}
                 className="px-2 py-2 h-12
                bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
                 type="number"
-                placeholder="Enter Model Year"
+                placeholder="Enter Product Name"
                 onChange={handleChange}
               />
             </div>
@@ -445,12 +361,12 @@ function ProductDetail() {
                 htmlFor="carBrand"
                 className="text-theme-500 flex items-center"
               >
-                Car Brand/Car Model<span className="text-red-600">*</span>
+                Price <span className="text-red-600">*</span>
               </label>
               <input
-                name="carBrand"
+                name="price"
                 disabled
-                value={productDetail.name}
+                value={productDetail.price}
                 id="carBrand"
                 className="px-2 py-2 h-12
                bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -459,51 +375,11 @@ function ProductDetail() {
               />
             </div>
 
-            <div>
-              <label
-                htmlFor="owner-type"
-                className="text-theme-500 flex items-center"
-              >
-                Fuel Type<span className="text-red-600">*</span>
-              </label>
-              <input
-                required
-                name="fuelType"
-                value={productDetail.fuel}
-                id="fuel-type"
-                className="px-2 py-2 h-12
-               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-                onChange={handleChange}
-                placeholder="Enter Fuel Type"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="budget"
-                className="text-theme-500 flex items-center"
-              >
-                Budget<span className="text-red-600">*</span>
-              </label>
-              <input
-                id="budget"
-                disabled
-                required
-                name="budget"
-                value={productDetail.price}
-                className="px-2 py-2 h-12
-               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-                type="text"
-                placeholder="Enter Your Budget"
-                onChange={handleChange}
-              />
-            </div>
-
             <div className="mt-5 ">
               {formMutation.isLoading ? (
                 <button
                   type="button"
-                  className="bg-theme-red text-white flex justify-center items-center py-2 px-5 rounded-lg"
+                  className="bg-theme-red text-white w-full  md:flex justify-center items-center py-2 px-5 rounded-lg"
                   disabled
                 >
                   <svg
@@ -515,72 +391,72 @@ function ProductDetail() {
                       y1="32"
                       x2="128"
                       y2="64"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="195.9"
                       y1="60.1"
                       x2="173.3"
                       y2="82.7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="224"
                       y1="128"
                       x2="192"
                       y2="128"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="195.9"
                       y1="195.9"
                       x2="173.3"
                       y2="173.3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="128"
                       y1="224"
                       x2="128"
                       y2="192"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="60.1"
                       y1="195.9"
                       x2="82.7"
                       y2="173.3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="32"
                       y1="128"
                       x2="64"
                       y2="128"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                     <line
                       x1="60.1"
                       y1="60.1"
                       x2="82.7"
                       y2="82.7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
                     ></line>
                   </svg>
                   Processing...
@@ -596,7 +472,11 @@ function ProductDetail() {
             </div>
             <div className="flex flex-col items-center justify-center">
               <h3 className="text-theme-semibold p-0">URBAN GARAGE !</h3>
-              <h2 className="h2  text-theme-bold text-theme-red">Contant Us</h2>
+              <Link to={"/contact-us"}>
+                <h2 className="h2  text-theme-bold text-theme-red">
+                  Contact Us
+                </h2>
+              </Link>
             </div>
           </form>
           {/* third container  */}
