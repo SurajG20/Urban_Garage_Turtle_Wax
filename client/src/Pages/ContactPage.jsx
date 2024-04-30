@@ -136,18 +136,8 @@ function Contactus() {
                         </span>
                         <span>support@dcbi.in</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span>
-                          <FaPhoneAlt className="text-lg text-theme-red" />
-                        </span>
-                        <span>+91 7744900001</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span>
-                          <IoMail className="text-lg text-theme-red" />
-                        </span>
-                        <span>urbangarage@gmail.com</span>
-                      </div>
+                     
+                   
                     </div>
                   </div>
                   {/* right container  */}

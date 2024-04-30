@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+const Admin = require("./models/Admin");
 require("dotenv").config();
 const dotenv = require("dotenv");
 
@@ -26,7 +26,31 @@ app.use("/uploads", express.static("uploads"));
 app.use(cors());
 
 // Routes
+app.post("/update-password", async (req, res) => {
+  const { username, password, newpassword } = req.body;
+  res.json({ message: "Password updated successfully" });
+    try {
+      // Find the admin by username and current password
+      const admin = await Admin.findOne({ username, password });
+      if (!admin) {
+        return res
+          .status(404)
+          .json({ message: "Incorrect current password or username" });
+      }
+
+      // Directly update the password in the database (not recommended)
+      admin.password = newpassword;
+      await admin.save();
+
+      res.json({ message: "Password updated successfully" });
+    } catch (error) {
+      console.error("Error updating password: ", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 app.use("/admin", AdminRoute);
+
 
 app.use("/car", CarRoute);
 

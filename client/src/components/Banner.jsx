@@ -20,13 +20,13 @@ function Banner() {
           >
             <FaWhatsapp className="text-2xl" />
           </Link>
-          <Link
+          <a
             target="_blank"
-            to="tel:+917744900001"
+            href="tel:+917744900001"
             className="bg-blue-700 text-white theme-border-white  px-6 py-2   hover:cursor-pointer"
           >
             <IoCall className="text-2xl" />
-          </Link>
+          </a>
           <div
             className="absolute -top-5 bg-white -right-5 rounded-lg hover:cursor-pointer"
             onClick={() => setTab(false)}
@@ -37,11 +37,11 @@ function Banner() {
       )}
 
       <div className="fixed md:hidden z-50 bottom-2 w-full px-2">
-        <Link to="/contact-us">
+        <a target="_blank" href="tel:+917744900001">
           <button className="rounded-lg px-8 py-3 w-full text-theme-bold tracking-wider bg-theme-red text-white">
             Call Now
           </button>
-        </Link>
+        </a>
       </div>
     </>
   );
