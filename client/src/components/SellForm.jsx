@@ -122,7 +122,6 @@ function SellForm() {
             </label>
             <input
               id="modelYear"
-              required
               name="modelYear"
               maxLength={4}
               value={formData.modelYear}
@@ -140,7 +139,6 @@ function SellForm() {
               Owner Type<span className="text-red-600">*</span>
             </label>
             <select
-              required
               type="number"
               maxLength={2}
               name="ownerType"
@@ -165,7 +163,6 @@ function SellForm() {
               kilometers Driven <span className="text-red-600">*</span>
             </label>
             <input
-              required
               name="kilometersDriven"
               value={formData.kilometersDriven}
               className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -184,7 +181,6 @@ function SellForm() {
             </label>
             <input
               className="px-2 py-2 h-12  bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
-              required
               name="carName"
               value={formData.carName}
               type="text"
@@ -200,7 +196,6 @@ function SellForm() {
               Fuel Type<span className="text-red-600">*</span>
             </label>
             <select
-              required
               typeof="text"
               name="fuelType"
               value={formData.fuelType}
@@ -224,7 +219,6 @@ function SellForm() {
               Reg.City<span className="text-red-600">*</span>
             </label>
             <input
-              required
               name="regCity"
               value={formData.regCity}
               className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
@@ -241,7 +235,6 @@ function SellForm() {
               Address<span className="text-red-600">*</span>
             </label>
             <input
-              required
               name="address"
               value={formData.address}
               className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"

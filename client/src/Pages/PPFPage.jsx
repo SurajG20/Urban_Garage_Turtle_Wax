@@ -131,7 +131,8 @@ function PPFPage() {
                                 <TiTick className="text-white" />
                               </span>
                               <span className="text-white text-theme-semibold">
-                                Recommended by 10,000+ customers across India
+                                Where quality meets trust: More than 10,000
+                                customers can't be wrong.
                               </span>
                             </li>
                           </ul>
@@ -247,7 +248,6 @@ function PPFPage() {
                               </label>
                               <input
                                 id="car-name"
-                                required
                                 type="car-name"
                                 name="carName"
                                 value={formData.carName}
@@ -266,7 +266,6 @@ function PPFPage() {
                               </label>
                               <select
                                 id="car-brand"
-                                required
                                 type="text"
                                 name="carBrand"
                                 value={formData.carBrand}
@@ -293,7 +292,6 @@ function PPFPage() {
                               </label>
                               <select
                                 id="city-name"
-                                required
                                 type="text"
                                 name="cityName"
                                 value={formData.cityName}
@@ -320,7 +318,6 @@ function PPFPage() {
                                 Address<span className="text-red-600">*</span>
                               </label>
                               <input
-                                required
                                 id="state-name"
                                 type="text"
                                 name="stateName"
@@ -348,72 +345,72 @@ function PPFPage() {
                                     y1="32"
                                     x2="128"
                                     y2="64"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="195.9"
                                     y1="60.1"
                                     x2="173.3"
                                     y2="82.7"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="224"
                                     y1="128"
                                     x2="192"
                                     y2="128"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="195.9"
                                     y1="195.9"
                                     x2="173.3"
                                     y2="173.3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="128"
                                     y1="224"
                                     x2="128"
                                     y2="192"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="60.1"
                                     y1="195.9"
                                     x2="82.7"
                                     y2="173.3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="32"
                                     y1="128"
                                     x2="64"
                                     y2="128"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                   <line
                                     x1="60.1"
                                     y1="60.1"
                                     x2="82.7"
                                     y2="82.7"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="24"
+                                    strokelinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="24"
                                   ></line>
                                 </svg>
                                 Processing...
@@ -791,79 +788,7 @@ function PPFPage() {
                   </div>
                 </div>
               </div>
-              {/* container 4 */}
-              <div className="container mb-10 md:mb-20">
-                <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-5">
-                  {/* card 1 */}
-                  <div className="md:col-span-3 h-72 rounded-2xl overflow-hidden theme-border-white">
-                    <img
-                      loading="lazy"
-                      className="w-full h-full object-cover object-center"
-                      src="https://luxuryride.in/_next/image?url=%2Fimg%2Fpeelable-paint-banner.png&w=1920&q=75"
-                      alt="Urban Garage Peelable Paint"
-                    />
-                  </div>
-                  {/* card 2 */}
-                  <div className="md:col-span-2  flex flex-col gap-y-2 items-start justify-between rounded-2xl text-white  text-theme-500">
-                    <div className="flex flex-col  gap-y-5">
-                      <div>
-                        <h1 className="h2 text-start text-theme-bold  font-bold tracking-wide text-theme-semibold">
-                          Peelable Paint
-                        </h1>
-                        <p className="p text-lg text-theme-semibold ">
-                          Peelable paint is a specialized coating that provides
-                          a temporary and removable solution for various
-                          surfaces
-                        </p>
-                      </div>
-
-                      <div>
-                        <ul className="flex flex-col gap-y-5">
-                          <li className="flex gap-2 items-center">
-                            <span className="p-1 rounded-full bg-green-600">
-                              <TiTick className="text-white" />
-                            </span>
-                            <span className=" text-theme-semibold">
-                              Our peelable car paint is designed for easy
-                              application with minimal effort.
-                            </span>
-                          </li>
-                          <li className="flex gap-2 items-center">
-                            <span className="p-1 rounded-full bg-green-600">
-                              <TiTick className="text-white" />
-                            </span>
-                            <span className=" text-theme-semibold">
-                              We ensure a clean and shiny engine bay by removing
-                              grime and grease.
-                            </span>
-                          </li>
-                          <li className="flex gap-2 items-center">
-                            <span className="p-1 rounded-full bg-green-600">
-                              <TiTick className="text-white" />
-                            </span>
-                            <span className=" text-theme-semibold">
-                              We bring every detail to life, from chrome accents
-                              to trim surfaces.
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div className="flex gap-2">
-                        <button className="px-5 py-2 bg-theme-red text-white text-theme-semibold rounded-lg">
-                          Enquire Now
-                        </button>
-                        <button className="px-5 py-2 bg-white text-gray-800 text-theme-semibold  text-gray-800 text-theme-semibold rounded-lg flex gap-x-1 items-center">
-                          <span>
-                            <MdSlowMotionVideo />
-                          </span>{" "}
-                          Watch Now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
             </section>
 
             {/* OUR SERVICES */}

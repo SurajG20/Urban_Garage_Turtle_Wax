@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const sellCarSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
   mobileNumber: { type: String, required: true },
-  modelYear: { type: String, required: true },
-  ownerType: { type: String, required: true },
-  kilometersDriven: { type: String, required: true },
-  carName: { type: String, required: true },
-  fuelType: { type: String, required: true },
-  regCity: { type: String, required: true },
-  address: { type: String, required: true },
+  modelYear: { type: String},
+  ownerType: { type: String},
+  kilometersDriven: { type: String},
+  carName: { type: String},
+  fuelType: { type: String},
+  regCity: { type: String},
+  address: { type: String},
 });
 
 const SellCar = mongoose.model("SellCar", sellCarSchema);

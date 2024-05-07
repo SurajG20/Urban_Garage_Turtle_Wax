@@ -248,7 +248,8 @@ function Home() {
                     <div
                       className="relative flex items-end theme-border-white rounded-2xl h-60 hover:cursor-pointer bg-cover bg-center overflow-hidden"
                       style={{
-                        backgroundImage: "url('/assets/garage/garage-one.jpeg')",
+                        backgroundImage:
+                          "url('/assets/garage/garage-one.jpeg')",
                       }}
                     >
                       {/* Gradient Overlay for the Lower Part with Blue Shade */}
@@ -595,13 +596,13 @@ function Home() {
           <section className="section text-white" id="hero-banner">
             <div className="relative min-h-min">
               {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
-              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-80"></div>
+              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-90"></div>
               <div className="h-full grid grid-cols-1 items-center md:grid-cols-2">
                 <div className="absolute -z-0 h-full w-full">
                   <img
                     loading="lazy"
                     className="h-full w-full object-cover object-left"
-                    src="https://api.luxuryride.in/public/cms-page/our_service_centers-1689576363766-569547964-service-centre-desktop-.png"
+                    src="https://spn-sta.spinny.com/blog/20220217155723/ezgif.com-gif-maker-2022-02-17T155636.048.jpg?compress=true&quality=80&w=1200&dpr=1.5"
                     alt="Urban Garage"
                   />
                 </div>

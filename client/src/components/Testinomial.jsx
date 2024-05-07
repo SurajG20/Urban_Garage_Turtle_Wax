@@ -191,26 +191,25 @@ function Testinomial() {
               <figure className="card-banner">
                 <Link to="#">
                   <img
-                    src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-48.png&w=1920&q=75"
-                    alt="As estatísticas mostraram qual idade média"
+                    src="https://luxuryride.in/_next/image?url=https%3A%2F%2Fapi.luxuryride.in%2Fpublic%2Ftestimonial%2Fuser_image-mask-group-50.png&w=1920&q=75"
                     loading="lazy"
                     className="w-100"
                   />
                 </Link>
 
                 <Link to="#" className="btn card-badge">
-                  Naveen Mishra
+                  Money bains
                 </Link>
               </figure>
 
               <div className="card-content">
                 <h3 className="h3 card-title text-theme-500">
-                  <Link to="#">BMW GT</Link>
+                  <Link to="#">Mercedes-Benz CLA200D</Link>
                 </h3>
                 <p className="text-theme-400 text-black">
-                  It was amazing experience... The gesture..the quality of work
-                  ..the process ..it's all of the excellent quality...thanks
-                  @Urban Garage for the amazing experience 👍👍
+                  Great Experience and Luxurious Time With the URBAN GARAGE and
+                  It's Team. Really thanks to Varun Sir for Delivering us
+                  Excellent Car Mercedes-Benz CLA200D.
                 </p>
 
                 <div className="card-meta">

@@ -120,7 +120,7 @@ function BuyForm() {
             </label>
             <input
               id="modelYear"
-              required
+              
               name="modelYear"
               maxLength={4}
               minLength={4}
@@ -142,7 +142,7 @@ function BuyForm() {
             </label>
             <select
               id="carBrand"
-              required
+              
               type="text"
               name="carBrand"
               value={formData.carBrand}
@@ -170,7 +170,7 @@ function BuyForm() {
             </label>
             <select
               id="fuelType"
-              required
+             
               type="text"
               name="fuelType"
               value={formData.fuelType}
@@ -195,7 +195,7 @@ function BuyForm() {
             </label>
             <input
               id="budget"
-              required
+              
               name="budget"
               value={formData.budget}
               className="px-2 py-2 h-12
