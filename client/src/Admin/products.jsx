@@ -55,7 +55,7 @@ function Product() {
       </>
       <div className="bg-theme-black min-h-screen flex flex-col ">
         <Header />
-        <main className="flex-grow ">
+        <main className="flex-grow h-[95vh] overflow-y-auto">
           {isLoading ? (
             <LoadingAlert msg="Loading..." />
           ) : isError ? (
@@ -90,14 +90,14 @@ function Product() {
                               Product Name :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              {item.name?item.name:"No name"}
+                              {item.name ? item.name : "N/A"}
                             </span>
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Model Numbe :
                             </span>
-                            {item.modelNumber ?item.modelNumber:"No model number"}
+                            {item.modelNumber ? item.modelNumber : "N/A"}
                           </p>
 
                           {/* col3 */}
@@ -107,7 +107,7 @@ function Product() {
                               Price :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              ₹ {item.price ?item.price:"No price Avaliable"} /-
+                              ₹ {item.price ? item.price : "N/A"} /-
                             </span>
                           </p>
 

@@ -246,7 +246,6 @@ function CoatingPage() {
                               </label>
                               <input
                                 id="car-name"
-                                required
                                 type="car-name"
                                 name="carName"
                                 value={formData.carName}
@@ -265,7 +264,6 @@ function CoatingPage() {
                               </label>
                               <select
                                 id="car-brand"
-                                required
                                 type="text"
                                 name="carBrand"
                                 value={formData.carBrand}
@@ -292,7 +290,6 @@ function CoatingPage() {
                               </label>
                               <select
                                 id="city-name"
-                                required
                                 type="text"
                                 name="cityName"
                                 value={formData.cityName}
@@ -319,7 +316,6 @@ function CoatingPage() {
                                 Address<span className="text-red-600">*</span>
                               </label>
                               <input
-                                required
                                 id="state-name"
                                 type="text"
                                 name="stateName"
@@ -571,8 +567,6 @@ function CoatingPage() {
                     driving experience like never before!
                   </p>
                 </div>
-
-               
               </div>
               {/* container 2  */}
               <div className="container mb-10 md:mb-20">
@@ -719,7 +713,6 @@ function CoatingPage() {
                   </div>
                 </div>
               </div>
-            
             </section>
 
             <section>

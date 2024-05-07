@@ -88,6 +88,46 @@ function BuyPage() {
               </div>
             </div>
           </section>
+          {/* form  */}
+          <section>
+            <div className="container">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title flex flex-col md:flex-row items-center justify-center text-center text-theme-semibold text-white">
+                  Buy Your Luxury Car From{" "}
+                  <span className="text-theme-red mx-2">URBAN GARAGE</span>
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Experience a seamless purchasing process and unbeatable market
+                  prices with our experts.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-x-2">
+                <div className="hidden relative md:block min-h-min">
+                  <img
+                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
+                    src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt={`Urban Garage`}
+                  />
+                  <div className="absolute left-12 bottom-20 bg-theme-red rounded-3xl">
+                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
+                      {" "}
+                      Urban garage
+                    </h2>
+                  </div>
+                  <div className="absolute left-12 bottom-5 bg-theme-red rounded-3xl">
+                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
+                      {" "}
+                      BUY CAR WITH ZERO HIDDEN charges !
+                    </h2>
+                  </div>
+                </div>
+
+                <div>
+                  <BuyForm />
+                </div>
+              </div>
+            </div>
+          </section>
           {/* <!-- 
         - #FEATURED CAR
       --> */}
@@ -123,22 +163,6 @@ function BuyPage() {
           {/* <!-- 
         - #GET START
       --> */}
-          {/* form  */}
-          <section>
-            <div className="container">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title flex flex-col md:flex-row items-center justify-center text-center text-theme-semibold text-white">
-                  Buy Your Luxury Car From{" "}
-                  <span className="text-theme-red mx-2">URBAN GARAGE</span>
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
-                  Experience a seamless purchasing process and unbeatable market
-                  prices with our experts.
-                </p>
-              </div>
-              <BuyForm />
-            </div>
-          </section>
 
           {/* hero Banner section Start  */}
           <section className="section" id="hero-banner">

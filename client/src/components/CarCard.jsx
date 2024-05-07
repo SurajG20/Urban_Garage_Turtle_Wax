@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { FaAddressCard } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaMoneyBillAlt } from "react-icons/fa";
@@ -11,7 +11,14 @@ import { IoSpeedometerSharp } from "react-icons/io5";
 
 function CarCard({ item }) {
   return (
-    <div className="featured-car-card border-2 shadow-lg border-gray-900 hover:shadow-xl theme-border-white">
+    <div className="relative featured-car-card border-2 shadow-lg border-gray-900 hover:shadow-xl theme-border-white">
+      <div className="absolute top-3">
+        <div className="card-badge text-theme-semibold text-sm flex items-center gap-x-2 border-s border-white bg-theme-red text-white   rounded-e-md py-1 px-2">
+          <span>Urban Garage </span>
+          <MdVerified className="text-lg text-"/>
+        </div>
+      </div>
+
       <figure className="card-banner">
         <img
           src={`${item.img ? item.thumbnail : "/assets/loading.jpeg"}`}

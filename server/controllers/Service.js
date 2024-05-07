@@ -9,13 +9,16 @@ exports.allServiceUsers = async (req, res) => {
   }
 };
 
+
+// Add Server File 
 exports.addServiceUser = async (req, res) => {
   try {
     const serviceUser = new Service(req.body);
     await serviceUser.save();
     res.json({ message: "User added successfully", user: serviceUser });
   } catch (error) {
-    res.status(500).json({ error: "Server error" });
+    console.error("Failed to add service user:", error);
+    res.status(500).json({ error: "Server error", message: error.message });
   }
 };
 

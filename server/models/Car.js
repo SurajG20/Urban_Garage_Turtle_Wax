@@ -13,7 +13,7 @@ const carSchema = new mongoose.Schema({
   colour: { type: String, required: true },
   insurance: { type: String, required: true },
   img: [{ type: String, required: true }],
-  thumbnail: { type: String },
+  thumbnail: { type: String, required: true },
 });
 
 const Car = mongoose.model("Cars", carSchema);

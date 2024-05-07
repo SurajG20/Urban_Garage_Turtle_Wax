@@ -60,9 +60,9 @@ function BuyCarUser() {
       </>
       <div className="bg-theme-black min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow h-[80vh] overflow-y-auto">
+        <main className="flex-grow h-[95vh] overflow-y-auto">
           <section>
-            <div className="mx-2 mt-20">
+            <div className="mx-2 mt-20 mb-5">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                   <thead className="text-xs text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -125,25 +125,25 @@ function BuyCarUser() {
                           className="odd:bg-white odd:dark:bg-gray-600 even:bg-gray-50 even:dark:bg-gray-600 border-b border-gray-300 "
                         >
                           <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-                            {users.fullName}
+                            {users.fullName?users.fullName:"N/A"}
                           </td>
                           <td className="px-6 py-4 font-medium text-blue-600 dark:text-blue-500 text-center">
-                            +91 {users.mobileNumber}
+                            +91 {users.mobileNumber?users.mobileNumber:"N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.carBrand}
+                            {users.carBrand?users.carBrand:"N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center ">
-                            {users.modelYear}
+                            {users.modelYear?users.modelYear:"N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.fuelType}
+                            {users.fuelType?users.fuelType:"N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 flex items-center">
                             <span className="mx-1 text-theme-red text-center">
                               ₹
                             </span>{" "}
-                            {users.budget}
+                            {users.budget?users.budget:"N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700">
                             <button

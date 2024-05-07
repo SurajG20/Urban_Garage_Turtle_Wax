@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import Dropdown from "../utils/Dropdown";
 import SellForm from "../components/SellForm";
 
-
 import Image from "../utils/Image";
 // icons
 import { TiTick } from "react-icons/ti";
@@ -25,7 +24,6 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { FaCirclePlus, FaCircleMinus } from "react-icons/fa6";
-
 
 function SellPage() {
   const [cars, setCars] = useState([]);
@@ -66,9 +64,8 @@ function SellPage() {
       <main>
         <article>
           {/* <!-- 
-        - #HERO
+        - #HERO BANNER START
       --> */}
-
           <section className="">
             <div
               className="abosolute mt-20 md:mt-16 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
@@ -247,6 +244,39 @@ function SellPage() {
                       </div>
                     </div> */}
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* <!-- 
+        - #HERO BANNER END
+      --> */}
+
+          {/* FORM START*/}
+          <section>
+            <div className="container ">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h1 section-title text-center text-theme-semibold text-white">
+                  Get In Touch
+                </h2>
+                <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Sell your luxury car to{" "}
+                  <span className="text-theme-red text-theme-bold mx-2">
+                    URBAN GARAGE
+                  </span>
+                  experts for hassle free process and best market price.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-x-2">
+                <div className="h-full">
+                  <img
+                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
+                    src="https://t3.ftcdn.net/jpg/03/99/51/32/360_F_399513285_jt8xoPECnoH1dGIUsYcaNeFnlJ3j3khd.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <SellForm />
                 </div>
               </div>
             </div>
@@ -469,24 +499,6 @@ function SellPage() {
                   </p>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section>
-            <div className="container ">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h1 section-title text-center text-theme-semibold text-white">
-                  Get In Touch
-                </h2>
-                <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
-                  Sell your luxury car to{" "}
-                  <span className="text-theme-red text-theme-bold mx-2">
-                    URBAN GARAGE
-                  </span>
-                  experts for hassle free process and best market price.
-                </p>
-              </div>
-              <SellForm />
             </div>
           </section>
 

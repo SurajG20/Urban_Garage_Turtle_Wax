@@ -9,7 +9,7 @@ const sellCarSchema = new mongoose.Schema({
   carName: { type: String},
   fuelType: { type: String},
   regCity: { type: String},
-  address: { type: String},
+  // address: { type: String},
 });
 
 const SellCar = mongoose.model("SellCar", sellCarSchema);

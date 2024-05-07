@@ -43,7 +43,7 @@ function SellForm() {
           carName: "",
           fuelType: "",
           regCity: "",
-          address: "",
+          // address: "",
         });
       },
       onError: (error) => {
@@ -75,7 +75,7 @@ function SellForm() {
         {/* second container  */}
         <form
           onSubmit={handleSubmit}
-          className="grid md:grid-cols-2 gap-5 md:gap-10"
+          className="grid md:grid-cols-2 gap-5"
         >
           <div>
             <label
@@ -227,7 +227,7 @@ function SellForm() {
               onChange={handleChange}
             />
           </div>
-          <div className="md:col-span-2">
+          {/* <div className="md:col-span-2">
             <label
               htmlFor="address"
               className="text-theme-500 flex items-center"
@@ -242,7 +242,7 @@ function SellForm() {
               placeholder="Select State"
               onChange={handleChange}
             />
-          </div>
+          </div> */}
           <div className="mt-5">
             {formMutation.isLoading ? (
               <button

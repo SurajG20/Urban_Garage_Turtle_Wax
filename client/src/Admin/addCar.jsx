@@ -103,7 +103,7 @@ function AddCar() {
         <main className="flex-grow ">
           <section>
             <div className="container px-6 py-24  lg:px-8">
-              <div className="relative bg-gray-100 px-20 py-5 border rounded-lg shadow">
+              <div className="relative bg-gray-100 px-20 py-5 border shadow-md">
                 <h1 className="mb-10 text-3xl text-theme-red text-theme-bold text-theme-semibold text-center uppercase hover:underline">
                   Add New CAR
                 </h1>

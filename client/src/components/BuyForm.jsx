@@ -67,10 +67,7 @@ function BuyForm() {
           </p>
         </div>
         {/* second container  */}
-        <form
-          onSubmit={handleSubmit}
-          className="grid md:grid-cols-2 gap-5 md:gap-10"
-        >
+        <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-5 ">
           <div>
             <label
               htmlFor="full-name"
@@ -120,7 +117,6 @@ function BuyForm() {
             </label>
             <input
               id="modelYear"
-              
               name="modelYear"
               maxLength={4}
               minLength={4}
@@ -142,7 +138,6 @@ function BuyForm() {
             </label>
             <select
               id="carBrand"
-              
               type="text"
               name="carBrand"
               value={formData.carBrand}
@@ -170,7 +165,6 @@ function BuyForm() {
             </label>
             <select
               id="fuelType"
-             
               type="text"
               name="fuelType"
               value={formData.fuelType}
@@ -195,7 +189,6 @@ function BuyForm() {
             </label>
             <input
               id="budget"
-              
               name="budget"
               value={formData.budget}
               className="px-2 py-2 h-12

@@ -92,26 +92,26 @@ function AdminDashboard() {
                               Name :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              {item.name}
+                              {item.name?item.name:"N/A"}
                             </span>
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Model :
                             </span>
-                            {item.model}
+                            {item.model?item.model:"N/A"}
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Company Brand :
                             </span>{" "}
-                            {item.make}
+                            {item.make?item.make:"N/A"}
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               {"Model Year "}
                             </span>
-                            {item.modelyear}
+                            {item.modelyear?item.modelyear:"N/A"}
                           </p>
 
                           {/* col3 */}
@@ -121,24 +121,24 @@ function AdminDashboard() {
                               Price :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              ₹ {item.price} /-
+                              ₹ {item.price?item.price:"N/A"} /-
                             </span>
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">Fuel :</span>
-                            {item.fuel}
+                            {item.fuel?item.fuel:"N/A"}
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Kms Driven:
                             </span>{" "}
-                            {item.kms} km
+                            {item.kms?item.kms:"N/A"} km
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               {"Ownership"}
                             </span>
-                            {item.owner}
+                            {item.owner?item.owner:"N/A"}
                           </p>
 
                           {/* col4 */}
@@ -148,20 +148,20 @@ function AdminDashboard() {
                               Reg.Year :
                             </span>{" "}
                             <span className="text-theme-red text-theme-semibold">
-                              {item.reg}
+                              {item.reg?item.reg:"N/A"}
                             </span>
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2   truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Color :
                             </span>
-                            {item.colour}
+                            {item.colour?item.colour:"N/A"}
                           </p>
                           <p className="mt-1 text-theme-500 flex gap-x-2  truncate text-md leading-5 text-gray-800">
                             <span className="text-black font-bold">
                               Insurance :
                             </span>{" "}
-                            {item.insurance}
+                            {item.insurance?item.insurance:"N/A"}
                           </p>
                         </div>
                       </div>
