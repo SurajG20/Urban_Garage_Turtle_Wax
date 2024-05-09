@@ -9,9 +9,6 @@ import { SuccessAlert, ErrorAlert } from "../components/Alerts";
 
 // icons
 import { TiTick } from "react-icons/ti";
-import { FaBlenderPhone } from "react-icons/fa";
-import { FaCar } from "react-icons/fa";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import { MdSlowMotionVideo } from "react-icons/md";
 import CardGallery from "../components/CardGallery";

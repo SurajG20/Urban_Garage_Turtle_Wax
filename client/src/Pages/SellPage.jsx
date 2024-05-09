@@ -10,6 +10,7 @@ import SellForm from "../components/SellForm";
 
 import Image from "../utils/Image";
 // icons
+import { IoIosStar } from "react-icons/io";
 import { TiTick } from "react-icons/ti";
 import { FaHeadset } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
@@ -66,221 +67,173 @@ function SellPage() {
           {/* <!-- 
         - #HERO BANNER START
       --> */}
-          <section className="">
+          <>
+            <section className="">
+              <div
+                className="abosolute mt-20 md:mt-16 m-1  -z-50 overflow-hidden top-0 md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+                style={backgroundImg}
+              >
+                <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+                <div className="container">
+                  <div className="grid md:grid-cols-2 items-center gap-y-10 md:gap-x-10">
+                    {/* left container  */}
+                    <div className="flex flex-col  gap-y-5">
+                      <div>
+                        <h1 className="h2 text-center md:text-start text-white font-bold tracking-wide text-theme-semibold">
+                          Sell Your Car At Highest Price in{" "}
+                          <span className="font-extrabold text-5xl md:text-7xl">
+                            59 Minutes
+                          </span>
+                        </h1>
+                      </div>
+
+                      <div>
+                        <ul className="flex flex-col gap-y-5">
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              <b> Efficient and Reliable: </b>Secure the best
+                              offer for your vehicle in just 59 minutes with our
+                              swift and dependable service.
+                            </span>
+                          </li>
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              <b> Widely Trusted: </b>Thousands of satisfied
+                              customers recommend our services, trusting us for
+                              quick and fair car transactions.
+                            </span>
+                          </li>
+                          <li className="flex gap-2 items-center">
+                            <span className="p-1 rounded-full bg-green-600">
+                              <TiTick className="text-white" />
+                            </span>
+                            <span className="text-white text-theme-semibold">
+                              <b> Expert Care Guaranteed:</b> Chosen by over
+                              10,000 customers for superior vehicle care and
+                              maintenance services.
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="grid grid-cols-3">
+                        {/* rating  */}
+                        <div className="flex flex-col justify-between items-center  gap-2">
+                          <div className="flex items-center gap-1">
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                            <IoIosStar className="text-xl md:text-2xl  text-yellow-600" />
+                          </div>
+                          <div>
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
+                              Based on 100+ ratings
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col justify-between items-center gap-2">
+                          <div className="flex items-center gap-1">
+                            <h2 className="text-white text-xl md:text-2xl text-theme-semibold">
+                              5000+
+                            </h2>
+                          </div>
+                          <div>
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
+                              Detailing done
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col justify-between items-center gap-2">
+                          <div className="flex items-center gap-1">
+                            <h2 className="text-white text-xl md:text-2xl  text-theme-semibold">
+                              8000+
+                            </h2>
+                          </div>
+                          <div>
+                            <p className="md:whitespace-nowrap text-center md:text-start text-theme-500 text-white">
+                              Registered users
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* right container  */}
+                    <SellForm />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+          {/* <section className="">
             <div
               className="abosolute mt-20 md:mt-16 m-1 -z-50  overflow-hidden top-0 md:h-screen h-[65vh] flex items-center justify-center rounded-2xl  md:rounded-none"
               style={backgroundImg}
             >
               <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
               <div className="max-w-6xl m-auto px-10 py-5">
-                {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
-                <div className="flex flex-col gap-y-5">
+
+                <div className="flex  items-center gap-10 gap-y-5">
                   <div>
-                    <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-semibold">
-                      Sell Your Car At Highest Price in{" "}
-                      <span className="font-extrabold text-5xl md:text-8xl">
-                        59 Minutes
-                      </span>
-                    </h1>
-                  </div>
-
-                  <div className="hidden md:block">
-                    {/* <div className="bg-white rounded-2xl">
-                      <form
-                        action=""
-                        class="w-full relative grid grid-cols-4 gap-4"
-                      >
-                        <div class="flex justify-center">
-                          <Dropdown title={"Car, model or brand"} />
-                        </div>
-
-                        <div class="flex justify-center">
-                          <Dropdown title={"Max monthly payment"} />
-                        </div>
-
-                        <div class="flex justify-center">
-                          <Dropdown title={"Make the Year"} />
-                        </div>
-
-                        <div class="flex justify-center">
-                          <Dropdown title={"KMs Driven"} />
-                        </div>
-                      </form>
-                    </div> */}
-                    <div className="flex justify-start items-center mt-5">
-                      <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand1.png"
-                            alt="Urban Gradge BMW"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand2.png"
-                            alt="Urban Gradge Mercedes"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand3.png"
-                            alt="Urban Gradge Chevrolet"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand4.png"
-                            alt="Urban Gradge Ferrari"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand5.png"
-                            alt="Urban Gradge Ford"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand6.png"
-                            alt="Urban Gradge Porsche"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand7.png"
-                            alt="Urban Gradge Toyota"
-                          />
-                        </div>
-                        <div className="h-16 bg-gray-200 opacity-40 p-2 rounded-xl theme-border-white hover:cursor-pointer transition-transform duration-300 transform hover:scale-105">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand8.png"
-                            alt="Urban Gradge Volkswagen"
-                          />
-                        </div>
-                      </div>
+                    <div>
+                      <h1 className="h1 text-center md:text-start text-white font-bold tracking-wide text-theme-semibold">
+                        Sell Your Car At Highest Price in{" "}
+                        <span className="font-extrabold text-5xl md:text-8xl">
+                          59 Minutes
+                        </span>
+                      </h1>
                     </div>
-                    {/* <div className="flex justify-start items-center mt-5">
-                      <div className="hidden  max-w-4xl m-auto md:grid grid-cols-4 md:grid-cols-8 gap-y-2 gap-x-3 mt-5">
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand1.png"
-                            alt="Urban Gradge BMW"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand2.png"
-                            alt="Urban Gradge Mercedes"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand3.png"
-                            alt="Urban Gradge Chevrolet"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand4.png"
-                            alt="Urban Gradge Ferrari"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand5.png"
-                            alt="Urban Gradge Ford"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand6.png"
-                            alt="Urban Gradge Porsche"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand7.png"
-                            alt="Urban Gradge Toyota"
-                          />
-                        </div>
-                        <div className="h-16 bg-black opacity-40 p-2 rounded-2xl theme-border-white hover:cursor-pointer">
-                          <img
-                            loading="lazy"
-                            className="h-full w-full object-contain object-center"
-                            src="assets/brands/brand8.png"
-                            alt="Urban Gradge Volkswagen"
-                          />
-                        </div>
-                      </div>
-                    </div> */}
+                    <div>
+                      <ul className="flex flex-col gap-y-5">
+                        <li className="flex gap-2 items-center">
+                          <span className="p-1 rounded-full bg-green-600">
+                            <TiTick className="text-white" />
+                          </span>
+                          <span className="text-white text-theme-semibold">
+                            Efficient and Reliable: Secure the best offer for
+                            your vehicle in just 59 minutes with our swift and
+                            dependable service.
+                          </span>
+                        </li>
+                        <li className="flex gap-2 items-center">
+                          <span className="p-1 rounded-full bg-green-600">
+                            <TiTick className="text-white" />
+                          </span>
+                          <span className="text-white text-theme-semibold">
+                            Widely Trusted: Thousands of satisfied customers
+                            recommend our services, trusting us for quick and
+                            fair car transactions.
+                          </span>
+                        </li>
+                        <li className="flex gap-2 items-center">
+                          <span className="p-1 rounded-full bg-green-600">
+                            <TiTick className="text-white" />
+                          </span>
+                          <span className="text-white text-theme-semibold">
+                            Expert Care Guaranteed: Chosen by over 10,000
+                            customers for superior vehicle care and maintenance
+                            services.
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* <!-- 
-        - #HERO BANNER END
-      --> */}
-
-          {/* FORM START*/}
-          <section>
-            <div className="container ">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h1 section-title text-center text-theme-semibold text-white">
-                  Get In Touch
-                </h2>
-                <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
-                  Sell your luxury car to{" "}
-                  <span className="text-theme-red text-theme-bold mx-2">
-                    URBAN GARAGE
-                  </span>
-                  experts for hassle free process and best market price.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-x-2">
-                <div className="h-full">
-                  <img
-                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
-                    src="https://t3.ftcdn.net/jpg/03/99/51/32/360_F_399513285_jt8xoPECnoH1dGIUsYcaNeFnlJ3j3khd.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
                   <SellForm />
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
+          {/* <!-- 
+        - #HERO BANNER END
+      --> */}
 
           {/* Selling Your Car Made Easy */}
           <section className="section get-start text-white">
@@ -303,14 +256,14 @@ function SellPage() {
                     loading="lazy"
                     src="https://luxuryride.in/img/selling-car-made-simple.png"
                     alt="Urban Garage"
-                    onError={(e) => (e.target.src = "assets/loading.jpeg")} // Updated for React
+                    onError={(e) => (e.target.src = "/assets/loading.jpeg")} // Updated for React
                   />
                 </div>
 
                 {/* right container  */}
-                <div className="flex flex-col justify-between gapy-3 ">
+                <div className="flex flex-col justify-start gap-y-3 ">
                   <div>
-                    <h2 className="h2 mb-5 text-theme-semibold">
+                    <h2 className="h2  text-theme-semibold">
                       Selling Your Car Made Easy
                     </h2>
                   </div>
@@ -356,71 +309,6 @@ function SellPage() {
                         </span>
                       </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="section text-white" id="hero-banner">
-            <div className="relative min-h-min md:h-screen">
-              {/* <!-- Adjusted overlay with modified opacity for better content visibility --> */}
-              <div className="absolute z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-50"></div>
-              <div className="h-full grid grid-cols-1 md:grid-cols-2">
-                <div className="absolute -z-0 h-full w-full">
-                  <img
-                    loading="lazy"
-                    className="h-full w-full object-contain object-right"
-                    src="https://luxuryride.in/img/bookcar-mobile.png"
-                    alt="Urban Garage"
-                  />
-                </div>
-                {/* <!-- Right container --> */}
-                <div className="opacity-90 bg-black p-4 md:p-10 z-20 relative">
-                  <div className="mb-2">
-                    <h2 className="h1 text-white text-theme-bold font-bold text-2xl shadow-md">
-                      BOOK YOUR CAR INSPECTION AT YOUR DOORSTEP
-                    </h2>
-                  </div>
-                  <div className="mb-2">
-                    <p className="text-theme-500 text-white shadow-md">
-                      Urban Garadge is not owned but experienced and we let you
-                      experience it from the comfort of your home. Or just
-                      simply visit our experience centre near you.
-                    </p>
-                  </div>
-                  {/* <!-- Adjustments to text shadow for better visibility --> */}
-                  <div className="grid md:grid-cols-2 gap-x-5 mb-10">
-                    <div>
-                      <ul className="text-theme-500 flex flex-col gap-y-5">
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          <TiTick className="text-red-600 text-xl" />
-                          Safety assurance
-                        </li>
-                        <li className="flex gap-2 text-white items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> PAN India
-                          Schedule FREE evaluation
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> In House
-                          Get the highest quote upon inspection
-                        </li>
-                        <li className="flex gap-2 text-white  items-center text-theme-500">
-                          {" "}
-                          <TiTick className="text-red-600 text-xl" /> 350+ Check
-                          Ensure complete peace of mind
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5 max-w-1xl">
-                    <Link to={"/contact-us"}>
-                      <button className="theme-border-white hover:bg-white hover:text-gray-900 text-white px-6 py-2 rounded-lg bg-transparent text-theme-semibold transition-colors">
-                        Book a Appointment Now
-                      </button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -573,6 +461,37 @@ function SellPage() {
                       </Link>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FORM START*/}
+          <section>
+            <div className="container ">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h1 section-title text-center text-theme-semibold text-white">
+                  Get In Touch
+                </h2>
+                <p className="p flex flex-wrap items-center justify-center max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Sell your luxury car to{" "}
+                  <span className="text-theme-red text-theme-bold mx-2">
+                    URBAN GARAGE
+                  </span>
+                  experts for hassle free process and best market price.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-x-2">
+                <div className="h-full">
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
+                    src="https://t3.ftcdn.net/jpg/03/99/51/32/360_F_399513285_jt8xoPECnoH1dGIUsYcaNeFnlJ3j3khd.jpg"
+                    alt="Urban Garage"
+                  />
+                </div>
+                <div>
+                  <SellForm />
                 </div>
               </div>
             </div>

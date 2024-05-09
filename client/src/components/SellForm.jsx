@@ -62,11 +62,9 @@ function SellForm() {
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  gapx-2 py-2 md:h-12 items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  md:justify-start gap-x-2 py-2  items-center ">
             <span className="text-black">Please Enter Your </span>
-            <span className="text-theme-red hover:underline">
-              Car Details
-            </span>{" "}
+            <span className="text-theme-red hover:underline">Car Details</span>
           </h3>
           <p className="text-theme-500 text-theme-red">
             Fields marked with an * are required
@@ -75,7 +73,7 @@ function SellForm() {
         {/* second container  */}
         <form
           onSubmit={handleSubmit}
-          className="grid md:grid-cols-2 gap-5"
+          className=" grid md:grid-cols-2 gap-x-5 gap-y-2"
         >
           <div>
             <label
@@ -85,10 +83,11 @@ function SellForm() {
               Full Name<span className="text-red-600">*</span>
             </label>
             <input
+              id="full-name"
               required
               name="fullName"
               value={formData.fullName}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Enter Name"
               onChange={handleChange}
@@ -102,12 +101,13 @@ function SellForm() {
               Mobile <span className="text-red-600">*</span>
             </label>
             <input
+              id="number"
               required
               maxLength={10}
               minLength={10}
               name="mobileNumber"
               value={formData.mobileNumber}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Mobile Number"
               onChange={handleChange}
@@ -125,7 +125,7 @@ function SellForm() {
               name="modelYear"
               maxLength={4}
               value={formData.modelYear}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Model Year"
               onChange={handleChange}
@@ -139,12 +139,12 @@ function SellForm() {
               Owner Type<span className="text-red-600">*</span>
             </label>
             <select
+              id="owner-type"
               type="number"
               maxLength={2}
               name="ownerType"
               value={formData.ownerType}
-              id="owner-type"
-              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
+              className="px-2 py-2 h-10 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
               <option value="">--- Select Owner Type ---</option>
@@ -157,15 +157,16 @@ function SellForm() {
           </div>
           <div>
             <label
-              htmlFor="number"
+              htmlFor="driven-km"
               className="text-theme-500 flex items-center"
             >
               kilometers Driven <span className="text-red-600">*</span>
             </label>
             <input
+              id="driven-km"
               name="kilometersDriven"
               value={formData.kilometersDriven}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter kilometers Driven"
               onChange={handleChange}
@@ -180,7 +181,8 @@ function SellForm() {
               Car Name/Car Model<span className="text-red-600">*</span>
             </label>
             <input
-              className="px-2 py-2 h-12  bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              id="car-name"
+              className="px-2 py-2 h-10  bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               name="carName"
               value={formData.carName}
               type="text"
@@ -196,11 +198,11 @@ function SellForm() {
               Fuel Type<span className="text-red-600">*</span>
             </label>
             <select
+              name="owner-type"
               typeof="text"
-              name="fuelType"
               value={formData.fuelType}
               id="fuel-type"
-              className="px-2 py-2 h-12 bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
+              className="px-2 py-2 h-10 bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
               <option value="">--- Select Fuel Type ---</option>
@@ -221,7 +223,7 @@ function SellForm() {
             <input
               name="regCity"
               value={formData.regCity}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Select City"
               onChange={handleChange}
@@ -237,7 +239,7 @@ function SellForm() {
             <input
               name="address"
               value={formData.address}
-              className="px-2 py-2 h-12 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10 bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
               placeholder="Select State"
               onChange={handleChange}

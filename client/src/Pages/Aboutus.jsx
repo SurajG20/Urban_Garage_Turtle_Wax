@@ -35,7 +35,9 @@ function AboutUs() {
 
                 <div>
                   <h2 className="h1  font-bold text-theme-bold">
-                    About <span className="text-theme-red hover:undeline"></span> Urban Garage !
+                    About{" "}
+                    <span className="text-theme-red hover:undeline"></span>{" "}
+                    Urban Garage !
                   </h2>
                   <div className="mb-5">
                     <p className="text-theme-500">
@@ -93,126 +95,47 @@ function AboutUs() {
               <div className="grid sm:grid-cols-2  md:grid-cols-3 justify-items-center gap-x-5 gap-y-5">
                 {/* card 1 */}
                 <div>
-                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
+                  <div className="mb-3 theme-border-white max-w-72 max-h-42 rounded-xl overflow-hidden">
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/Himanshu.png"
+                      src="/assets/loading.jpeg"
                       alt="Urban Garage About Us"
                     />
                   </div>
                   <div className="text-center">
-                    <h4 className="h4">Himanshu Arya</h4>
+                    <h4 className="h4">Urban Garage</h4>
                     <p className="p text-theme-500">Co-Founder & CEO</p>
                   </div>
                 </div>
-                {/* card 2 */}
-                <div>
-                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/Sumit.png"
-                      alt="Urban Garage About Us"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h4 className="h4">Himanshu Arya</h4>
-                    <p className="p text-theme-500">Co-Founder & CEO</p>
-                  </div>
-                </div>
-                {/* card 3 */}
-                <div>
-                  <div className="mb-3 theme-border-white w-72 h-42 rounded-xl overflow-hidden">
-                    <img
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/Himanshu.png"
-                      alt="Urban Garage About Us"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h4 className="h4">Himanshu Arya</h4>
-                    <p className="p text-theme-500">Co-Founder & CEO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Our Experience Centres */}
-          <section className="section get-start text-white">
-            <div className="container">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title text-center text-theme-semibold ">
-                  Our Experience Centres
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500">
-                  Test drive, learn about services and more at your nearest
-                  showroom.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-x-5 gap-y-5">
                 {/* card 1 */}
-
-                <div
-                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
-                  style={{
-                    backgroundImage: `url(/assets/garage/garage-one.jpeg)`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
-                      CHANDIGARH
-                    </h1>
-                    <p className="p font-extrabold text-theme-500 mb-2">
-                      Standing at the heart of the Millennium city, our team of
-                      seasoned experts offers an array luxury car services and
-                      tailored solutions to cater to your every automotive
-                      requirement.
-                    </p>
-
-                    <div className="flex gap-x-3">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Book a visit
-                      </button>
-                      <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                        Get Directions
-                      </button>
-                    </div>
+                <div>
+                  <div className="mb-3 theme-border-white max-w-72 max-h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="/assets/loading.jpeg"
+                      alt="Urban Garage About Us"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="h4">Urban Garage</h4>
+                    <p className="p text-theme-500">Co-Founder & CEO</p>
                   </div>
                 </div>
-
-                {/* card 2 */}
-
-                <div
-                  className="relative h-96 p-4 flex flex-col gap-y-2 items-start justify-end rounded-2xl text-white text-theme-500"
-                  style={{
-                    backgroundImage: `url(/assets/garage/garage-four.jpeg)`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
-                  <div className="relative z-10">
-                    <h1 className="text-4xl font-semibold text-theme-bold tracking-wide text-nowrap mb-3">
-                      Karnal
-                    </h1>
-                    <p className="p font-extrabold text-theme-500 mb-2">
-                      Witness the grandeur of India's largest pre-owned car
-                      experience centre, where our highly skilled team of
-                      experts bring you a wide array of comprehensive
-                      car-related services.
-                    </p>
-
-                    <div className="flex gap-x-3">
-                      <button className="theme-border-white hover:bg-gray-600 text-white px-6 py-2 rounded-lg bg-transparent hover:text-theme-semibold transition-colors">
-                        Book a visit
-                      </button>
-                      <button className="bg-white hover:bg-gray-300 text-gray-800 px-6 text-theme-semibold py-2 rounded-lg ">
-                        Get a Direction
-                      </button>
-                    </div>
+                {/* card 1 */}
+                <div>
+                  <div className="mb-3 theme-border-white max-w-72 max-h-42 rounded-xl overflow-hidden">
+                    <img
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                      src="/assets/loading.jpeg"
+                      alt="Urban Garage About Us"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="h4">Urban Garage</h4>
+                    <p className="p text-theme-500">Co-Founder & CEO</p>
                   </div>
                 </div>
               </div>
@@ -228,7 +151,7 @@ function AboutUs() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img.png"
+                      src="/assets/loading.jpeg"
                       alt="Urban Garage about us"
                     />
                   </div>
@@ -236,7 +159,7 @@ function AboutUs() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img1.png"
+                      src="/assets/loading.jpeg"
                       alt="Urban Garage about us"
                     />
                   </div>
@@ -266,7 +189,7 @@ function AboutUs() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img2.png"
+                      src="/assets/loading.jpeg"
                       alt="Urban Garage about us"
                     />
                   </div>
@@ -274,7 +197,7 @@ function AboutUs() {
                     <img
                       loading="lazy"
                       className="h-full w-full object-cover object-center"
-                      src="https://luxuryride.in/img/join-img3.png"
+                      src="/assets/loading.jpeg"
                       alt="Urban Garage about us"
                     />
                   </div>
