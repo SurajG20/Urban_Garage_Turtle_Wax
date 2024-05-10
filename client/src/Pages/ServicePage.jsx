@@ -64,7 +64,7 @@ function ServicePage() {
                 {/* card 1 */}
                 <div className="h-42 col-span-2 flex flex-col border theme-border-white hover:shadow-sm hover:shadow-white justify-between bg-gradient-to-r from-red-500 to-red-900 rounded-2xl p-4">
                   <div className="">
-                    <h2 className="h3  text-theme-bold text-white">
+                    <h2 className="h3 text-theme-bold text-white">
                       Periodic Maintenance
                     </h2>
                   </div>

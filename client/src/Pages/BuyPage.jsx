@@ -42,15 +42,15 @@ function BuyPage() {
       --> */}
           <section className="relative text-white">
             <div
-              className="container abosolute m-1 mt-20 md:mt-18 -z-50 overflow-hidden top-0 h-[65vh] flex items-center justify-center rounded-2xl  "
+              className="abosolute mt-20 md:mt-16 m-1  -z-50 overflow-hidden top-0 md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
               style={backgroundImg}
             >
               {/* <div className="absolute -z-10 h-full w-full bg-gradient-to-r from-black to-transparent opacity-60"></div> */}
-              <div className="absolute -z-10 bg-gradient-to-l from-black to-transparent  opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-              <div className="h-full w-full flex items-center justify-end py-10 md:px-5">
+              <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
+              <div className="container grid md:grid-cols-2 gap-y-10 md:gap-x-52 ">
                 <div className="min-w-3xl">
                   <div className="mb-10">
-                    <h2 className="h2 text-theme-semibold text-white">
+                    <h2 className="h1 text-theme-semibold text-white">
                       High Quality, More Comfort
                     </h2>
                   </div>
@@ -85,49 +85,13 @@ function BuyPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-          {/* form  */}
-          <section>
-            <div className="container">
-              <div className="mb-5 md:mb-10">
-                <h2 className="h2 section-title flex flex-col md:flex-row items-center justify-center text-center text-theme-semibold text-white">
-                  Buy Your Luxury Car From{" "}
-                  <span className="text-theme-red mx-2">URBAN GARAGE</span>
-                </h2>
-                <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
-                  Experience a seamless purchasing process and unbeatable market
-                  prices with our experts.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-x-2">
-                <div className="hidden relative md:block min-h-min">
-                  <img
-                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
-                    src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt={`Urban Garage`}
-                  />
-                  <div className="absolute left-12 bottom-20 bg-theme-red rounded-3xl">
-                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
-                      {" "}
-                      Urban garage
-                    </h2>
-                  </div>
-                  <div className="absolute left-12 bottom-5 bg-theme-red rounded-3xl">
-                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
-                      {" "}
-                      BUY CAR WITH ZERO HIDDEN charges !
-                    </h2>
-                  </div>
-                </div>
-
-                <div>
+                <div className="text-black">
                   <BuyForm />
                 </div>
               </div>
             </div>
           </section>
+
           {/* <!-- 
         - #FEATURED CAR
       --> */}
@@ -660,6 +624,47 @@ function BuyPage() {
             </div>
           </section>
           {/* OUR SERVICES */}
+
+          {/* form  */}
+          <section>
+            <div className="container">
+              <div className="mb-5 md:mb-10">
+                <h2 className="h2 section-title flex flex-col md:flex-row items-center justify-center text-center text-theme-semibold text-white">
+                  Buy Your Luxury Car From{" "}
+                  <span className="text-theme-red mx-2">URBAN GARAGE</span>
+                </h2>
+                <p className="p max-w-3xl m-auto text-center text-theme-500 text-white">
+                  Experience a seamless purchasing process and unbeatable market
+                  prices with our experts.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-x-2">
+                <div className="hidden relative md:block min-h-min">
+                  <img
+                    className="h-full w-full object-cover object-center rounded-2xl theme-border-white"
+                    src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt={`Urban Garage`}
+                  />
+                  <div className="absolute left-12 bottom-20 bg-theme-red rounded-3xl">
+                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
+                      {" "}
+                      Urban garage
+                    </h2>
+                  </div>
+                  <div className="absolute left-12 bottom-5 bg-theme-red rounded-3xl">
+                    <h2 className="text-theme-bold text-2xl text-white uppercase px-8 py-2">
+                      {" "}
+                      BUY CAR WITH ZERO HIDDEN charges !
+                    </h2>
+                  </div>
+                </div>
+
+                <div>
+                  <BuyForm />
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* <!-- 
         - #BLOG

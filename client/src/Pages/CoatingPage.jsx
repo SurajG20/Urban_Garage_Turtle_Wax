@@ -96,7 +96,7 @@ function CoatingPage() {
                   <div className="container">
                     <div className="grid md:grid-cols-2 gap-y-10 md:gap-x-52">
                       {/* left container  */}
-                      <div className="flex flex-col  gap-y-5">
+                      <div className="flex flex-col gap-y-5">
                         <div>
                           <h1 className="text-4xl md:text-start text-theme-bold  text-center text-white font-bold tracking-wide text-theme-semibold">
                             Detailing Services That Fulfill All Your Needs
@@ -433,6 +433,7 @@ function CoatingPage() {
             <section className="section get-start text-white relative">
               <div className="hidden md:block absolute w-full md:w-[32rem] right-0 top-20">
                 <img
+                  loading="lazy"
                   src="/assets/banners/car6.png"
                   className="scale-x-[-1] h-full w-full object-cover object-center"
                   alt="urban garage"

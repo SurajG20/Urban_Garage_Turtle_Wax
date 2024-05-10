@@ -1598,6 +1598,9 @@ p {
 .bg-theme-red {
   background-color: "#f50303";
 }
+.border-theme-white {
+  border: 1px solid white;
+}
 .border-theme-red {
   border: 1px solid #f50303;
 }

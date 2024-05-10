@@ -301,12 +301,19 @@ function Home() {
                     </p>
                   </div>
                   <ul className="featured-car-list">
-                    {data?.map((item) => (
+                    {data.slice(0, 6).map((item) => (
                       <li key={item._id}>
                         <CarCard item={item} />
                       </li>
                     ))}
                   </ul>
+                </div>
+                <div className="mt-5 flex justify-center">
+                  <Link to={"/buy"}>
+                    <button className="px-10 py-2 bg-theme-red text-theme-semibold rounded-lg border-theme-white hover:bg-red-500" >
+                      View more
+                    </button>
+                  </Link>
                 </div>
               </section>
             </>

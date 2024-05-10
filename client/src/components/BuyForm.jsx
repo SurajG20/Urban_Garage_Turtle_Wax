@@ -52,9 +52,9 @@ function BuyForm() {
       </>
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
-        <div className="mb-5">
+        <div className="mb-2">
           <h3
-            className="h2 text-theme-semibold flex flex-col md:flex-row  gap-x-2 py-2 md:h-12
+            className="h2 text-theme-semibold flex flex-col md:flex-row  gap-x-2 
            items-start md:items-center justify-center  text-center md:text-left"
           >
             <span className="text-black">Please Enter Your </span>
@@ -80,8 +80,8 @@ function BuyForm() {
               required
               name="fullName"
               value={formData.fullName}
-              className="px-2 py-2 h-12
-               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10
+               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md "
               type="text"
               placeholder="Enter Name"
               onChange={handleChange}
@@ -101,8 +101,8 @@ function BuyForm() {
               minLength={10}
               name="mobileNumber"
               value={formData.mobileNumber}
-              className="px-2 py-2 h-12
-               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10
+               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Mobile Number"
               onChange={handleChange}
@@ -121,8 +121,8 @@ function BuyForm() {
               maxLength={4}
               minLength={4}
               value={formData.modelYear}
-              className="px-2 py-2 h-12
-               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10
+               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="Number"
               placeholder="Enter Model Year"
               onChange={handleChange}
@@ -141,8 +141,8 @@ function BuyForm() {
               type="text"
               name="carBrand"
               value={formData.carBrand}
-              className="px-2 py-2 h-12
-               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
+              className="px-2 py-2 h-10
+               bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
               <option value="">--- Select Brand ---</option>
@@ -168,8 +168,8 @@ function BuyForm() {
               type="text"
               name="fuelType"
               value={formData.fuelType}
-              className="px-2 py-2 h-12
-               bg-gray-200 w-full text-lg text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
+              className="px-2 py-2 h-10
+               bg-gray-200 w-full text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
               onChange={handleChange}
             >
               <option value="">--- Select Fuel Type ---</option>
@@ -191,8 +191,8 @@ function BuyForm() {
               id="budget"
               name="budget"
               value={formData.budget}
-              className="px-2 py-2 h-12
-               bg-gray-200 text-lg text-theme-500 border-theme-gray outline-none rounded-md"
+              className="px-2 py-2 h-10
+               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="number"
               placeholder="Enter Your Budget"
               onChange={handleChange}
@@ -204,11 +204,11 @@ function BuyForm() {
               URBAN GARAGE LUXURY CARS !
             </h2>
           </div> */}
-          <div className="mt-5">
+          <div className="">
             {formMutation.isLoading ? (
               <button
                 type="button"
-                className="bg-theme-red text-white flex justify-center items-center py-2 px-5 rounded-lg"
+                className="bg-theme-red text-white flex justify-center items-center py-2 px-10 rounded-lg"
                 disabled
               >
                 <svg
@@ -293,7 +293,7 @@ function BuyForm() {
             ) : (
               <button
                 type="submit"
-                className="bg-theme-red text-white py-2 px-8 rounded-lg"
+                className="bg-theme-red text-white py-2 px-10 rounded-lg"
               >
                 Submit
               </button>

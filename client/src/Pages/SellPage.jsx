@@ -94,7 +94,7 @@ function SellPage() {
                               <TiTick className="text-white" />
                             </span>
                             <span className="text-white text-theme-semibold">
-                              <b> Efficient and Reliable: </b>Secure the best
+                              <b> Efficient and Reliable : </b>Secure the best
                               offer for your vehicle in just 59 minutes with our
                               swift and dependable service.
                             </span>
@@ -104,7 +104,7 @@ function SellPage() {
                               <TiTick className="text-white" />
                             </span>
                             <span className="text-white text-theme-semibold">
-                              <b> Widely Trusted: </b>Thousands of satisfied
+                              <b> Widely Trusted : </b>Thousands of satisfied
                               customers recommend our services, trusting us for
                               quick and fair car transactions.
                             </span>
@@ -114,7 +114,7 @@ function SellPage() {
                               <TiTick className="text-white" />
                             </span>
                             <span className="text-white text-theme-semibold">
-                              <b> Expert Care Guaranteed:</b> Chosen by over
+                              <b> Expert Care Guaranteed :</b> Chosen by over
                               10,000 customers for superior vehicle care and
                               maintenance services.
                             </span>
@@ -277,7 +277,7 @@ function SellPage() {
                     </p>
                   </div>
                   <div>
-                    <ul className="flex flex-col gap-y-2">
+                    <ul className="flex flex-col gap-y-2 text-theme-500">
                       <li className="flex items-center gap-x-2">
                         <span>
                           <TiTick className="text-red-600" />

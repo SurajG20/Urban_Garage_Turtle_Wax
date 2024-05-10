@@ -19,14 +19,14 @@ function HeroSection({ imgURL, title }) {
     <>
       <section className="">
         <div
-          className="abosolute mt-20 md:mt-16 m-1  -z-50 overflow-hidden top-0 h-[65vh] md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
+          className="abosolute mt-20 md:mt-16 m-1 -z-50 overflow-hidden top-0 h-[65vh] md:h-screen flex items-center justify-center rounded-2xl  md:rounded-none"
           style={backgroundImg}
         >
           <div className="absolute -z-10 bg-black opacity-20 rounded-2xl md:rounded-none h-56vh md:h-screen w-full"></div>
-          <div className="h-full max-w-6xl m-auto px-10 py-5">
+          <div className="h-full max-w-6xl m-auto md:px-10 py-5">
             {/* <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div> */}
-            <div className="h-full flex flex-col justify-around md:justify-center gap-y-5">
-              <div>
+            <div className="h-full flex flex-col justify-between md:justify-center gap-y-5">
+              <div className="mt-20 md:mt-0">
                 <h1 className="h1 text-center text-white font-bold tracking-wide text-theme-bold">
                   {title}
                 </h1>
@@ -104,7 +104,7 @@ function HeroSection({ imgURL, title }) {
                 </div>
               </div>
               {/* button  */}
-              <Link to={"/buy"} className="w-full block md:hidden">
+              <Link to={"/buy"} className=" w-full block md:hidden">
                 <button className="py-2 px-8 w-full text-theme-semibold tracking-wide bg-red-900 text-white">
                   View Cars
                 </button>

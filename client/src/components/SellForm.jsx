@@ -62,7 +62,7 @@ function SellForm() {
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  md:justify-start gap-x-2 py-2  items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  md:justify-start gap-x-2 items-center ">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">Car Details</span>
           </h3>
@@ -261,18 +261,18 @@ function SellForm() {
                     y1="32"
                     x2="128"
                     y2="64"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokelinecap="round"
+                    strokelinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="195.9"
                     y1="60.1"
                     x2="173.3"
                     y2="82.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="24"
+                    strokelinecap="round"
+                    strokelinejoin="round"
+                    strokeWidth="24"
                   ></line>
                   <line
                     x1="224"
@@ -334,7 +334,7 @@ function SellForm() {
             ) : (
               <button
                 type="submit"
-                className="bg-theme-red text-white py-2 px-8 rounded-lg"
+                className="bg-theme-red text-white py-2 px-10 rounded-lg"
               >
                 Submit
               </button>
