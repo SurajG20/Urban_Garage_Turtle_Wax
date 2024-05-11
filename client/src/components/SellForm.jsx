@@ -62,7 +62,7 @@ function SellForm() {
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  md:justify-center gap-x-2 items-center ">
+          <h3 className="h2 text-theme-semibold flex flex-col md:flex-row items-center justify-center gap-x-2">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">Car Details</span>
           </h3>

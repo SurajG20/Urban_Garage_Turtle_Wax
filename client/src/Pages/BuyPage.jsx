@@ -50,12 +50,12 @@ function BuyPage() {
               <div className="container grid md:grid-cols-2 gap-y-10 md:gap-x-52 ">
                 <div className="min-w-3xl">
                   <div className="mb-10">
-                    <h2 className="h1 text-theme-semibold text-white">
+                    <h2 className="h1 text-theme-semibold md:text-start text-center text-white">
                       High Quality, More Comfort
                     </h2>
                   </div>
                   <div className="mt-5">
-                    <ul className="text-theme-semibold text-white flex flex-col gap-y-5">
+                    <ul className="ms-10 md:ms-0 text-theme-semibold text-white flex flex-col  gap-y-5">
                       <li className="flex">
                         <TiTick className="text-white text-xl" />
                         <span>Largest Assortment of Pre-Owned Luxury Cars</span>
@@ -70,7 +70,7 @@ function BuyPage() {
                         <TiTick className="text-white text-xl" />
                         <span>Sell Or Upgrade Effortlessly</span>
                       </li>
-                      <li className="flex justify-start items-center gap-x-5">
+                      <li className="flex justify-center md:justify-start items-center gap-x-5">
                         {" "}
                         <div className="bg-gray-200 theme-border-white rounded-lg p-3 hover:cursor-pointer">
                           <MdVerifiedUser className="text-4xl text-red-600" />

@@ -53,16 +53,13 @@ function BuyForm() {
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div className="mb-2">
-          <h3
-            className="h2 text-theme-semibold flex flex-col md:flex-row  gap-x-2 
-           items-start md:items-center justify-center  text-center md:text-left"
-          >
+          <h3 className="h2 text-theme-semibold flex flex-col md:flex-row items-center justify-center gap-x-2">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">
               Car Details !
             </span>{" "}
           </h3>
-          <p className="text-theme-500 text-start md:text-center text-theme-red">
+          <p className="text-theme-500 text-center text-theme-red">
             Fields marked with an * are required
           </p>
         </div>
