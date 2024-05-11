@@ -113,7 +113,7 @@ function SellCarUser() {
                         className="px-6 py-3 text-center flex items-center"
                       >
                         <FaAddressCard className="text-theme-red mx-1" />
-                        Reg.City / Address
+                        Reg.Number
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
                         Action
@@ -153,7 +153,7 @@ function SellCarUser() {
                             {users.fuelType}
                           </td>
                           <td className="px-6 py-4 text-gray-900 flex items-center text-xs">
-                            {users.regCity ? users.regCity : "N/A"}
+                            {users.regNumber ? users.regNumber : "N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700">
                             <button

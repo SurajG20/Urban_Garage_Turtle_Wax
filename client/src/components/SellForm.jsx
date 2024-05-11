@@ -42,7 +42,7 @@ function SellForm() {
           kilometersDriven: "",
           carName: "",
           fuelType: "",
-          regCity: "",
+          regNumber: "",
           // address: "",
         });
       },
@@ -62,11 +62,11 @@ function SellForm() {
       <div className="h-full bg-white flex flex-col justify-between p-4 rounded-xl">
         {/* first container  */}
         <div>
-          <h3 className="h2 text-theme-semibold md:flex  md:justify-start gap-x-2 items-center ">
+          <h3 className="h2 text-theme-semibold md:flex  md:justify-center gap-x-2 items-center ">
             <span className="text-black">Please Enter Your </span>
             <span className="text-theme-red hover:underline">Car Details</span>
           </h3>
-          <p className="text-theme-500 text-theme-red">
+          <p className="text-theme-500 text-center text-theme-red">
             Fields marked with an * are required
           </p>
         </div>
@@ -115,10 +115,26 @@ function SellForm() {
           </div>
           <div>
             <label
+              htmlFor="regNumber"
+              className="text-theme-500 flex items-center"
+            >
+              Reg.Number<span className="text-red-600">*</span>
+            </label>
+            <input
+              name="regNumber"
+              value={formData.regNumber}
+              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              type="text"
+              placeholder="Select City"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label
               htmlFor="modelYear"
               className="text-theme-500 flex items-center"
             >
-              Model Year<span className="text-red-600">*</span>
+              Model Year
             </label>
             <input
               id="modelYear"
@@ -136,7 +152,7 @@ function SellForm() {
               htmlFor="owner-type"
               className="text-theme-500 flex items-center"
             >
-              Owner Type<span className="text-red-600">*</span>
+              Owner Type
             </label>
             <select
               id="owner-type"
@@ -160,7 +176,7 @@ function SellForm() {
               htmlFor="driven-km"
               className="text-theme-500 flex items-center"
             >
-              kilometers Driven <span className="text-red-600">*</span>
+              kilometers Driven
             </label>
             <input
               id="driven-km"
@@ -178,7 +194,7 @@ function SellForm() {
               htmlFor="car-name"
               className="text-theme-500 flex items-center"
             >
-              Car Name/Car Model<span className="text-red-600">*</span>
+              Car Name/Car Model
             </label>
             <input
               id="car-name"
@@ -195,7 +211,7 @@ function SellForm() {
               htmlFor="owner-type"
               className="text-theme-500 flex items-center"
             >
-              Fuel Type<span className="text-red-600">*</span>
+              Fuel Type
             </label>
             <select
               name="owner-type"
@@ -213,22 +229,6 @@ function SellForm() {
             </select>
           </div>
 
-          <div>
-            <label
-              htmlFor="city-name"
-              className="text-theme-500 flex items-center"
-            >
-              Reg.City<span className="text-red-600">*</span>
-            </label>
-            <input
-              name="regCity"
-              value={formData.regCity}
-              className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-              type="text"
-              placeholder="Select City"
-              onChange={handleChange}
-            />
-          </div>
           {/* <div className="md:col-span-2">
             <label
               htmlFor="address"

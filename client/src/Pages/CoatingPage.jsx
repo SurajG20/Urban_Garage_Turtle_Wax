@@ -181,8 +181,8 @@ function CoatingPage() {
                       <form onSubmit={handleSubmit} className="h-full">
                         <div className="h-full bg-white flex flex-col justify-between p-5 rounded-xl">
                           {/* first container  */}
-                          <div>
-                            <h3 className="h2 text-theme-semibold flex flex-col md:flex-row gap-2  ">
+                          <div className="mb-5 md:mb-10">
+                            <h3 className="h2 text-theme-semibold flex flex-col justify-center md:flex-row gap-2  ">
                               <span className="text-black">
                                 Please Enter Your{" "}
                               </span>
@@ -190,7 +190,7 @@ function CoatingPage() {
                                 Car Details
                               </span>{" "}
                             </h3>
-                            <p className="text-theme-500">
+                            <p className="text-theme-500 text-start md:text-center text-theme-red">
                               Fields marked with an * are required
                             </p>
                           </div>
@@ -239,7 +239,7 @@ function CoatingPage() {
                                 htmlFor="car-name"
                                 className="text-theme-500 flex items-center"
                               >
-                                Car Model<span className="text-red-600">*</span>
+                                Car Model
                               </label>
                               <input
                                 id="car-name"
@@ -257,7 +257,7 @@ function CoatingPage() {
                                 className="text-theme-500 flex items-center"
                               >
                                 Car Brand
-                                <span className="text-red-600">*</span>
+                             
                               </label>
                               <select
                                 id="car-brand"
@@ -283,7 +283,7 @@ function CoatingPage() {
                                 htmlFor="city-name"
                                 className="text-theme-500 flex items-center"
                               >
-                                Service<span className="text-red-600">*</span>
+                                Service
                               </label>
                               <select
                                 id="city-name"
@@ -310,7 +310,7 @@ function CoatingPage() {
                                 htmlFor="state-name"
                                 className="text-theme-500 flex items-center"
                               >
-                                Address<span className="text-red-600">*</span>
+                                Address
                               </label>
                               <input
                                 id="state-name"

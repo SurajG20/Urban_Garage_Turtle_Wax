@@ -179,7 +179,7 @@ function Footer() {
 
             <li>
               <Link
-                to="https://www.instagram.com/urbangarageindia"
+                to="https://www.instagram.com/urbangaragepvtltd?igsh=dDg0aG5ydno4MnZv"
                 target="_blank"
                 className="social-link"
               >

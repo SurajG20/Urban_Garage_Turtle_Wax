@@ -110,27 +110,6 @@ function BuyForm() {
           </div>
           <div>
             <label
-              htmlFor="modelYear"
-              className="text-theme-500 flex items-center"
-            >
-              Model Year<span className="text-red-600">*</span>
-            </label>
-            <input
-              id="modelYear"
-              name="modelYear"
-              maxLength={4}
-              minLength={4}
-              value={formData.modelYear}
-              className="px-2 py-2 h-10
-               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-              type="Number"
-              placeholder="Enter Model Year"
-              onChange={handleChange}
-            />
-          </div>
-
-          <div>
-            <label
               htmlFor="carBrand"
               className="text-theme-500 flex items-center"
             >
@@ -158,10 +137,31 @@ function BuyForm() {
 
           <div>
             <label
+              htmlFor="modelYear"
+              className="text-theme-500 flex items-center"
+            >
+              Model Year
+            </label>
+            <input
+              id="modelYear"
+              name="modelYear"
+              maxLength={4}
+              minLength={4}
+              value={formData.modelYear}
+              className="px-2 py-2 h-10
+               bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+              type="Number"
+              placeholder="Enter Model Year"
+              onChange={handleChange}
+            />
+          </div>
+
+          <div>
+            <label
               htmlFor="fuelType"
               className="text-theme-500 flex items-center"
             >
-              Fuel Type<span className="text-red-600">*</span>
+              Fuel Type
             </label>
             <select
               id="fuelType"
@@ -185,7 +185,7 @@ function BuyForm() {
               htmlFor="budget"
               className="text-theme-500 flex items-center"
             >
-              Budget<span className="text-red-600">*</span>
+              Budget
             </label>
             <input
               id="budget"
