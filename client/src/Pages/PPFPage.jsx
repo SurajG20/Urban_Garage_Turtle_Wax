@@ -37,8 +37,8 @@ function PPFPage() {
     mobileNumber: "",
     carName: "",
     carBrand: "",
-    cityName: "",
-    stateName: "Chandigarh,Punjab",
+    serviceName: "",
+    stateName: "",
   });
 
   // Update form state
@@ -65,7 +65,7 @@ function PPFPage() {
           mobileNumber: "",
           carName: "",
           carBrand: "",
-          cityName: "",
+          serviceName: "",
           stateName: "",
         });
       },
@@ -241,6 +241,24 @@ function PPFPage() {
                             </div>
                             <div>
                               <label
+                                htmlFor="regNumber"
+                                className="text-theme-500 flex items-center"
+                              >
+                                Reg.Number
+                              </label>
+                              <input
+                                id="regNumber"
+                                type="text"
+                                name="regNumber"
+                                required
+                                value={formData.regNumber}
+                                onChange={handleChange}
+                                className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+                                placeholder="Select State"
+                              />
+                            </div>
+                            <div>
+                              <label
                                 htmlFor="car-name"
                                 className="text-theme-500 flex items-center"
                               >
@@ -262,7 +280,6 @@ function PPFPage() {
                                 className="text-theme-500 flex items-center"
                               >
                                 Car Brand
-                               
                               </label>
                               <select
                                 id="car-brand"
@@ -294,7 +311,7 @@ function PPFPage() {
                                 id="city-name"
                                 type="text"
                                 name="cityName"
-                                value={formData.cityName}
+                                value={formData.serviceName}
                                 className="p-2 w-full bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
                                 onChange={handleChange}
                                 placeholder="Select City"
@@ -309,23 +326,6 @@ function PPFPage() {
                                 </option>
                                 <option value="Car Wash">Car Wash</option>
                               </select>
-                            </div>
-                            <div>
-                              <label
-                                htmlFor="state-name"
-                                className="text-theme-500 flex items-center"
-                              >
-                                Address
-                              </label>
-                              <input
-                                id="state-name"
-                                type="text"
-                                name="stateName"
-                                value={formData.stateName}
-                                onChange={handleChange}
-                                className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                                placeholder="Select State"
-                              />
                             </div>
                           </div>
                           {/* third container  */}

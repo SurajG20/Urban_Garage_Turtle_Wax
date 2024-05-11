@@ -5,8 +5,8 @@ const serviceSchema = new mongoose.Schema({
   mobileNumber: { type: String, required: true },
   carName: { type: String },
   carBrand: { type: String },
-  cityName: { type: String },
-  stateName: { type: String },
+  serviceName: { type: String },
+  regNumber: { type: String, required: true },
 });
 
 const Service = mongoose.model("Service", serviceSchema);

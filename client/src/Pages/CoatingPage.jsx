@@ -33,8 +33,8 @@ function CoatingPage() {
     mobileNumber: "",
     carName: "",
     carBrand: "",
-    cityName: "",
-    stateName: "",
+    serviceName: "",
+    regNumber: "",
   });
 
   // Update form state
@@ -61,8 +61,8 @@ function CoatingPage() {
           mobileNumber: "",
           carName: "",
           carBrand: "",
-          cityName: "",
-          stateName: "",
+          serviceName: "",
+          regNumber: "",
         });
       },
       onError: (error) => {
@@ -236,6 +236,25 @@ function CoatingPage() {
                             </div>
                             <div>
                               <label
+                                htmlFor="regNumber"
+                                className="text-theme-500 flex items-center"
+                              >
+                                Reg.Number
+                                <span className="text-red-600">*</span>
+                              </label>
+                              <input
+                                id="regNumber"
+                                type="text"
+                                required
+                                name="regNumber"
+                                value={formData.regNumber}
+                                onChange={handleChange}
+                                className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
+                                placeholder="Select State"
+                              />
+                            </div>
+                            <div>
+                              <label
                                 htmlFor="car-name"
                                 className="text-theme-500 flex items-center"
                               >
@@ -257,7 +276,6 @@ function CoatingPage() {
                                 className="text-theme-500 flex items-center"
                               >
                                 Car Brand
-                             
                               </label>
                               <select
                                 id="car-brand"
@@ -289,7 +307,7 @@ function CoatingPage() {
                                 id="city-name"
                                 type="text"
                                 name="cityName"
-                                value={formData.cityName}
+                                value={formData.serviceName}
                                 className="p-2 w-full bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
                                 onChange={handleChange}
                                 placeholder="Select City"
@@ -304,23 +322,6 @@ function CoatingPage() {
                                 </option>
                                 <option value="Car Wash">Car Wash</option>
                               </select>
-                            </div>
-                            <div>
-                              <label
-                                htmlFor="state-name"
-                                className="text-theme-500 flex items-center"
-                              >
-                                Address
-                              </label>
-                              <input
-                                id="state-name"
-                                type="text"
-                                name="stateName"
-                                value={formData.stateName}
-                                onChange={handleChange}
-                                className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                                placeholder="Select State"
-                              />
                             </div>
                           </div>
                           {/* third container  */}

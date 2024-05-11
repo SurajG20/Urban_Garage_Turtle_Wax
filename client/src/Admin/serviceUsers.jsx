@@ -96,6 +96,12 @@ function ServiceUsers() {
                       </th>
                       <th scope="col" className="px-6 py-3 text-center">
                         <p className="flex items-center justify-center gap-2">
+                          <FaCalendarAlt className="text-theme-red text-lg" />{" "}
+                          <span className="text-gray-800">Reg Number</span>
+                        </p>
+                      </th>
+                      <th scope="col" className="px-6 py-3 text-center">
+                        <p className="flex items-center justify-center gap-2">
                           {" "}
                           <span className="text-gray-800">Action</span>
                         </p>
@@ -126,7 +132,10 @@ function ServiceUsers() {
                           </td>
 
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.cityName ? users.cityName : "N/A"}
+                            {users.serviceName ? users.serviceName : "N/A"}
+                          </td>
+                          <td className="px-6 py-4 text-gray-700 text-center">
+                            {users.regNumber ? users.regNumber : "N/A"}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700 flex justify-center">
