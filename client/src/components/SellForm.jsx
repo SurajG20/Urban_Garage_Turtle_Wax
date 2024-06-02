@@ -125,7 +125,7 @@ function SellForm() {
               value={formData.regNumber}
               className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
-              placeholder="Select City"
+              placeholder="Reg Number"
               onChange={handleChange}
             />
           </div>
@@ -208,13 +208,13 @@ function SellForm() {
           </div>
           <div>
             <label
-              htmlFor="owner-type"
+              htmlFor="fuelType"
               className="text-theme-500 flex items-center"
             >
               Fuel Type
             </label>
             <select
-              name="owner-type"
+              name="fuelType"
               typeof="text"
               value={formData.fuelType}
               id="fuel-type"
@@ -222,7 +222,7 @@ function SellForm() {
               onChange={handleChange}
             >
               <option value="">--- Select Fuel Type ---</option>
-              <option value="first">Petrol</option>
+              <option value="Petrol">Petrol</option>
               <option value="Disel">Disel</option>
               <option value="EV">EV</option>
               <option value="Hybrid">Hybrid</option>

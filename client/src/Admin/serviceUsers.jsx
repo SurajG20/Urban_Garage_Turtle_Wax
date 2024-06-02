@@ -20,7 +20,7 @@ function ServiceUsers() {
   const { data, error, isError, isLoading } = useQuery("people", fetchPeople, {
     select: (data) => data.data,
   });
-
+  console.log(data);
   const deleteServiceUserMutation = useMutation(
     (id) => {
       return axios.delete(`${import.meta.env.VITE_API_URL}/service/${id}`);
@@ -127,14 +127,14 @@ function ServiceUsers() {
                             {users.mobileNumber ? users.mobileNumber : "N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.carName ? users.carName : "N/A"} /
-                            {users.carBrand ? users.carBrand : "N/A"}
+                            {users.carName ? users.carName : "--"} /
+                            {users.carBrand ? users.carBrand : "--"}
                           </td>
 
                           <td className="px-6 py-4 text-gray-700 text-center">
                             {users.serviceName ? users.serviceName : "N/A"}
                           </td>
-                          <td className="px-6 py-4 text-gray-700 text-center">
+                          <td className="px-6 py-4 uppercase text-gray-700 text-center">
                             {users.regNumber ? users.regNumber : "N/A"}
                           </td>
 

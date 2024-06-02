@@ -142,7 +142,7 @@ function ContactUser() {
                           <td className="px-6 py-4 text-gray-700">
                             <button
                               onClick={() => deleteContactUser(users._id)} // Assuming handleDelete is defined elsewhere
-                              className="font-medium text-theme-red dark:text-theme-red hover:underline text-center"
+                              className="m-auto font-medium text-theme-red dark:text-theme-red hover:underline text-center"
                             >
                               Delete
                             </button>

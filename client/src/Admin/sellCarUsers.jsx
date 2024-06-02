@@ -25,7 +25,6 @@ function SellCarUser() {
   });
   const deleteSellCarUserMutation = useMutation(
     (id) => {
-      // console.log("Deleting user with ID:", id);
       return axios.delete(
         `${import.meta.env.VITE_API_URL}/sellCar-users/${id}`
       );
@@ -139,20 +138,20 @@ function SellCarUser() {
                             {users.mobileNumber ? users.mobileNumber : "N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.carName ? users.carName : "N/A"} /{" "}
-                            {users.modelYear ? users.modelYear : "N/A"}
+                            {users.carName ? users.carName : "--"} /{" "}
+                            {users.modelYear ? users.modelYear : "--"}
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center ">
-                            {users.fuelType ? users.fuelType : "N/A"}/
+                            {users.fuelType ? users.fuelType : "--"}/
                             {users.kilometersDriven
                               ? users.kilometersDriven
-                              : "N/A"}
+                              : "--"}
                             kms
                           </td>
                           <td className="px-6 py-4 text-gray-700 text-center">
-                            {users.fuelType}
+                            {users.fuelType?users.fuelType :'N/A'} 
                           </td>
-                          <td className="px-6 py-4 text-gray-900 flex items-center text-xs">
+                          <td className="px-6 uppercase py-4 text-gray-900 flex justify-center items-center text-xs">
                             {users.regNumber ? users.regNumber : "N/A"}
                           </td>
                           <td className="px-6 py-4 text-gray-700">

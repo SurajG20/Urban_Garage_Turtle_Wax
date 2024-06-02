@@ -56,6 +56,7 @@ function CoatingPage() {
     mutation.mutate(formData, {
       onSuccess: (response) => {
         // Handle success scenario
+     
         setFormData({
           fullName: "",
           mobileNumber: "",
@@ -250,7 +251,7 @@ function CoatingPage() {
                                 value={formData.regNumber}
                                 onChange={handleChange}
                                 className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                                placeholder="Select State"
+                                placeholder="Reg.Number"
                               />
                             </div>
                             <div>
@@ -298,15 +299,15 @@ function CoatingPage() {
                             </div>
                             <div>
                               <label
-                                htmlFor="city-name"
+                                htmlFor="serviceName"
                                 className="text-theme-500 flex items-center"
                               >
                                 Service
                               </label>
                               <select
-                                id="city-name"
+                                id="serviceName"
                                 type="text"
-                                name="cityName"
+                                name="serviceName"
                                 value={formData.serviceName}
                                 className="p-2 w-full bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md cursor-pointer"
                                 onChange={handleChange}

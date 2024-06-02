@@ -254,7 +254,7 @@ function PPFPage() {
                                 value={formData.regNumber}
                                 onChange={handleChange}
                                 className="p-2 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
-                                placeholder="Select State"
+                                placeholder="Reg.Number"
                               />
                             </div>
                             <div>
