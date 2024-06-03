@@ -60,3 +60,25 @@ exports.AdminLogin = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+
+exports.updatePassword = async (req, res) => {
+  const { username, password, newpassword } = req.body;
+  // console.log(req.body);
+
+  try {
+    const admin = await Admin.findOne({ username: username,password:password });
+
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+
+    admin.password = newpassword;
+    await admin.save();
+
+    res.json({ message: "Password updated successfully" });
+  } catch (error) {
+    console.error("Error updating password:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};

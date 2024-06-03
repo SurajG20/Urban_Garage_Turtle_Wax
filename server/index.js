@@ -25,32 +25,9 @@ app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
 app.use(cors());
 
-// Routes
-app.post("/update-password", async (req, res) => {
-  const { username, password, newpassword } = req.body;
-  res.json({ message: "Password updated successfully" });
-    try {
-      // Find the admin by username and current password
-      const admin = await Admin.findOne({ username, password });
-      if (!admin) {
-        return res
-          .status(404)
-          .json({ message: "Incorrect current password or username" });
-      }
 
-      // Directly update the password in the database (not recommended)
-      admin.password = newpassword;
-      await admin.save();
-
-      res.json({ message: "Password updated successfully" });
-    } catch (error) {
-      console.error("Error updating password: ", error);
-      res.status(500).json({ error: "Internal server error" });
-    }
-});
 
 app.use("/admin", AdminRoute);
-
 
 app.use("/car", CarRoute);
 
@@ -67,10 +44,9 @@ app.use("/product-customer", ProductCustomerRoute);
 app.use("/contact", ContactRoute);
 
 // In your main app file (app.js or similar)
-app.get("/", (req, res) => {
-  res.status(200).send("Welcome To Urban Garage!");
-});
-
+// app.put("/admin/update-password", async (req, res) => {
+//   res.status(200).send("Welcome to Urban Garage Admin Panel !");
+// });
 // Connect to MongoDB
 mongoose
   .connect(process.env.DB_URI)

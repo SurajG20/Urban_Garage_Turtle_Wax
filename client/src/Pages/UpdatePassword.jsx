@@ -15,15 +15,15 @@ function UpdatePassword() {
   const [errorMessage, setErrorMessage] = useState("");
   const loginMutation = useMutation(
     (data) => {
-      return axios.post(
-        `${import.meta.env.VITE_API_URL}/update-password`,
+      return axios.put(
+        `${import.meta.env.VITE_API_URL}/admin/update-password`,
         data
       );
     },
     {
       onSuccess: (data) => {
         login(data.data);
-        navigate("/admin/cars");
+        navigate("/login");
       },
 
       onError: (error) => {
@@ -47,9 +47,7 @@ function UpdatePassword() {
     <>
       <>
         {loginMutation.isSuccess && <SuccessAlert msg="Welcome Admin" />}
-        {loginMutation.isError && (
-          <ErrorAlert msg="Login Failed! Try again..." />
-        )}
+        {loginMutation.isError && <ErrorAlert msg="Update Password Failed.!" />}
       </>
 
       <div
@@ -62,10 +60,11 @@ function UpdatePassword() {
         <div className="absolute inset-0 opacity-50 bg-gray-50 blur-xl"></div>
         <div className="p-5 w-full md:w-1/3 bg-white rounded-lg shadow-lg z-10">
           <form onSubmit={handleSubmit}>
-            <div className="mb-10">
+            <div className="mb-5">
               <div className="h-16 w-16 m-auto mb-5">
                 <Link to={"/"}>
                   <img
+                    loading="lazy"
                     className="h-full w-full object-cover object-center"
                     src="/assets/logo/light-logo.png"
                     alt="Urban Garage"
@@ -93,7 +92,7 @@ function UpdatePassword() {
             </div>
             <div className="mb-5">
               <label
-                htmlFor="password"
+                htmlFor="Password-field"
                 className="block text-sm text-theme-semibold text-gray-700"
               >
                 Password
@@ -102,7 +101,7 @@ function UpdatePassword() {
                 <input
                   placeholder="Password"
                   type={`${visible ? "password" : "text"}`}
-                  id="password"
+                  id="Password-field"
                   name="password"
                   className="py-2 text-theme-semibold px-3 mt-1 bg-gray-200 ring-gray-300 focus:ring-2 focus:ring-theme-red focus:outline-none rounded-md"
                 />
@@ -149,6 +148,11 @@ function UpdatePassword() {
                   />
                 )}
               </div>
+              <Link to={"/login"} className="mt-1">
+                <p className="text-sm text-end text-theme-500 text-blue-800 hover:text-blue-500">
+                  Login
+                </p>
+              </Link>
             </div>
             <div className="mb-4">
               {loginMutation.isLoading ? (
@@ -241,7 +245,7 @@ function UpdatePassword() {
                   type="submit"
                   className="bg-theme-red text-white py-2 px-5 rounded-lg text-theme-semibold"
                 >
-                  Create New Password
+                  Update Password
                 </button>
               )}
             </div>
