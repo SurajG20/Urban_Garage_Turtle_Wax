@@ -125,6 +125,7 @@ function SellForm() {
               value={formData.regNumber}
               className="px-2 py-2 h-10 bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md"
               type="text"
+              required
               placeholder="Reg Number"
               onChange={handleChange}
             />

@@ -74,12 +74,12 @@ function BuyForm() {
             </label>
             <input
               id="full-name"
-              required
               name="fullName"
               value={formData.fullName}
               className="px-2 py-2 h-10
                bg-gray-200 text-sm text-theme-500 border-theme-gray outline-none rounded-md "
               type="text"
+              required
               placeholder="Enter Name"
               onChange={handleChange}
             />
@@ -110,7 +110,7 @@ function BuyForm() {
               htmlFor="carBrand"
               className="text-theme-500 flex items-center"
             >
-              Car Brand/Car Model<span className="text-red-600">*</span>
+              Car Brand/Car Model
             </label>
             <select
               id="carBrand"

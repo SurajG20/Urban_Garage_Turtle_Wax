@@ -245,6 +245,7 @@ function PPFPage() {
                                 className="text-theme-500 flex items-center"
                               >
                                 Reg.Number
+                                <span className="text-red-600">*</span>
                               </label>
                               <input
                                 id="regNumber"

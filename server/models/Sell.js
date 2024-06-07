@@ -8,7 +8,7 @@ const sellCarSchema = new mongoose.Schema({
   kilometersDriven: { type: String },
   carName: { type: String },
   fuelType: { type: String },
-  regNumber: { type: String },
+  regNumber: { type: String, required: true },
   // address: { type: String},
 });
 
